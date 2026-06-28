@@ -83,7 +83,7 @@ namespace SistemaAcademico1
         private readonly Button btnRegresar = new();
 
         private int nivelActual;
-        private int puntuacion = 100;
+        private int puntuacion;
         private int intentosFallidos;
         private readonly Random random = new();
 
