@@ -603,7 +603,7 @@ namespace SistemaAcademico1
 
             lblPie.Text = "CodeNova  •  Aprende  •  Practica  •  Innova";
             lblPie.ForeColor = Color.FromArgb(110, 130, 190);
-            lblPie.Location = new Point(320, 735);
+            lblPie.Location = new Point(320, 724);
             lblPie.Size = new Size(430, 25);
             lblPie.TextAlign = ContentAlignment.MiddleCenter;
 
