@@ -296,7 +296,7 @@ namespace SistemaAcademico1
             // Contenido principal
             panelContenido.BackColor = Color.FromArgb(5, 16, 43);
             panelContenido.Dock = DockStyle.Fill;
-            panelContenido.AutoScroll = true;
+            panelContenido.AutoScroll = false;
             panelContenido.Controls.Add(lblBienvenida);
             panelContenido.Controls.Add(lblSubtitulo);
             panelContenido.Controls.Add(tarjetaFecha);
