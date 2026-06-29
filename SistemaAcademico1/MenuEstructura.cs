@@ -81,5 +81,15 @@ namespace SistemaAcademico1
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
         }
+
+        private void contenido_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblFecha_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
