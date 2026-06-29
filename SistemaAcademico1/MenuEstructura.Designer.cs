@@ -15,6 +15,9 @@ namespace SistemaAcademico1
         private Button btnCiclos = null!;
         private Button btnAlgoritmos = null!;
         private Button btnCondicionales = null!;
+        private Button btnAccesoJuego = null!;
+        private Button btnAccesoVariables = null!;
+        private Button btnAccesoCiclos = null!;
 
         protected override void Dispose(bool disposing)
         {
@@ -36,6 +39,9 @@ namespace SistemaAcademico1
             btnCiclos = new Button();
             btnAlgoritmos = new Button();
             btnCondicionales = new Button();
+            btnAccesoJuego = new Button();
+            btnAccesoVariables = new Button();
+            btnAccesoCiclos = new Button();
             lblFecha = new Label();
             panelTemas = new Panel();
 
@@ -59,9 +65,6 @@ namespace SistemaAcademico1
             var lblTemas = new Label();
             var accesos = new Panel();
             var lblAccesos = new Label();
-            var btnAccesoJuego = new Button();
-            var btnAccesoVariables = new Button();
-            var btnAccesoCiclos = new Button();
             var lblPie = new Label();
 
             SuspendLayout();
