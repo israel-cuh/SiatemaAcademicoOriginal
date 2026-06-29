@@ -624,6 +624,7 @@
             btnjuego.TabIndex = 7;
             btnjuego.Text = "Practicar lo Aprendido";
             btnjuego.UseVisualStyleBackColor = false;
+            btnjuego.Click += btnjuego_Click_1;
             // 
             // MenuTemaCiclo
             // 

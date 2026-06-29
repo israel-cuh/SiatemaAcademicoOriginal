@@ -72,5 +72,10 @@ namespace SistemaAcademico1
             using MinijuegoOrdenarCodigo juego = new();
             juego.ShowDialog(this);
         }
+
+        private void btnjuego_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
