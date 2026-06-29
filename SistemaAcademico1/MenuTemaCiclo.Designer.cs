@@ -219,9 +219,9 @@
             // 
             panelConsejo.BackgroundImage = (Image)resources.GetObject("panelConsejo.BackgroundImage");
             panelConsejo.BackgroundImageLayout = ImageLayout.Stretch;
-            panelConsejo.Location = new Point(3, 490);
+            panelConsejo.Location = new Point(3, 468);
             panelConsejo.Name = "panelConsejo";
-            panelConsejo.Size = new Size(247, 128);
+            panelConsejo.Size = new Size(247, 150);
             panelConsejo.TabIndex = 2;
             // 
             // panel4
