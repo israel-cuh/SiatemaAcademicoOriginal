@@ -15,6 +15,9 @@ namespace SistemaAcademico1
         private Button btnCiclos = null!;
         private Button btnAlgoritmos = null!;
         private Button btnCondicionales = null!;
+        private Button btnAccesoJuego = null!;
+        private Button btnAccesoVariables = null!;
+        private Button btnAccesoCiclos = null!;
 
         protected override void Dispose(bool disposing)
         {
@@ -25,6 +28,7 @@ namespace SistemaAcademico1
 
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             btnCerrar = new Button();
             btnMinimizar = new Button();
             btnCerrarSesion = new Button();
@@ -35,161 +39,59 @@ namespace SistemaAcademico1
             btnCiclos = new Button();
             btnAlgoritmos = new Button();
             btnCondicionales = new Button();
-            lblFecha = new Label();
-            panelTemas = new Panel();
-            barraSuperior = new Panel();
-            lblMarca = new Label();
-            barraLateral = new Panel();
-            lblLogo = new Label();
-            lblNombre = new Label();
-            lblSistema = new Label();
-            lblCurso = new Label();
-            tarjetaUsuario = new Panel();
-            lblAvatar = new Label();
-            lblUsuario = new Label();
-            lblRol = new Label();
-            contenido = new Panel();
-            lblBienvenida = new Label();
-            lblSubtitulo = new Label();
-            tarjetaFecha = new Panel();
-            lblCalendario = new Label();
-            estadisticas = new FlowLayoutPanel();
-            lblTemas = new Label();
-            accesos = new Panel();
-            lblAccesos = new Label();
             btnAccesoJuego = new Button();
             btnAccesoVariables = new Button();
             btnAccesoCiclos = new Button();
-            barraSuperior.SuspendLayout();
-            barraLateral.SuspendLayout();
-            tarjetaUsuario.SuspendLayout();
-            contenido.SuspendLayout();
-            tarjetaFecha.SuspendLayout();
-            accesos.SuspendLayout();
+            lblFecha = new Label();
+            panelTemas = new Panel();
+
+            var barraSuperior = new Panel();
+            var barraLateral = new Panel();
+            var contenido = new Panel();
+            var lblMarca = new Label();
+            var lblLogo = new Label();
+            var lblNombre = new Label();
+            var lblSistema = new Label();
+            var lblCurso = new Label();
+            var tarjetaUsuario = new Panel();
+            var lblAvatar = new Label();
+            var lblUsuario = new Label();
+            var lblRol = new Label();
+            var lblBienvenida = new Label();
+            var lblSubtitulo = new Label();
+            var tarjetaFecha = new Panel();
+            var lblCalendario = new Label();
+            var estadisticas = new FlowLayoutPanel();
+            var lblTemas = new Label();
+            var accesos = new Panel();
+            var lblAccesos = new Label();
+            var lblPie = new Label();
+
             SuspendLayout();
-            // 
-            // btnCerrar
-            // 
-            btnCerrar.Location = new Point(0, 0);
-            btnCerrar.Name = "btnCerrar";
-            btnCerrar.Size = new Size(75, 23);
-            btnCerrar.TabIndex = 2;
-            btnCerrar.Click += btnCerrar_Click;
-            // 
-            // btnMinimizar
-            // 
-            btnMinimizar.Location = new Point(0, 0);
-            btnMinimizar.Name = "btnMinimizar";
-            btnMinimizar.Size = new Size(75, 23);
-            btnMinimizar.TabIndex = 1;
-            btnMinimizar.Click += btnMinimizar_Click;
-            // 
-            // btnCerrarSesion
-            // 
-            btnCerrarSesion.Location = new Point(0, 0);
-            btnCerrarSesion.Name = "btnCerrarSesion";
-            btnCerrarSesion.Size = new Size(75, 23);
-            btnCerrarSesion.TabIndex = 7;
-            btnCerrarSesion.Click += btnCerrarSesion_Click;
-            // 
-            // btnInicio
-            // 
-            btnInicio.Location = new Point(0, 0);
-            btnInicio.Name = "btnInicio";
-            btnInicio.Size = new Size(75, 23);
-            btnInicio.TabIndex = 4;
-            // 
-            // btnTemas
-            // 
-            btnTemas.Location = new Point(0, 0);
-            btnTemas.Name = "btnTemas";
-            btnTemas.Size = new Size(75, 23);
-            btnTemas.TabIndex = 5;
-            btnTemas.Click += btnTemas_Click;
-            // 
-            // btnJuego
-            // 
-            btnJuego.Location = new Point(0, 0);
-            btnJuego.Name = "btnJuego";
-            btnJuego.Size = new Size(75, 23);
-            btnJuego.TabIndex = 6;
-            btnJuego.Click += btnJuego_Click;
-            // 
-            // btnVariables
-            // 
-            btnVariables.Location = new Point(0, 0);
-            btnVariables.Name = "btnVariables";
-            btnVariables.Size = new Size(75, 23);
-            btnVariables.TabIndex = 0;
-            btnVariables.Click += btnVariables_Click;
-            // 
-            // btnCiclos
-            // 
-            btnCiclos.Location = new Point(0, 0);
-            btnCiclos.Name = "btnCiclos";
-            btnCiclos.Size = new Size(75, 23);
-            btnCiclos.TabIndex = 0;
-            btnCiclos.Click += btnCiclos_Click;
-            // 
-            // btnAlgoritmos
-            // 
-            btnAlgoritmos.Location = new Point(0, 0);
-            btnAlgoritmos.Name = "btnAlgoritmos";
-            btnAlgoritmos.Size = new Size(75, 23);
-            btnAlgoritmos.TabIndex = 0;
-            btnAlgoritmos.Click += btnAlgoritmos_Click;
-            // 
-            // btnCondicionales
-            // 
-            btnCondicionales.Location = new Point(0, 0);
-            btnCondicionales.Name = "btnCondicionales";
-            btnCondicionales.Size = new Size(75, 23);
-            btnCondicionales.TabIndex = 0;
-            btnCondicionales.Click += btnCondicionales_Click;
-            // 
-            // lblFecha
-            // 
-            lblFecha.Font = new Font("Segoe UI", 9.5F);
-            lblFecha.ForeColor = Color.White;
-            lblFecha.Location = new Point(61, 8);
-            lblFecha.Name = "lblFecha";
-            lblFecha.Size = new Size(120, 52);
-            lblFecha.TabIndex = 1;
-            lblFecha.Text = "Fecha y hora";
-            // 
-            // panelTemas
-            // 
-            panelTemas.BackColor = Color.Transparent;
-            panelTemas.Location = new Point(35, 295);
-            panelTemas.Name = "panelTemas";
-            panelTemas.Size = new Size(990, 300);
-            panelTemas.TabIndex = 5;
-            // 
-            // barraSuperior
-            // 
+
+            // Barra superior
             barraSuperior.BackColor = Color.FromArgb(4, 9, 28);
+            barraSuperior.Dock = DockStyle.Top;
+            barraSuperior.Height = 48;
             barraSuperior.Controls.Add(lblMarca);
             barraSuperior.Controls.Add(btnMinimizar);
             barraSuperior.Controls.Add(btnCerrar);
-            barraSuperior.Dock = DockStyle.Top;
-            barraSuperior.Location = new Point(0, 0);
-            barraSuperior.Name = "barraSuperior";
-            barraSuperior.Size = new Size(1329, 48);
-            barraSuperior.TabIndex = 2;
-            // 
-            // lblMarca
-            // 
+
+            lblMarca.Text = "</>  CodeNova";
             lblMarca.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             lblMarca.ForeColor = Color.White;
             lblMarca.Location = new Point(18, 10);
-            lblMarca.Name = "lblMarca";
             lblMarca.Size = new Size(210, 30);
-            lblMarca.TabIndex = 0;
-            lblMarca.Text = "</>  CodeNova";
-            // 
-            // barraLateral
-            // 
+
+            ConfigurarBotonVentana(btnMinimizar, "—", new Point(1175, 4));
+            ConfigurarBotonVentana(btnCerrar, "✕", new Point(1225, 4));
+            btnMinimizar.Click += btnMinimizar_Click;
+            btnCerrar.Click += btnCerrar_Click;
+
+            // Barra lateral
             barraLateral.BackColor = Color.FromArgb(6, 16, 45);
+            barraLateral.Dock = DockStyle.Left;
+            barraLateral.Width = 270;
             barraLateral.Controls.Add(lblLogo);
             barraLateral.Controls.Add(lblNombre);
             barraLateral.Controls.Add(lblSistema);
@@ -199,99 +101,70 @@ namespace SistemaAcademico1
             barraLateral.Controls.Add(btnJuego);
             barraLateral.Controls.Add(btnCerrarSesion);
             barraLateral.Controls.Add(tarjetaUsuario);
-            barraLateral.Dock = DockStyle.Left;
-            barraLateral.Location = new Point(0, 48);
-            barraLateral.Name = "barraLateral";
-            barraLateral.Size = new Size(270, 752);
-            barraLateral.TabIndex = 1;
-            // 
-            // lblLogo
-            // 
+
+            lblLogo.Text = "</>";
             lblLogo.Font = new Font("Consolas", 36F, FontStyle.Bold);
             lblLogo.ForeColor = Color.FromArgb(55, 116, 255);
             lblLogo.Location = new Point(60, 28);
-            lblLogo.Name = "lblLogo";
             lblLogo.Size = new Size(150, 68);
-            lblLogo.TabIndex = 0;
-            lblLogo.Text = "</>";
             lblLogo.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // lblNombre
-            // 
+
+            lblNombre.Text = "CodeNova";
             lblNombre.Font = new Font("Segoe UI", 25F, FontStyle.Bold);
             lblNombre.ForeColor = Color.White;
             lblNombre.Location = new Point(30, 98);
-            lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(215, 48);
-            lblNombre.TabIndex = 1;
-            lblNombre.Text = "CodeNova";
             lblNombre.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // lblSistema
-            // 
+
+            lblSistema.Text = "Sistema Académico";
             lblSistema.Font = new Font("Segoe UI", 10F);
             lblSistema.ForeColor = Color.Gainsboro;
             lblSistema.Location = new Point(35, 150);
-            lblSistema.Name = "lblSistema";
             lblSistema.Size = new Size(205, 25);
-            lblSistema.TabIndex = 2;
-            lblSistema.Text = "Sistema Académico";
             lblSistema.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // lblCurso
-            // 
+
+            lblCurso.Text = "PROGRAMACIÓN I";
             lblCurso.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             lblCurso.ForeColor = Color.FromArgb(86, 139, 255);
             lblCurso.Location = new Point(35, 176);
-            lblCurso.Name = "lblCurso";
             lblCurso.Size = new Size(205, 25);
-            lblCurso.TabIndex = 3;
-            lblCurso.Text = "PROGRAMACIÓN I";
             lblCurso.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // tarjetaUsuario
-            // 
+
+            ConfigurarBotonMenu(btnInicio, "⌂    Inicio", 225, Color.FromArgb(18, 38, 111));
+            ConfigurarBotonMenu(btnTemas, "☷    Temas", 282, Color.Transparent);
+            ConfigurarBotonMenu(btnJuego, "🎮   Juego interactivo", 339, Color.Transparent);
+            ConfigurarBotonMenu(btnCerrarSesion, "↪    Cerrar sesión", 610, Color.Transparent);
+            btnTemas.Click += btnTemas_Click;
+            btnJuego.Click += btnJuego_Click;
+            btnCerrarSesion.Click += btnCerrarSesion_Click;
+
             tarjetaUsuario.BackColor = Color.FromArgb(13, 29, 71);
+            tarjetaUsuario.Location = new Point(20, 675);
+            tarjetaUsuario.Size = new Size(230, 72);
             tarjetaUsuario.Controls.Add(lblAvatar);
             tarjetaUsuario.Controls.Add(lblUsuario);
             tarjetaUsuario.Controls.Add(lblRol);
-            tarjetaUsuario.Location = new Point(20, 675);
-            tarjetaUsuario.Name = "tarjetaUsuario";
-            tarjetaUsuario.Size = new Size(230, 72);
-            tarjetaUsuario.TabIndex = 8;
-            // 
-            // lblAvatar
-            // 
+
+            lblAvatar.Text = "👤";
             lblAvatar.Font = new Font("Segoe UI Emoji", 23F);
             lblAvatar.Location = new Point(12, 12);
-            lblAvatar.Name = "lblAvatar";
             lblAvatar.Size = new Size(52, 50);
-            lblAvatar.TabIndex = 0;
-            lblAvatar.Text = "👤";
-            // 
-            // lblUsuario
-            // 
+
+            lblUsuario.Text = "Docente";
             lblUsuario.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             lblUsuario.ForeColor = Color.White;
             lblUsuario.Location = new Point(70, 14);
-            lblUsuario.Name = "lblUsuario";
             lblUsuario.Size = new Size(140, 25);
-            lblUsuario.TabIndex = 1;
-            lblUsuario.Text = "Docente";
-            // 
-            // lblRol
-            // 
+
+            lblRol.Text = "Profesor";
             lblRol.ForeColor = Color.Silver;
             lblRol.Location = new Point(70, 40);
-            lblRol.Name = "lblRol";
             lblRol.Size = new Size(140, 22);
-            lblRol.TabIndex = 2;
-            lblRol.Text = "Profesor";
-            // 
-            // contenido
-            // 
-            contenido.AutoScroll = true;
+
+            // Contenido principal
             contenido.BackColor = Color.FromArgb(5, 16, 43);
+            contenido.Dock = DockStyle.Fill;
+            contenido.AutoScroll = true;
             contenido.Controls.Add(lblBienvenida);
             contenido.Controls.Add(lblSubtitulo);
             contenido.Controls.Add(tarjetaFecha);
@@ -299,123 +172,96 @@ namespace SistemaAcademico1
             contenido.Controls.Add(lblTemas);
             contenido.Controls.Add(panelTemas);
             contenido.Controls.Add(accesos);
-            contenido.Dock = DockStyle.Fill;
-            contenido.Location = new Point(270, 48);
-            contenido.Name = "contenido";
-            contenido.Size = new Size(1059, 752);
-            contenido.TabIndex = 0;
-            // 
-            // lblBienvenida
-            // 
+            contenido.Controls.Add(lblPie);
+
+            lblBienvenida.Text = "¡Bienvenido a CodeNova!";
             lblBienvenida.Font = new Font("Segoe UI", 23F, FontStyle.Bold);
             lblBienvenida.ForeColor = Color.White;
             lblBienvenida.Location = new Point(35, 25);
-            lblBienvenida.Name = "lblBienvenida";
             lblBienvenida.Size = new Size(550, 50);
-            lblBienvenida.TabIndex = 0;
-            lblBienvenida.Text = "¡Bienvenido a CodeNova!";
-            // 
-            // lblSubtitulo
-            // 
+
+            lblSubtitulo.Text = "Sistema académico para Programación I";
             lblSubtitulo.Font = new Font("Segoe UI", 11F);
             lblSubtitulo.ForeColor = Color.Silver;
             lblSubtitulo.Location = new Point(38, 75);
-            lblSubtitulo.Name = "lblSubtitulo";
             lblSubtitulo.Size = new Size(430, 30);
-            lblSubtitulo.TabIndex = 1;
-            lblSubtitulo.Text = "Sistema académico para Programación I";
-            // 
-            // tarjetaFecha
-            // 
+
             tarjetaFecha.BackColor = Color.FromArgb(12, 28, 68);
+            tarjetaFecha.Location = new Point(800, 25);
+            tarjetaFecha.Size = new Size(190, 75);
             tarjetaFecha.Controls.Add(lblCalendario);
             tarjetaFecha.Controls.Add(lblFecha);
-            tarjetaFecha.Location = new Point(800, 25);
-            tarjetaFecha.Name = "tarjetaFecha";
-            tarjetaFecha.Size = new Size(190, 75);
-            tarjetaFecha.TabIndex = 2;
-            // 
-            // lblCalendario
-            // 
+
+            lblCalendario.Text = "▣";
             lblCalendario.Font = new Font("Segoe UI", 20F);
             lblCalendario.ForeColor = Color.LightSteelBlue;
             lblCalendario.Location = new Point(15, 20);
-            lblCalendario.Name = "lblCalendario";
             lblCalendario.Size = new Size(40, 40);
-            lblCalendario.TabIndex = 0;
-            lblCalendario.Text = "▣";
-            // 
-            // estadisticas
-            // 
-            estadisticas.BackColor = Color.Transparent;
+
+            lblFecha.Text = "Fecha y hora";
+            lblFecha.Font = new Font("Segoe UI", 9.5F);
+            lblFecha.ForeColor = Color.White;
+            lblFecha.Location = new Point(60, 14);
+            lblFecha.Size = new Size(120, 52);
+
             estadisticas.Location = new Point(35, 125);
-            estadisticas.Name = "estadisticas";
             estadisticas.Size = new Size(980, 105);
-            estadisticas.TabIndex = 3;
+            estadisticas.BackColor = Color.Transparent;
             estadisticas.WrapContents = false;
-            // 
-            // lblTemas
-            // 
+            estadisticas.Controls.Add(CrearEstadistica("👥", "DOCENTES", "4", "Integrantes", Color.MediumPurple));
+            estadisticas.Controls.Add(CrearEstadistica("🎓", "EQUIPO", "4", "Estudiantes", Color.MediumSeaGreen));
+            estadisticas.Controls.Add(CrearEstadistica("▣", "MATERIAS", "1", "Programación I", Color.Goldenrod));
+            estadisticas.Controls.Add(CrearEstadistica("☷", "TEMAS", "4", "Disponibles", Color.DodgerBlue));
+
+            lblTemas.Text = "</>  Temas de Programación I";
             lblTemas.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             lblTemas.ForeColor = Color.White;
             lblTemas.Location = new Point(35, 250);
-            lblTemas.Name = "lblTemas";
             lblTemas.Size = new Size(430, 35);
-            lblTemas.TabIndex = 4;
-            lblTemas.Text = "</>  Temas de Programación I";
-            // 
-            // accesos
-            // 
+
+            panelTemas.Location = new Point(35, 295);
+            panelTemas.Size = new Size(990, 300);
+            panelTemas.BackColor = Color.Transparent;
+            panelTemas.Controls.Add(CrearTema(0, "1", "◇", "Algoritmos", "Diseño de pasos lógicos para resolver problemas.", Color.MediumPurple, btnAlgoritmos));
+            panelTemas.Controls.Add(CrearTema(247, "2", "{ }", "Variables y tipos de datos", "Almacenamiento y manejo de datos en diferentes tipos.", Color.MediumSeaGreen, btnVariables));
+            panelTemas.Controls.Add(CrearTema(494, "3", "if", "Condicionales", "Estructuras para tomar decisiones en el programa.", Color.Goldenrod, btnCondicionales));
+            panelTemas.Controls.Add(CrearTema(741, "4", "↻", "Ciclos o bucles", "Estructuras para repetir instrucciones varias veces.", Color.DodgerBlue, btnCiclos));
+            btnAlgoritmos.Click += btnAlgoritmos_Click;
+            btnVariables.Click += btnVariables_Click;
+            btnCondicionales.Click += btnCondicionales_Click;
+            btnCiclos.Click += btnCiclos_Click;
+
             accesos.BackColor = Color.FromArgb(10, 27, 64);
+            accesos.Location = new Point(35, 615);
+            accesos.Size = new Size(990, 105);
             accesos.Controls.Add(lblAccesos);
             accesos.Controls.Add(btnAccesoJuego);
             accesos.Controls.Add(btnAccesoVariables);
             accesos.Controls.Add(btnAccesoCiclos);
-            accesos.Location = new Point(35, 615);
-            accesos.Name = "accesos";
-            accesos.Size = new Size(990, 105);
-            accesos.TabIndex = 6;
-            // 
-            // lblAccesos
-            // 
+
+            lblAccesos.Text = "⚡  Accesos rápidos";
             lblAccesos.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             lblAccesos.ForeColor = Color.White;
             lblAccesos.Location = new Point(18, 12);
-            lblAccesos.Name = "lblAccesos";
             lblAccesos.Size = new Size(240, 28);
-            lblAccesos.TabIndex = 0;
-            lblAccesos.Text = "⚡  Accesos rápidos";
-            // 
-            // btnAccesoJuego
-            // 
-            btnAccesoJuego.Location = new Point(0, 0);
-            btnAccesoJuego.Name = "btnAccesoJuego";
-            btnAccesoJuego.Size = new Size(75, 23);
-            btnAccesoJuego.TabIndex = 1;
+
+            ConfigurarAcceso(btnAccesoJuego, "🎮  Jugar", new Point(20, 50), Color.FromArgb(121, 67, 225));
+            ConfigurarAcceso(btnAccesoVariables, "{ }  Variables", new Point(225, 50), Color.FromArgb(30, 152, 79));
+            ConfigurarAcceso(btnAccesoCiclos, "↻  Ciclos", new Point(430, 50), Color.FromArgb(43, 104, 224));
             btnAccesoJuego.Click += btnJuego_Click;
-            // 
-            // btnAccesoVariables
-            // 
-            btnAccesoVariables.Location = new Point(0, 0);
-            btnAccesoVariables.Name = "btnAccesoVariables";
-            btnAccesoVariables.Size = new Size(75, 23);
-            btnAccesoVariables.TabIndex = 2;
             btnAccesoVariables.Click += btnVariables_Click;
-            // 
-            // btnAccesoCiclos
-            // 
-            btnAccesoCiclos.Location = new Point(0, 0);
-            btnAccesoCiclos.Name = "btnAccesoCiclos";
-            btnAccesoCiclos.Size = new Size(75, 23);
-            btnAccesoCiclos.TabIndex = 3;
             btnAccesoCiclos.Click += btnCiclos_Click;
-            // 
-            // MenuEstructura
-            // 
+
+            lblPie.Text = "CodeNova  •  Aprende  •  Practica  •  Innova";
+            lblPie.ForeColor = Color.FromArgb(110, 130, 190);
+            lblPie.Location = new Point(320, 735);
+            lblPie.Size = new Size(430, 25);
+            lblPie.TextAlign = ContentAlignment.MiddleCenter;
+
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(5, 16, 43);
-            ClientSize = new Size(1329, 800);
+            ClientSize = new Size(1280, 800);
             Controls.Add(contenido);
             Controls.Add(barraLateral);
             Controls.Add(barraSuperior);
@@ -424,12 +270,6 @@ namespace SistemaAcademico1
             Name = "MenuEstructura";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CodeNova - Menú principal";
-            barraSuperior.ResumeLayout(false);
-            barraLateral.ResumeLayout(false);
-            tarjetaUsuario.ResumeLayout(false);
-            contenido.ResumeLayout(false);
-            tarjetaFecha.ResumeLayout(false);
-            accesos.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -499,29 +339,5 @@ namespace SistemaAcademico1
             boton.Location = ubicacion;
             boton.Size = new Size(185, 42);
         }
-
-        private Panel barraSuperior;
-        private Label lblMarca;
-        private Panel barraLateral;
-        private Label lblLogo;
-        private Label lblNombre;
-        private Label lblSistema;
-        private Label lblCurso;
-        private Panel tarjetaUsuario;
-        private Label lblAvatar;
-        private Label lblUsuario;
-        private Label lblRol;
-        private Panel contenido;
-        private Label lblBienvenida;
-        private Label lblSubtitulo;
-        private Panel tarjetaFecha;
-        private Label lblCalendario;
-        private FlowLayoutPanel estadisticas;
-        private Label lblTemas;
-        private Panel accesos;
-        private Label lblAccesos;
-        private Button btnAccesoJuego;
-        private Button btnAccesoVariables;
-        private Button btnAccesoCiclos;
     }
 }
