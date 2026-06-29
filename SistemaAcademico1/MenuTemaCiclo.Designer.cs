@@ -181,7 +181,7 @@
             // 
             // btnAnidados
             // 
-            btnAnidados.Location = new Point(12, 301);
+            btnAnidados.Location = new Point(12, 247);
             btnAnidados.Name = "btnAnidados";
             btnAnidados.Size = new Size(218, 49);
             btnAnidados.TabIndex = 4;
@@ -190,7 +190,7 @@
             // 
             // btnDoWhile
             // 
-            btnDoWhile.Location = new Point(12, 221);
+            btnDoWhile.Location = new Point(12, 168);
             btnDoWhile.Name = "btnDoWhile";
             btnDoWhile.Size = new Size(218, 49);
             btnDoWhile.TabIndex = 3;
@@ -199,7 +199,7 @@
             // 
             // btnFor
             // 
-            btnFor.Location = new Point(12, 137);
+            btnFor.Location = new Point(12, 91);
             btnFor.Name = "btnFor";
             btnFor.Size = new Size(218, 49);
             btnFor.TabIndex = 2;
@@ -208,7 +208,7 @@
             // 
             // btnWhile
             // 
-            btnWhile.Location = new Point(12, 51);
+            btnWhile.Location = new Point(12, 19);
             btnWhile.Name = "btnWhile";
             btnWhile.Size = new Size(218, 49);
             btnWhile.TabIndex = 1;
