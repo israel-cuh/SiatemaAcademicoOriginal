@@ -38,7 +38,8 @@ namespace SistemaAcademico1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Menuvariables ventana = new Menuvariables();
+            ventana.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
