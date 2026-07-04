@@ -283,5 +283,15 @@ namespace SistemaAcademico1
             temporizador.Stop();
             base.OnFormClosed(e);
         }
+
+        private void tituloTiempo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MinijuegoOrdenarCodigo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -151,7 +151,7 @@
             picOjo.BackColor = Color.Transparent;
             picOjo.BackgroundImage = (Image)resources.GetObject("picOjo.BackgroundImage");
             picOjo.BackgroundImageLayout = ImageLayout.Stretch;
-            picOjo.Location = new Point(732, 301);
+            picOjo.Location = new Point(718, 301);
             picOjo.Name = "picOjo";
             picOjo.Size = new Size(28, 27);
             picOjo.TabIndex = 9;
@@ -165,7 +165,7 @@
             BackColor = Color.MidnightBlue;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(831, 649);
+            ClientSize = new Size(841, 646);
             Controls.Add(picOjo);
             Controls.Add(btnsalir);
             Controls.Add(label3);
