@@ -29,7 +29,7 @@ namespace SistemaAcademico1
         {
             if (txtUsuario.Text == "estudiante" && txtClave.Text == "1234")
             {
-                MenuEstudiante frm = new MenuEstudiante();
+               MenuEstructura frm = new MenuEstructura ();
                 frm.Show();
                 this.Hide();
             }
