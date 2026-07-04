@@ -78,7 +78,7 @@
             lblInicio.Size = new Size(119, 31);
             lblInicio.TabIndex = 0;
             lblInicio.Text = "🏠  Inicio";
-            lblInicio.Click += label2_Click;
+          //  lblInicio.Click += label2_Click;
             // 
             // lblExplicacion
             // 
@@ -91,7 +91,7 @@
             lblExplicacion.Size = new Size(181, 31);
             lblExplicacion.TabIndex = 1;
             lblExplicacion.Text = "📖  Explicación";
-            lblExplicacion.Click += lblExplicacion_Click;
+           // lblExplicacion.Click += lblExplicacion_Click;
             // 
             // lblCondiMemo
             // 

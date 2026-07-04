@@ -56,5 +56,13 @@ namespace SistemaAcademico1
             menutema.Show();
             this.Hide();
         }
+
+        private void btnVariables_Click(object sender, EventArgs e)
+        {
+            Menuvariables menuvariables = new Menuvariables();
+            menuvariables.Show();
+            this.Hide();
+
+        }
     }
 }
