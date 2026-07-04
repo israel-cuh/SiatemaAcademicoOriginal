@@ -14,15 +14,5 @@ namespace SistemaAcademico1
         {
             InitializeComponent();
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblExplicacion_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
