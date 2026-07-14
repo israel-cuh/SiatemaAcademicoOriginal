@@ -8,6 +8,7 @@ namespace SistemaAcademico1
     internal static class MenuLateralHelper
     {
         private const int AnchoMenu = 270;
+        private static readonly Size TamanoComun = new Size(1560, 850);
 
         public static void AgregarMenu(Form formulario, string opcionActiva)
         {
@@ -19,10 +20,9 @@ namespace SistemaAcademico1
             foreach (Control control in formulario.Controls.Cast<Control>().ToList())
                 control.Left += AnchoMenu;
 
-            formulario.ClientSize = new Size(formulario.ClientSize.Width + AnchoMenu, formulario.ClientSize.Height);
-            formulario.MinimumSize = new Size(
-                Math.Max(formulario.MinimumSize.Width, formulario.ClientSize.Width),
-                Math.Max(formulario.MinimumSize.Height, formulario.ClientSize.Height));
+            formulario.ClientSize = TamanoComun;
+            formulario.MinimumSize = TamanoComun;
+            formulario.StartPosition = FormStartPosition.CenterScreen;
 
             MenuLateralControl menu = new MenuLateralControl
             {
