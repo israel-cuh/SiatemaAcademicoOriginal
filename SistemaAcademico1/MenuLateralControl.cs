@@ -26,7 +26,9 @@ namespace SistemaAcademico1
             Color normal = Color.Transparent;
 
             btnInicio.BackColor = OpcionActiva == "Inicio" ? activo : normal;
+            button1.BackColor = OpcionActiva == "Algoritmo" ? activo : normal;
             btnVariables.BackColor = OpcionActiva == "Variables" ? activo : normal;
+            button2.BackColor = OpcionActiva == "Condicionales" ? activo : normal;
             btnCiclos.BackColor = OpcionActiva == "Ciclos" ? activo : normal;
             btnJuego.BackColor = OpcionActiva == "Juego" ? activo : normal;
         }
@@ -36,9 +38,19 @@ namespace SistemaAcademico1
             AbrirFormulario(new MenuEstructura(), OpcionActiva == "Inicio");
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MostrarEnPreparacion("Algoritmo");
+        }
+
         private void btnVariables_Click(object sender, EventArgs e)
         {
             AbrirFormulario(new Menuvariables(), OpcionActiva == "Variables");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MostrarEnPreparacion("Condicionales");
         }
 
         private void btnCiclos_Click(object sender, EventArgs e)
@@ -66,6 +78,15 @@ namespace SistemaAcademico1
                 login.Show();
                 (FormularioActual ?? FindForm())?.Close();
             }
+        }
+
+        private void MostrarEnPreparacion(string tema)
+        {
+            MessageBox.Show(
+                $"La sección de {tema} todavía está en preparación.",
+                "CodeNova",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
         }
 
         private void AbrirFormulario(Form siguiente, bool yaEstoyAqui)
