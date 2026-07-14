@@ -18,6 +18,7 @@ namespace SistemaAcademico1
             rolUsuario = string.IsNullOrWhiteSpace(rol) ? "Docente" : rol;
             InitializeComponent();
             AjustarTamanoComun();
+            AjustarDashboardGrande();
             ConfigurarPantallaPrincipal();
             ConfigurarEventosDelMenu();
         }
@@ -28,6 +29,76 @@ namespace SistemaAcademico1
             MinimumSize = new Size(1560, 850);
             btnMinimizar.Location = new Point(ClientSize.Width - 105, 4);
             btnCerrar.Location = new Point(ClientSize.Width - 55, 4);
+        }
+
+        private void AjustarDashboardGrande()
+        {
+            int anchoContenido = ClientSize.Width - panelLateral.Width;
+            int margen = 45;
+            int separacion = 24;
+            int anchoDisponible = anchoContenido - (margen * 2);
+            int anchoTarjeta = (anchoDisponible - (separacion * 3)) / 4;
+
+            lblBienvenida.Location = new Point(margen, 28);
+            lblBienvenida.Size = new Size(680, 50);
+            lblSubtitulo.Location = new Point(margen + 3, 80);
+            lblSubtitulo.Size = new Size(560, 30);
+            tarjetaFecha.Location = new Point(anchoContenido - margen - tarjetaFecha.Width, 28);
+
+            panelEstadisticas.Location = new Point(margen, 130);
+            panelEstadisticas.Size = new Size(anchoDisponible, 105);
+            tarjetaDocentes.Location = new Point(0, 0);
+            tarjetaEquipo.Location = new Point(anchoTarjeta + separacion, 0);
+            tarjetaMateria.Location = new Point((anchoTarjeta + separacion) * 2, 0);
+            tarjetaCantidadTemas.Location = new Point((anchoTarjeta + separacion) * 3, 0);
+            tarjetaDocentes.Size = new Size(anchoTarjeta, 95);
+            tarjetaEquipo.Size = new Size(anchoTarjeta, 95);
+            tarjetaMateria.Size = new Size(anchoTarjeta, 95);
+            tarjetaCantidadTemas.Size = new Size(anchoTarjeta, 95);
+            lblStatDocentes.Size = new Size(anchoTarjeta - 30, 75);
+            lblStatEquipo.Size = new Size(anchoTarjeta - 30, 75);
+            lblStatMateria.Size = new Size(anchoTarjeta - 30, 75);
+            lblStatTemas.Size = new Size(anchoTarjeta - 30, 75);
+
+            lblTituloTemas.Location = new Point(margen, 260);
+            panelTemas.Location = new Point(margen, 305);
+            panelTemas.Size = new Size(anchoDisponible, 305);
+
+            tarjetaAlgoritmos.Location = new Point(0, 0);
+            tarjetaVariables.Location = new Point(anchoTarjeta + separacion, 0);
+            tarjetaCondicionales.Location = new Point((anchoTarjeta + separacion) * 2, 0);
+            tarjetaCiclos.Location = new Point((anchoTarjeta + separacion) * 3, 0);
+            tarjetaAlgoritmos.Size = new Size(anchoTarjeta, 285);
+            tarjetaVariables.Size = new Size(anchoTarjeta, 285);
+            tarjetaCondicionales.Size = new Size(anchoTarjeta, 285);
+            tarjetaCiclos.Size = new Size(anchoTarjeta, 285);
+
+            AjustarContenidoTarjetaTema(tarjetaAlgoritmos, lblIconoAlgoritmos, lblTituloAlgoritmos, lblDescripcionAlgoritmos, btnAlgoritmos, anchoTarjeta);
+            AjustarContenidoTarjetaTema(tarjetaVariables, lblIconoVariables, lblTituloVariables, lblDescripcionVariables, btnVariables, anchoTarjeta);
+            AjustarContenidoTarjetaTema(tarjetaCondicionales, lblIconoCondicionales, lblTituloCondicionales, lblDescripcionCondicionales, btnCondicionales, anchoTarjeta);
+            AjustarContenidoTarjetaTema(tarjetaCiclos, lblIconoCiclos, lblTituloCiclos, lblDescripcionCiclos, btnCiclos, anchoTarjeta);
+
+            panelAccesos.Location = new Point(margen, 635);
+            panelAccesos.Size = new Size(anchoDisponible, 120);
+            btnAccesoJuego.Location = new Point(25, 58);
+            btnAccesoVariables.Location = new Point(240, 58);
+            btnAccesoCiclos.Location = new Point(455, 58);
+            btnAccesoJuego.Size = new Size(195, 45);
+            btnAccesoVariables.Size = new Size(195, 45);
+            btnAccesoCiclos.Size = new Size(195, 45);
+
+            lblPie.Location = new Point((anchoContenido - lblPie.Width) / 2, 770);
+        }
+
+        private void AjustarContenidoTarjetaTema(Panel tarjeta, Label icono, Label titulo, Label descripcion, Button boton, int anchoTarjeta)
+        {
+            icono.Left = (anchoTarjeta - icono.Width) / 2;
+            titulo.Location = new Point(15, titulo.Top);
+            titulo.Size = new Size(anchoTarjeta - 30, titulo.Height);
+            descripcion.Location = new Point(22, descripcion.Top);
+            descripcion.Size = new Size(anchoTarjeta - 44, descripcion.Height + 8);
+            boton.Location = new Point(22, boton.Top);
+            boton.Size = new Size(anchoTarjeta - 44, boton.Height);
         }
 
         private void ConfigurarPantallaPrincipal()
