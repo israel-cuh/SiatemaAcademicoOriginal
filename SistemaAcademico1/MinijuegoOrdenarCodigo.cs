@@ -70,8 +70,27 @@ namespace SistemaAcademico1
             if (LicenseManager.UsageMode == LicenseUsageMode.Designtime)
                 return;
 
+            AjustarTamanoComun();
             ConfigurarEventos();
             CargarNivel();
+        }
+
+        private void AjustarTamanoComun()
+        {
+            Size tamanoOriginal = ClientSize;
+            Size tamanoComun = new Size(1560, 850);
+            int moverX = (tamanoComun.Width - tamanoOriginal.Width) / 2;
+            int moverY = (tamanoComun.Height - tamanoOriginal.Height) / 2;
+
+            foreach (Control control in Controls.Cast<Control>().ToList())
+            {
+                control.Left += moverX;
+                control.Top += moverY;
+            }
+
+            ClientSize = tamanoComun;
+            MinimumSize = tamanoComun;
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         protected override void OnPaintBackground(PaintEventArgs e)
