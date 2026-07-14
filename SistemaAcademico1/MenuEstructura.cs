@@ -17,8 +17,17 @@ namespace SistemaAcademico1
         {
             rolUsuario = string.IsNullOrWhiteSpace(rol) ? "Docente" : rol;
             InitializeComponent();
+            AjustarTamanoComun();
             ConfigurarPantallaPrincipal();
             ConfigurarEventosDelMenu();
+        }
+
+        private void AjustarTamanoComun()
+        {
+            ClientSize = new Size(1560, 850);
+            MinimumSize = new Size(1560, 850);
+            btnMinimizar.Location = new Point(ClientSize.Width - 105, 4);
+            btnCerrar.Location = new Point(ClientSize.Width - 55, 4);
         }
 
         private void ConfigurarPantallaPrincipal()
