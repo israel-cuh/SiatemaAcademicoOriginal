@@ -77,20 +77,48 @@ namespace SistemaAcademico1
 
         private void AjustarTamanoComun()
         {
-            Size tamanoOriginal = ClientSize;
             Size tamanoComun = new Size(1560, 850);
-            int moverX = (tamanoComun.Width - tamanoOriginal.Width) / 2;
-            int moverY = (tamanoComun.Height - tamanoOriginal.Height) / 2;
-
-            foreach (Control control in Controls.Cast<Control>().ToList())
-            {
-                control.Left += moverX;
-                control.Top += moverY;
-            }
-
             ClientSize = tamanoComun;
             MinimumSize = tamanoComun;
             StartPosition = FormStartPosition.CenterScreen;
+
+            tarjetaTiempo.Location = new Point(40, 25);
+            tituloPrincipal.Location = new Point(430, 28);
+            tituloPrincipal.Size = new Size(700, 50);
+            subtitulo.Location = new Point(430, 80);
+            subtitulo.Size = new Size(700, 30);
+            tarjetaPuntos.Location = new Point(1290, 25);
+            btnPausa.Location = new Point(1500, 38);
+
+            contenedor.Location = new Point(40, 135);
+            contenedor.Size = new Size(1480, 570);
+
+            panelLateral.Location = new Point(22, 22);
+            panelLateral.Size = new Size(330, 526);
+            lblNivel.Size = new Size(285, 78);
+            lblInstruccion.Size = new Size(285, 75);
+            cajaPista.Size = new Size(292, 145);
+            lblPista.Size = new Size(262, 88);
+            btnReiniciar.Location = new Point(20, 455);
+            btnRegresar.Location = new Point(170, 455);
+
+            panelCodigo.Location = new Point(375, 22);
+            panelCodigo.Size = new Size(1080, 526);
+            tituloBloques.Location = new Point(25, 18);
+            ayudaArrastre.Location = new Point(650, 20);
+            ayudaArrastre.Size = new Size(390, 26);
+            lstCodigo.Location = new Point(25, 60);
+            lstCodigo.Size = new Size(930, 350);
+            btnSubir.Location = new Point(980, 110);
+            btnBajar.Location = new Point(980, 180);
+            lblResultado.Location = new Point(25, 438);
+            lblResultado.Size = new Size(1010, 60);
+
+            lblProgreso.Location = new Point(45, 735);
+            progreso.Location = new Point(45, 762);
+            progreso.Size = new Size(640, 20);
+            btnSiguiente.Location = new Point(940, 748);
+            btnVerificar.Location = new Point(1230, 742);
         }
 
         protected override void OnPaintBackground(PaintEventArgs e)
