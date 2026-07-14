@@ -14,6 +14,7 @@ namespace SistemaAcademico1
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuLateralControl));
             lblLogo = new Label();
             lblNombre = new Label();
             lblSistema = new Label();
@@ -22,13 +23,17 @@ namespace SistemaAcademico1
             btnCiclos = new Button();
             btnJuego = new Button();
             btnCerrarSesion = new Button();
+            button1 = new Button();
+            button2 = new Button();
             SuspendLayout();
             // 
             // lblLogo
             // 
+            lblLogo.BackColor = Color.Transparent;
             lblLogo.Font = new Font("Consolas", 34F, FontStyle.Bold);
             lblLogo.ForeColor = Color.FromArgb(55, 116, 255);
-            lblLogo.Location = new Point(55, 25);
+            lblLogo.Image = (Image)resources.GetObject("lblLogo.Image");
+            lblLogo.Location = new Point(54, 13);
             lblLogo.Name = "lblLogo";
             lblLogo.Size = new Size(160, 62);
             lblLogo.TabIndex = 0;
@@ -37,9 +42,11 @@ namespace SistemaAcademico1
             // 
             // lblNombre
             // 
+            lblNombre.BackColor = Color.Transparent;
             lblNombre.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
             lblNombre.ForeColor = Color.White;
-            lblNombre.Location = new Point(25, 92);
+            lblNombre.Image = (Image)resources.GetObject("lblNombre.Image");
+            lblNombre.Location = new Point(25, 75);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(220, 45);
             lblNombre.TabIndex = 1;
@@ -48,9 +55,12 @@ namespace SistemaAcademico1
             // 
             // lblSistema
             // 
+            lblSistema.BackColor = Color.Transparent;
             lblSistema.Font = new Font("Segoe UI", 10F);
             lblSistema.ForeColor = Color.Gainsboro;
-            lblSistema.Location = new Point(30, 142);
+            lblSistema.Image = (Image)resources.GetObject("lblSistema.Image");
+            lblSistema.ImageAlign = ContentAlignment.TopCenter;
+            lblSistema.Location = new Point(25, 120);
             lblSistema.Name = "lblSistema";
             lblSistema.Size = new Size(210, 55);
             lblSistema.TabIndex = 2;
@@ -64,12 +74,12 @@ namespace SistemaAcademico1
             btnInicio.FlatStyle = FlatStyle.Flat;
             btnInicio.Font = new Font("Segoe UI", 11F);
             btnInicio.ForeColor = Color.Gainsboro;
-            btnInicio.Location = new Point(20, 225);
+            btnInicio.Location = new Point(37, 191);
             btnInicio.Name = "btnInicio";
             btnInicio.Padding = new Padding(20, 0, 0, 0);
             btnInicio.Size = new Size(230, 48);
             btnInicio.TabIndex = 3;
-            btnInicio.Text = "⌂    Inicio";
+            btnInicio.Text = "Inicio";
             btnInicio.TextAlign = ContentAlignment.MiddleLeft;
             btnInicio.UseVisualStyleBackColor = false;
             btnInicio.Click += btnInicio_Click;
@@ -81,12 +91,12 @@ namespace SistemaAcademico1
             btnVariables.FlatStyle = FlatStyle.Flat;
             btnVariables.Font = new Font("Segoe UI", 11F);
             btnVariables.ForeColor = Color.Gainsboro;
-            btnVariables.Location = new Point(20, 282);
+            btnVariables.Location = new Point(37, 334);
             btnVariables.Name = "btnVariables";
             btnVariables.Padding = new Padding(20, 0, 0, 0);
             btnVariables.Size = new Size(230, 48);
             btnVariables.TabIndex = 4;
-            btnVariables.Text = "{ }   Variables";
+            btnVariables.Text = "Variables";
             btnVariables.TextAlign = ContentAlignment.MiddleLeft;
             btnVariables.UseVisualStyleBackColor = false;
             btnVariables.Click += btnVariables_Click;
@@ -98,12 +108,12 @@ namespace SistemaAcademico1
             btnCiclos.FlatStyle = FlatStyle.Flat;
             btnCiclos.Font = new Font("Segoe UI", 11F);
             btnCiclos.ForeColor = Color.Gainsboro;
-            btnCiclos.Location = new Point(20, 339);
+            btnCiclos.Location = new Point(37, 495);
             btnCiclos.Name = "btnCiclos";
             btnCiclos.Padding = new Padding(20, 0, 0, 0);
             btnCiclos.Size = new Size(230, 48);
             btnCiclos.TabIndex = 5;
-            btnCiclos.Text = "↻    Ciclos";
+            btnCiclos.Text = "Ciclos";
             btnCiclos.TextAlign = ContentAlignment.MiddleLeft;
             btnCiclos.UseVisualStyleBackColor = false;
             btnCiclos.Click += btnCiclos_Click;
@@ -115,12 +125,12 @@ namespace SistemaAcademico1
             btnJuego.FlatStyle = FlatStyle.Flat;
             btnJuego.Font = new Font("Segoe UI", 11F);
             btnJuego.ForeColor = Color.Gainsboro;
-            btnJuego.Location = new Point(20, 396);
+            btnJuego.Location = new Point(37, 579);
             btnJuego.Name = "btnJuego";
             btnJuego.Padding = new Padding(20, 0, 0, 0);
             btnJuego.Size = new Size(230, 48);
             btnJuego.TabIndex = 6;
-            btnJuego.Text = "🎮   Juego";
+            btnJuego.Text = "Juegos";
             btnJuego.TextAlign = ContentAlignment.MiddleLeft;
             btnJuego.UseVisualStyleBackColor = false;
             btnJuego.Click += btnJuego_Click;
@@ -133,7 +143,7 @@ namespace SistemaAcademico1
             btnCerrarSesion.FlatStyle = FlatStyle.Flat;
             btnCerrarSesion.Font = new Font("Segoe UI", 11F);
             btnCerrarSesion.ForeColor = Color.Gainsboro;
-            btnCerrarSesion.Location = new Point(20, 665);
+            btnCerrarSesion.Location = new Point(15, 681);
             btnCerrarSesion.Name = "btnCerrarSesion";
             btnCerrarSesion.Padding = new Padding(20, 0, 0, 0);
             btnCerrarSesion.Size = new Size(230, 48);
@@ -143,9 +153,45 @@ namespace SistemaAcademico1
             btnCerrarSesion.UseVisualStyleBackColor = false;
             btnCerrarSesion.Click += btnCerrarSesion_Click;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.Transparent;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 11F);
+            button1.ForeColor = Color.Gainsboro;
+            button1.Location = new Point(37, 255);
+            button1.Name = "button1";
+            button1.Padding = new Padding(20, 0, 0, 0);
+            button1.Size = new Size(230, 48);
+            button1.TabIndex = 8;
+            button1.Text = "Algoritmo";
+            button1.TextAlign = ContentAlignment.MiddleLeft;
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.Transparent;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 11F);
+            button2.ForeColor = Color.Gainsboro;
+            button2.Location = new Point(37, 410);
+            button2.Name = "button2";
+            button2.Padding = new Padding(20, 0, 0, 0);
+            button2.Size = new Size(230, 48);
+            button2.TabIndex = 9;
+            button2.Text = "Condicionales";
+            button2.TextAlign = ContentAlignment.MiddleLeft;
+            button2.UseVisualStyleBackColor = false;
+            // 
             // MenuLateralControl
             // 
             BackColor = Color.FromArgb(6, 16, 45);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(lblLogo);
             Controls.Add(lblNombre);
             Controls.Add(lblSistema);
@@ -154,6 +200,7 @@ namespace SistemaAcademico1
             Controls.Add(btnCiclos);
             Controls.Add(btnJuego);
             Controls.Add(btnCerrarSesion);
+            DoubleBuffered = true;
             Name = "MenuLateralControl";
             Size = new Size(270, 752);
             ResumeLayout(false);
@@ -167,5 +214,9 @@ namespace SistemaAcademico1
         private Button btnCiclos;
         private Button btnJuego;
         private Button btnCerrarSesion;
+        private Button button1;
+        private Button button2;
+        private Panel panel1;
+        private Label label1;
     }
 }
