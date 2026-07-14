@@ -22,6 +22,9 @@ namespace SistemaAcademico1
         {
             InitializeComponent();
 
+            if (System.ComponentModel.LicenseManager.UsageMode != System.ComponentModel.LicenseUsageMode.Designtime)
+                MenuLateralHelper.AgregarMenu(this, "Ciclos");
+
             btnWhile.Click += (_, _) => MostrarWhile();
             btnFor.Click += (_, _) => MostrarFor();
             btnDoWhile.Click += (_, _) => MostrarDoWhile();
