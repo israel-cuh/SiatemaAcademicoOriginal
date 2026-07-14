@@ -27,17 +27,20 @@ namespace SistemaAcademico1
         }
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "estudiante" && txtClave.Text == "1234")
+            string usuario = txtUsuario.Text.Trim().ToLower();
+            string clave = txtClave.Text.Trim();
+
+            if (usuario == "estudiante" && clave == "1234")
             {
-               MenuEstructura frm = new MenuEstructura ();
+                MenuEstructura frm = new MenuEstructura("Estudiante");
                 frm.Show();
-                this.Hide();
+                Hide();
             }
-            else if (txtUsuario.Text == "docente" && txtClave.Text == "1234")
+            else if (usuario == "docente" && clave == "1234")
             {
-                MenuEstructura frm = new MenuEstructura();
+                MenuEstructura frm = new MenuEstructura("Docente");
                 frm.Show();
-                this.Hide();
+                Hide();
             }
             else
             {
@@ -100,7 +103,7 @@ namespace SistemaAcademico1
                 mostrar = false;
             }
         }
-        // paara activar y desaptivar el texto de usuario 
+        // para activar y desactivar el texto de usuario
         private void txtUsuario_Enter_1(object sender, EventArgs e)
         {
             if (txtUsuario.Text == "Username")
@@ -115,9 +118,9 @@ namespace SistemaAcademico1
                 txtUsuario.Text = "Username";
             }
         }
-        //fin de activar y desaptivar el texto de usuario
+        // fin de activar y desactivar el texto de usuario
 
-        // para activar y desaptivar el texto de contraseña
+        // para activar y desactivar el texto de contraseña
         private void txtClave_Enter(object sender, EventArgs e)
         {
             if (txtClave.Text == "Password")
@@ -134,7 +137,7 @@ namespace SistemaAcademico1
                 txtClave.Text = "Password";
                 txtClave.UseSystemPasswordChar = false;
             }
-            // fin de activar y desaptivar el texto de contraseña
+            // fin de activar y desactivar el texto de contraseña
         }
     }
 }
