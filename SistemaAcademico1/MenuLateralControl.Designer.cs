@@ -74,7 +74,7 @@ namespace SistemaAcademico1
             btnInicio.FlatStyle = FlatStyle.Flat;
             btnInicio.Font = new Font("Segoe UI", 11F);
             btnInicio.ForeColor = Color.Gainsboro;
-            btnInicio.Location = new Point(37, 191);
+            btnInicio.Location = new Point(20, 191);
             btnInicio.Name = "btnInicio";
             btnInicio.Padding = new Padding(20, 0, 0, 0);
             btnInicio.Size = new Size(230, 48);
@@ -91,7 +91,7 @@ namespace SistemaAcademico1
             btnVariables.FlatStyle = FlatStyle.Flat;
             btnVariables.Font = new Font("Segoe UI", 11F);
             btnVariables.ForeColor = Color.Gainsboro;
-            btnVariables.Location = new Point(37, 334);
+            btnVariables.Location = new Point(20, 334);
             btnVariables.Name = "btnVariables";
             btnVariables.Padding = new Padding(20, 0, 0, 0);
             btnVariables.Size = new Size(230, 48);
@@ -108,7 +108,7 @@ namespace SistemaAcademico1
             btnCiclos.FlatStyle = FlatStyle.Flat;
             btnCiclos.Font = new Font("Segoe UI", 11F);
             btnCiclos.ForeColor = Color.Gainsboro;
-            btnCiclos.Location = new Point(37, 495);
+            btnCiclos.Location = new Point(20, 495);
             btnCiclos.Name = "btnCiclos";
             btnCiclos.Padding = new Padding(20, 0, 0, 0);
             btnCiclos.Size = new Size(230, 48);
@@ -125,7 +125,7 @@ namespace SistemaAcademico1
             btnJuego.FlatStyle = FlatStyle.Flat;
             btnJuego.Font = new Font("Segoe UI", 11F);
             btnJuego.ForeColor = Color.Gainsboro;
-            btnJuego.Location = new Point(37, 579);
+            btnJuego.Location = new Point(20, 579);
             btnJuego.Name = "btnJuego";
             btnJuego.Padding = new Padding(20, 0, 0, 0);
             btnJuego.Size = new Size(230, 48);
@@ -143,7 +143,7 @@ namespace SistemaAcademico1
             btnCerrarSesion.FlatStyle = FlatStyle.Flat;
             btnCerrarSesion.Font = new Font("Segoe UI", 11F);
             btnCerrarSesion.ForeColor = Color.Gainsboro;
-            btnCerrarSesion.Location = new Point(15, 681);
+            btnCerrarSesion.Location = new Point(20, 681);
             btnCerrarSesion.Name = "btnCerrarSesion";
             btnCerrarSesion.Padding = new Padding(20, 0, 0, 0);
             btnCerrarSesion.Size = new Size(230, 48);
@@ -160,7 +160,7 @@ namespace SistemaAcademico1
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 11F);
             button1.ForeColor = Color.Gainsboro;
-            button1.Location = new Point(37, 255);
+            button1.Location = new Point(20, 255);
             button1.Name = "button1";
             button1.Padding = new Padding(20, 0, 0, 0);
             button1.Size = new Size(230, 48);
@@ -168,6 +168,7 @@ namespace SistemaAcademico1
             button1.Text = "Algoritmo";
             button1.TextAlign = ContentAlignment.MiddleLeft;
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -176,7 +177,7 @@ namespace SistemaAcademico1
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 11F);
             button2.ForeColor = Color.Gainsboro;
-            button2.Location = new Point(37, 410);
+            button2.Location = new Point(20, 410);
             button2.Name = "button2";
             button2.Padding = new Padding(20, 0, 0, 0);
             button2.Size = new Size(230, 48);
@@ -184,6 +185,7 @@ namespace SistemaAcademico1
             button2.Text = "Condicionales";
             button2.TextAlign = ContentAlignment.MiddleLeft;
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // MenuLateralControl
             // 
