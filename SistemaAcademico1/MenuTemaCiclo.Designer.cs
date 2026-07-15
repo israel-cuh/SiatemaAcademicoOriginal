@@ -181,7 +181,7 @@
             // 
             // btnAnidados
             // 
-            btnAnidados.Location = new Point(12, 301);
+            btnAnidados.Location = new Point(12, 247);
             btnAnidados.Name = "btnAnidados";
             btnAnidados.Size = new Size(218, 49);
             btnAnidados.TabIndex = 4;
@@ -190,7 +190,7 @@
             // 
             // btnDoWhile
             // 
-            btnDoWhile.Location = new Point(12, 221);
+            btnDoWhile.Location = new Point(12, 168);
             btnDoWhile.Name = "btnDoWhile";
             btnDoWhile.Size = new Size(218, 49);
             btnDoWhile.TabIndex = 3;
@@ -199,7 +199,7 @@
             // 
             // btnFor
             // 
-            btnFor.Location = new Point(12, 137);
+            btnFor.Location = new Point(12, 91);
             btnFor.Name = "btnFor";
             btnFor.Size = new Size(218, 49);
             btnFor.TabIndex = 2;
@@ -208,7 +208,7 @@
             // 
             // btnWhile
             // 
-            btnWhile.Location = new Point(12, 51);
+            btnWhile.Location = new Point(12, 19);
             btnWhile.Name = "btnWhile";
             btnWhile.Size = new Size(218, 49);
             btnWhile.TabIndex = 1;
@@ -219,9 +219,9 @@
             // 
             panelConsejo.BackgroundImage = (Image)resources.GetObject("panelConsejo.BackgroundImage");
             panelConsejo.BackgroundImageLayout = ImageLayout.Stretch;
-            panelConsejo.Location = new Point(3, 490);
+            panelConsejo.Location = new Point(3, 468);
             panelConsejo.Name = "panelConsejo";
-            panelConsejo.Size = new Size(247, 128);
+            panelConsejo.Size = new Size(247, 150);
             panelConsejo.TabIndex = 2;
             // 
             // panel4
@@ -630,7 +630,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(6, 16, 41);
-            ClientSize = new Size(1293, 787);
+            ClientSize = new Size(1278, 751);
             Controls.Add(panel6);
             Controls.Add(panel5);
             Controls.Add(panel4);
