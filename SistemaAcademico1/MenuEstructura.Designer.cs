@@ -60,7 +60,6 @@ namespace SistemaAcademico1
         private Button btnCerrar = null!;
         private Button btnMinimizar = null!;
         private Button btnCerrarSesion = null!;
-        private Button btnInicio = null!;
         private Button btnTemas = null!;
         private Button btnJuego = null!;
         private Button btnVariables = null!;
@@ -85,11 +84,11 @@ namespace SistemaAcademico1
             btnMinimizar = new Button();
             btnCerrar = new Button();
             panelLateral = new Panel();
+            btnInicio = new Button();
             lblLogo = new Label();
             lblNombre = new Label();
             lblSistema = new Label();
             lblCurso = new Label();
-            btnInicio = new Button();
             btnTemas = new Button();
             btnJuego = new Button();
             btnCerrarSesion = new Button();
@@ -196,6 +195,7 @@ namespace SistemaAcademico1
             btnMinimizar.TabIndex = 1;
             btnMinimizar.Text = "—";
             btnMinimizar.UseVisualStyleBackColor = false;
+            btnMinimizar.Click += btnMinimizar_Click_1;
             // 
             // btnCerrar
             // 
@@ -214,11 +214,11 @@ namespace SistemaAcademico1
             // panelLateral
             // 
             panelLateral.BackColor = Color.FromArgb(6, 16, 45);
+            panelLateral.Controls.Add(btnInicio);
             panelLateral.Controls.Add(lblLogo);
             panelLateral.Controls.Add(lblNombre);
             panelLateral.Controls.Add(lblSistema);
             panelLateral.Controls.Add(lblCurso);
-            panelLateral.Controls.Add(btnInicio);
             panelLateral.Controls.Add(btnTemas);
             panelLateral.Controls.Add(btnJuego);
             panelLateral.Controls.Add(btnCerrarSesion);
@@ -228,6 +228,22 @@ namespace SistemaAcademico1
             panelLateral.Name = "panelLateral";
             panelLateral.Size = new Size(270, 752);
             panelLateral.TabIndex = 1;
+            // 
+            // btnInicio
+            // 
+            btnInicio.BackColor = Color.Transparent;
+            btnInicio.FlatAppearance.BorderSize = 0;
+            btnInicio.FlatStyle = FlatStyle.Flat;
+            btnInicio.Font = new Font("Segoe UI", 11F);
+            btnInicio.ForeColor = Color.Gainsboro;
+            btnInicio.Location = new Point(30, 217);
+            btnInicio.Name = "btnInicio";
+            btnInicio.Padding = new Padding(20, 0, 0, 0);
+            btnInicio.Size = new Size(230, 48);
+            btnInicio.TabIndex = 9;
+            btnInicio.Text = "Inicio";
+            btnInicio.TextAlign = ContentAlignment.MiddleLeft;
+            btnInicio.UseVisualStyleBackColor = false;
             // 
             // lblLogo
             // 
@@ -272,22 +288,6 @@ namespace SistemaAcademico1
             lblCurso.TabIndex = 3;
             lblCurso.Text = "PROGRAMACIÓN I";
             lblCurso.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // btnInicio
-            // 
-            btnInicio.BackColor = Color.FromArgb(18, 38, 111);
-            btnInicio.FlatAppearance.BorderSize = 0;
-            btnInicio.FlatStyle = FlatStyle.Flat;
-            btnInicio.Font = new Font("Segoe UI", 11F);
-            btnInicio.ForeColor = Color.Gainsboro;
-            btnInicio.Location = new Point(20, 225);
-            btnInicio.Name = "btnInicio";
-            btnInicio.Padding = new Padding(20, 0, 0, 0);
-            btnInicio.Size = new Size(230, 48);
-            btnInicio.TabIndex = 4;
-            btnInicio.Text = "⌂    Inicio";
-            btnInicio.TextAlign = ContentAlignment.MiddleLeft;
-            btnInicio.UseVisualStyleBackColor = false;
             // 
             // btnTemas
             // 
@@ -937,5 +937,7 @@ namespace SistemaAcademico1
             panelAccesos.ResumeLayout(false);
             ResumeLayout(false);
         }
+
+        private Button btnInicio;
     }
 }

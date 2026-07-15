@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +13,16 @@ namespace SistemaAcademico1
         public Menuvariables()
         {
             InitializeComponent();
+
+            if (LicenseManager.UsageMode != LicenseUsageMode.Designtime)
+                MenuLateralHelper.AgregarMenu(this, "Variables");
+        }
+
+        private void btnIrVariables_Click(object sender, EventArgs e)
+        {
+            FrmVariables frm = new FrmVariables();
+            frm.Show();
+            this.Hide();
         }
     }
 }

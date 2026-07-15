@@ -22,6 +22,12 @@ namespace SistemaAcademico1
         {
             InitializeComponent();
 
+            if (System.ComponentModel.LicenseManager.UsageMode != System.ComponentModel.LicenseUsageMode.Designtime)
+            {
+                MenuLateralHelper.AgregarMenu(this, "Ciclos");
+                AjustarDistribucionGrande();
+            }
+
             btnWhile.Click += (_, _) => MostrarWhile();
             btnFor.Click += (_, _) => MostrarFor();
             btnDoWhile.Click += (_, _) => MostrarDoWhile();
@@ -35,6 +41,40 @@ namespace SistemaAcademico1
 
             OcultarTextosFijosDeWhile();
             MostrarWhile();
+        }
+
+        private void AjustarDistribucionGrande()
+        {
+            int margenIzquierdo = 290;
+            int margenSuperior = 18;
+            int anchoContenido = ClientSize.Width - margenIzquierdo - 30;
+
+            panel2.Location = new Point(margenIzquierdo, margenSuperior);
+            panel2.Size = new Size(250, 430);
+
+            panelConsejo.Location = new Point(margenIzquierdo, 475);
+            panelConsejo.Size = new Size(250, 165);
+
+            panel1.Location = new Point(margenIzquierdo + 270, margenSuperior);
+            panel1.Size = new Size(anchoContenido - 270, 118);
+
+            panel4.Location = new Point(margenIzquierdo + 270, 145);
+            panel4.Size = new Size(500, 535);
+            panelImportante.Location = new Point(12, 430);
+            panelImportante.Size = new Size(468, 87);
+
+            panel5.Location = new Point(margenIzquierdo + 790, 145);
+            panel5.Size = new Size(anchoContenido - 790, 535);
+            txtCodigo.Size = new Size(panel5.Width - 54, 160);
+            txtSalida.Size = new Size(panel5.Width - 54, 175);
+            label3.Size = new Size(panel5.Width - 54, 55);
+            btnLimpiar.Location = new Point(panel5.Width - 248, 205);
+            btnEjecutar.Location = new Point(panel5.Width - 128, 205);
+
+            panel6.Location = new Point(margenIzquierdo, 705);
+            panel6.Size = new Size(anchoContenido, 105);
+            button1.Location = new Point(45, 38);
+            btnjuego.Location = new Point(panel6.Width - btnjuego.Width - 28, 28);
         }
 
         private void MostrarTema(
