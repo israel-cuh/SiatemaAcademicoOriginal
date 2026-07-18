@@ -26,6 +26,7 @@ namespace SistemaAcademico1
             {
                 MenuLateralHelper.AgregarMenu(this, "Ciclos");
                 AjustarDistribucionGrande();
+                ControlesVentanaHelper.Agregar(this, cerrarAplicacion: true);
             }
 
             btnWhile.Click += (_, _) => MostrarWhile();
