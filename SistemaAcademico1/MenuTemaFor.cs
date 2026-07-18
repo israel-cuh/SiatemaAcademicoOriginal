@@ -30,11 +30,9 @@ namespace SistemaAcademico1
 
         private void btnSubDoWhile_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(
-                "El formulario de Ciclo Do While todavía está pendiente.",
-                "CodeNova",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+            MenuTemaDoWhile ventana = new MenuTemaDoWhile();
+            ventana.Show();
+            Hide();
         }
 
         private void btnSubAnidados_Click(object sender, EventArgs e)
