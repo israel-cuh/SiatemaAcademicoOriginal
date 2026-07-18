@@ -40,6 +40,8 @@ namespace SistemaAcademico1
             btnAnidados.Click += (_, _) => MostrarAnidados();
             btnjuego.Click += btnjuego_Click;
 
+            ConfigurarBotonesSubMenu();
+
             txtCodigo.ReadOnly = true;
             txtCodigo.TabStop = false;
             richTextBox1.ReadOnly = true;
@@ -47,6 +49,23 @@ namespace SistemaAcademico1
 
             OcultarTextosFijosDeWhile();
             MostrarWhile();
+        }
+
+        private void ConfigurarBotonesSubMenu()
+        {
+            Button[] botones = { btnWhile, btnFor, btnDoWhile, btnAnidados };
+
+            foreach (Button boton in botones)
+            {
+                boton.UseVisualStyleBackColor = false;
+                boton.FlatStyle = FlatStyle.Flat;
+                boton.FlatAppearance.BorderSize = 1;
+                boton.FlatAppearance.BorderColor = Color.FromArgb(16, 35, 80);
+                boton.FlatAppearance.MouseOverBackColor = Color.FromArgb(28, 49, 105);
+                boton.FlatAppearance.MouseDownBackColor = Color.FromArgb(132, 78, 255);
+                boton.BackColor = Color.FromArgb(6, 16, 41);
+                boton.ForeColor = Color.White;
+            }
         }
 
         private void AjustarDistribucionGrande()
@@ -154,14 +173,17 @@ namespace SistemaAcademico1
 
             foreach (Button boton in botones)
             {
-                boton.BackColor = Color.White;
-                boton.ForeColor = Color.FromArgb(6, 16, 41);
+                boton.UseVisualStyleBackColor = false;
                 boton.FlatStyle = FlatStyle.Flat;
-                boton.FlatAppearance.BorderSize = 0;
+                boton.FlatAppearance.BorderSize = 1;
+                boton.FlatAppearance.BorderColor = Color.FromArgb(16, 35, 80);
+                boton.BackColor = Color.FromArgb(6, 16, 41);
+                boton.ForeColor = Color.White;
             }
 
             botonActivo.BackColor = Color.FromArgb(132, 78, 255);
             botonActivo.ForeColor = Color.White;
+            botonActivo.FlatAppearance.BorderColor = Color.FromArgb(160, 120, 255);
         }
 
         private void OcultarTextosFijosDeWhile()
