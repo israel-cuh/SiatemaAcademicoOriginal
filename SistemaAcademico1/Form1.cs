@@ -18,6 +18,7 @@ namespace SistemaAcademico1
         public Login()
         {
             InitializeComponent();
+            ControlesVentanaHelper.Agregar(this, cerrarAplicacion: true);
             this.MouseDown += Login_MouseDown;
             txtUsuario.KeyDown += txtUsuario_KeyDown;
             txtClave.KeyDown += txtClave_KeyDown;
