@@ -181,6 +181,9 @@
             // 
             // btnAnidados
             // 
+            btnAnidados.FlatStyle = FlatStyle.Popup;
+            btnAnidados.ForeColor = SystemColors.ButtonFace;
+            btnAnidados.Image = (Image)resources.GetObject("btnAnidados.Image");
             btnAnidados.Location = new Point(12, 247);
             btnAnidados.Name = "btnAnidados";
             btnAnidados.Size = new Size(218, 49);
@@ -190,6 +193,9 @@
             // 
             // btnDoWhile
             // 
+            btnDoWhile.FlatStyle = FlatStyle.Popup;
+            btnDoWhile.ForeColor = SystemColors.ButtonFace;
+            btnDoWhile.Image = (Image)resources.GetObject("btnDoWhile.Image");
             btnDoWhile.Location = new Point(12, 168);
             btnDoWhile.Name = "btnDoWhile";
             btnDoWhile.Size = new Size(218, 49);
@@ -199,6 +205,9 @@
             // 
             // btnFor
             // 
+            btnFor.FlatStyle = FlatStyle.Popup;
+            btnFor.ForeColor = SystemColors.ButtonFace;
+            btnFor.Image = (Image)resources.GetObject("btnFor.Image");
             btnFor.Location = new Point(12, 91);
             btnFor.Name = "btnFor";
             btnFor.Size = new Size(218, 49);
@@ -208,6 +217,9 @@
             // 
             // btnWhile
             // 
+            btnWhile.FlatStyle = FlatStyle.Popup;
+            btnWhile.ForeColor = SystemColors.ButtonHighlight;
+            btnWhile.Image = (Image)resources.GetObject("btnWhile.Image");
             btnWhile.Location = new Point(12, 19);
             btnWhile.Name = "btnWhile";
             btnWhile.Size = new Size(218, 49);

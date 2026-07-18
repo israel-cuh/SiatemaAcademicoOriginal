@@ -22,7 +22,7 @@ namespace SistemaAcademico1
 
         private void MarcarOpcionActiva()
         {
-            Color activo = Color.FromArgb(18, 38, 111);
+            Color activo = Color.FromArgb(13, 22, 97);
             Color normal = Color.Transparent;
 
             btnInicio.BackColor = OpcionActiva == "Inicio" ? activo : normal;
