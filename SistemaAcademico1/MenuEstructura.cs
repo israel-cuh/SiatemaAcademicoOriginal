@@ -22,6 +22,11 @@ namespace SistemaAcademico1
             ConfigurarPantallaPrincipal();
             ConfigurarEventosDelMenu();
             ControlesVentanaHelper.Agregar(this, cerrarAplicacion: true);
+            Resize += (_, _) =>
+            {
+                if (WindowState != FormWindowState.Minimized)
+                    AjustarDashboardGrande();
+            };
         }
 
         private void AjustarTamanoComun()
@@ -44,7 +49,7 @@ namespace SistemaAcademico1
             lblBienvenida.Size = new Size(680, 50);
             lblSubtitulo.Location = new Point(margen + 3, 80);
             lblSubtitulo.Size = new Size(560, 30);
-            tarjetaFecha.Location = new Point(anchoContenido - margen - tarjetaFecha.Width, 28);
+            tarjetaFecha.Location = new Point(anchoContenido - margen - tarjetaFecha.Width - 135, 28);
 
             panelEstadisticas.Location = new Point(margen, 130);
             panelEstadisticas.Size = new Size(anchoDisponible, 105);
@@ -79,7 +84,7 @@ namespace SistemaAcademico1
             AjustarContenidoTarjetaTema(tarjetaCondicionales, lblIconoCondicionales, lblTituloCondicionales, lblDescripcionCondicionales, btnCondicionales, anchoTarjeta);
             AjustarContenidoTarjetaTema(tarjetaCiclos, lblIconoCiclos, lblTituloCiclos, lblDescripcionCiclos, btnCiclos, anchoTarjeta);
 
-            panelAccesos.Location = new Point(margen, 635);
+            panelAccesos.Location = new Point(margen, Math.Max(635, ClientSize.Height - 215));
             panelAccesos.Size = new Size(anchoDisponible, 120);
             btnAccesoJuego.Location = new Point(25, 58);
             btnAccesoVariables.Location = new Point(240, 58);
@@ -88,7 +93,7 @@ namespace SistemaAcademico1
             btnAccesoVariables.Size = new Size(195, 45);
             btnAccesoCiclos.Size = new Size(195, 45);
 
-            lblPie.Location = new Point((anchoContenido - lblPie.Width) / 2, 770);
+            lblPie.Location = new Point((anchoContenido - lblPie.Width) / 2, Math.Max(770, ClientSize.Height - 65));
         }
 
         private void AjustarContenidoTarjetaTema(Panel tarjeta, Label icono, Label titulo, Label descripcion, Button boton, int anchoTarjeta)
