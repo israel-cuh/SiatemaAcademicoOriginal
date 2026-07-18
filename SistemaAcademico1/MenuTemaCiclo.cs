@@ -27,6 +27,11 @@ namespace SistemaAcademico1
                 MenuLateralHelper.AgregarMenu(this, "Ciclos");
                 AjustarDistribucionGrande();
                 ControlesVentanaHelper.Agregar(this, cerrarAplicacion: true);
+                Resize += (_, _) =>
+                {
+                    if (WindowState != FormWindowState.Minimized)
+                        AjustarDistribucionGrande();
+                };
             }
 
             btnWhile.Click += (_, _) => MostrarWhile();
@@ -48,31 +53,34 @@ namespace SistemaAcademico1
         {
             int margenIzquierdo = 290;
             int margenSuperior = 18;
-            int anchoContenido = ClientSize.Width - margenIzquierdo - 30;
+            int anchoContenido = Math.Max(900, ClientSize.Width - margenIzquierdo - 30);
+            int altoPaneles = Math.Max(535, ClientSize.Height - 315);
+            int posicionPanelInferior = Math.Max(705, ClientSize.Height - 145);
 
             panel2.Location = new Point(margenIzquierdo, margenSuperior);
-            panel2.Size = new Size(250, 430);
+            panel2.Size = new Size(250, Math.Max(430, altoPaneles - 105));
 
-            panelConsejo.Location = new Point(margenIzquierdo, 475);
+            panelConsejo.Location = new Point(margenIzquierdo, Math.Max(475, ClientSize.Height - 375));
             panelConsejo.Size = new Size(250, 165);
 
             panel1.Location = new Point(margenIzquierdo + 270, margenSuperior);
-            panel1.Size = new Size(anchoContenido - 270, 118);
+            panel1.Size = new Size(Math.Max(620, anchoContenido - 270), 118);
 
             panel4.Location = new Point(margenIzquierdo + 270, 145);
-            panel4.Size = new Size(500, 535);
-            panelImportante.Location = new Point(12, 430);
+            panel4.Size = new Size(500, altoPaneles);
+            panelImportante.Location = new Point(12, panel4.Height - 105);
             panelImportante.Size = new Size(468, 87);
 
             panel5.Location = new Point(margenIzquierdo + 790, 145);
-            panel5.Size = new Size(anchoContenido - 790, 535);
+            panel5.Size = new Size(Math.Max(420, anchoContenido - 790), altoPaneles);
             txtCodigo.Size = new Size(panel5.Width - 54, 160);
-            txtSalida.Size = new Size(panel5.Width - 54, 175);
+            txtSalida.Size = new Size(panel5.Width - 54, Math.Max(175, panel5.Height - 360));
+            label3.Location = new Point(label3.Left, txtSalida.Bottom + 10);
             label3.Size = new Size(panel5.Width - 54, 55);
             btnLimpiar.Location = new Point(panel5.Width - 248, 205);
             btnEjecutar.Location = new Point(panel5.Width - 128, 205);
 
-            panel6.Location = new Point(margenIzquierdo, 705);
+            panel6.Location = new Point(margenIzquierdo, posicionPanelInferior);
             panel6.Size = new Size(anchoContenido, 105);
             button1.Location = new Point(45, 38);
             btnjuego.Location = new Point(panel6.Width - btnjuego.Width - 28, 28);
