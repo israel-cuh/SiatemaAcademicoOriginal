@@ -36,7 +36,7 @@ namespace SistemaAcademico1
 
             btnWhile.Click += (_, _) => MostrarWhile();
             btnFor.Click += (_, _) => AbrirCicloFor();
-            btnDoWhile.Click += (_, _) => MostrarDoWhile();
+            btnDoWhile.Click += (_, _) => AbrirCicloDoWhile();
             btnAnidados.Click += (_, _) => MostrarAnidados();
             btnjuego.Click += btnjuego_Click;
 
@@ -152,6 +152,13 @@ namespace SistemaAcademico1
         private void AbrirCicloFor()
         {
             MenuTemaFor ventana = new MenuTemaFor();
+            ventana.Show();
+            Hide();
+        }
+
+        private void AbrirCicloDoWhile()
+        {
+            MenuTemaDoWhile ventana = new MenuTemaDoWhile();
             ventana.Show();
             Hide();
         }
