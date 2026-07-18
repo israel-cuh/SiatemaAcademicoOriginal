@@ -35,7 +35,7 @@ namespace SistemaAcademico1
             }
 
             btnWhile.Click += (_, _) => MostrarWhile();
-            btnFor.Click += (_, _) => MostrarFor();
+            btnFor.Click += (_, _) => AbrirCicloFor();
             btnDoWhile.Click += (_, _) => MostrarDoWhile();
             btnAnidados.Click += (_, _) => MostrarAnidados();
             btnjuego.Click += btnjuego_Click;
@@ -117,16 +117,11 @@ namespace SistemaAcademico1
                 "Comienza en 1, imprime el número y lo incrementa hasta llegar a 5.");
         }
 
-        private void MostrarFor()
+        private void AbrirCicloFor()
         {
-            MostrarTema(
-                TemaCiclo.For,
-                btnFor,
-                "Ciclo For",
-                "Repite instrucciones una cantidad determinada de veces.",
-                "for (inicio; condicion; incremento)\n{\n    instrucciones;\n}",
-                "for (int i = 1; i <= 5; i++)\n{\n    Console.WriteLine(i);\n}",
-                "El ciclo controla el inicio, la condición y el incremento en una sola línea.");
+            CicloFor ventana = new CicloFor();
+            ventana.Show();
+            Hide();
         }
 
         private void MostrarDoWhile()
