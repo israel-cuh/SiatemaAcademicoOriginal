@@ -21,6 +21,7 @@ namespace SistemaAcademico1
             AjustarDashboardGrande();
             ConfigurarPantallaPrincipal();
             ConfigurarEventosDelMenu();
+            ControlesVentanaHelper.Agregar(this, cerrarAplicacion: true);
         }
 
         private void AjustarTamanoComun()
