@@ -119,7 +119,7 @@ namespace SistemaAcademico1
 
         private void AbrirCicloFor()
         {
-            CicloFor ventana = new CicloFor();
+            MenuTemaFor ventana = new MenuTemaFor();
             ventana.Show();
             Hide();
         }
