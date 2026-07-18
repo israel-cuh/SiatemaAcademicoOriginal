@@ -41,7 +41,6 @@ namespace SistemaAcademico1
             btnjuego.Click += btnjuego_Click;
 
             ConfigurarBotonesSubMenu();
-            PrepararLabelExplicacion();
 
             txtCodigo.ReadOnly = true;
             txtCodigo.TabStop = false;
@@ -69,16 +68,6 @@ namespace SistemaAcademico1
             }
         }
 
-        private void PrepararLabelExplicacion()
-        {
-            label12.AutoSize = false;
-            label12.Location = new Point(12, 260);
-            label12.Size = new Size(455, 140);
-            label12.Font = new Font("Segoe UI", 10F, FontStyle.Regular);
-            label12.ForeColor = Color.WhiteSmoke;
-            label12.BackColor = Color.Transparent;
-        }
-
         private void AjustarDistribucionGrande()
         {
             int margenIzquierdo = 290;
@@ -100,7 +89,6 @@ namespace SistemaAcademico1
             panel4.Size = new Size(500, altoPaneles);
             panelImportante.Location = new Point(12, panel4.Height - 105);
             panelImportante.Size = new Size(468, 87);
-            label12.Size = new Size(panel4.Width - 45, 140);
 
             panel5.Location = new Point(margenIzquierdo + 790, 145);
             panel5.Size = new Size(Math.Max(420, anchoContenido - 790), altoPaneles);
@@ -132,22 +120,21 @@ namespace SistemaAcademico1
             richTextBox1.Text = sintaxis;
             txtCodigo.Text = ejemplo;
             label3.Text = explicacion;
-            label12.Text = ObtenerExplicacionTema(tema);
-            label12.Visible = true;
             txtSalida.Clear();
+            MostrarExplicacionConColores(tema == TemaCiclo.While);
             MarcarBotonActivo(botonActivo);
         }
 
-        private string ObtenerExplicacionTema(TemaCiclo tema)
+        private void MostrarExplicacionConColores(bool mostrar)
         {
-            return tema switch
+            Control[] explicacionColores =
             {
-                TemaCiclo.While => "Explicación\n1. Se evalúa la condición.\n2. Si es verdadera, se ejecutan las instrucciones.\n3. Luego vuelve a evaluarse la condición.\n4. El ciclo termina cuando la condición es falsa.",
-                TemaCiclo.For => "Explicación\n1. Se inicializa la variable de control.\n2. Se evalúa la condición.\n3. Si es verdadera, se ejecuta el bloque.\n4. Se realiza el incremento.\n5. El proceso se repite hasta que la condición sea falsa.",
-                TemaCiclo.DoWhile => "Explicación\n1. Primero se ejecutan las instrucciones.\n2. Después se evalúa la condición.\n3. Si es verdadera, el ciclo vuelve a repetirse.\n4. Siempre se ejecuta al menos una vez.",
-                TemaCiclo.Anidados => "Explicación\n1. El ciclo externo inicia una repetición.\n2. El ciclo interno se ejecuta completo.\n3. Luego el ciclo externo continúa.\n4. Es útil para tablas, matrices o recorridos dobles.",
-                _ => string.Empty
+                label12, label13, label14, label15, label16,
+                label17, label18, label19
             };
+
+            foreach (Control control in explicacionColores)
+                control.Visible = mostrar;
         }
 
         private void MostrarWhile()
@@ -217,8 +204,7 @@ namespace SistemaAcademico1
             Control[] textosFijos =
             {
                 label4, label5, label6, label7, label8,
-                label13, label14, label15, label16,
-                label17, label18, label19, panel3
+                panel3
             };
 
             foreach (Control control in textosFijos)

@@ -17,6 +17,7 @@ namespace SistemaAcademico1
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CicloFor));
             panelTitulo = new Panel();
             lblSubtitulo = new Label();
             lblTituloAzul = new Label();
@@ -65,7 +66,7 @@ namespace SistemaAcademico1
             lblSubtitulo.ForeColor = Color.Gainsboro;
             lblSubtitulo.Location = new Point(32, 70);
             lblSubtitulo.Name = "lblSubtitulo";
-            lblSubtitulo.Size = new Size(627, 25);
+            lblSubtitulo.Size = new Size(587, 25);
             lblSubtitulo.TabIndex = 2;
             lblSubtitulo.Text = "Comprende cómo funcionan los ciclos for para repetir instrucciones.";
             // 
@@ -76,7 +77,7 @@ namespace SistemaAcademico1
             lblTituloAzul.ForeColor = Color.FromArgb(132, 78, 255);
             lblTituloAzul.Location = new Point(242, 18);
             lblTituloAzul.Name = "lblTituloAzul";
-            lblTituloAzul.Size = new Size(180, 50);
+            lblTituloAzul.Size = new Size(175, 50);
             lblTituloAzul.TabIndex = 1;
             lblTituloAzul.Text = "Ciclo For";
             // 
@@ -87,7 +88,7 @@ namespace SistemaAcademico1
             lblTitulo.ForeColor = Color.White;
             lblTitulo.Location = new Point(32, 18);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(212, 50);
+            lblTitulo.Size = new Size(186, 50);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "Aprender";
             // 
@@ -110,7 +111,7 @@ namespace SistemaAcademico1
             lblImportante.BackColor = Color.FromArgb(27, 28, 75);
             lblImportante.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblImportante.ForeColor = Color.FromArgb(190, 140, 255);
-            lblImportante.Location = new Point(28, 430);
+            lblImportante.Location = new Point(28, 443);
             lblImportante.Name = "lblImportante";
             lblImportante.Size = new Size(520, 62);
             lblImportante.TabIndex = 5;
@@ -122,9 +123,9 @@ namespace SistemaAcademico1
             lblExplicacion.ForeColor = Color.WhiteSmoke;
             lblExplicacion.Location = new Point(28, 285);
             lblExplicacion.Name = "lblExplicacion";
-            lblExplicacion.Size = new Size(520, 132);
+            lblExplicacion.Size = new Size(520, 144);
             lblExplicacion.TabIndex = 4;
-            lblExplicacion.Text = "Explicación\r\n1. Se inicializa la variable de control.\r\n2. Se evalúa la condición.\r\n3. Si es verdadera, se ejecuta el bloque.\r\n4. Se realiza el incremento.\r\n5. Se repite hasta que la condición sea falsa.";
+            lblExplicacion.Text = resources.GetString("lblExplicacion.Text");
             // 
             // lblSintaxis
             // 
@@ -133,7 +134,7 @@ namespace SistemaAcademico1
             lblSintaxis.ForeColor = Color.White;
             lblSintaxis.Location = new Point(28, 125);
             lblSintaxis.Name = "lblSintaxis";
-            lblSintaxis.Size = new Size(83, 28);
+            lblSintaxis.Size = new Size(86, 28);
             lblSintaxis.TabIndex = 3;
             lblSintaxis.Text = "Sintaxis";
             // 
@@ -167,7 +168,7 @@ namespace SistemaAcademico1
             lblTituloTema.ForeColor = Color.White;
             lblTituloTema.Location = new Point(28, 18);
             lblTituloTema.Name = "lblTituloTema";
-            lblTituloTema.Size = new Size(127, 37);
+            lblTituloTema.Size = new Size(129, 37);
             lblTituloTema.TabIndex = 0;
             lblTituloTema.Text = "Ciclo For";
             // 
@@ -194,7 +195,7 @@ namespace SistemaAcademico1
             lblQuePasa.ForeColor = Color.White;
             lblQuePasa.Location = new Point(28, 420);
             lblQuePasa.Name = "lblQuePasa";
-            lblQuePasa.Size = new Size(192, 25);
+            lblQuePasa.Size = new Size(185, 25);
             lblQuePasa.TabIndex = 7;
             lblQuePasa.Text = "¿Qué está pasando?";
             // 
@@ -243,7 +244,7 @@ namespace SistemaAcademico1
             lblSalida.ForeColor = Color.White;
             lblSalida.Location = new Point(28, 222);
             lblSalida.Name = "lblSalida";
-            lblSalida.Size = new Size(164, 25);
+            lblSalida.Size = new Size(165, 25);
             lblSalida.TabIndex = 3;
             lblSalida.Text = "Salida en consola";
             // 
@@ -267,7 +268,7 @@ namespace SistemaAcademico1
             lblCodigo.ForeColor = Color.White;
             lblCodigo.Location = new Point(28, 18);
             lblCodigo.Name = "lblCodigo";
-            lblCodigo.Size = new Size(190, 28);
+            lblCodigo.Size = new Size(197, 28);
             lblCodigo.TabIndex = 1;
             lblCodigo.Text = "Ejemplo interactivo";
             // 
@@ -315,7 +316,7 @@ namespace SistemaAcademico1
             btnSiguiente.FlatStyle = FlatStyle.Flat;
             btnSiguiente.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSiguiente.ForeColor = Color.White;
-            btnSiguiente.Location = new Point(380, 18);
+            btnSiguiente.Location = new Point(658, 18);
             btnSiguiente.Name = "btnSiguiente";
             btnSiguiente.Size = new Size(190, 50);
             btnSiguiente.TabIndex = 1;

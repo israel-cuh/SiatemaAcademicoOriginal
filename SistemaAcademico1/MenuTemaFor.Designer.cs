@@ -17,16 +17,24 @@ namespace SistemaAcademico1
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuTemaFor));
             panelSubMenu = new Panel();
             btnSubAnidados = new Button();
             btnSubDoWhile = new Button();
             btnSubFor = new Button();
             btnSubWhile = new Button();
             panelTitulo = new Panel();
+            panel2 = new Panel();
             lblSubtitulo = new Label();
             lblTituloAzul = new Label();
             lblTitulo = new Label();
             panelIzquierdo = new Panel();
+            label2 = new Label();
+            label1 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            panel1 = new Panel();
             lblImportante = new Label();
             lblExplicacion = new Label();
             lblSintaxis = new Label();
@@ -47,18 +55,22 @@ namespace SistemaAcademico1
             btnSiguiente = new Button();
             btnPracticar = new Button();
             panelConsejo = new Panel();
-            lblConsejo = new Label();
+            label14 = new Label();
+            label7 = new Label();
+            label17 = new Label();
+            label8 = new Label();
+            label9 = new Label();
             panelSubMenu.SuspendLayout();
             panelTitulo.SuspendLayout();
             panelIzquierdo.SuspendLayout();
             panelDerecho.SuspendLayout();
             panelInferior.SuspendLayout();
-            panelConsejo.SuspendLayout();
             SuspendLayout();
             // 
             // panelSubMenu
             // 
             panelSubMenu.BackColor = Color.FromArgb(8, 22, 56);
+            panelSubMenu.BackgroundImage = (Image)resources.GetObject("panelSubMenu.BackgroundImage");
             panelSubMenu.Controls.Add(btnSubAnidados);
             panelSubMenu.Controls.Add(btnSubDoWhile);
             panelSubMenu.Controls.Add(btnSubFor);
@@ -70,8 +82,9 @@ namespace SistemaAcademico1
             // 
             // btnSubAnidados
             // 
-            btnSubAnidados.BackColor = Color.FromArgb(6, 16, 41);
-            btnSubAnidados.FlatStyle = FlatStyle.Flat;
+            btnSubAnidados.BackColor = Color.Transparent;
+            btnSubAnidados.BackgroundImage = (Image)resources.GetObject("btnSubAnidados.BackgroundImage");
+            btnSubAnidados.FlatStyle = FlatStyle.Popup;
             btnSubAnidados.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSubAnidados.ForeColor = Color.White;
             btnSubAnidados.Location = new Point(20, 230);
@@ -84,8 +97,9 @@ namespace SistemaAcademico1
             // 
             // btnSubDoWhile
             // 
-            btnSubDoWhile.BackColor = Color.FromArgb(6, 16, 41);
-            btnSubDoWhile.FlatStyle = FlatStyle.Flat;
+            btnSubDoWhile.BackColor = Color.Transparent;
+            btnSubDoWhile.BackgroundImage = (Image)resources.GetObject("btnSubDoWhile.BackgroundImage");
+            btnSubDoWhile.FlatStyle = FlatStyle.Popup;
             btnSubDoWhile.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSubDoWhile.ForeColor = Color.White;
             btnSubDoWhile.Location = new Point(20, 155);
@@ -98,8 +112,9 @@ namespace SistemaAcademico1
             // 
             // btnSubFor
             // 
-            btnSubFor.BackColor = Color.FromArgb(132, 78, 255);
-            btnSubFor.FlatStyle = FlatStyle.Flat;
+            btnSubFor.BackColor = Color.Transparent;
+            btnSubFor.BackgroundImage = (Image)resources.GetObject("btnSubFor.BackgroundImage");
+            btnSubFor.FlatStyle = FlatStyle.Popup;
             btnSubFor.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSubFor.ForeColor = Color.White;
             btnSubFor.Location = new Point(20, 80);
@@ -112,8 +127,9 @@ namespace SistemaAcademico1
             // 
             // btnSubWhile
             // 
-            btnSubWhile.BackColor = Color.FromArgb(6, 16, 41);
-            btnSubWhile.FlatStyle = FlatStyle.Flat;
+            btnSubWhile.BackColor = Color.Transparent;
+            btnSubWhile.BackgroundImage = (Image)resources.GetObject("btnSubWhile.BackgroundImage");
+            btnSubWhile.FlatStyle = FlatStyle.Popup;
             btnSubWhile.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSubWhile.ForeColor = Color.White;
             btnSubWhile.Location = new Point(20, 15);
@@ -127,60 +143,157 @@ namespace SistemaAcademico1
             // panelTitulo
             // 
             panelTitulo.BackColor = Color.FromArgb(8, 22, 56);
+            panelTitulo.BackgroundImage = (Image)resources.GetObject("panelTitulo.BackgroundImage");
+            panelTitulo.BackgroundImageLayout = ImageLayout.Stretch;
+            panelTitulo.Controls.Add(panel2);
             panelTitulo.Controls.Add(lblSubtitulo);
             panelTitulo.Controls.Add(lblTituloAzul);
             panelTitulo.Controls.Add(lblTitulo);
-            panelTitulo.Location = new Point(300, 25);
+            panelTitulo.Location = new Point(314, 25);
             panelTitulo.Name = "panelTitulo";
-            panelTitulo.Size = new Size(930, 120);
+            panelTitulo.Size = new Size(916, 120);
             panelTitulo.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
+            panel2.BackgroundImageLayout = ImageLayout.Stretch;
+            panel2.Location = new Point(497, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(419, 120);
+            panel2.TabIndex = 3;
             // 
             // lblSubtitulo
             // 
             lblSubtitulo.AutoSize = true;
-            lblSubtitulo.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblSubtitulo.BackColor = Color.Transparent;
+            lblSubtitulo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblSubtitulo.ForeColor = Color.Gainsboro;
             lblSubtitulo.Location = new Point(32, 70);
             lblSubtitulo.Name = "lblSubtitulo";
-            lblSubtitulo.Size = new Size(627, 25);
+            lblSubtitulo.Size = new Size(459, 20);
             lblSubtitulo.TabIndex = 2;
             lblSubtitulo.Text = "Comprende cómo funcionan los ciclos for para repetir instrucciones.";
             // 
             // lblTituloAzul
             // 
             lblTituloAzul.AutoSize = true;
+            lblTituloAzul.BackColor = Color.Transparent;
             lblTituloAzul.Font = new Font("Segoe UI", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTituloAzul.ForeColor = Color.FromArgb(132, 78, 255);
             lblTituloAzul.Location = new Point(242, 18);
             lblTituloAzul.Name = "lblTituloAzul";
-            lblTituloAzul.Size = new Size(180, 50);
+            lblTituloAzul.Size = new Size(175, 50);
             lblTituloAzul.TabIndex = 1;
             lblTituloAzul.Text = "Ciclo For";
             // 
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
+            lblTitulo.BackColor = Color.Transparent;
             lblTitulo.Font = new Font("Segoe UI", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitulo.ForeColor = Color.White;
             lblTitulo.Location = new Point(32, 18);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(212, 50);
+            lblTitulo.Size = new Size(186, 50);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "Aprender";
             // 
             // panelIzquierdo
             // 
             panelIzquierdo.BackColor = Color.FromArgb(8, 22, 56);
+            panelIzquierdo.BackgroundImage = (Image)resources.GetObject("panelIzquierdo.BackgroundImage");
+            panelIzquierdo.BackgroundImageLayout = ImageLayout.Stretch;
+            panelIzquierdo.Controls.Add(panel1);
+            panelIzquierdo.Controls.Add(label9);
+            panelIzquierdo.Controls.Add(label8);
+            panelIzquierdo.Controls.Add(label17);
+            panelIzquierdo.Controls.Add(label7);
+            panelIzquierdo.Controls.Add(label14);
+            panelIzquierdo.Controls.Add(label2);
+            panelIzquierdo.Controls.Add(label1);
+            panelIzquierdo.Controls.Add(label6);
+            panelIzquierdo.Controls.Add(label5);
+            panelIzquierdo.Controls.Add(label4);
             panelIzquierdo.Controls.Add(lblImportante);
             panelIzquierdo.Controls.Add(lblExplicacion);
             panelIzquierdo.Controls.Add(lblSintaxis);
             panelIzquierdo.Controls.Add(txtSintaxis);
             panelIzquierdo.Controls.Add(lblDescripcionTema);
             panelIzquierdo.Controls.Add(lblTituloTema);
-            panelIzquierdo.Location = new Point(300, 165);
+            panelIzquierdo.Location = new Point(314, 151);
             panelIzquierdo.Name = "panelIzquierdo";
             panelIzquierdo.Size = new Size(455, 520);
             panelIzquierdo.TabIndex = 2;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.FromArgb(6, 16, 41);
+            label2.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.DodgerBlue;
+            label2.Location = new Point(302, 183);
+            label2.Name = "label2";
+            label2.Size = new Size(83, 20);
+            label2.TabIndex = 11;
+            label2.Text = "Condicion";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.FromArgb(6, 16, 41);
+            label1.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.DodgerBlue;
+            label1.Location = new Point(204, 183);
+            label1.Name = "label1";
+            label1.Size = new Size(92, 20);
+            label1.TabIndex = 10;
+            label1.Text = "Incremento";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.FromArgb(6, 16, 41);
+            label6.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.Green;
+            label6.Location = new Point(82, 218);
+            label6.Name = "label6";
+            label6.Size = new Size(194, 20);
+            label6.TabIndex = 9;
+            label6.Text = "// Intrucciones a ejecutar ";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.FromArgb(6, 16, 41);
+            label5.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.DodgerBlue;
+            label5.Location = new Point(82, 183);
+            label5.Name = "label5";
+            label5.Size = new Size(105, 20);
+            label5.TabIndex = 8;
+            label5.Text = "inicializacion";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = Color.FromArgb(6, 16, 41);
+            label4.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.DarkViolet;
+            label4.Location = new Point(32, 183);
+            label4.Name = "label4";
+            label4.Size = new Size(34, 20);
+            label4.TabIndex = 7;
+            label4.Text = "For";
+            // 
+            // panel1
+            // 
+            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Location = new Point(9, 420);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(431, 87);
+            panel1.TabIndex = 6;
             // 
             // lblImportante
             // 
@@ -195,62 +308,68 @@ namespace SistemaAcademico1
             // 
             // lblExplicacion
             // 
-            lblExplicacion.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblExplicacion.BackColor = Color.Transparent;
+            lblExplicacion.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblExplicacion.ForeColor = Color.WhiteSmoke;
             lblExplicacion.Location = new Point(24, 285);
             lblExplicacion.Name = "lblExplicacion";
             lblExplicacion.Size = new Size(405, 132);
             lblExplicacion.TabIndex = 4;
-            lblExplicacion.Text = "Explicación\r\n1. Se inicializa la variable de control.\r\n2. Se evalúa la condición.\r\n3. Si es verdadera, se ejecuta el bloque.\r\n4. Se realiza el incremento.\r\n5. Se repite hasta que la condición sea falsa.";
+            lblExplicacion.Text = "Explicación\r\n1. Se inicializa la variable de control.\r\n2. Se evalúa la condición.\r\n\r\n4. Se realiza el incremento.\r\n";
             // 
             // lblSintaxis
             // 
             lblSintaxis.AutoSize = true;
+            lblSintaxis.BackColor = Color.Transparent;
             lblSintaxis.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblSintaxis.ForeColor = Color.White;
             lblSintaxis.Location = new Point(24, 125);
             lblSintaxis.Name = "lblSintaxis";
-            lblSintaxis.Size = new Size(83, 28);
+            lblSintaxis.Size = new Size(86, 28);
             lblSintaxis.TabIndex = 3;
             lblSintaxis.Text = "Sintaxis";
             // 
             // txtSintaxis
             // 
             txtSintaxis.BackColor = Color.FromArgb(6, 16, 41);
-            txtSintaxis.BorderStyle = BorderStyle.FixedSingle;
+            txtSintaxis.BorderStyle = BorderStyle.None;
             txtSintaxis.Font = new Font("Consolas", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtSintaxis.ForeColor = Color.White;
             txtSintaxis.Location = new Point(24, 160);
             txtSintaxis.Name = "txtSintaxis";
             txtSintaxis.ReadOnly = true;
-            txtSintaxis.Size = new Size(405, 105);
+            txtSintaxis.Size = new Size(416, 105);
             txtSintaxis.TabIndex = 2;
-            txtSintaxis.Text = "for (inicialización; condición; incremento)\n{\n    // instrucciones a ejecutar\n}";
+            txtSintaxis.Text = "\n     (            ,           ,         )\n{\n\n}";
             // 
             // lblDescripcionTema
             // 
+            lblDescripcionTema.BackColor = Color.Transparent;
             lblDescripcionTema.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblDescripcionTema.ForeColor = Color.Gainsboro;
             lblDescripcionTema.Location = new Point(24, 58);
             lblDescripcionTema.Name = "lblDescripcionTema";
             lblDescripcionTema.Size = new Size(405, 60);
             lblDescripcionTema.TabIndex = 1;
-            lblDescripcionTema.Text = "El ciclo for permite repetir un bloque de código un número determinado de veces.";
+            lblDescripcionTema.Text = "El ciclo      permite repetir un bloque de código un número determinado de veces.";
             // 
             // lblTituloTema
             // 
             lblTituloTema.AutoSize = true;
+            lblTituloTema.BackColor = Color.Transparent;
             lblTituloTema.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTituloTema.ForeColor = Color.White;
             lblTituloTema.Location = new Point(24, 18);
             lblTituloTema.Name = "lblTituloTema";
-            lblTituloTema.Size = new Size(127, 37);
+            lblTituloTema.Size = new Size(129, 37);
             lblTituloTema.TabIndex = 0;
             lblTituloTema.Text = "Ciclo For";
             // 
             // panelDerecho
             // 
             panelDerecho.BackColor = Color.FromArgb(8, 22, 56);
+            panelDerecho.BackgroundImage = (Image)resources.GetObject("panelDerecho.BackgroundImage");
+            panelDerecho.BackgroundImageLayout = ImageLayout.Stretch;
             panelDerecho.Controls.Add(lblQuePasa);
             panelDerecho.Controls.Add(lblExplicacionCodigo);
             panelDerecho.Controls.Add(btnLimpiar);
@@ -259,7 +378,7 @@ namespace SistemaAcademico1
             panelDerecho.Controls.Add(txtSalida);
             panelDerecho.Controls.Add(lblCodigo);
             panelDerecho.Controls.Add(txtCodigo);
-            panelDerecho.Location = new Point(775, 165);
+            panelDerecho.Location = new Point(775, 151);
             panelDerecho.Name = "panelDerecho";
             panelDerecho.Size = new Size(455, 520);
             panelDerecho.TabIndex = 3;
@@ -267,16 +386,18 @@ namespace SistemaAcademico1
             // lblQuePasa
             // 
             lblQuePasa.AutoSize = true;
+            lblQuePasa.BackColor = Color.Transparent;
             lblQuePasa.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblQuePasa.ForeColor = Color.White;
             lblQuePasa.Location = new Point(24, 420);
             lblQuePasa.Name = "lblQuePasa";
-            lblQuePasa.Size = new Size(192, 25);
+            lblQuePasa.Size = new Size(185, 25);
             lblQuePasa.TabIndex = 7;
             lblQuePasa.Text = "¿Qué está pasando?";
             // 
             // lblExplicacionCodigo
             // 
+            lblExplicacionCodigo.BackColor = Color.Transparent;
             lblExplicacionCodigo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblExplicacionCodigo.ForeColor = Color.Gainsboro;
             lblExplicacionCodigo.Location = new Point(24, 450);
@@ -288,7 +409,7 @@ namespace SistemaAcademico1
             // btnLimpiar
             // 
             btnLimpiar.BackColor = Color.FromArgb(132, 78, 255);
-            btnLimpiar.FlatStyle = FlatStyle.Flat;
+            btnLimpiar.FlatStyle = FlatStyle.Popup;
             btnLimpiar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLimpiar.ForeColor = Color.White;
             btnLimpiar.Location = new Point(235, 218);
@@ -302,7 +423,7 @@ namespace SistemaAcademico1
             // btnEjecutar
             // 
             btnEjecutar.BackColor = Color.FromArgb(132, 78, 255);
-            btnEjecutar.FlatStyle = FlatStyle.Flat;
+            btnEjecutar.FlatStyle = FlatStyle.Popup;
             btnEjecutar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEjecutar.ForeColor = Color.White;
             btnEjecutar.Location = new Point(335, 218);
@@ -316,18 +437,19 @@ namespace SistemaAcademico1
             // lblSalida
             // 
             lblSalida.AutoSize = true;
+            lblSalida.BackColor = Color.Transparent;
             lblSalida.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblSalida.ForeColor = Color.White;
             lblSalida.Location = new Point(24, 222);
             lblSalida.Name = "lblSalida";
-            lblSalida.Size = new Size(164, 25);
+            lblSalida.Size = new Size(165, 25);
             lblSalida.TabIndex = 3;
             lblSalida.Text = "Salida en consola";
             // 
             // txtSalida
             // 
             txtSalida.BackColor = Color.FromArgb(6, 16, 41);
-            txtSalida.BorderStyle = BorderStyle.FixedSingle;
+            txtSalida.BorderStyle = BorderStyle.None;
             txtSalida.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtSalida.ForeColor = Color.Lime;
             txtSalida.Location = new Point(24, 260);
@@ -340,18 +462,19 @@ namespace SistemaAcademico1
             // lblCodigo
             // 
             lblCodigo.AutoSize = true;
+            lblCodigo.BackColor = Color.Transparent;
             lblCodigo.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblCodigo.ForeColor = Color.White;
             lblCodigo.Location = new Point(24, 18);
             lblCodigo.Name = "lblCodigo";
-            lblCodigo.Size = new Size(190, 28);
+            lblCodigo.Size = new Size(197, 28);
             lblCodigo.TabIndex = 1;
             lblCodigo.Text = "Ejemplo interactivo";
             // 
             // txtCodigo
             // 
             txtCodigo.BackColor = Color.FromArgb(6, 16, 41);
-            txtCodigo.BorderStyle = BorderStyle.FixedSingle;
+            txtCodigo.BorderStyle = BorderStyle.None;
             txtCodigo.Font = new Font("Consolas", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtCodigo.ForeColor = Color.White;
             txtCodigo.Location = new Point(24, 58);
@@ -364,23 +487,26 @@ namespace SistemaAcademico1
             // panelInferior
             // 
             panelInferior.BackColor = Color.FromArgb(8, 22, 56);
+            panelInferior.BackgroundImage = (Image)resources.GetObject("panelInferior.BackgroundImage");
+            panelInferior.BackgroundImageLayout = ImageLayout.Stretch;
             panelInferior.Controls.Add(btnAnterior);
             panelInferior.Controls.Add(btnSiguiente);
             panelInferior.Controls.Add(btnPracticar);
-            panelInferior.Location = new Point(300, 705);
+            panelInferior.Location = new Point(30, 677);
             panelInferior.Name = "panelInferior";
-            panelInferior.Size = new Size(930, 85);
+            panelInferior.Size = new Size(1200, 85);
             panelInferior.TabIndex = 4;
             // 
             // btnAnterior
             // 
             btnAnterior.BackColor = Color.FromArgb(10, 25, 65);
-            btnAnterior.FlatStyle = FlatStyle.Flat;
+            btnAnterior.BackgroundImage = (Image)resources.GetObject("btnAnterior.BackgroundImage");
+            btnAnterior.FlatStyle = FlatStyle.Popup;
             btnAnterior.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAnterior.ForeColor = Color.White;
-            btnAnterior.Location = new Point(40, 18);
+            btnAnterior.Location = new Point(24, 10);
             btnAnterior.Name = "btnAnterior";
-            btnAnterior.Size = new Size(180, 50);
+            btnAnterior.Size = new Size(217, 67);
             btnAnterior.TabIndex = 0;
             btnAnterior.Text = "← Anterior\r\nCiclo While";
             btnAnterior.UseVisualStyleBackColor = false;
@@ -389,12 +515,13 @@ namespace SistemaAcademico1
             // btnSiguiente
             // 
             btnSiguiente.BackColor = Color.FromArgb(132, 78, 255);
-            btnSiguiente.FlatStyle = FlatStyle.Flat;
+            btnSiguiente.BackgroundImage = (Image)resources.GetObject("btnSiguiente.BackgroundImage");
+            btnSiguiente.FlatStyle = FlatStyle.Popup;
             btnSiguiente.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSiguiente.ForeColor = Color.White;
-            btnSiguiente.Location = new Point(250, 18);
+            btnSiguiente.Location = new Point(274, 10);
             btnSiguiente.Name = "btnSiguiente";
-            btnSiguiente.Size = new Size(190, 50);
+            btnSiguiente.Size = new Size(217, 64);
             btnSiguiente.TabIndex = 1;
             btnSiguiente.Text = "Siguiente →\r\nCiclo Do While";
             btnSiguiente.UseVisualStyleBackColor = false;
@@ -403,12 +530,12 @@ namespace SistemaAcademico1
             // btnPracticar
             // 
             btnPracticar.BackColor = Color.FromArgb(10, 25, 65);
-            btnPracticar.FlatStyle = FlatStyle.Flat;
+            btnPracticar.FlatStyle = FlatStyle.Popup;
             btnPracticar.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnPracticar.ForeColor = Color.White;
-            btnPracticar.Location = new Point(680, 18);
+            btnPracticar.Location = new Point(937, 18);
             btnPracticar.Name = "btnPracticar";
-            btnPracticar.Size = new Size(220, 50);
+            btnPracticar.Size = new Size(237, 50);
             btnPracticar.TabIndex = 2;
             btnPracticar.Text = "🎮 Practicar lo aprendido";
             btnPracticar.UseVisualStyleBackColor = false;
@@ -417,28 +544,79 @@ namespace SistemaAcademico1
             // panelConsejo
             // 
             panelConsejo.BackColor = Color.FromArgb(8, 22, 56);
-            panelConsejo.Controls.Add(lblConsejo);
-            panelConsejo.Location = new Point(30, 435);
+            panelConsejo.BackgroundImage = (Image)resources.GetObject("panelConsejo.BackgroundImage");
+            panelConsejo.BackgroundImageLayout = ImageLayout.Stretch;
+            panelConsejo.Location = new Point(30, 521);
             panelConsejo.Name = "panelConsejo";
-            panelConsejo.Size = new Size(250, 165);
+            panelConsejo.Size = new Size(250, 150);
             panelConsejo.TabIndex = 5;
             // 
-            // lblConsejo
+            // label14
             // 
-            lblConsejo.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblConsejo.ForeColor = Color.WhiteSmoke;
-            lblConsejo.Location = new Point(18, 18);
-            lblConsejo.Name = "lblConsejo";
-            lblConsejo.Size = new Size(214, 128);
-            lblConsejo.TabIndex = 0;
-            lblConsejo.Text = "💡 Consejo\r\nUsa for cuando ya sabes cuántas veces quieres repetir el código.";
+            label14.AutoSize = true;
+            label14.BackColor = Color.Transparent;
+            label14.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label14.ForeColor = SystemColors.ButtonFace;
+            label14.Location = new Point(24, 349);
+            label14.Name = "label14";
+            label14.Size = new Size(282, 18);
+            label14.TabIndex = 14;
+            label14.Text = "3. Si es                 , se ejecuta el bloque.";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.FromArgb(0, 64, 0);
+            label7.Location = new Point(77, 347);
+            label7.Name = "label7";
+            label7.Size = new Size(79, 20);
+            label7.TabIndex = 15;
+            label7.Text = "verdadera";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.BackColor = Color.Transparent;
+            label17.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label17.ForeColor = SystemColors.ButtonFace;
+            label17.Location = new Point(24, 387);
+            label17.Name = "label17";
+            label17.Size = new Size(280, 36);
+            label17.TabIndex = 17;
+            label17.Text = "5. Se repite hasta que la condición sea\r\n\r\n";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.BackColor = Color.Transparent;
+            label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.FromArgb(192, 0, 0);
+            label8.Location = new Point(302, 387);
+            label8.Name = "label8";
+            label8.Size = new Size(46, 20);
+            label8.TabIndex = 18;
+            label8.Text = "falsa.";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.BackColor = Color.Transparent;
+            label9.Font = new Font("Arial Narrow", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.ForeColor = Color.FromArgb(192, 0, 192);
+            label9.Location = new Point(80, 59);
+            label9.Name = "label9";
+            label9.Size = new Size(30, 22);
+            label9.TabIndex = 19;
+            label9.Text = "for";
             // 
             // MenuTemaFor
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(6, 16, 41);
-            ClientSize = new Size(1270, 820);
+            ClientSize = new Size(1278, 773);
             Controls.Add(panelConsejo);
             Controls.Add(panelInferior);
             Controls.Add(panelDerecho);
@@ -457,7 +635,6 @@ namespace SistemaAcademico1
             panelDerecho.ResumeLayout(false);
             panelDerecho.PerformLayout();
             panelInferior.ResumeLayout(false);
-            panelConsejo.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -493,6 +670,17 @@ namespace SistemaAcademico1
         private Button btnSiguiente;
         private Button btnPracticar;
         private Panel panelConsejo;
-        private Label lblConsejo;
+        private Panel panel1;
+        private Panel panel2;
+        private Label label4;
+        private Label label5;
+        private Label label6;
+        private Label label2;
+        private Label label1;
+        private Label label7;
+        private Label label14;
+        private Label label8;
+        private Label label17;
+        private Label label9;
     }
 }

@@ -181,6 +181,7 @@
             // 
             // btnAnidados
             // 
+            btnAnidados.BackColor = Color.Transparent;
             btnAnidados.FlatStyle = FlatStyle.Popup;
             btnAnidados.ForeColor = SystemColors.ButtonFace;
             btnAnidados.Image = (Image)resources.GetObject("btnAnidados.Image");
@@ -189,10 +190,11 @@
             btnAnidados.Size = new Size(218, 49);
             btnAnidados.TabIndex = 4;
             btnAnidados.Text = "Ciclos Anidados";
-            btnAnidados.UseVisualStyleBackColor = true;
+            btnAnidados.UseVisualStyleBackColor = false;
             // 
             // btnDoWhile
             // 
+            btnDoWhile.BackColor = Color.Transparent;
             btnDoWhile.FlatStyle = FlatStyle.Popup;
             btnDoWhile.ForeColor = SystemColors.ButtonFace;
             btnDoWhile.Image = (Image)resources.GetObject("btnDoWhile.Image");
@@ -201,10 +203,11 @@
             btnDoWhile.Size = new Size(218, 49);
             btnDoWhile.TabIndex = 3;
             btnDoWhile.Text = "Ciclo Do While";
-            btnDoWhile.UseVisualStyleBackColor = true;
+            btnDoWhile.UseVisualStyleBackColor = false;
             // 
             // btnFor
             // 
+            btnFor.BackColor = Color.Transparent;
             btnFor.FlatStyle = FlatStyle.Popup;
             btnFor.ForeColor = SystemColors.ButtonFace;
             btnFor.Image = (Image)resources.GetObject("btnFor.Image");
@@ -213,10 +216,11 @@
             btnFor.Size = new Size(218, 49);
             btnFor.TabIndex = 2;
             btnFor.Text = "Ciclo For";
-            btnFor.UseVisualStyleBackColor = true;
+            btnFor.UseVisualStyleBackColor = false;
             // 
             // btnWhile
             // 
+            btnWhile.BackColor = Color.Transparent;
             btnWhile.FlatStyle = FlatStyle.Popup;
             btnWhile.ForeColor = SystemColors.ButtonHighlight;
             btnWhile.Image = (Image)resources.GetObject("btnWhile.Image");
@@ -225,7 +229,7 @@
             btnWhile.Size = new Size(218, 49);
             btnWhile.TabIndex = 1;
             btnWhile.Text = "Ciclo while";
-            btnWhile.UseVisualStyleBackColor = true;
+            btnWhile.UseVisualStyleBackColor = false;
             // 
             // panelConsejo
             // 

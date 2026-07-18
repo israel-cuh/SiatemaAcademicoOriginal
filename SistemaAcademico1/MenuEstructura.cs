@@ -237,5 +237,10 @@ namespace SistemaAcademico1
         private void lblFecha_Click(object sender, EventArgs e)
         {
         }
+
+        private void btnJuego_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
