@@ -29,12 +29,17 @@ namespace SistemaAcademico1
             lblTituloAzul = new Label();
             lblTitulo = new Label();
             panelIzquierdo = new Panel();
+            panel1 = new Panel();
+            label9 = new Label();
+            label8 = new Label();
+            label17 = new Label();
+            label7 = new Label();
+            label14 = new Label();
             label2 = new Label();
             label1 = new Label();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
-            panel1 = new Panel();
             lblImportante = new Label();
             lblExplicacion = new Label();
             lblSintaxis = new Label();
@@ -55,11 +60,6 @@ namespace SistemaAcademico1
             btnSiguiente = new Button();
             btnPracticar = new Button();
             panelConsejo = new Panel();
-            label14 = new Label();
-            label7 = new Label();
-            label17 = new Label();
-            label8 = new Label();
-            label9 = new Label();
             panelSubMenu.SuspendLayout();
             panelTitulo.SuspendLayout();
             panelIzquierdo.SuspendLayout();
@@ -181,7 +181,7 @@ namespace SistemaAcademico1
             lblTituloAzul.BackColor = Color.Transparent;
             lblTituloAzul.Font = new Font("Segoe UI", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTituloAzul.ForeColor = Color.FromArgb(132, 78, 255);
-            lblTituloAzul.Location = new Point(242, 18);
+            lblTituloAzul.Location = new Point(224, 20);
             lblTituloAzul.Name = "lblTituloAzul";
             lblTituloAzul.Size = new Size(175, 50);
             lblTituloAzul.TabIndex = 1;
@@ -225,6 +225,75 @@ namespace SistemaAcademico1
             panelIzquierdo.Name = "panelIzquierdo";
             panelIzquierdo.Size = new Size(455, 520);
             panelIzquierdo.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Location = new Point(9, 420);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(431, 87);
+            panel1.TabIndex = 6;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.BackColor = Color.Transparent;
+            label9.Font = new Font("Arial Narrow", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.ForeColor = Color.FromArgb(192, 0, 192);
+            label9.Location = new Point(80, 59);
+            label9.Name = "label9";
+            label9.Size = new Size(30, 22);
+            label9.TabIndex = 19;
+            label9.Text = "for";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.BackColor = Color.Transparent;
+            label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.FromArgb(192, 0, 0);
+            label8.Location = new Point(302, 387);
+            label8.Name = "label8";
+            label8.Size = new Size(46, 20);
+            label8.TabIndex = 18;
+            label8.Text = "falsa.";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.BackColor = Color.Transparent;
+            label17.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label17.ForeColor = SystemColors.ButtonFace;
+            label17.Location = new Point(24, 387);
+            label17.Name = "label17";
+            label17.Size = new Size(280, 36);
+            label17.TabIndex = 17;
+            label17.Text = "5. Se repite hasta que la condición sea\r\n\r\n";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.FromArgb(0, 64, 0);
+            label7.Location = new Point(77, 347);
+            label7.Name = "label7";
+            label7.Size = new Size(79, 20);
+            label7.TabIndex = 15;
+            label7.Text = "verdadera";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.BackColor = Color.Transparent;
+            label14.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label14.ForeColor = SystemColors.ButtonFace;
+            label14.Location = new Point(24, 349);
+            label14.Name = "label14";
+            label14.Size = new Size(282, 18);
+            label14.TabIndex = 14;
+            label14.Text = "3. Si es                 , se ejecuta el bloque.";
             // 
             // label2
             // 
@@ -285,15 +354,6 @@ namespace SistemaAcademico1
             label4.Size = new Size(34, 20);
             label4.TabIndex = 7;
             label4.Text = "For";
-            // 
-            // panel1
-            // 
-            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
-            panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            panel1.Location = new Point(9, 420);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(431, 87);
-            panel1.TabIndex = 6;
             // 
             // lblImportante
             // 
@@ -550,66 +610,6 @@ namespace SistemaAcademico1
             panelConsejo.Name = "panelConsejo";
             panelConsejo.Size = new Size(250, 150);
             panelConsejo.TabIndex = 5;
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.BackColor = Color.Transparent;
-            label14.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label14.ForeColor = SystemColors.ButtonFace;
-            label14.Location = new Point(24, 349);
-            label14.Name = "label14";
-            label14.Size = new Size(282, 18);
-            label14.TabIndex = 14;
-            label14.Text = "3. Si es                 , se ejecuta el bloque.";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.BackColor = Color.Transparent;
-            label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.FromArgb(0, 64, 0);
-            label7.Location = new Point(77, 347);
-            label7.Name = "label7";
-            label7.Size = new Size(79, 20);
-            label7.TabIndex = 15;
-            label7.Text = "verdadera";
-            // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.BackColor = Color.Transparent;
-            label17.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label17.ForeColor = SystemColors.ButtonFace;
-            label17.Location = new Point(24, 387);
-            label17.Name = "label17";
-            label17.Size = new Size(280, 36);
-            label17.TabIndex = 17;
-            label17.Text = "5. Se repite hasta que la condición sea\r\n\r\n";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.BackColor = Color.Transparent;
-            label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.ForeColor = Color.FromArgb(192, 0, 0);
-            label8.Location = new Point(302, 387);
-            label8.Name = "label8";
-            label8.Size = new Size(46, 20);
-            label8.TabIndex = 18;
-            label8.Text = "falsa.";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.Transparent;
-            label9.Font = new Font("Arial Narrow", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.ForeColor = Color.FromArgb(192, 0, 192);
-            label9.Location = new Point(80, 59);
-            label9.Name = "label9";
-            label9.Size = new Size(30, 22);
-            label9.TabIndex = 19;
-            label9.Text = "for";
             // 
             // MenuTemaFor
             // 
