@@ -204,6 +204,7 @@
             btnDoWhile.TabIndex = 3;
             btnDoWhile.Text = "Ciclo Do While";
             btnDoWhile.UseVisualStyleBackColor = false;
+            btnDoWhile.Click += btnDoWhile_Click;
             // 
             // btnFor
             // 
@@ -529,7 +530,7 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = SystemColors.ButtonFace;
-            label3.Location = new Point(18, 438);
+            label3.Location = new Point(18, 431);
             label3.Name = "label3";
             label3.Size = new Size(414, 40);
             label3.TabIndex = 5;

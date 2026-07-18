@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace SistemaAcademico1
 {
-    public partial class MenuTemaFor : Form
+    public partial class MenuTemaDoWhile : Form
     {
-        public MenuTemaFor()
+        public MenuTemaDoWhile()
         {
             InitializeComponent();
 
@@ -25,14 +25,14 @@ namespace SistemaAcademico1
 
         private void btnSubFor_Click(object sender, EventArgs e)
         {
-            txtSalida.Clear();
+            MenuTemaFor ventana = new MenuTemaFor();
+            ventana.Show();
+            Hide();
         }
 
         private void btnSubDoWhile_Click(object sender, EventArgs e)
         {
-            MenuTemaDoWhile ventana = new MenuTemaDoWhile();
-            ventana.Show();
-            Hide();
+            txtSalida.Clear();
         }
 
         private void btnSubAnidados_Click(object sender, EventArgs e)
@@ -48,8 +48,13 @@ namespace SistemaAcademico1
         {
             txtSalida.Clear();
 
-            for (int i = 1; i <= 5; i++)
+            int i = 1;
+            do
+            {
                 txtSalida.AppendText(i + Environment.NewLine);
+                i++;
+            }
+            while (i <= 5);
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -59,12 +64,12 @@ namespace SistemaAcademico1
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {
-            btnSubWhile_Click(sender, e);
+            btnSubFor_Click(sender, e);
         }
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            btnSubDoWhile_Click(sender, e);
+            btnSubAnidados_Click(sender, e);
         }
 
         private void btnPracticar_Click(object sender, EventArgs e)
