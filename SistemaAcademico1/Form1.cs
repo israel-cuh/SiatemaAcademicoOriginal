@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
@@ -9,6 +11,9 @@ namespace SistemaAcademico1
 
     {
         private bool mostrar = false;
+        private Size tamanoBaseLogin;
+        private readonly Dictionary<Control, Rectangle> posicionesOriginales = new();
+        private readonly Dictionary<Control, float> fuentesOriginales = new();
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -18,7 +23,14 @@ namespace SistemaAcademico1
         public Login()
         {
             InitializeComponent();
+            GuardarDisenoOriginal();
             ControlesVentanaHelper.Agregar(this, cerrarAplicacion: true);
+            AjustarLoginResponsivo();
+            Resize += (_, _) =>
+            {
+                if (WindowState != FormWindowState.Minimized)
+                    AjustarLoginResponsivo();
+            };
             this.MouseDown += Login_MouseDown;
             txtUsuario.KeyDown += txtUsuario_KeyDown;
             txtClave.KeyDown += txtClave_KeyDown;
@@ -26,6 +38,53 @@ namespace SistemaAcademico1
             txtUsuario.Text = "Username";
             txtClave.Text = "Password";
         }
+
+        private void GuardarDisenoOriginal()
+        {
+            tamanoBaseLogin = ClientSize;
+            posicionesOriginales.Clear();
+            fuentesOriginales.Clear();
+
+            foreach (Control control in Controls)
+            {
+                if (control is VentanaControl)
+                    continue;
+
+                posicionesOriginales[control] = control.Bounds;
+                fuentesOriginales[control] = control.Font.Size;
+            }
+        }
+
+        private void AjustarLoginResponsivo()
+        {
+            if (tamanoBaseLogin.Width == 0 || tamanoBaseLogin.Height == 0)
+                return;
+
+            float escala = Math.Min(
+                ClientSize.Width / (float)tamanoBaseLogin.Width,
+                ClientSize.Height / (float)tamanoBaseLogin.Height);
+
+            int anchoEscalado = (int)(tamanoBaseLogin.Width * escala);
+            int altoEscalado = (int)(tamanoBaseLogin.Height * escala);
+            int desplazamientoX = (ClientSize.Width - anchoEscalado) / 2;
+            int desplazamientoY = (ClientSize.Height - altoEscalado) / 2;
+
+            foreach (var item in posicionesOriginales)
+            {
+                Control control = item.Key;
+                Rectangle original = item.Value;
+
+                control.Bounds = new Rectangle(
+                    desplazamientoX + (int)(original.X * escala),
+                    desplazamientoY + (int)(original.Y * escala),
+                    Math.Max(1, (int)(original.Width * escala)),
+                    Math.Max(1, (int)(original.Height * escala)));
+
+                if (fuentesOriginales.TryGetValue(control, out float tamanoFuente))
+                    control.Font = new Font(control.Font.FontFamily, Math.Max(7F, tamanoFuente * escala), control.Font.Style);
+            }
+        }
+
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             string usuario = txtUsuario.Text.Trim().ToLower();
