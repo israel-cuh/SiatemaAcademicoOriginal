@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -6,7 +7,12 @@ namespace SistemaAcademico1
 {
     public partial class MenuLateralControl : UserControl
     {
+        [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Form? FormularioActual { get; set; }
+
+        [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string OpcionActiva { get; set; } = "Inicio";
 
         public MenuLateralControl()

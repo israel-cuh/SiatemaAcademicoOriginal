@@ -18,7 +18,6 @@ namespace SistemaAcademico1
         private void InitializeComponent()
         {
             btnMinimizar = new Button();
-            btnMaximizar = new Button();
             btnCerrar = new Button();
             SuspendLayout();
             // 
@@ -41,25 +40,6 @@ namespace SistemaAcademico1
             btnMinimizar.UseVisualStyleBackColor = false;
             btnMinimizar.Click += btnMinimizar_Click;
             // 
-            // btnMaximizar
-            // 
-            btnMaximizar.BackColor = Color.FromArgb(28, 49, 105);
-            btnMaximizar.Cursor = Cursors.Hand;
-            btnMaximizar.FlatAppearance.BorderColor = Color.FromArgb(70, 95, 170);
-            btnMaximizar.FlatAppearance.MouseDownBackColor = Color.FromArgb(132, 78, 255);
-            btnMaximizar.FlatAppearance.MouseOverBackColor = Color.FromArgb(75, 105, 210);
-            btnMaximizar.FlatStyle = FlatStyle.Flat;
-            btnMaximizar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            btnMaximizar.ForeColor = Color.White;
-            btnMaximizar.Location = new Point(41, 0);
-            btnMaximizar.Name = "btnMaximizar";
-            btnMaximizar.Size = new Size(36, 28);
-            btnMaximizar.TabIndex = 1;
-            btnMaximizar.TabStop = false;
-            btnMaximizar.Text = "□";
-            btnMaximizar.UseVisualStyleBackColor = false;
-            btnMaximizar.Click += btnMaximizar_Click;
-            // 
             // btnCerrar
             // 
             btnCerrar.BackColor = Color.FromArgb(160, 45, 65);
@@ -70,10 +50,10 @@ namespace SistemaAcademico1
             btnCerrar.FlatStyle = FlatStyle.Flat;
             btnCerrar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnCerrar.ForeColor = Color.White;
-            btnCerrar.Location = new Point(82, 0);
+            btnCerrar.Location = new Point(41, 0);
             btnCerrar.Name = "btnCerrar";
             btnCerrar.Size = new Size(36, 28);
-            btnCerrar.TabIndex = 2;
+            btnCerrar.TabIndex = 1;
             btnCerrar.TabStop = false;
             btnCerrar.Text = "X";
             btnCerrar.UseVisualStyleBackColor = false;
@@ -85,17 +65,15 @@ namespace SistemaAcademico1
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Transparent;
             Controls.Add(btnCerrar);
-            Controls.Add(btnMaximizar);
             Controls.Add(btnMinimizar);
             Name = "VentanaControl";
-            Size = new Size(118, 28);
+            Size = new Size(77, 28);
             ResumeLayout(false);
         }
 
         #endregion
 
         private Button btnMinimizar;
-        private Button btnMaximizar;
         private Button btnCerrar;
     }
 }

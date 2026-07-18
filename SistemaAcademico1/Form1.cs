@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace SistemaAcademico1
 {
