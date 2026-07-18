@@ -16,6 +16,36 @@ namespace SistemaAcademico1
             }
         }
 
+        private void btnSubWhile_Click(object sender, EventArgs e)
+        {
+            MenuTemaCiclo ventana = new MenuTemaCiclo();
+            ventana.Show();
+            Hide();
+        }
+
+        private void btnSubFor_Click(object sender, EventArgs e)
+        {
+            txtSalida.Clear();
+        }
+
+        private void btnSubDoWhile_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+                "El formulario de Ciclo Do While todavía está pendiente.",
+                "CodeNova",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+        }
+
+        private void btnSubAnidados_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+                "El formulario de Ciclos Anidados todavía está pendiente.",
+                "CodeNova",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+        }
+
         private void btnEjecutar_Click(object sender, EventArgs e)
         {
             txtSalida.Clear();
@@ -31,18 +61,12 @@ namespace SistemaAcademico1
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {
-            MenuTemaCiclo ventana = new MenuTemaCiclo();
-            ventana.Show();
-            Hide();
+            btnSubWhile_Click(sender, e);
         }
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(
-                "El formulario de Ciclo Do While todavía está pendiente.",
-                "CodeNova",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+            btnSubDoWhile_Click(sender, e);
         }
 
         private void btnPracticar_Click(object sender, EventArgs e)
