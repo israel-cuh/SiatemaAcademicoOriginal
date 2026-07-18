@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -7,11 +8,14 @@ namespace SistemaAcademico1
 {
     internal static class ControlesVentanaHelper
     {
-        private const int AnchoBoton = 42;
-        private const int AltoBoton = 32;
-        private const int Separacion = 6;
-        private const int MargenSuperior = 8;
-        private const int MargenDerecho = 12;
+        private const int AnchoBoton = 36;
+        private const int AltoBoton = 28;
+        private const int Separacion = 5;
+        private const int MargenSuperior = 6;
+        private const int MargenDerecho = 10;
+
+        private static readonly Dictionary<Form, Rectangle> PosicionNormal = new();
+        private static readonly Dictionary<Form, Size> TamanoMinimoOriginal = new();
 
         public static void Agregar(Form formulario, bool cerrarAplicacion = true)
         {
@@ -44,7 +48,7 @@ namespace SistemaAcademico1
             formulario.Resize += (_, _) =>
             {
                 UbicarBotones(formulario, btnMinimizar, btnMaximizar, btnCerrar);
-                btnMaximizar.Text = formulario.WindowState == FormWindowState.Maximized ? "❐" : "□";
+                btnMaximizar.Text = EstaEnPantallaCompleta(formulario) ? "❐" : "□";
                 TraerAlFrente(btnMinimizar, btnMaximizar, btnCerrar);
             };
         }
@@ -60,7 +64,7 @@ namespace SistemaAcademico1
                 BackColor = colorFondo,
                 ForeColor = Color.White,
                 FlatStyle = FlatStyle.Flat,
-                Font = new Font("Segoe UI", 10F, FontStyle.Bold),
+                Font = new Font("Segoe UI", 9F, FontStyle.Bold),
                 TabStop = false,
                 Cursor = Cursors.Hand
             };
@@ -86,16 +90,46 @@ namespace SistemaAcademico1
 
         private static void AlternarPantalla(Form formulario, Button btnMaximizar)
         {
-            if (formulario.WindowState == FormWindowState.Maximized)
+            if (EstaEnPantallaCompleta(formulario))
             {
-                formulario.WindowState = FormWindowState.Normal;
+                RestaurarPantalla(formulario);
                 btnMaximizar.Text = "□";
+                return;
             }
-            else
-            {
-                formulario.WindowState = FormWindowState.Maximized;
-                btnMaximizar.Text = "❐";
-            }
+
+            PosicionNormal[formulario] = formulario.Bounds;
+            TamanoMinimoOriginal[formulario] = formulario.MinimumSize;
+
+            formulario.WindowState = FormWindowState.Normal;
+            formulario.MinimumSize = Size.Empty;
+            formulario.MaximumSize = Size.Empty;
+            formulario.Bounds = Screen.FromControl(formulario).WorkingArea;
+            formulario.StartPosition = FormStartPosition.Manual;
+            btnMaximizar.Text = "❐";
+        }
+
+        private static void RestaurarPantalla(Form formulario)
+        {
+            formulario.WindowState = FormWindowState.Normal;
+
+            if (TamanoMinimoOriginal.TryGetValue(formulario, out Size minimoOriginal))
+                formulario.MinimumSize = minimoOriginal;
+
+            if (PosicionNormal.TryGetValue(formulario, out Rectangle posicionNormal))
+                formulario.Bounds = posicionNormal;
+
+            PosicionNormal.Remove(formulario);
+            TamanoMinimoOriginal.Remove(formulario);
+        }
+
+        private static bool EstaEnPantallaCompleta(Form formulario)
+        {
+            if (!PosicionNormal.ContainsKey(formulario))
+                return false;
+
+            Rectangle areaPantalla = Screen.FromControl(formulario).WorkingArea;
+            return formulario.Bounds.Width >= areaPantalla.Width - 5
+                && formulario.Bounds.Height >= areaPantalla.Height - 5;
         }
 
         private static void TraerAlFrente(params Button[] botones)
