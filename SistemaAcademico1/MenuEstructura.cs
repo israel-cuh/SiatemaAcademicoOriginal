@@ -128,7 +128,7 @@ namespace SistemaAcademico1
         private void ConfigurarEventosDelMenu()
         {
             btnMinimizar.Click += btnMinimizar_Click;
-            btnTemas.Click += btnTemas_Click;
+          //  btnTemas.Click += btnTemas_Click;
             btnJuego.Click += btnJuego_Click;
             btnCiclos.Click += btnCiclos_Click;
             btnAlgoritmos.Click += btnAlgoritmos_Click;
@@ -185,9 +185,9 @@ namespace SistemaAcademico1
 
         private void btnVariables_Click(object? sender, EventArgs e)
         {
-            Menuvariables menuvariables = new Menuvariables();
-            menuvariables.Show();
-            Hide();
+            Menuvariables menutema = new Menuvariables();
+            menutema.Show(); Hide();
+            
         }
 
         private void btnAlgoritmos_Click(object? sender, EventArgs e)
