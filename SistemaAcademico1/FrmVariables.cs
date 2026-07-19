@@ -19,7 +19,17 @@ namespace SistemaAcademico1
                 FormBorderStyle = FormBorderStyle.None;
                 MenuLateralHelper.AgregarMenu(this, "Variables");
                 ControlesVentanaHelper.Agregar(this, cerrarAplicacion: true);
+                AsegurarBotonSiguienteVisible();
             }
+        }
+
+        private void AsegurarBotonSiguienteVisible()
+        {
+            btnSiguiente.Text = "Siguiente";
+            btnSiguiente.Visible = true;
+            btnSiguiente.Enabled = true;
+            btnSiguiente.Location = new Point(ClientSize.Width - btnSiguiente.Width - 70, ClientSize.Height - btnSiguiente.Height - 55);
+            btnSiguiente.BringToFront();
         }
 
         private void pnlRegresar_Paint(object sender, PaintEventArgs e)
