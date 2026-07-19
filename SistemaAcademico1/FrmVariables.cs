@@ -16,6 +16,7 @@ namespace SistemaAcademico1
 
             if (LicenseManager.UsageMode != LicenseUsageMode.Designtime)
             {
+                FormBorderStyle = FormBorderStyle.None;
                 MenuLateralHelper.AgregarMenu(this, "Variables");
                 ControlesVentanaHelper.Agregar(this, cerrarAplicacion: true);
             }
