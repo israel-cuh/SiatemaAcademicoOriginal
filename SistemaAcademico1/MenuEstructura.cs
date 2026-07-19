@@ -172,8 +172,9 @@ namespace SistemaAcademico1
 
         private void btnJuego_Click(object? sender, EventArgs e)
         {
-            using MinijuegoOrdenarCodigo juego = new MinijuegoOrdenarCodigo();
-            juego.ShowDialog(this);
+            MenuJuegos menuJuegos = new MenuJuegos();
+            menuJuegos.Show();
+            Hide();
         }
 
         private void btnCiclos_Click(object? sender, EventArgs e)
@@ -185,8 +186,8 @@ namespace SistemaAcademico1
 
         private void btnVariables_Click(object? sender, EventArgs e)
         {
-            Menuvariables menuvariables = new Menuvariables();
-            menuvariables.Show();
+            Menuvariables menutema = new Menuvariables();
+            menutema.Show();
             Hide();
         }
 

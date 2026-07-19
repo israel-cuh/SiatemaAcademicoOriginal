@@ -97,7 +97,7 @@ namespace SistemaAcademico1
             // 
             // btnSubDoWhile
             // 
-            btnSubDoWhile.BackColor = Color.Transparent;
+            btnSubDoWhile.BackColor = Color.Violet;
             btnSubDoWhile.BackgroundImage = (Image)resources.GetObject("btnSubDoWhile.BackgroundImage");
             btnSubDoWhile.FlatStyle = FlatStyle.Popup;
             btnSubDoWhile.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -430,8 +430,8 @@ namespace SistemaAcademico1
             panelDerecho.BackColor = Color.FromArgb(8, 22, 56);
             panelDerecho.BackgroundImage = (Image)resources.GetObject("panelDerecho.BackgroundImage");
             panelDerecho.BackgroundImageLayout = ImageLayout.Stretch;
-            panelDerecho.Controls.Add(lblQuePasa);
             panelDerecho.Controls.Add(lblExplicacionCodigo);
+            panelDerecho.Controls.Add(lblQuePasa);
             panelDerecho.Controls.Add(btnLimpiar);
             panelDerecho.Controls.Add(btnEjecutar);
             panelDerecho.Controls.Add(lblSalida);
@@ -590,6 +590,8 @@ namespace SistemaAcademico1
             // btnPracticar
             // 
             btnPracticar.BackColor = Color.FromArgb(10, 25, 65);
+            btnPracticar.BackgroundImage = (Image)resources.GetObject("btnPracticar.BackgroundImage");
+            btnPracticar.BackgroundImageLayout = ImageLayout.Stretch;
             btnPracticar.FlatStyle = FlatStyle.Popup;
             btnPracticar.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnPracticar.ForeColor = Color.White;
@@ -616,6 +618,8 @@ namespace SistemaAcademico1
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(6, 16, 41);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1278, 773);
             Controls.Add(panelConsejo);
             Controls.Add(panelInferior);
@@ -623,6 +627,7 @@ namespace SistemaAcademico1
             Controls.Add(panelIzquierdo);
             Controls.Add(panelTitulo);
             Controls.Add(panelSubMenu);
+            DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
             Name = "MenuTemaFor";
             StartPosition = FormStartPosition.CenterScreen;

@@ -17,6 +17,7 @@ namespace SistemaAcademico1
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuTemaDoWhile));
             panelSubMenu = new Panel();
             btnSubAnidados = new Button();
             btnSubDoWhile = new Button();
@@ -37,7 +38,6 @@ namespace SistemaAcademico1
             lblSyntaxComentario = new Label();
             lblSyntaxDo = new Label();
             panelImportante = new Panel();
-            lblImportante = new Label();
             lblExplicacion = new Label();
             lblSintaxis = new Label();
             txtSintaxis = new RichTextBox();
@@ -57,20 +57,17 @@ namespace SistemaAcademico1
             btnSiguiente = new Button();
             btnPracticar = new Button();
             panelConsejo = new Panel();
-            lblConsejoTexto = new Label();
-            lblConsejoTitulo = new Label();
             panelSubMenu.SuspendLayout();
             panelTitulo.SuspendLayout();
             panelIzquierdo.SuspendLayout();
-            panelImportante.SuspendLayout();
             panelDerecho.SuspendLayout();
             panelInferior.SuspendLayout();
-            panelConsejo.SuspendLayout();
             SuspendLayout();
             // 
             // panelSubMenu
             // 
             panelSubMenu.BackColor = Color.FromArgb(8, 22, 56);
+            panelSubMenu.BackgroundImage = (Image)resources.GetObject("panelSubMenu.BackgroundImage");
             panelSubMenu.Controls.Add(btnSubAnidados);
             panelSubMenu.Controls.Add(btnSubDoWhile);
             panelSubMenu.Controls.Add(btnSubFor);
@@ -82,7 +79,8 @@ namespace SistemaAcademico1
             // 
             // btnSubAnidados
             // 
-            btnSubAnidados.BackColor = Color.FromArgb(6, 16, 41);
+            btnSubAnidados.BackColor = Color.Transparent;
+            btnSubAnidados.BackgroundImage = (Image)resources.GetObject("btnSubAnidados.BackgroundImage");
             btnSubAnidados.FlatStyle = FlatStyle.Flat;
             btnSubAnidados.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSubAnidados.ForeColor = Color.White;
@@ -96,8 +94,9 @@ namespace SistemaAcademico1
             // 
             // btnSubDoWhile
             // 
-            btnSubDoWhile.BackColor = Color.FromArgb(132, 78, 255);
-            btnSubDoWhile.FlatStyle = FlatStyle.Flat;
+            btnSubDoWhile.BackColor = Color.Violet;
+            btnSubDoWhile.BackgroundImage = (Image)resources.GetObject("btnSubDoWhile.BackgroundImage");
+            btnSubDoWhile.FlatStyle = FlatStyle.Popup;
             btnSubDoWhile.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSubDoWhile.ForeColor = Color.White;
             btnSubDoWhile.Location = new Point(20, 155);
@@ -110,8 +109,9 @@ namespace SistemaAcademico1
             // 
             // btnSubFor
             // 
-            btnSubFor.BackColor = Color.FromArgb(6, 16, 41);
-            btnSubFor.FlatStyle = FlatStyle.Flat;
+            btnSubFor.BackColor = Color.Transparent;
+            btnSubFor.BackgroundImage = (Image)resources.GetObject("btnSubFor.BackgroundImage");
+            btnSubFor.FlatStyle = FlatStyle.Popup;
             btnSubFor.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSubFor.ForeColor = Color.White;
             btnSubFor.Location = new Point(20, 80);
@@ -124,8 +124,9 @@ namespace SistemaAcademico1
             // 
             // btnSubWhile
             // 
-            btnSubWhile.BackColor = Color.FromArgb(6, 16, 41);
-            btnSubWhile.FlatStyle = FlatStyle.Flat;
+            btnSubWhile.BackColor = Color.Transparent;
+            btnSubWhile.BackgroundImage = (Image)resources.GetObject("btnSubWhile.BackgroundImage");
+            btnSubWhile.FlatStyle = FlatStyle.Popup;
             btnSubWhile.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSubWhile.ForeColor = Color.White;
             btnSubWhile.Location = new Point(20, 15);
@@ -139,6 +140,8 @@ namespace SistemaAcademico1
             // panelTitulo
             // 
             panelTitulo.BackColor = Color.FromArgb(8, 22, 56);
+            panelTitulo.BackgroundImage = (Image)resources.GetObject("panelTitulo.BackgroundImage");
+            panelTitulo.BackgroundImageLayout = ImageLayout.Stretch;
             panelTitulo.Controls.Add(panelDecoracion);
             panelTitulo.Controls.Add(lblSubtitulo);
             panelTitulo.Controls.Add(lblTituloAzul);
@@ -151,9 +154,11 @@ namespace SistemaAcademico1
             // panelDecoracion
             // 
             panelDecoracion.BackColor = Color.FromArgb(10, 33, 86);
-            panelDecoracion.Location = new Point(555, 15);
+            panelDecoracion.BackgroundImage = (Image)resources.GetObject("panelDecoracion.BackgroundImage");
+            panelDecoracion.BackgroundImageLayout = ImageLayout.Stretch;
+            panelDecoracion.Location = new Point(531, 0);
             panelDecoracion.Name = "panelDecoracion";
-            panelDecoracion.Size = new Size(330, 90);
+            panelDecoracion.Size = new Size(385, 120);
             panelDecoracion.TabIndex = 3;
             // 
             // lblSubtitulo
@@ -194,6 +199,7 @@ namespace SistemaAcademico1
             // panelIzquierdo
             // 
             panelIzquierdo.BackColor = Color.FromArgb(8, 22, 56);
+            panelIzquierdo.BackgroundImage = (Image)resources.GetObject("panelIzquierdo.BackgroundImage");
             panelIzquierdo.Controls.Add(lblExpFalsa);
             panelIzquierdo.Controls.Add(lblExp4);
             panelIzquierdo.Controls.Add(lblExpVerdadera);
@@ -217,35 +223,36 @@ namespace SistemaAcademico1
             // 
             lblExpFalsa.AutoSize = true;
             lblExpFalsa.BackColor = Color.Transparent;
-            lblExpFalsa.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblExpFalsa.ForeColor = Color.FromArgb(255, 85, 120);
-            lblExpFalsa.Location = new Point(71, 391);
+            lblExpFalsa.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblExpFalsa.ForeColor = Color.FromArgb(192, 0, 0);
+            lblExpFalsa.Location = new Point(73, 352);
             lblExpFalsa.Name = "lblExpFalsa";
-            lblExpFalsa.Size = new Size(46, 20);
+            lblExpFalsa.Size = new Size(48, 20);
             lblExpFalsa.TabIndex = 13;
             lblExpFalsa.Text = "falsa,";
+            lblExpFalsa.Click += lblExpFalsa_Click;
             // 
             // lblExp4
             // 
             lblExp4.AutoSize = true;
             lblExp4.BackColor = Color.Transparent;
-            lblExp4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblExp4.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblExp4.ForeColor = Color.WhiteSmoke;
-            lblExp4.Location = new Point(24, 391);
+            lblExp4.Location = new Point(18, 352);
             lblExp4.Name = "lblExp4";
-            lblExp4.Size = new Size(211, 20);
+            lblExp4.Size = new Size(229, 20);
             lblExp4.TabIndex = 12;
-            lblExp4.Text = "4. Si es           el ciclo termina.";
+            lblExp4.Text = "4. Si es             el ciclo termina.";
             // 
             // lblExpVerdadera
             // 
             lblExpVerdadera.AutoSize = true;
             lblExpVerdadera.BackColor = Color.Transparent;
-            lblExpVerdadera.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblExpVerdadera.ForeColor = Color.LimeGreen;
-            lblExpVerdadera.Location = new Point(71, 363);
+            lblExpVerdadera.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblExpVerdadera.ForeColor = Color.Green;
+            lblExpVerdadera.Location = new Point(73, 332);
             lblExpVerdadera.Name = "lblExpVerdadera";
-            lblExpVerdadera.Size = new Size(79, 20);
+            lblExpVerdadera.Size = new Size(84, 20);
             lblExpVerdadera.TabIndex = 11;
             lblExpVerdadera.Text = "verdadera";
             // 
@@ -253,20 +260,20 @@ namespace SistemaAcademico1
             // 
             lblExp3.AutoSize = true;
             lblExp3.BackColor = Color.Transparent;
-            lblExp3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblExp3.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblExp3.ForeColor = Color.WhiteSmoke;
-            lblExp3.Location = new Point(24, 363);
+            lblExp3.Location = new Point(18, 332);
             lblExp3.Name = "lblExp3";
-            lblExp3.Size = new Size(236, 20);
+            lblExp3.Size = new Size(280, 20);
             lblExp3.TabIndex = 10;
-            lblExp3.Text = "3. Si es              , se repite el ciclo.";
+            lblExp3.Text = "3. Si es                      , se repite el ciclo.";
             // 
             // lblSyntaxCondicion
             // 
             lblSyntaxCondicion.AutoSize = true;
             lblSyntaxCondicion.BackColor = Color.FromArgb(6, 16, 41);
             lblSyntaxCondicion.Font = new Font("Consolas", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblSyntaxCondicion.ForeColor = Color.DodgerBlue;
+            lblSyntaxCondicion.ForeColor = Color.Cyan;
             lblSyntaxCondicion.Location = new Point(145, 222);
             lblSyntaxCondicion.Name = "lblSyntaxCondicion";
             lblSyntaxCondicion.Size = new Size(90, 20);
@@ -278,7 +285,7 @@ namespace SistemaAcademico1
             lblSyntaxWhile.AutoSize = true;
             lblSyntaxWhile.BackColor = Color.FromArgb(6, 16, 41);
             lblSyntaxWhile.Font = new Font("Consolas", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblSyntaxWhile.ForeColor = Color.Violet;
+            lblSyntaxWhile.ForeColor = Color.Purple;
             lblSyntaxWhile.Location = new Point(82, 222);
             lblSyntaxWhile.Name = "lblSyntaxWhile";
             lblSyntaxWhile.Size = new Size(54, 20);
@@ -290,7 +297,7 @@ namespace SistemaAcademico1
             lblSyntaxComentario.AutoSize = true;
             lblSyntaxComentario.BackColor = Color.FromArgb(6, 16, 41);
             lblSyntaxComentario.Font = new Font("Consolas", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblSyntaxComentario.ForeColor = Color.LimeGreen;
+            lblSyntaxComentario.ForeColor = Color.Green;
             lblSyntaxComentario.Location = new Point(82, 195);
             lblSyntaxComentario.Name = "lblSyntaxComentario";
             lblSyntaxComentario.Size = new Size(252, 20);
@@ -302,7 +309,7 @@ namespace SistemaAcademico1
             lblSyntaxDo.AutoSize = true;
             lblSyntaxDo.BackColor = Color.FromArgb(6, 16, 41);
             lblSyntaxDo.Font = new Font("Consolas", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblSyntaxDo.ForeColor = Color.Violet;
+            lblSyntaxDo.ForeColor = Color.Purple;
             lblSyntaxDo.Location = new Point(42, 165);
             lblSyntaxDo.Name = "lblSyntaxDo";
             lblSyntaxDo.Size = new Size(27, 20);
@@ -312,30 +319,21 @@ namespace SistemaAcademico1
             // panelImportante
             // 
             panelImportante.BackColor = Color.FromArgb(27, 28, 75);
-            panelImportante.Controls.Add(lblImportante);
-            panelImportante.Location = new Point(18, 420);
+            panelImportante.BackgroundImage = (Image)resources.GetObject("panelImportante.BackgroundImage");
+            panelImportante.BackgroundImageLayout = ImageLayout.Stretch;
+            panelImportante.Location = new Point(12, 390);
             panelImportante.Name = "panelImportante";
-            panelImportante.Size = new Size(420, 87);
+            panelImportante.Size = new Size(434, 116);
             panelImportante.TabIndex = 5;
-            // 
-            // lblImportante
-            // 
-            lblImportante.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblImportante.ForeColor = Color.FromArgb(190, 140, 255);
-            lblImportante.Location = new Point(12, 10);
-            lblImportante.Name = "lblImportante";
-            lblImportante.Size = new Size(395, 68);
-            lblImportante.TabIndex = 0;
-            lblImportante.Text = "ⓘ  Importante\r\nA diferencia de while, el ciclo do while siempre ejecuta el bloque al menos una vez, aunque la condición sea falsa desde el inicio.";
             // 
             // lblExplicacion
             // 
             lblExplicacion.BackColor = Color.Transparent;
-            lblExplicacion.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblExplicacion.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblExplicacion.ForeColor = Color.WhiteSmoke;
-            lblExplicacion.Location = new Point(24, 285);
+            lblExplicacion.Location = new Point(18, 273);
             lblExplicacion.Name = "lblExplicacion";
-            lblExplicacion.Size = new Size(405, 132);
+            lblExplicacion.Size = new Size(428, 132);
             lblExplicacion.TabIndex = 4;
             lblExplicacion.Text = "Explicación\r\n1. Se ejecutan las instrucciones del bloque.\r\n2. Luego se evalúa la condición.";
             // 
@@ -357,10 +355,10 @@ namespace SistemaAcademico1
             txtSintaxis.BorderStyle = BorderStyle.None;
             txtSintaxis.Font = new Font("Consolas", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtSintaxis.ForeColor = Color.White;
-            txtSintaxis.Location = new Point(24, 160);
+            txtSintaxis.Location = new Point(18, 156);
             txtSintaxis.Name = "txtSintaxis";
             txtSintaxis.ReadOnly = true;
-            txtSintaxis.Size = new Size(416, 105);
+            txtSintaxis.Size = new Size(428, 105);
             txtSintaxis.TabIndex = 2;
             txtSintaxis.Text = "\n   {\n\n   }        (          );";
             // 
@@ -390,8 +388,9 @@ namespace SistemaAcademico1
             // panelDerecho
             // 
             panelDerecho.BackColor = Color.FromArgb(8, 22, 56);
-            panelDerecho.Controls.Add(lblQuePasa);
+            panelDerecho.BackgroundImage = (Image)resources.GetObject("panelDerecho.BackgroundImage");
             panelDerecho.Controls.Add(lblExplicacionCodigo);
+            panelDerecho.Controls.Add(lblQuePasa);
             panelDerecho.Controls.Add(btnLimpiar);
             panelDerecho.Controls.Add(btnEjecutar);
             panelDerecho.Controls.Add(lblSalida);
@@ -422,7 +421,7 @@ namespace SistemaAcademico1
             lblExplicacionCodigo.ForeColor = Color.Gainsboro;
             lblExplicacionCodigo.Location = new Point(24, 450);
             lblExplicacionCodigo.Name = "lblExplicacionCodigo";
-            lblExplicacionCodigo.Size = new Size(405, 62);
+            lblExplicacionCodigo.Size = new Size(358, 62);
             lblExplicacionCodigo.TabIndex = 6;
             lblExplicacionCodigo.Text = "El ciclo ejecuta el bloque por primera vez con i = 1. Luego, mientras i sea menor o igual a 5, se imprime su valor y se incrementa en 1. Cuando i llega a 6, la condición es falsa y el ciclo termina.";
             // 
@@ -507,6 +506,8 @@ namespace SistemaAcademico1
             // panelInferior
             // 
             panelInferior.BackColor = Color.FromArgb(8, 22, 56);
+            panelInferior.BackgroundImage = (Image)resources.GetObject("panelInferior.BackgroundImage");
+            panelInferior.BackgroundImageLayout = ImageLayout.Stretch;
             panelInferior.Controls.Add(btnAnterior);
             panelInferior.Controls.Add(btnSiguiente);
             panelInferior.Controls.Add(btnPracticar);
@@ -517,7 +518,8 @@ namespace SistemaAcademico1
             // 
             // btnAnterior
             // 
-            btnAnterior.BackColor = Color.FromArgb(10, 25, 65);
+            btnAnterior.BackColor = Color.Tomato;
+            btnAnterior.BackgroundImage = (Image)resources.GetObject("btnAnterior.BackgroundImage");
             btnAnterior.FlatStyle = FlatStyle.Popup;
             btnAnterior.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAnterior.ForeColor = Color.White;
@@ -532,6 +534,7 @@ namespace SistemaAcademico1
             // btnSiguiente
             // 
             btnSiguiente.BackColor = Color.FromArgb(132, 78, 255);
+            btnSiguiente.BackgroundImage = (Image)resources.GetObject("btnSiguiente.BackgroundImage");
             btnSiguiente.FlatStyle = FlatStyle.Popup;
             btnSiguiente.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSiguiente.ForeColor = Color.White;
@@ -545,7 +548,9 @@ namespace SistemaAcademico1
             // 
             // btnPracticar
             // 
-            btnPracticar.BackColor = Color.FromArgb(10, 25, 65);
+            btnPracticar.BackColor = Color.Lime;
+            btnPracticar.BackgroundImage = (Image)resources.GetObject("btnPracticar.BackgroundImage");
+            btnPracticar.BackgroundImageLayout = ImageLayout.Stretch;
             btnPracticar.FlatStyle = FlatStyle.Popup;
             btnPracticar.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnPracticar.ForeColor = Color.White;
@@ -560,39 +565,20 @@ namespace SistemaAcademico1
             // panelConsejo
             // 
             panelConsejo.BackColor = Color.FromArgb(8, 22, 56);
-            panelConsejo.Controls.Add(lblConsejoTexto);
-            panelConsejo.Controls.Add(lblConsejoTitulo);
-            panelConsejo.Location = new Point(30, 521);
+            panelConsejo.BackgroundImage = (Image)resources.GetObject("panelConsejo.BackgroundImage");
+            panelConsejo.BackgroundImageLayout = ImageLayout.Stretch;
+            panelConsejo.Location = new Point(30, 503);
             panelConsejo.Name = "panelConsejo";
-            panelConsejo.Size = new Size(250, 150);
+            panelConsejo.Size = new Size(250, 168);
             panelConsejo.TabIndex = 5;
-            // 
-            // lblConsejoTexto
-            // 
-            lblConsejoTexto.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblConsejoTexto.ForeColor = Color.Gainsboro;
-            lblConsejoTexto.Location = new Point(18, 58);
-            lblConsejoTexto.Name = "lblConsejoTexto";
-            lblConsejoTexto.Size = new Size(215, 78);
-            lblConsejoTexto.TabIndex = 1;
-            lblConsejoTexto.Text = "Do While sirve cuando necesitas ejecutar el bloque al menos una vez.";
-            // 
-            // lblConsejoTitulo
-            // 
-            lblConsejoTitulo.AutoSize = true;
-            lblConsejoTitulo.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblConsejoTitulo.ForeColor = Color.Gold;
-            lblConsejoTitulo.Location = new Point(18, 20);
-            lblConsejoTitulo.Name = "lblConsejoTitulo";
-            lblConsejoTitulo.Size = new Size(110, 25);
-            lblConsejoTitulo.TabIndex = 0;
-            lblConsejoTitulo.Text = "💡 Consejo";
             // 
             // MenuTemaDoWhile
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(6, 16, 41);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1278, 773);
             Controls.Add(panelConsejo);
             Controls.Add(panelInferior);
@@ -600,6 +586,7 @@ namespace SistemaAcademico1
             Controls.Add(panelIzquierdo);
             Controls.Add(panelTitulo);
             Controls.Add(panelSubMenu);
+            DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
             Name = "MenuTemaDoWhile";
             StartPosition = FormStartPosition.CenterScreen;
@@ -609,12 +596,9 @@ namespace SistemaAcademico1
             panelTitulo.PerformLayout();
             panelIzquierdo.ResumeLayout(false);
             panelIzquierdo.PerformLayout();
-            panelImportante.ResumeLayout(false);
             panelDerecho.ResumeLayout(false);
             panelDerecho.PerformLayout();
             panelInferior.ResumeLayout(false);
-            panelConsejo.ResumeLayout(false);
-            panelConsejo.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -631,7 +615,6 @@ namespace SistemaAcademico1
         private Label lblTituloAzul;
         private Label lblTitulo;
         private Panel panelIzquierdo;
-        private Label lblImportante;
         private Label lblExplicacion;
         private Label lblSintaxis;
         private RichTextBox txtSintaxis;
@@ -651,8 +634,6 @@ namespace SistemaAcademico1
         private Button btnSiguiente;
         private Button btnPracticar;
         private Panel panelConsejo;
-        private Label lblConsejoTexto;
-        private Label lblConsejoTitulo;
         private Panel panelImportante;
         private Label lblSyntaxDo;
         private Label lblSyntaxComentario;

@@ -111,11 +111,11 @@
             // 
             label11.AutoSize = true;
             label11.BackColor = Color.Transparent;
-            label11.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label11.Font = new Font("Arial", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label11.ForeColor = Color.Blue;
-            label11.Location = new Point(198, 19);
+            label11.Location = new Point(347, 18);
             label11.Name = "label11";
-            label11.Size = new Size(72, 24);
+            label11.Size = new Size(124, 40);
             label11.TabIndex = 5;
             label11.Text = "bucles";
             // 
@@ -123,11 +123,11 @@
             // 
             label10.AutoSize = true;
             label10.BackColor = Color.Transparent;
-            label10.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.Font = new Font("Arial", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label10.ForeColor = Color.Blue;
-            label10.Location = new Point(171, 19);
+            label10.Location = new Point(317, 20);
             label10.Name = "label10";
-            label10.Size = new Size(21, 24);
+            label10.Size = new Size(37, 40);
             label10.TabIndex = 4;
             label10.Text = "y";
             // 
@@ -135,11 +135,11 @@
             // 
             label9.AutoSize = true;
             label9.BackColor = Color.Transparent;
-            label9.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.Font = new Font("Arial", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label9.ForeColor = Color.Blue;
-            label9.Location = new Point(108, 19);
+            label9.Location = new Point(191, 20);
             label9.Name = "label9";
-            label9.Size = new Size(68, 24);
+            label9.Size = new Size(119, 40);
             label9.TabIndex = 3;
             label9.Text = "Ciclos";
             // 
@@ -158,11 +158,11 @@
             // 
             lblTitulo.AutoSize = true;
             lblTitulo.BackColor = Color.Transparent;
-            lblTitulo.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.Font = new Font("Arial", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitulo.ForeColor = SystemColors.ButtonFace;
             lblTitulo.Location = new Point(12, 19);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(97, 24);
+            lblTitulo.Size = new Size(168, 40);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "Aprender\r\n";
             // 
@@ -221,7 +221,7 @@
             // 
             // btnWhile
             // 
-            btnWhile.BackColor = Color.Transparent;
+            btnWhile.BackColor = Color.Violet;
             btnWhile.FlatStyle = FlatStyle.Popup;
             btnWhile.ForeColor = SystemColors.ButtonHighlight;
             btnWhile.Image = (Image)resources.GetObject("btnWhile.Image");
@@ -498,8 +498,8 @@
             // 
             panel5.BackgroundImage = (Image)resources.GetObject("panel5.BackgroundImage");
             panel5.BackgroundImageLayout = ImageLayout.Stretch;
-            panel5.Controls.Add(btnLimpiar);
             panel5.Controls.Add(label3);
+            panel5.Controls.Add(btnLimpiar);
             panel5.Controls.Add(label2);
             panel5.Controls.Add(label1);
             panel5.Controls.Add(btnEjecutar);
@@ -620,9 +620,9 @@
             button1.BackgroundImageLayout = ImageLayout.Stretch;
             button1.FlatStyle = FlatStyle.Popup;
             button1.ForeColor = SystemColors.ButtonFace;
-            button1.Location = new Point(47, 48);
+            button1.Location = new Point(27, 20);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(237, 57);
             button1.TabIndex = 6;
             button1.Text = "Regresar";
             button1.UseVisualStyleBackColor = false;
@@ -634,12 +634,13 @@
             btnjuego.BackgroundImage = (Image)resources.GetObject("btnjuego.BackgroundImage");
             btnjuego.BackgroundImageLayout = ImageLayout.Stretch;
             btnjuego.FlatStyle = FlatStyle.Popup;
+            btnjuego.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnjuego.ForeColor = SystemColors.ButtonFace;
-            btnjuego.Location = new Point(1059, 28);
+            btnjuego.Location = new Point(992, 20);
             btnjuego.Name = "btnjuego";
-            btnjuego.Size = new Size(170, 49);
+            btnjuego.Size = new Size(237, 57);
             btnjuego.TabIndex = 7;
-            btnjuego.Text = "Practicar lo Aprendido";
+            btnjuego.Text = "🎮 Practicar lo aprendido";
             btnjuego.UseVisualStyleBackColor = false;
             // 
             // MenuTemaCiclo
@@ -647,6 +648,8 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(6, 16, 41);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1278, 751);
             Controls.Add(panel6);
             Controls.Add(panel5);
@@ -654,6 +657,7 @@
             Controls.Add(panelConsejo);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
             Name = "MenuTemaCiclo";
             StartPosition = FormStartPosition.CenterScreen;
