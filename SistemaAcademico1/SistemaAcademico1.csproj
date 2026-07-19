@@ -31,6 +31,18 @@
     <Compile Update="MenuTemaDoWhile.Designer.cs">
       <DependentUpon>MenuTemaDoWhile.cs</DependentUpon>
     </Compile>
+    <Compile Update="Menuvariables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Menuvariables.Designer.cs">
+      <DependentUpon>Menuvariables.cs</DependentUpon>
+    </Compile>
+    <Compile Update="FrmVariables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmVariables.Designer.cs">
+      <DependentUpon>FrmVariables.cs</DependentUpon>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -47,6 +59,12 @@
     </EmbeddedResource>
     <EmbeddedResource Update="MenuTemaDoWhile.resx">
       <DependentUpon>MenuTemaDoWhile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Menuvariables.resx">
+      <DependentUpon>Menuvariables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="FrmVariables.resx">
+      <DependentUpon>FrmVariables.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
