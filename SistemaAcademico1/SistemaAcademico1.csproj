@@ -43,6 +43,12 @@
     <Compile Update="FrmVariables.Designer.cs">
       <DependentUpon>FrmVariables.cs</DependentUpon>
     </Compile>
+    <Compile Update="DashboardPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DashboardPrincipal.Designer.cs">
+      <DependentUpon>DashboardPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -65,6 +71,9 @@
     </EmbeddedResource>
     <EmbeddedResource Update="FrmVariables.resx">
       <DependentUpon>FrmVariables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="DashboardPrincipal.resx">
+      <DependentUpon>DashboardPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

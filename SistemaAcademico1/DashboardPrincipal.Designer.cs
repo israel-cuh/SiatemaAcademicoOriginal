@@ -89,7 +89,7 @@ namespace SistemaAcademico1
             lblUsuario.ForeColor = Color.FromArgb(95, 210, 255);
             lblUsuario.Location = new Point(43, 106);
             lblUsuario.Name = "lblUsuario";
-            lblUsuario.Size = new Size(177, 23);
+            lblUsuario.Size = new Size(168, 23);
             lblUsuario.TabIndex = 4;
             lblUsuario.Text = "Vista administrador";
             // 
@@ -128,7 +128,7 @@ namespace SistemaAcademico1
             lblSubtitulo.ForeColor = Color.Gainsboro;
             lblSubtitulo.Location = new Point(40, 70);
             lblSubtitulo.Name = "lblSubtitulo";
-            lblSubtitulo.Size = new Size(395, 32);
+            lblSubtitulo.Size = new Size(427, 32);
             lblSubtitulo.TabIndex = 1;
             lblSubtitulo.Text = "Este es el resumen general del sistema";
             // 
@@ -139,9 +139,9 @@ namespace SistemaAcademico1
             lblTitulo.ForeColor = Color.White;
             lblTitulo.Location = new Point(35, 12);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(719, 61);
+            lblTitulo.Size = new Size(549, 61);
             lblTitulo.TabIndex = 0;
-            lblTitulo.Text = "Buenos días, Administrador 👋";
+            lblTitulo.Text = "Buenos días, docente 👋";
             // 
             // panelTarjetas
             // 
@@ -173,7 +173,7 @@ namespace SistemaAcademico1
             lblRendimientoTexto.ForeColor = Color.Gainsboro;
             lblRendimientoTexto.Location = new Point(22, 76);
             lblRendimientoTexto.Name = "lblRendimientoTexto";
-            lblRendimientoTexto.Size = new Size(239, 23);
+            lblRendimientoTexto.Size = new Size(244, 23);
             lblRendimientoTexto.TabIndex = 1;
             lblRendimientoTexto.Text = "Rendimiento académico prom.";
             // 
@@ -184,7 +184,7 @@ namespace SistemaAcademico1
             lblRendimientoValor.ForeColor = Color.FromArgb(255, 190, 70);
             lblRendimientoValor.Location = new Point(20, 12);
             lblRendimientoValor.Name = "lblRendimientoValor";
-            lblRendimientoValor.Size = new Size(106, 61);
+            lblRendimientoValor.Size = new Size(91, 61);
             lblRendimientoValor.TabIndex = 0;
             lblRendimientoValor.Text = "8.9";
             // 
@@ -216,7 +216,7 @@ namespace SistemaAcademico1
             lblActividadesValor.ForeColor = Color.FromArgb(80, 230, 160);
             lblActividadesValor.Location = new Point(20, 12);
             lblActividadesValor.Name = "lblActividadesValor";
-            lblActividadesValor.Size = new Size(78, 61);
+            lblActividadesValor.Size = new Size(79, 61);
             lblActividadesValor.TabIndex = 0;
             lblActividadesValor.Text = "18";
             // 
@@ -248,7 +248,7 @@ namespace SistemaAcademico1
             lblProgresoValor.ForeColor = Color.FromArgb(132, 78, 255);
             lblProgresoValor.Location = new Point(20, 12);
             lblProgresoValor.Name = "lblProgresoValor";
-            lblProgresoValor.Size = new Size(123, 61);
+            lblProgresoValor.Size = new Size(118, 61);
             lblProgresoValor.TabIndex = 0;
             lblProgresoValor.Text = "76%";
             // 
@@ -269,7 +269,7 @@ namespace SistemaAcademico1
             lblDocentesTexto.ForeColor = Color.Gainsboro;
             lblDocentesTexto.Location = new Point(22, 76);
             lblDocentesTexto.Name = "lblDocentesTexto";
-            lblDocentesTexto.Size = new Size(118, 23);
+            lblDocentesTexto.Size = new Size(120, 23);
             lblDocentesTexto.TabIndex = 1;
             lblDocentesTexto.Text = "Total docentes";
             // 
@@ -280,7 +280,7 @@ namespace SistemaAcademico1
             lblDocentesValor.ForeColor = Color.FromArgb(95, 210, 255);
             lblDocentesValor.Location = new Point(20, 12);
             lblDocentesValor.Name = "lblDocentesValor";
-            lblDocentesValor.Size = new Size(52, 61);
+            lblDocentesValor.Size = new Size(53, 61);
             lblDocentesValor.TabIndex = 0;
             lblDocentesValor.Text = "4";
             // 
@@ -301,7 +301,7 @@ namespace SistemaAcademico1
             lblEstudiantesTexto.ForeColor = Color.Gainsboro;
             lblEstudiantesTexto.Location = new Point(22, 76);
             lblEstudiantesTexto.Name = "lblEstudiantesTexto";
-            lblEstudiantesTexto.Size = new Size(142, 23);
+            lblEstudiantesTexto.Size = new Size(138, 23);
             lblEstudiantesTexto.TabIndex = 1;
             lblEstudiantesTexto.Text = "Total estudiantes";
             // 
@@ -312,7 +312,7 @@ namespace SistemaAcademico1
             lblEstudiantesValor.ForeColor = Color.White;
             lblEstudiantesValor.Location = new Point(20, 12);
             lblEstudiantesValor.Name = "lblEstudiantesValor";
-            lblEstudiantesValor.Size = new Size(78, 61);
+            lblEstudiantesValor.Size = new Size(79, 61);
             lblEstudiantesValor.TabIndex = 0;
             lblEstudiantesValor.Text = "45";
             // 
@@ -387,7 +387,7 @@ namespace SistemaAcademico1
             lblActividadTitulo.ForeColor = Color.White;
             lblActividadTitulo.Location = new Point(30, 28);
             lblActividadTitulo.Name = "lblActividadTitulo";
-            lblActividadTitulo.Size = new Size(267, 41);
+            lblActividadTitulo.Size = new Size(274, 41);
             lblActividadTitulo.TabIndex = 0;
             lblActividadTitulo.Text = "Actividad reciente";
             // 
@@ -437,7 +437,7 @@ namespace SistemaAcademico1
             lblBar3.ForeColor = Color.Gainsboro;
             lblBar3.Location = new Point(35, 282);
             lblBar3.Name = "lblBar3";
-            lblBar3.Size = new Size(242, 25);
+            lblBar3.Size = new Size(273, 25);
             lblBar3.TabIndex = 3;
             lblBar3.Text = "Actividades completadas 62%";
             // 
@@ -448,7 +448,7 @@ namespace SistemaAcademico1
             lblBar2.ForeColor = Color.Gainsboro;
             lblBar2.Location = new Point(35, 187);
             lblBar2.Name = "lblBar2";
-            lblBar2.Size = new Size(272, 25);
+            lblBar2.Size = new Size(268, 25);
             lblBar2.TabIndex = 2;
             lblBar2.Text = "Rendimiento académico 89%";
             // 
@@ -459,7 +459,7 @@ namespace SistemaAcademico1
             lblBar1.ForeColor = Color.Gainsboro;
             lblBar1.Location = new Point(35, 92);
             lblBar1.Name = "lblBar1";
-            lblBar1.Size = new Size(200, 25);
+            lblBar1.Size = new Size(209, 25);
             lblBar1.TabIndex = 1;
             lblBar1.Text = "Progreso general 76%";
             // 
@@ -470,7 +470,7 @@ namespace SistemaAcademico1
             lblProgresoGeneralTitulo.ForeColor = Color.White;
             lblProgresoGeneralTitulo.Location = new Point(30, 28);
             lblProgresoGeneralTitulo.Name = "lblProgresoGeneralTitulo";
-            lblProgresoGeneralTitulo.Size = new Size(251, 41);
+            lblProgresoGeneralTitulo.Size = new Size(258, 41);
             lblProgresoGeneralTitulo.TabIndex = 0;
             lblProgresoGeneralTitulo.Text = "Progreso general";
             // 
@@ -492,7 +492,7 @@ namespace SistemaAcademico1
             lblGraficoSubtitulo.ForeColor = Color.Gainsboro;
             lblGraficoSubtitulo.Location = new Point(30, 70);
             lblGraficoSubtitulo.Name = "lblGraficoSubtitulo";
-            lblGraficoSubtitulo.Size = new Size(277, 23);
+            lblGraficoSubtitulo.Size = new Size(265, 23);
             lblGraficoSubtitulo.TabIndex = 1;
             lblGraficoSubtitulo.Text = "Rendimiento semanal del sistema";
             // 
@@ -503,7 +503,7 @@ namespace SistemaAcademico1
             lblGraficoTitulo.ForeColor = Color.White;
             lblGraficoTitulo.Location = new Point(30, 28);
             lblGraficoTitulo.Name = "lblGraficoTitulo";
-            lblGraficoTitulo.Size = new Size(241, 41);
+            lblGraficoTitulo.Size = new Size(256, 41);
             lblGraficoTitulo.TabIndex = 0;
             lblGraficoTitulo.Text = "Gráfico moderno";
             // 
