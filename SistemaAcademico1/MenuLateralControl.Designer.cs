@@ -39,6 +39,7 @@ namespace SistemaAcademico1
             lblLogo.TabIndex = 0;
             lblLogo.Text = "</>";
             lblLogo.TextAlign = ContentAlignment.MiddleCenter;
+            lblLogo.Click += lblLogo_Click;
             // 
             // lblNombre
             // 
@@ -205,6 +206,7 @@ namespace SistemaAcademico1
             DoubleBuffered = true;
             Name = "MenuLateralControl";
             Size = new Size(270, 752);
+            Load += MenuLateralControl_Load;
             ResumeLayout(false);
         }
 

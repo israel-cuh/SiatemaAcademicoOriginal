@@ -106,5 +106,15 @@ namespace SistemaAcademico1
             siguiente.Show();
             (FormularioActual ?? FindForm())?.Close();
         }
+
+        private void MenuLateralControl_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblLogo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

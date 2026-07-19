@@ -192,7 +192,8 @@ namespace SistemaAcademico1
 
         private void btnAlgoritmos_Click(object? sender, EventArgs e)
         {
-            MostrarProximamente("Algoritmos");
+            frmPrincipal ormaza = new frmPrincipal();
+            ormaza.Show();
         }
 
         private void btnCondicionales_Click(object? sender, EventArgs e)
@@ -235,6 +236,11 @@ namespace SistemaAcademico1
         private void btnMinimizar_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAlgoritmos_Click_1(object sender, EventArgs e)
+        {
+          
         }
     }
 }

@@ -144,7 +144,7 @@ namespace SistemaAcademico1
             lblProgreso.Name = "lblProgreso";
             lblProgreso.Size = new Size(230, 25);
             lblProgreso.TabIndex = 6;
-            lblProgreso.Text = "PROGRESO  ·  NIVEL 1 DE 3";
+            lblProgreso.Text = "PROGRESO  ·  NIVEL 1 DE 10";
             // 
             // lstCodigo
             // 
@@ -160,6 +160,7 @@ namespace SistemaAcademico1
             lstCodigo.Name = "lstCodigo";
             lstCodigo.Size = new Size(670, 300);
             lstCodigo.TabIndex = 2;
+            lstCodigo.SelectedIndexChanged += lstCodigo_SelectedIndexChanged;
             // 
             // progreso
             // 

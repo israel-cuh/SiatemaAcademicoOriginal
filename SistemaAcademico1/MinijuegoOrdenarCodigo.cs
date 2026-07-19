@@ -396,5 +396,10 @@ namespace SistemaAcademico1
         {
 
         }
+
+        private void lstCodigo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

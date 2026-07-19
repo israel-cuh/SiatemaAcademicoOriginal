@@ -78,6 +78,7 @@ namespace SistemaAcademico1
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuEstructura));
             panelSuperior = new Panel();
             lblMarca = new Label();
             btnMinimizar = new Button();
@@ -212,6 +213,7 @@ namespace SistemaAcademico1
             // panelLateral
             // 
             panelLateral.BackColor = Color.FromArgb(6, 16, 45);
+            panelLateral.BackgroundImage = (Image)resources.GetObject("panelLateral.BackgroundImage");
             panelLateral.Controls.Add(btnInicio);
             panelLateral.Controls.Add(lblLogo);
             panelLateral.Controls.Add(lblNombre);
@@ -244,6 +246,7 @@ namespace SistemaAcademico1
             // 
             // lblLogo
             // 
+            lblLogo.BackColor = Color.Transparent;
             lblLogo.Font = new Font("Consolas", 36F, FontStyle.Bold);
             lblLogo.ForeColor = Color.FromArgb(55, 116, 255);
             lblLogo.Location = new Point(60, 28);
@@ -255,6 +258,7 @@ namespace SistemaAcademico1
             // 
             // lblNombre
             // 
+            lblNombre.BackColor = Color.Transparent;
             lblNombre.Font = new Font("Segoe UI", 25F, FontStyle.Bold);
             lblNombre.ForeColor = Color.White;
             lblNombre.Location = new Point(30, 98);
@@ -266,6 +270,7 @@ namespace SistemaAcademico1
             // 
             // lblSistema
             // 
+            lblSistema.BackColor = Color.Transparent;
             lblSistema.Font = new Font("Segoe UI", 10F);
             lblSistema.ForeColor = Color.Gainsboro;
             lblSistema.Location = new Point(35, 150);
@@ -277,6 +282,7 @@ namespace SistemaAcademico1
             // 
             // lblCurso
             // 
+            lblCurso.BackColor = Color.Transparent;
             lblCurso.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             lblCurso.ForeColor = Color.FromArgb(86, 139, 255);
             lblCurso.Location = new Point(35, 176);
@@ -301,7 +307,6 @@ namespace SistemaAcademico1
             btnJuego.Text = "🎮   Juego interactivo";
             btnJuego.TextAlign = ContentAlignment.MiddleLeft;
             btnJuego.UseVisualStyleBackColor = false;
-          //  btnJuego.Click += btnJuego_Click_1;
             // 
             // btnCerrarSesion
             // 
@@ -323,6 +328,7 @@ namespace SistemaAcademico1
             // tarjetaUsuario
             // 
             tarjetaUsuario.BackColor = Color.FromArgb(13, 29, 71);
+            tarjetaUsuario.BackgroundImage = (Image)resources.GetObject("tarjetaUsuario.BackgroundImage");
             tarjetaUsuario.Controls.Add(lblAvatar);
             tarjetaUsuario.Controls.Add(lblUsuario);
             tarjetaUsuario.Controls.Add(lblRol);
@@ -333,6 +339,7 @@ namespace SistemaAcademico1
             // 
             // lblAvatar
             // 
+            lblAvatar.BackColor = Color.Transparent;
             lblAvatar.Font = new Font("Segoe UI Emoji", 23F);
             lblAvatar.Location = new Point(12, 12);
             lblAvatar.Name = "lblAvatar";
@@ -342,6 +349,7 @@ namespace SistemaAcademico1
             // 
             // lblUsuario
             // 
+            lblUsuario.BackColor = Color.Transparent;
             lblUsuario.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             lblUsuario.ForeColor = Color.White;
             lblUsuario.Location = new Point(70, 14);
@@ -352,6 +360,7 @@ namespace SistemaAcademico1
             // 
             // lblRol
             // 
+            lblRol.BackColor = Color.Transparent;
             lblRol.ForeColor = Color.Silver;
             lblRol.Location = new Point(70, 40);
             lblRol.Name = "lblRol";
@@ -362,6 +371,8 @@ namespace SistemaAcademico1
             // panelContenido
             // 
             panelContenido.BackColor = Color.FromArgb(5, 16, 43);
+            panelContenido.BackgroundImage = (Image)resources.GetObject("panelContenido.BackgroundImage");
+            panelContenido.BackgroundImageLayout = ImageLayout.Stretch;
             panelContenido.Controls.Add(lblBienvenida);
             panelContenido.Controls.Add(lblSubtitulo);
             panelContenido.Controls.Add(tarjetaFecha);
@@ -378,6 +389,7 @@ namespace SistemaAcademico1
             // 
             // lblBienvenida
             // 
+            lblBienvenida.BackColor = Color.Transparent;
             lblBienvenida.Font = new Font("Segoe UI", 23F, FontStyle.Bold);
             lblBienvenida.ForeColor = Color.White;
             lblBienvenida.Location = new Point(35, 25);
@@ -388,6 +400,7 @@ namespace SistemaAcademico1
             // 
             // lblSubtitulo
             // 
+            lblSubtitulo.BackColor = Color.Transparent;
             lblSubtitulo.Font = new Font("Segoe UI", 11F);
             lblSubtitulo.ForeColor = Color.Silver;
             lblSubtitulo.Location = new Point(38, 75);
@@ -440,7 +453,8 @@ namespace SistemaAcademico1
             // 
             // tarjetaDocentes
             // 
-            tarjetaDocentes.BackColor = Color.FromArgb(12, 28, 68);
+            tarjetaDocentes.BackColor = Color.MidnightBlue;
+            tarjetaDocentes.BackgroundImage = (Image)resources.GetObject("tarjetaDocentes.BackgroundImage");
             tarjetaDocentes.Controls.Add(lblStatDocentes);
             tarjetaDocentes.Location = new Point(0, 0);
             tarjetaDocentes.Name = "tarjetaDocentes";
@@ -449,6 +463,7 @@ namespace SistemaAcademico1
             // 
             // lblStatDocentes
             // 
+            lblStatDocentes.BackColor = Color.Transparent;
             lblStatDocentes.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             lblStatDocentes.ForeColor = Color.MediumPurple;
             lblStatDocentes.Location = new Point(15, 12);
@@ -460,6 +475,7 @@ namespace SistemaAcademico1
             // tarjetaEquipo
             // 
             tarjetaEquipo.BackColor = Color.FromArgb(12, 28, 68);
+            tarjetaEquipo.BackgroundImage = (Image)resources.GetObject("tarjetaEquipo.BackgroundImage");
             tarjetaEquipo.Controls.Add(lblStatEquipo);
             tarjetaEquipo.Location = new Point(246, 0);
             tarjetaEquipo.Name = "tarjetaEquipo";
@@ -468,6 +484,7 @@ namespace SistemaAcademico1
             // 
             // lblStatEquipo
             // 
+            lblStatEquipo.BackColor = Color.Transparent;
             lblStatEquipo.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             lblStatEquipo.ForeColor = Color.MediumSeaGreen;
             lblStatEquipo.Location = new Point(15, 12);
@@ -479,6 +496,7 @@ namespace SistemaAcademico1
             // tarjetaMateria
             // 
             tarjetaMateria.BackColor = Color.FromArgb(12, 28, 68);
+            tarjetaMateria.BackgroundImage = (Image)resources.GetObject("tarjetaMateria.BackgroundImage");
             tarjetaMateria.Controls.Add(lblStatMateria);
             tarjetaMateria.Location = new Point(492, 0);
             tarjetaMateria.Name = "tarjetaMateria";
@@ -487,6 +505,7 @@ namespace SistemaAcademico1
             // 
             // lblStatMateria
             // 
+            lblStatMateria.BackColor = Color.Transparent;
             lblStatMateria.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             lblStatMateria.ForeColor = Color.Goldenrod;
             lblStatMateria.Location = new Point(15, 12);
@@ -497,7 +516,8 @@ namespace SistemaAcademico1
             // 
             // tarjetaCantidadTemas
             // 
-            tarjetaCantidadTemas.BackColor = Color.FromArgb(12, 28, 68);
+            tarjetaCantidadTemas.BackColor = Color.Transparent;
+            tarjetaCantidadTemas.BackgroundImage = (Image)resources.GetObject("tarjetaCantidadTemas.BackgroundImage");
             tarjetaCantidadTemas.Controls.Add(lblStatTemas);
             tarjetaCantidadTemas.Location = new Point(738, 0);
             tarjetaCantidadTemas.Name = "tarjetaCantidadTemas";
@@ -506,6 +526,7 @@ namespace SistemaAcademico1
             // 
             // lblStatTemas
             // 
+            lblStatTemas.BackColor = Color.Transparent;
             lblStatTemas.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             lblStatTemas.ForeColor = Color.DodgerBlue;
             lblStatTemas.Location = new Point(15, 12);
@@ -516,6 +537,7 @@ namespace SistemaAcademico1
             // 
             // lblTituloTemas
             // 
+            lblTituloTemas.BackColor = Color.Transparent;
             lblTituloTemas.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             lblTituloTemas.ForeColor = Color.White;
             lblTituloTemas.Location = new Point(35, 250);
@@ -604,6 +626,7 @@ namespace SistemaAcademico1
             btnAlgoritmos.TabIndex = 4;
             btnAlgoritmos.Text = "Ver tema";
             btnAlgoritmos.UseVisualStyleBackColor = false;
+            btnAlgoritmos.Click += btnAlgoritmos_Click_1;
             // 
             // tarjetaVariables
             // 
@@ -816,6 +839,7 @@ namespace SistemaAcademico1
             // panelAccesos
             // 
             panelAccesos.BackColor = Color.FromArgb(10, 27, 64);
+            panelAccesos.BackgroundImage = (Image)resources.GetObject("panelAccesos.BackgroundImage");
             panelAccesos.Controls.Add(lblAccesos);
             panelAccesos.Controls.Add(btnAccesoJuego);
             panelAccesos.Controls.Add(btnAccesoVariables);
@@ -827,6 +851,7 @@ namespace SistemaAcademico1
             // 
             // lblAccesos
             // 
+            lblAccesos.BackColor = Color.Transparent;
             lblAccesos.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             lblAccesos.ForeColor = Color.White;
             lblAccesos.Location = new Point(18, 12);
