@@ -99,7 +99,7 @@ namespace SistemaAcademico1
             {
                 DashboardPrincipal frm = new DashboardPrincipal("Docente");
                 frm.Show();
-                Hide();
+                Hide(); Close();
             }
             else
             {
