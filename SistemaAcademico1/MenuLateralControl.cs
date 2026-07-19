@@ -66,8 +66,7 @@ namespace SistemaAcademico1
 
         private void btnJuego_Click(object sender, EventArgs e)
         {
-            using MinijuegoOrdenarCodigo juego = new MinijuegoOrdenarCodigo();
-            juego.ShowDialog(FormularioActual ?? FindForm());
+            AbrirFormulario(new MenuJuegos(), OpcionActiva == "Juego");
         }
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)

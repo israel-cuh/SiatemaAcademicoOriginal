@@ -301,7 +301,7 @@ namespace SistemaAcademico1
             btnJuego.Text = "🎮   Juego interactivo";
             btnJuego.TextAlign = ContentAlignment.MiddleLeft;
             btnJuego.UseVisualStyleBackColor = false;
-            btnJuego.Click += btnJuego_Click_1;
+          //  btnJuego.Click += btnJuego_Click_1;
             // 
             // btnCerrarSesion
             // 

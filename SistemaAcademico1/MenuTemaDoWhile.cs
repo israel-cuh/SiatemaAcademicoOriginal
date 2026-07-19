@@ -77,5 +77,10 @@ namespace SistemaAcademico1
             using MinijuegoOrdenarCodigo juego = new MinijuegoOrdenarCodigo();
             juego.ShowDialog(this);
         }
+
+        private void lblExpFalsa_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
