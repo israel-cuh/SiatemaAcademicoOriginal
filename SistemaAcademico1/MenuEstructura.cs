@@ -172,7 +172,7 @@ namespace SistemaAcademico1
 
         private void btnJuego_Click(object? sender, EventArgs e)
         {
-            MenuJuegos menuJuegos = new MenuJuegos();
+            MenuJuegos menuJuegos = new MenuJuegos(rolUsuario);
             menuJuegos.Show();
             Hide();
         }
