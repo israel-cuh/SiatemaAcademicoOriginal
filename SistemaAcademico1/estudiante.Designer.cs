@@ -60,10 +60,10 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.WhatsApp_Image_2026_07_20_at_22_38_38;
-            pictureBox1.Location = new Point(17, 14);
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(43, 25);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(116, 100);
+            pictureBox1.Size = new Size(116, 74);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -75,7 +75,7 @@
             lblejercicio.BackColor = Color.Transparent;
             lblejercicio.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblejercicio.ForeColor = SystemColors.ButtonFace;
-            lblejercicio.Location = new Point(152, 25);
+            lblejercicio.Location = new Point(165, 25);
             lblejercicio.Name = "lblejercicio";
             lblejercicio.Size = new Size(343, 50);
             lblejercicio.TabIndex = 1;
@@ -109,10 +109,10 @@
             // pictureBox2
             // 
             pictureBox2.BackColor = Color.Transparent;
-            pictureBox2.Image = Properties.Resources.WhatsApp_Image_2026_07_20_at_22_39_32;
-            pictureBox2.Location = new Point(793, 3);
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(752, 15);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(146, 125);
+            pictureBox2.Size = new Size(146, 103);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 3;
             pictureBox2.TabStop = false;
@@ -138,7 +138,7 @@
             // pictureBox3
             // 
             pictureBox3.BackColor = Color.Transparent;
-            pictureBox3.Image = Properties.Resources.WhatsApp_Image_2026_07_20_at_22_39_08;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
             pictureBox3.Location = new Point(742, 83);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(156, 172);
@@ -311,6 +311,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "estudiante";
+            ShowInTaskbar = false;
             Text = "estudiante";
             Load += estudiante_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
