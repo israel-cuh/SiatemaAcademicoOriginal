@@ -43,6 +43,12 @@
     <Compile Update="FrmVariables.Designer.cs">
       <DependentUpon>FrmVariables.cs</DependentUpon>
     </Compile>
+    <Compile Update="FrmDeclaracionVariables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmDeclaracionVariables.Designer.cs">
+      <DependentUpon>FrmDeclaracionVariables.cs</DependentUpon>
+    </Compile>
     <Compile Update="DashboardPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Update="FrmVariables.resx">
       <DependentUpon>FrmVariables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="FrmDeclaracionVariables.resx">
+      <DependentUpon>FrmDeclaracionVariables.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Update="DashboardPrincipal.resx">
       <DependentUpon>DashboardPrincipal.cs</DependentUpon>

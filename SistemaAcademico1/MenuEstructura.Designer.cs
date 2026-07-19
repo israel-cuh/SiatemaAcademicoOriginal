@@ -68,6 +68,7 @@ namespace SistemaAcademico1
         private Button btnAccesoJuego = null!;
         private Button btnAccesoVariables = null!;
         private Button btnAccesoCiclos = null!;
+        private Button btnTemas = null!;
 
         protected override void Dispose(bool disposing)
         {
@@ -90,6 +91,7 @@ namespace SistemaAcademico1
             lblSistema = new Label();
             lblCurso = new Label();
             btnJuego = new Button();
+            btnTemas = new Button();
             btnCerrarSesion = new Button();
             tarjetaUsuario = new Panel();
             lblAvatar = new Label();
@@ -220,6 +222,7 @@ namespace SistemaAcademico1
             panelLateral.Controls.Add(lblSistema);
             panelLateral.Controls.Add(lblCurso);
             panelLateral.Controls.Add(btnJuego);
+            panelLateral.Controls.Add(btnTemas);
             panelLateral.Controls.Add(btnCerrarSesion);
             panelLateral.Controls.Add(tarjetaUsuario);
             panelLateral.Dock = DockStyle.Left;
@@ -307,6 +310,22 @@ namespace SistemaAcademico1
             btnJuego.Text = "🎮   Juego interactivo";
             btnJuego.TextAlign = ContentAlignment.MiddleLeft;
             btnJuego.UseVisualStyleBackColor = false;
+            // 
+            // btnTemas
+            // 
+            btnTemas.BackColor = Color.Transparent;
+            btnTemas.FlatAppearance.BorderSize = 0;
+            btnTemas.FlatStyle = FlatStyle.Flat;
+            btnTemas.Font = new Font("Segoe UI", 11F);
+            btnTemas.ForeColor = Color.Gainsboro;
+            btnTemas.Location = new Point(15, 255);
+            btnTemas.Name = "btnTemas";
+            btnTemas.Padding = new Padding(20, 0, 0, 0);
+            btnTemas.Size = new Size(230, 48);
+            btnTemas.TabIndex = 5;
+            btnTemas.Text = "📚   Temas";
+            btnTemas.TextAlign = ContentAlignment.MiddleLeft;
+            btnTemas.UseVisualStyleBackColor = false;
             // 
             // btnCerrarSesion
             // 
