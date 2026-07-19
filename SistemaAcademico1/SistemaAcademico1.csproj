@@ -55,6 +55,12 @@
     <Compile Update="MenuJuegos.Designer.cs">
       <DependentUpon>MenuJuegos.cs</DependentUpon>
     </Compile>
+    <Compile Update="MinijuegoOrdenarCodigo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MinijuegoOrdenarCodigo.Designer.cs">
+      <DependentUpon>MinijuegoOrdenarCodigo.cs</DependentUpon>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -83,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Update="MenuJuegos.resx">
       <DependentUpon>MenuJuegos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MinijuegoOrdenarCodigo.resx">
+      <DependentUpon>MinijuegoOrdenarCodigo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
