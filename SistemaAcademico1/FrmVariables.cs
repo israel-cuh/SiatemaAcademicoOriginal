@@ -13,6 +13,12 @@ namespace SistemaAcademico1
         public FrmVariables()
         {
             InitializeComponent();
+
+            if (LicenseManager.UsageMode != LicenseUsageMode.Designtime)
+            {
+                MenuLateralHelper.AgregarMenu(this, "Variables");
+                ControlesVentanaHelper.Agregar(this, cerrarAplicacion: true);
+            }
         }
 
         private void pnlRegresar_Paint(object sender, PaintEventArgs e)
@@ -24,7 +30,7 @@ namespace SistemaAcademico1
         {
             Menuvariables menu = new Menuvariables();
             menu.Show();
-            this.Close();
+            Hide();
         }
 
         private void lblRegresar_Click(object sender, EventArgs e)
