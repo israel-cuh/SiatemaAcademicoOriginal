@@ -91,13 +91,13 @@ namespace SistemaAcademico1
 
             if (usuario == "estudiante" && clave == "1234")
             {
-                MenuEstructura frm = new MenuEstructura("Estudiante");
+                DashboardPrincipal frm = new DashboardPrincipal("Estudiante");
                 frm.Show();
                 Hide();
             }
             else if (usuario == "docente" && clave == "1234")
             {
-                MenuEstructura frm = new MenuEstructura("Docente");
+                DashboardPrincipal frm = new DashboardPrincipal("Docente");
                 frm.Show();
                 Hide();
             }
