@@ -18,9 +18,9 @@ namespace SistemaAcademico1
         private void InitializeComponent()
         {
             panelHeader = new Panel();
-            lblUsuario = new Label();
             btnCerrarSesion = new Button();
             btnEntrar = new Button();
+            lblUsuario = new Label();
             lblSubtitulo = new Label();
             lblTitulo = new Label();
             panelTarjetas = new Panel();
@@ -48,13 +48,23 @@ namespace SistemaAcademico1
             lblActividadTitulo = new Label();
             panelProgreso = new Panel();
             progressActividades = new ProgressBar();
-            progressRendimiento = new ProgressBar();
-            progressGeneral = new ProgressBar();
             lblBar3 = new Label();
+            progressRendimiento = new ProgressBar();
             lblBar2 = new Label();
+            progressGeneral = new ProgressBar();
             lblBar1 = new Label();
             lblProgresoGeneralTitulo = new Label();
             panelGrafico = new Panel();
+            barraViernes = new ProgressBar();
+            lblGraficoViernes = new Label();
+            barraJueves = new ProgressBar();
+            lblGraficoJueves = new Label();
+            barraMiercoles = new ProgressBar();
+            lblGraficoMiercoles = new Label();
+            barraMartes = new ProgressBar();
+            lblGraficoMartes = new Label();
+            barraLunes = new ProgressBar();
+            lblGraficoLunes = new Label();
             lblGraficoSubtitulo = new Label();
             lblGraficoTitulo = new Label();
             panelHeader.SuspendLayout();
@@ -72,15 +82,43 @@ namespace SistemaAcademico1
             // panelHeader
             // 
             panelHeader.BackColor = Color.FromArgb(9, 25, 62);
-            panelHeader.Controls.Add(lblUsuario);
             panelHeader.Controls.Add(btnCerrarSesion);
             panelHeader.Controls.Add(btnEntrar);
+            panelHeader.Controls.Add(lblUsuario);
             panelHeader.Controls.Add(lblSubtitulo);
             panelHeader.Controls.Add(lblTitulo);
             panelHeader.Location = new Point(35, 35);
             panelHeader.Name = "panelHeader";
             panelHeader.Size = new Size(1490, 155);
             panelHeader.TabIndex = 0;
+            // 
+            // btnCerrarSesion
+            // 
+            btnCerrarSesion.BackColor = Color.FromArgb(9, 25, 62);
+            btnCerrarSesion.FlatStyle = FlatStyle.Popup;
+            btnCerrarSesion.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCerrarSesion.ForeColor = Color.White;
+            btnCerrarSesion.Location = new Point(1120, 53);
+            btnCerrarSesion.Name = "btnCerrarSesion";
+            btnCerrarSesion.Size = new Size(160, 50);
+            btnCerrarSesion.TabIndex = 4;
+            btnCerrarSesion.Text = "Cerrar sesión";
+            btnCerrarSesion.UseVisualStyleBackColor = false;
+            btnCerrarSesion.Click += btnCerrarSesion_Click;
+            // 
+            // btnEntrar
+            // 
+            btnEntrar.BackColor = Color.FromArgb(132, 78, 255);
+            btnEntrar.FlatStyle = FlatStyle.Popup;
+            btnEntrar.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEntrar.ForeColor = Color.White;
+            btnEntrar.Location = new Point(1300, 53);
+            btnEntrar.Name = "btnEntrar";
+            btnEntrar.Size = new Size(155, 50);
+            btnEntrar.TabIndex = 3;
+            btnEntrar.Text = "Entrar";
+            btnEntrar.UseVisualStyleBackColor = false;
+            btnEntrar.Click += btnEntrar_Click;
             // 
             // lblUsuario
             // 
@@ -90,36 +128,8 @@ namespace SistemaAcademico1
             lblUsuario.Location = new Point(43, 106);
             lblUsuario.Name = "lblUsuario";
             lblUsuario.Size = new Size(168, 23);
-            lblUsuario.TabIndex = 4;
+            lblUsuario.TabIndex = 2;
             lblUsuario.Text = "Vista administrador";
-            // 
-            // btnCerrarSesion
-            // 
-            btnCerrarSesion.BackColor = Color.FromArgb(9, 25, 62);
-            btnCerrarSesion.FlatStyle = FlatStyle.Flat;
-            btnCerrarSesion.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCerrarSesion.ForeColor = Color.White;
-            btnCerrarSesion.Location = new Point(1120, 53);
-            btnCerrarSesion.Name = "btnCerrarSesion";
-            btnCerrarSesion.Size = new Size(160, 50);
-            btnCerrarSesion.TabIndex = 3;
-            btnCerrarSesion.Text = "Cerrar sesión";
-            btnCerrarSesion.UseVisualStyleBackColor = false;
-            btnCerrarSesion.Click += btnCerrarSesion_Click;
-            // 
-            // btnEntrar
-            // 
-            btnEntrar.BackColor = Color.FromArgb(132, 78, 255);
-            btnEntrar.FlatStyle = FlatStyle.Flat;
-            btnEntrar.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEntrar.ForeColor = Color.White;
-            btnEntrar.Location = new Point(1300, 53);
-            btnEntrar.Name = "btnEntrar";
-            btnEntrar.Size = new Size(155, 50);
-            btnEntrar.TabIndex = 2;
-            btnEntrar.Text = "Entrar";
-            btnEntrar.UseVisualStyleBackColor = false;
-            btnEntrar.Click += btnEntrar_Click;
             // 
             // lblSubtitulo
             // 
@@ -139,13 +149,12 @@ namespace SistemaAcademico1
             lblTitulo.ForeColor = Color.White;
             lblTitulo.Location = new Point(35, 12);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(549, 61);
+            lblTitulo.Size = new Size(554, 61);
             lblTitulo.TabIndex = 0;
-            lblTitulo.Text = "Buenos días, docente 👋";
+            lblTitulo.Text = "Buenos días, Docente 👋";
             // 
             // panelTarjetas
             // 
-            panelTarjetas.BackColor = Color.Transparent;
             panelTarjetas.Controls.Add(tarjetaRendimiento);
             panelTarjetas.Controls.Add(tarjetaActividades);
             panelTarjetas.Controls.Add(tarjetaProgreso);
@@ -395,10 +404,10 @@ namespace SistemaAcademico1
             // 
             panelProgreso.BackColor = Color.FromArgb(9, 25, 62);
             panelProgreso.Controls.Add(progressActividades);
-            panelProgreso.Controls.Add(progressRendimiento);
-            panelProgreso.Controls.Add(progressGeneral);
             panelProgreso.Controls.Add(lblBar3);
+            panelProgreso.Controls.Add(progressRendimiento);
             panelProgreso.Controls.Add(lblBar2);
+            panelProgreso.Controls.Add(progressGeneral);
             panelProgreso.Controls.Add(lblBar1);
             panelProgreso.Controls.Add(lblProgresoGeneralTitulo);
             panelProgreso.Location = new Point(625, 375);
@@ -414,22 +423,6 @@ namespace SistemaAcademico1
             progressActividades.TabIndex = 6;
             progressActividades.Value = 62;
             // 
-            // progressRendimiento
-            // 
-            progressRendimiento.Location = new Point(35, 220);
-            progressRendimiento.Name = "progressRendimiento";
-            progressRendimiento.Size = new Size(360, 22);
-            progressRendimiento.TabIndex = 5;
-            progressRendimiento.Value = 89;
-            // 
-            // progressGeneral
-            // 
-            progressGeneral.Location = new Point(35, 125);
-            progressGeneral.Name = "progressGeneral";
-            progressGeneral.Size = new Size(360, 22);
-            progressGeneral.TabIndex = 4;
-            progressGeneral.Value = 76;
-            // 
             // lblBar3
             // 
             lblBar3.AutoSize = true;
@@ -438,8 +431,16 @@ namespace SistemaAcademico1
             lblBar3.Location = new Point(35, 282);
             lblBar3.Name = "lblBar3";
             lblBar3.Size = new Size(273, 25);
-            lblBar3.TabIndex = 3;
+            lblBar3.TabIndex = 5;
             lblBar3.Text = "Actividades completadas 62%";
+            // 
+            // progressRendimiento
+            // 
+            progressRendimiento.Location = new Point(35, 220);
+            progressRendimiento.Name = "progressRendimiento";
+            progressRendimiento.Size = new Size(360, 22);
+            progressRendimiento.TabIndex = 4;
+            progressRendimiento.Value = 89;
             // 
             // lblBar2
             // 
@@ -449,8 +450,16 @@ namespace SistemaAcademico1
             lblBar2.Location = new Point(35, 187);
             lblBar2.Name = "lblBar2";
             lblBar2.Size = new Size(268, 25);
-            lblBar2.TabIndex = 2;
+            lblBar2.TabIndex = 3;
             lblBar2.Text = "Rendimiento académico 89%";
+            // 
+            // progressGeneral
+            // 
+            progressGeneral.Location = new Point(35, 125);
+            progressGeneral.Name = "progressGeneral";
+            progressGeneral.Size = new Size(360, 22);
+            progressGeneral.TabIndex = 2;
+            progressGeneral.Value = 76;
             // 
             // lblBar1
             // 
@@ -477,13 +486,117 @@ namespace SistemaAcademico1
             // panelGrafico
             // 
             panelGrafico.BackColor = Color.FromArgb(9, 25, 62);
+            panelGrafico.Controls.Add(barraViernes);
+            panelGrafico.Controls.Add(lblGraficoViernes);
+            panelGrafico.Controls.Add(barraJueves);
+            panelGrafico.Controls.Add(lblGraficoJueves);
+            panelGrafico.Controls.Add(barraMiercoles);
+            panelGrafico.Controls.Add(lblGraficoMiercoles);
+            panelGrafico.Controls.Add(barraMartes);
+            panelGrafico.Controls.Add(lblGraficoMartes);
+            panelGrafico.Controls.Add(barraLunes);
+            panelGrafico.Controls.Add(lblGraficoLunes);
             panelGrafico.Controls.Add(lblGraficoSubtitulo);
             panelGrafico.Controls.Add(lblGraficoTitulo);
             panelGrafico.Location = new Point(1085, 375);
             panelGrafico.Name = "panelGrafico";
             panelGrafico.Size = new Size(440, 405);
             panelGrafico.TabIndex = 4;
-            panelGrafico.Paint += panelGrafico_Paint;
+            // 
+            // barraViernes
+            // 
+            barraViernes.Location = new Point(145, 307);
+            barraViernes.Name = "barraViernes";
+            barraViernes.Size = new Size(250, 20);
+            barraViernes.TabIndex = 11;
+            barraViernes.Value = 91;
+            // 
+            // lblGraficoViernes
+            // 
+            lblGraficoViernes.AutoSize = true;
+            lblGraficoViernes.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblGraficoViernes.ForeColor = Color.Gainsboro;
+            lblGraficoViernes.Location = new Point(35, 305);
+            lblGraficoViernes.Name = "lblGraficoViernes";
+            lblGraficoViernes.Size = new Size(108, 23);
+            lblGraficoViernes.TabIndex = 10;
+            lblGraficoViernes.Text = "Viernes 91%";
+            // 
+            // barraJueves
+            // 
+            barraJueves.Location = new Point(145, 262);
+            barraJueves.Name = "barraJueves";
+            barraJueves.Size = new Size(250, 20);
+            barraJueves.TabIndex = 9;
+            barraJueves.Value = 88;
+            // 
+            // lblGraficoJueves
+            // 
+            lblGraficoJueves.AutoSize = true;
+            lblGraficoJueves.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblGraficoJueves.ForeColor = Color.Gainsboro;
+            lblGraficoJueves.Location = new Point(35, 260);
+            lblGraficoJueves.Name = "lblGraficoJueves";
+            lblGraficoJueves.Size = new Size(102, 23);
+            lblGraficoJueves.TabIndex = 8;
+            lblGraficoJueves.Text = "Jueves 88%";
+            // 
+            // barraMiercoles
+            // 
+            barraMiercoles.Location = new Point(145, 217);
+            barraMiercoles.Name = "barraMiercoles";
+            barraMiercoles.Size = new Size(250, 20);
+            barraMiercoles.TabIndex = 7;
+            barraMiercoles.Value = 80;
+            // 
+            // lblGraficoMiercoles
+            // 
+            lblGraficoMiercoles.AutoSize = true;
+            lblGraficoMiercoles.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblGraficoMiercoles.ForeColor = Color.Gainsboro;
+            lblGraficoMiercoles.Location = new Point(35, 215);
+            lblGraficoMiercoles.Name = "lblGraficoMiercoles";
+            lblGraficoMiercoles.Size = new Size(100, 23);
+            lblGraficoMiercoles.TabIndex = 6;
+            lblGraficoMiercoles.Text = "Miérc. 80%";
+            // 
+            // barraMartes
+            // 
+            barraMartes.Location = new Point(145, 172);
+            barraMartes.Name = "barraMartes";
+            barraMartes.Size = new Size(250, 20);
+            barraMartes.TabIndex = 5;
+            barraMartes.Value = 72;
+            // 
+            // lblGraficoMartes
+            // 
+            lblGraficoMartes.AutoSize = true;
+            lblGraficoMartes.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblGraficoMartes.ForeColor = Color.Gainsboro;
+            lblGraficoMartes.Location = new Point(35, 170);
+            lblGraficoMartes.Name = "lblGraficoMartes";
+            lblGraficoMartes.Size = new Size(105, 23);
+            lblGraficoMartes.TabIndex = 4;
+            lblGraficoMartes.Text = "Martes 72%";
+            // 
+            // barraLunes
+            // 
+            barraLunes.Location = new Point(145, 127);
+            barraLunes.Name = "barraLunes";
+            barraLunes.Size = new Size(250, 20);
+            barraLunes.TabIndex = 3;
+            barraLunes.Value = 65;
+            // 
+            // lblGraficoLunes
+            // 
+            lblGraficoLunes.AutoSize = true;
+            lblGraficoLunes.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblGraficoLunes.ForeColor = Color.Gainsboro;
+            lblGraficoLunes.Location = new Point(35, 125);
+            lblGraficoLunes.Name = "lblGraficoLunes";
+            lblGraficoLunes.Size = new Size(95, 23);
+            lblGraficoLunes.TabIndex = 2;
+            lblGraficoLunes.Text = "Lunes 65%";
             // 
             // lblGraficoSubtitulo
             // 
@@ -550,25 +663,25 @@ namespace SistemaAcademico1
         private Panel panelHeader;
         private Label lblTitulo;
         private Label lblSubtitulo;
+        private Label lblUsuario;
         private Button btnEntrar;
         private Button btnCerrarSesion;
-        private Label lblUsuario;
         private Panel panelTarjetas;
         private Panel tarjetaEstudiantes;
         private Label lblEstudiantesValor;
         private Label lblEstudiantesTexto;
         private Panel tarjetaDocentes;
-        private Label lblDocentesTexto;
         private Label lblDocentesValor;
+        private Label lblDocentesTexto;
         private Panel tarjetaProgreso;
-        private Label lblProgresoTexto;
         private Label lblProgresoValor;
+        private Label lblProgresoTexto;
         private Panel tarjetaActividades;
-        private Label lblActividadesTexto;
         private Label lblActividadesValor;
+        private Label lblActividadesTexto;
         private Panel tarjetaRendimiento;
-        private Label lblRendimientoTexto;
         private Label lblRendimientoValor;
+        private Label lblRendimientoTexto;
         private Panel panelActividad;
         private Label lblActividadTitulo;
         private Label lblAct1;
@@ -579,13 +692,23 @@ namespace SistemaAcademico1
         private Panel panelProgreso;
         private Label lblProgresoGeneralTitulo;
         private Label lblBar1;
-        private Label lblBar2;
-        private Label lblBar3;
         private ProgressBar progressGeneral;
+        private Label lblBar2;
         private ProgressBar progressRendimiento;
+        private Label lblBar3;
         private ProgressBar progressActividades;
         private Panel panelGrafico;
         private Label lblGraficoTitulo;
         private Label lblGraficoSubtitulo;
+        private Label lblGraficoLunes;
+        private ProgressBar barraLunes;
+        private Label lblGraficoMartes;
+        private ProgressBar barraMartes;
+        private Label lblGraficoMiercoles;
+        private ProgressBar barraMiercoles;
+        private Label lblGraficoJueves;
+        private ProgressBar barraJueves;
+        private Label lblGraficoViernes;
+        private ProgressBar barraViernes;
     }
 }
