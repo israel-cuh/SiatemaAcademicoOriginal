@@ -26,13 +26,21 @@ namespace SistemaAcademico1
             {
                 MenuLateralHelper.AgregarMenu(this, "Ciclos");
                 AjustarDistribucionGrande();
+                ControlesVentanaHelper.Agregar(this, cerrarAplicacion: true);
+                Resize += (_, _) =>
+                {
+                    if (WindowState != FormWindowState.Minimized)
+                        AjustarDistribucionGrande();
+                };
             }
 
             btnWhile.Click += (_, _) => MostrarWhile();
-            btnFor.Click += (_, _) => MostrarFor();
-            btnDoWhile.Click += (_, _) => MostrarDoWhile();
+            btnFor.Click += (_, _) => AbrirCicloFor();
+            btnDoWhile.Click += (_, _) => AbrirCicloDoWhile();
             btnAnidados.Click += (_, _) => MostrarAnidados();
             btnjuego.Click += btnjuego_Click;
+
+            ConfigurarBotonesSubMenu();
 
             txtCodigo.ReadOnly = true;
             txtCodigo.TabStop = false;
@@ -43,35 +51,55 @@ namespace SistemaAcademico1
             MostrarWhile();
         }
 
+        private void ConfigurarBotonesSubMenu()
+        {
+            Button[] botones = { btnWhile, btnFor, btnDoWhile, btnAnidados };
+
+            foreach (Button boton in botones)
+            {
+                boton.UseVisualStyleBackColor = false;
+                boton.FlatStyle = FlatStyle.Flat;
+                boton.FlatAppearance.BorderSize = 1;
+                boton.FlatAppearance.BorderColor = Color.FromArgb(16, 35, 80);
+                boton.FlatAppearance.MouseOverBackColor = Color.FromArgb(28, 49, 105);
+                boton.FlatAppearance.MouseDownBackColor = Color.FromArgb(132, 78, 255);
+                boton.BackColor = Color.FromArgb(6, 16, 41);
+                boton.ForeColor = Color.White;
+            }
+        }
+
         private void AjustarDistribucionGrande()
         {
             int margenIzquierdo = 290;
             int margenSuperior = 18;
-            int anchoContenido = ClientSize.Width - margenIzquierdo - 30;
+            int anchoContenido = Math.Max(900, ClientSize.Width - margenIzquierdo - 30);
+            int altoPaneles = Math.Max(535, ClientSize.Height - 315);
+            int posicionPanelInferior = Math.Max(705, ClientSize.Height - 145);
 
             panel2.Location = new Point(margenIzquierdo, margenSuperior);
-            panel2.Size = new Size(250, 430);
+            panel2.Size = new Size(250, Math.Max(430, altoPaneles - 105));
 
-            panelConsejo.Location = new Point(margenIzquierdo, 475);
+            panelConsejo.Location = new Point(margenIzquierdo, Math.Max(475, ClientSize.Height - 375));
             panelConsejo.Size = new Size(250, 165);
 
             panel1.Location = new Point(margenIzquierdo + 270, margenSuperior);
-            panel1.Size = new Size(anchoContenido - 270, 118);
+            panel1.Size = new Size(Math.Max(620, anchoContenido - 270), 118);
 
             panel4.Location = new Point(margenIzquierdo + 270, 145);
-            panel4.Size = new Size(500, 535);
-            panelImportante.Location = new Point(12, 430);
+            panel4.Size = new Size(500, altoPaneles);
+            panelImportante.Location = new Point(12, panel4.Height - 105);
             panelImportante.Size = new Size(468, 87);
 
             panel5.Location = new Point(margenIzquierdo + 790, 145);
-            panel5.Size = new Size(anchoContenido - 790, 535);
+            panel5.Size = new Size(Math.Max(420, anchoContenido - 790), altoPaneles);
             txtCodigo.Size = new Size(panel5.Width - 54, 160);
-            txtSalida.Size = new Size(panel5.Width - 54, 175);
+            txtSalida.Size = new Size(panel5.Width - 54, Math.Max(175, panel5.Height - 360));
+            label3.Location = new Point(label3.Left, txtSalida.Bottom + 10);
             label3.Size = new Size(panel5.Width - 54, 55);
             btnLimpiar.Location = new Point(panel5.Width - 248, 205);
             btnEjecutar.Location = new Point(panel5.Width - 128, 205);
 
-            panel6.Location = new Point(margenIzquierdo, 705);
+            panel6.Location = new Point(margenIzquierdo, posicionPanelInferior);
             panel6.Size = new Size(anchoContenido, 105);
             button1.Location = new Point(45, 38);
             btnjuego.Location = new Point(panel6.Width - btnjuego.Width - 28, 28);
@@ -93,7 +121,20 @@ namespace SistemaAcademico1
             txtCodigo.Text = ejemplo;
             label3.Text = explicacion;
             txtSalida.Clear();
+            MostrarExplicacionConColores(tema == TemaCiclo.While);
             MarcarBotonActivo(botonActivo);
+        }
+
+        private void MostrarExplicacionConColores(bool mostrar)
+        {
+            Control[] explicacionColores =
+            {
+                label12, label13, label14, label15, label16,
+                label17, label18, label19
+            };
+
+            foreach (Control control in explicacionColores)
+                control.Visible = mostrar;
         }
 
         private void MostrarWhile()
@@ -108,16 +149,18 @@ namespace SistemaAcademico1
                 "Comienza en 1, imprime el número y lo incrementa hasta llegar a 5.");
         }
 
-        private void MostrarFor()
+        private void AbrirCicloFor()
         {
-            MostrarTema(
-                TemaCiclo.For,
-                btnFor,
-                "Ciclo For",
-                "Repite instrucciones una cantidad determinada de veces.",
-                "for (inicio; condicion; incremento)\n{\n    instrucciones;\n}",
-                "for (int i = 1; i <= 5; i++)\n{\n    Console.WriteLine(i);\n}",
-                "El ciclo controla el inicio, la condición y el incremento en una sola línea.");
+            MenuTemaFor ventana = new MenuTemaFor();
+            ventana.Show();
+            Hide();
+        }
+
+        private void AbrirCicloDoWhile()
+        {
+            MenuTemaDoWhile ventana = new MenuTemaDoWhile();
+            ventana.Show();
+            Hide();
         }
 
         private void MostrarDoWhile()
@@ -150,14 +193,17 @@ namespace SistemaAcademico1
 
             foreach (Button boton in botones)
             {
-                boton.BackColor = Color.White;
-                boton.ForeColor = Color.FromArgb(6, 16, 41);
+                boton.UseVisualStyleBackColor = false;
                 boton.FlatStyle = FlatStyle.Flat;
-                boton.FlatAppearance.BorderSize = 0;
+                boton.FlatAppearance.BorderSize = 1;
+                boton.FlatAppearance.BorderColor = Color.FromArgb(16, 35, 80);
+                boton.BackColor = Color.FromArgb(6, 16, 41);
+                boton.ForeColor = Color.White;
             }
 
             botonActivo.BackColor = Color.FromArgb(132, 78, 255);
             botonActivo.ForeColor = Color.White;
+            botonActivo.FlatAppearance.BorderColor = Color.FromArgb(160, 120, 255);
         }
 
         private void OcultarTextosFijosDeWhile()
@@ -165,8 +211,7 @@ namespace SistemaAcademico1
             Control[] textosFijos =
             {
                 label4, label5, label6, label7, label8,
-                label12, label13, label14, label15, label16,
-                label17, label18, label19, panel3
+                panel3
             };
 
             foreach (Control control in textosFijos)
@@ -249,6 +294,11 @@ namespace SistemaAcademico1
         {
             using MinijuegoOrdenarCodigo juego = new();
             juego.ShowDialog(this);
+        }
+
+        private void btnDoWhile_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

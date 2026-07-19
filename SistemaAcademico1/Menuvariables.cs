@@ -15,7 +15,10 @@ namespace SistemaAcademico1
             InitializeComponent();
 
             if (LicenseManager.UsageMode != LicenseUsageMode.Designtime)
+            {
                 MenuLateralHelper.AgregarMenu(this, "Variables");
+                ControlesVentanaHelper.Agregar(this, cerrarAplicacion: true);
+            }
         }
 
         private void btnIrVariables_Click(object sender, EventArgs e)

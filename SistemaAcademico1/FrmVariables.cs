@@ -73,5 +73,12 @@ namespace SistemaAcademico1
         {
 
         }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            FrmDeclaracionVariables frm = new FrmDeclaracionVariables();
+            frm.Show();
+            this.Hide();
+        }
     }
 }

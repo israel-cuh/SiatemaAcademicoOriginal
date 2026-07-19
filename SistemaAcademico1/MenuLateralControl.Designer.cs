@@ -73,7 +73,7 @@ namespace SistemaAcademico1
             btnInicio.FlatAppearance.BorderSize = 0;
             btnInicio.FlatStyle = FlatStyle.Flat;
             btnInicio.Font = new Font("Segoe UI", 11F);
-            btnInicio.ForeColor = Color.Gainsboro;
+            btnInicio.ForeColor = Color.White;
             btnInicio.Location = new Point(20, 191);
             btnInicio.Name = "btnInicio";
             btnInicio.Padding = new Padding(20, 0, 0, 0);
@@ -143,7 +143,7 @@ namespace SistemaAcademico1
             btnCerrarSesion.FlatStyle = FlatStyle.Flat;
             btnCerrarSesion.Font = new Font("Segoe UI", 11F);
             btnCerrarSesion.ForeColor = Color.Gainsboro;
-            btnCerrarSesion.Location = new Point(20, 681);
+            btnCerrarSesion.Location = new Point(15, 686);
             btnCerrarSesion.Name = "btnCerrarSesion";
             btnCerrarSesion.Padding = new Padding(20, 0, 0, 0);
             btnCerrarSesion.Size = new Size(230, 48);

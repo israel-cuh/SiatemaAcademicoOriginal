@@ -60,7 +60,6 @@ namespace SistemaAcademico1
         private Button btnCerrar = null!;
         private Button btnMinimizar = null!;
         private Button btnCerrarSesion = null!;
-        private Button btnTemas = null!;
         private Button btnJuego = null!;
         private Button btnVariables = null!;
         private Button btnCiclos = null!;
@@ -89,7 +88,6 @@ namespace SistemaAcademico1
             lblNombre = new Label();
             lblSistema = new Label();
             lblCurso = new Label();
-            btnTemas = new Button();
             btnJuego = new Button();
             btnCerrarSesion = new Button();
             tarjetaUsuario = new Panel();
@@ -189,7 +187,7 @@ namespace SistemaAcademico1
             btnMinimizar.FlatAppearance.BorderSize = 0;
             btnMinimizar.FlatStyle = FlatStyle.Flat;
             btnMinimizar.ForeColor = Color.White;
-            btnMinimizar.Location = new Point(1175, 4);
+            btnMinimizar.Location = new Point(1174, 4);
             btnMinimizar.Name = "btnMinimizar";
             btnMinimizar.Size = new Size(45, 38);
             btnMinimizar.TabIndex = 1;
@@ -219,7 +217,6 @@ namespace SistemaAcademico1
             panelLateral.Controls.Add(lblNombre);
             panelLateral.Controls.Add(lblSistema);
             panelLateral.Controls.Add(lblCurso);
-            panelLateral.Controls.Add(btnTemas);
             panelLateral.Controls.Add(btnJuego);
             panelLateral.Controls.Add(btnCerrarSesion);
             panelLateral.Controls.Add(tarjetaUsuario);
@@ -289,22 +286,6 @@ namespace SistemaAcademico1
             lblCurso.Text = "PROGRAMACIÓN I";
             lblCurso.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // btnTemas
-            // 
-            btnTemas.BackColor = Color.Transparent;
-            btnTemas.FlatAppearance.BorderSize = 0;
-            btnTemas.FlatStyle = FlatStyle.Flat;
-            btnTemas.Font = new Font("Segoe UI", 11F);
-            btnTemas.ForeColor = Color.Gainsboro;
-            btnTemas.Location = new Point(20, 282);
-            btnTemas.Name = "btnTemas";
-            btnTemas.Padding = new Padding(20, 0, 0, 0);
-            btnTemas.Size = new Size(230, 48);
-            btnTemas.TabIndex = 5;
-            btnTemas.Text = "☷    Temas";
-            btnTemas.TextAlign = ContentAlignment.MiddleLeft;
-            btnTemas.UseVisualStyleBackColor = false;
-            // 
             // btnJuego
             // 
             btnJuego.BackColor = Color.Transparent;
@@ -312,7 +293,7 @@ namespace SistemaAcademico1
             btnJuego.FlatStyle = FlatStyle.Flat;
             btnJuego.Font = new Font("Segoe UI", 11F);
             btnJuego.ForeColor = Color.Gainsboro;
-            btnJuego.Location = new Point(20, 339);
+            btnJuego.Location = new Point(15, 295);
             btnJuego.Name = "btnJuego";
             btnJuego.Padding = new Padding(20, 0, 0, 0);
             btnJuego.Size = new Size(230, 48);
@@ -320,6 +301,7 @@ namespace SistemaAcademico1
             btnJuego.Text = "🎮   Juego interactivo";
             btnJuego.TextAlign = ContentAlignment.MiddleLeft;
             btnJuego.UseVisualStyleBackColor = false;
+            btnJuego.Click += btnJuego_Click_1;
             // 
             // btnCerrarSesion
             // 

@@ -91,7 +91,7 @@ namespace SistemaAcademico1
             // 
             lblPuntuacion.Font = new Font("Segoe UI", 22F, FontStyle.Bold);
             lblPuntuacion.ForeColor = Color.White;
-            lblPuntuacion.Location = new Point(70, 38);
+            lblPuntuacion.Location = new Point(74, 35);
             lblPuntuacion.Name = "lblPuntuacion";
             lblPuntuacion.Size = new Size(120, 45);
             lblPuntuacion.TabIndex = 2;
@@ -205,7 +205,7 @@ namespace SistemaAcademico1
             btnPausa.FlatStyle = FlatStyle.Flat;
             btnPausa.Font = new Font("Segoe UI", 17F, FontStyle.Bold);
             btnPausa.ForeColor = Color.White;
-            btnPausa.Location = new Point(1155, 35);
+            btnPausa.Location = new Point(1155, 57);
             btnPausa.Name = "btnPausa";
             btnPausa.Size = new Size(50, 58);
             btnPausa.TabIndex = 4;
@@ -330,7 +330,7 @@ namespace SistemaAcademico1
             tarjetaPuntos.Controls.Add(iconoPuntos);
             tarjetaPuntos.Controls.Add(tituloPuntos);
             tarjetaPuntos.Controls.Add(lblPuntuacion);
-            tarjetaPuntos.Location = new Point(935, 22);
+            tarjetaPuntos.Location = new Point(935, 37);
             tarjetaPuntos.Name = "tarjetaPuntos";
             tarjetaPuntos.Size = new Size(205, 92);
             tarjetaPuntos.TabIndex = 3;
@@ -339,7 +339,7 @@ namespace SistemaAcademico1
             // 
             iconoPuntos.Font = new Font("Segoe UI", 22F, FontStyle.Bold);
             iconoPuntos.ForeColor = Color.Gold;
-            iconoPuntos.Location = new Point(18, 25);
+            iconoPuntos.Location = new Point(3, 35);
             iconoPuntos.Name = "iconoPuntos";
             iconoPuntos.Size = new Size(50, 50);
             iconoPuntos.TabIndex = 0;
@@ -349,7 +349,7 @@ namespace SistemaAcademico1
             // 
             tituloPuntos.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             tituloPuntos.ForeColor = Color.LightSkyBlue;
-            tituloPuntos.Location = new Point(73, 15);
+            tituloPuntos.Location = new Point(39, 10);
             tituloPuntos.Name = "tituloPuntos";
             tituloPuntos.Size = new Size(115, 25);
             tituloPuntos.TabIndex = 1;

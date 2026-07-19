@@ -59,6 +59,7 @@
             chkNombreAlumno = new CheckBox();
             label10 = new Label();
             label9 = new Label();
+            btnSiguiente = new Button();
             panel1.SuspendLayout();
             pnlRegresar.SuspendLayout();
             panelContenido.SuspendLayout();
@@ -416,12 +417,26 @@
             label9.TabIndex = 0;
             label9.Text = "🎯 ¡Practica lo aprendido!";
             // 
+            // btnSiguiente
+            // 
+            btnSiguiente.BackColor = Color.DarkViolet;
+            btnSiguiente.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSiguiente.ForeColor = SystemColors.ButtonHighlight;
+            btnSiguiente.Location = new Point(601, 717);
+            btnSiguiente.Name = "btnSiguiente";
+            btnSiguiente.Size = new Size(190, 53);
+            btnSiguiente.TabIndex = 3;
+            btnSiguiente.Text = "Suiguiente";
+            btnSiguiente.UseVisualStyleBackColor = false;
+            btnSiguiente.Click += btnSiguiente_Click;
+            // 
             // FrmVariables
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1267, 791);
+            Controls.Add(btnSiguiente);
             Controls.Add(panelPractica);
             Controls.Add(panelContenido);
             Controls.Add(panel1);
@@ -474,5 +489,6 @@
         private CheckBox chkNombreAlumno;
         private Label lblResultado;
         private Button btnComprobar;
+        private Button btnSiguiente;
     }
 }
