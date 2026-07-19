@@ -31,25 +31,74 @@ namespace SistemaAcademico1
         private readonly List<Ejercicio> ejercicios = new()
         {
             new Ejercicio(
+                "Salida simple",
+                "Ordena una instrucción básica de salida en consola.",
+                new[] { "Console.WriteLine(\"Hola CodeNova\");" },
+                "Es un nivel de calentamiento: solo debe quedar la instrucción de impresión.",
+                "WriteLine muestra un mensaje en la consola. Este nivel sirve para reconocer una instrucción completa."
+            ),
+            new Ejercicio(
+                "Variable y salida",
+                "Ordena el código para guardar un nombre y luego mostrarlo.",
+                new[] { "string nombre = \"Ana\";", "Console.WriteLine(nombre);" },
+                "Primero se crea la variable y después se usa en pantalla.",
+                "Una variable debe existir antes de poder utilizarse. Por eso la declaración va antes del WriteLine."
+            ),
+            new Ejercicio(
+                "Condición if",
+                "Ordena el código para comprobar si una nota está aprobada.",
+                new[] { "int nota = 8;", "if (nota >= 7)", "{", "    Console.WriteLine(\"Aprobado\");", "}" },
+                "Declara la nota, evalúa la condición y coloca la instrucción dentro de las llaves.",
+                "El if ejecuta su bloque solamente cuando la condición es verdadera."
+            ),
+            new Ejercicio(
+                "Condición if else",
+                "Ordena el código para mostrar si un estudiante aprobó o reprobó.",
+                new[] { "int nota = 5;", "if (nota >= 7)", "{", "    Console.WriteLine(\"Aprobado\");", "}", "else", "{", "    Console.WriteLine(\"Reprobado\");", "}" },
+                "El else siempre va después de cerrar el bloque del if.",
+                "if else permite tener dos caminos: uno cuando la condición se cumple y otro cuando no se cumple."
+            ),
+            new Ejercicio(
                 "Ciclo while",
-                "Ordena los bloques para imprimir los números del 1 al 5.",
+                "Ordena los bloques para imprimir los números del 1 al 5 con while.",
                 new[] { "int i = 1;", "while (i <= 5)", "{", "    Console.WriteLine(i);", "    i++;", "}" },
                 "Primero inicializa i. Dentro del ciclo imprime y luego incrementa.",
-                "El ciclo comienza con i en 1, imprime su valor y aumenta uno hasta llegar a 5."
+                "El while repite el bloque mientras la condición sea verdadera. El incremento evita un ciclo infinito."
+            ),
+            new Ejercicio(
+                "Ciclo do while",
+                "Ordena el código para ejecutar un bloque al menos una vez.",
+                new[] { "int i = 1;", "do", "{", "    Console.WriteLine(i);", "    i++;", "}", "while (i <= 5);" },
+                "En do while el bloque aparece antes de la condición final.",
+                "do while evalúa la condición al final, por eso siempre ejecuta el bloque al menos una vez."
             ),
             new Ejercicio(
                 "Ciclo for",
-                "Ordena los bloques para imprimir los números del 0 al 4.",
+                "Ordena los bloques para imprimir los números del 0 al 4 con for.",
                 new[] { "for (int i = 0; i < 5; i++)", "{", "    Console.WriteLine(i);", "}" },
                 "El encabezado del for debe aparecer antes de las llaves.",
-                "El ciclo for reúne la inicialización, la condición y el incremento en una sola línea."
+                "El ciclo for reúne inicialización, condición e incremento en una sola línea."
             ),
             new Ejercicio(
-                "Condición dentro de un ciclo",
-                "Ordena los bloques para mostrar únicamente los números pares.",
-                new[] { "for (int i = 1; i <= 5; i++)", "{", "    if (i % 2 == 0)", "    {", "        Console.WriteLine(i);", "    }", "}" },
-                "El if va dentro del for y necesita su propio par de llaves.",
-                "El operador % obtiene el residuo. Si el residuo al dividir para 2 es cero, el número es par."
+                "Switch básico",
+                "Ordena el código para mostrar el nombre de un día usando switch.",
+                new[] { "int dia = 2;", "switch (dia)", "{", "    case 1:", "        Console.WriteLine(\"Lunes\");", "        break;", "    case 2:", "        Console.WriteLine(\"Martes\");", "        break;", "}" },
+                "Cada case tiene sus instrucciones y normalmente termina con break.",
+                "switch permite elegir entre varias opciones según el valor de una variable."
+            ),
+            new Ejercicio(
+                "For con if else",
+                "Ordena el código para recorrer números y clasificar pares e impares.",
+                new[] { "for (int i = 1; i <= 5; i++)", "{", "    if (i % 2 == 0)", "    {", "        Console.WriteLine(\"Par\");", "    }", "    else", "    {", "        Console.WriteLine(\"Impar\");", "    }", "}" },
+                "El if else va dentro del for. Cuida bien el orden de las llaves.",
+                "Este nivel combina repetición y decisión: por cada número se decide si es par o impar."
+            ),
+            new Ejercicio(
+                "Desafío final",
+                "Ordena el algoritmo completo: ciclo, decisión y switch trabajando juntos.",
+                new[] { "for (int i = 1; i <= 3; i++)", "{", "    if (i == 1)", "    {", "        Console.WriteLine(\"Inicio\");", "    }", "    else", "    {", "        switch (i)", "        {", "            case 2:", "                Console.WriteLine(\"Proceso\");", "                break;", "            case 3:", "                Console.WriteLine(\"Final\");", "                break;", "        }", "    }", "}" },
+                "Primero arma el for, luego el if, después el else y dentro de ese else coloca el switch completo.",
+                "El desafío final mezcla for, if else y switch. Es más largo porque simula un flujo real de programa."
             )
         };
 
@@ -73,6 +122,7 @@ namespace SistemaAcademico1
             AjustarTamanoComun();
             ControlesVentanaHelper.Agregar(this, cerrarAplicacion: false);
             ConfigurarEventos();
+            progreso.Maximum = ejercicios.Count;
             CargarNivel();
         }
 
@@ -161,6 +211,7 @@ namespace SistemaAcademico1
             btnSiguiente.Enabled = false;
             btnSiguiente.Text = nivelActual == ejercicios.Count - 1 ? "VER RESULTADO  →" : "SIGUIENTE NIVEL  →";
 
+            progreso.Maximum = ejercicios.Count;
             lblNivel.Text = $"NIVEL {nivelActual + 1}\n{ejercicio.Titulo}";
             lblInstruccion.Text = ejercicio.Instruccion;
             lblPista.Text = ejercicio.Pista;
@@ -170,17 +221,20 @@ namespace SistemaAcademico1
             progreso.Value = nivelActual;
 
             var lineas = ejercicio.Solucion.ToList();
-            do
+            if (lineas.Count > 1)
             {
-                lineas = lineas.OrderBy(_ => random.Next()).ToList();
+                do
+                {
+                    lineas = lineas.OrderBy(_ => random.Next()).ToList();
+                }
+                while (lineas.SequenceEqual(ejercicio.Solucion));
             }
-            while (lineas.SequenceEqual(ejercicio.Solucion));
 
             lstCodigo.Items.Clear();
             foreach (string linea in lineas)
                 lstCodigo.Items.Add(linea);
 
-            lstCodigo.SelectedIndex = 0;
+            lstCodigo.SelectedIndex = lstCodigo.Items.Count > 0 ? 0 : -1;
             ActualizarMarcadores();
             temporizador.Start();
         }
@@ -196,7 +250,8 @@ namespace SistemaAcademico1
                 Color.FromArgb(64, 45, 128),
                 Color.FromArgb(35, 67, 126),
                 Color.FromArgb(38, 92, 85),
-                Color.FromArgb(115, 62, 53)
+                Color.FromArgb(115, 62, 53),
+                Color.FromArgb(85, 52, 120)
             };
 
             using var fondoBloque = new SolidBrush(seleccionado ? morado : colores[e.Index % colores.Length]);
