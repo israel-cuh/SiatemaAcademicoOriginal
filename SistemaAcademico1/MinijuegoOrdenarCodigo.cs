@@ -71,6 +71,7 @@ namespace SistemaAcademico1
                 return;
 
             AjustarTamanoComun();
+            ControlesVentanaHelper.Agregar(this, cerrarAplicacion: false);
             ConfigurarEventos();
             CargarNivel();
         }

@@ -13,6 +13,7 @@ namespace SistemaAcademico1
         public MenuEstudiante()
         {
             InitializeComponent();
+            ControlesVentanaHelper.Agregar(this, cerrarAplicacion: true);
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

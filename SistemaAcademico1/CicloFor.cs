@@ -1,11 +1,12 @@
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace SistemaAcademico1
 {
-    public partial class MenuTemaFor : Form
+    public partial class CicloFor : Form
     {
-        public MenuTemaFor()
+        public CicloFor()
         {
             InitializeComponent();
 
@@ -14,34 +15,6 @@ namespace SistemaAcademico1
                 MenuLateralHelper.AgregarMenu(this, "Ciclos");
                 ControlesVentanaHelper.Agregar(this, cerrarAplicacion: true);
             }
-        }
-
-        private void btnSubWhile_Click(object sender, EventArgs e)
-        {
-            MenuTemaCiclo ventana = new MenuTemaCiclo();
-            ventana.Show();
-            Hide();
-        }
-
-        private void btnSubFor_Click(object sender, EventArgs e)
-        {
-            txtSalida.Clear();
-        }
-
-        private void btnSubDoWhile_Click(object sender, EventArgs e)
-        {
-            MenuTemaDoWhile ventana = new MenuTemaDoWhile();
-            ventana.Show();
-            Hide();
-        }
-
-        private void btnSubAnidados_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(
-                "El formulario de Ciclos Anidados todavía está pendiente.",
-                "CodeNova",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
         }
 
         private void btnEjecutar_Click(object sender, EventArgs e)
@@ -59,12 +32,18 @@ namespace SistemaAcademico1
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {
-            btnSubWhile_Click(sender, e);
+            MenuTemaCiclo ventana = new MenuTemaCiclo();
+            ventana.Show();
+            Hide();
         }
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            btnSubDoWhile_Click(sender, e);
+            MessageBox.Show(
+                "El formulario de Ciclo Do While todavía está pendiente.",
+                "CodeNova",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
         }
 
         private void btnPracticar_Click(object sender, EventArgs e)
