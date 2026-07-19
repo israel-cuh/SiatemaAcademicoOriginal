@@ -80,7 +80,7 @@ namespace SistemaAcademico1
                     Math.Max(1, (int)(original.Height * escala)));
 
                 if (fuentesOriginales.TryGetValue(control, out float tamanoFuente))
-                    control.Font = new Font(control.Font.FontFamily, Math.Max(7F, tamanoFuente * escala), control.Font.Style);
+                    control.Font = new System.Drawing.Font(control.Font.FontFamily, Math.Max(7F, tamanoFuente * escala), control.Font.Style);
             }
         }
 
@@ -97,9 +97,9 @@ namespace SistemaAcademico1
             }
             else if (usuario == "docente" && clave == "1234")
             {
-               DashboardPrincipal dashboard= new DashboardPrincipal ("Docente");
+                DashboardPrincipal dashboard = new DashboardPrincipal("Docente");
                 dashboard.Show();
-               
+                Hide();
             }
             else
             {
