@@ -5,8 +5,15 @@ namespace SistemaAcademico1
 {
     public partial class MenuJuegos : Form
     {
-        public MenuJuegos()
+        private readonly string rolUsuario;
+
+        public MenuJuegos() : this("Docente")
         {
+        }
+
+        public MenuJuegos(string rol)
+        {
+            rolUsuario = string.IsNullOrWhiteSpace(rol) ? "Docente" : rol;
             InitializeComponent();
 
             if (System.ComponentModel.LicenseManager.UsageMode != System.ComponentModel.LicenseUsageMode.Designtime)
@@ -39,7 +46,7 @@ namespace SistemaAcademico1
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            MenuEstructura estructura = new MenuEstructura();
+            MenuEstructura estructura = new MenuEstructura(rolUsuario);
             estructura.Show();
             Hide();
         }
