@@ -60,7 +60,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.WhatsApp_Image_2026_07_20_at_22_38_38;
+          //  pictureBox1.Image = Properties.Resources.WhatsApp_Image_2026_07_20_at_22_38_38;
             pictureBox1.Location = new Point(17, 14);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(116, 100);
@@ -109,7 +109,7 @@
             // pictureBox2
             // 
             pictureBox2.BackColor = Color.Transparent;
-            pictureBox2.Image = Properties.Resources.WhatsApp_Image_2026_07_20_at_22_39_32;
+          //  pictureBox2.Image = Properties.Resources.WhatsApp_Image_2026_07_20_at_22_39_32;
             pictureBox2.Location = new Point(793, 3);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(146, 125);
@@ -138,7 +138,7 @@
             // pictureBox3
             // 
             pictureBox3.BackColor = Color.Transparent;
-            pictureBox3.Image = Properties.Resources.WhatsApp_Image_2026_07_20_at_22_39_08;
+         //   pictureBox3.Image = Properties.Resources.WhatsApp_Image_2026_07_20_at_22_39_08;
             pictureBox3.Location = new Point(742, 83);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(156, 172);

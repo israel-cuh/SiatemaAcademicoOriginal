@@ -33,7 +33,7 @@ namespace SistemaAcademico1
         {
             CodeMemo2 juego = new CodeMemo2();
             juego.Show();
-            this.Hide();
+            
         }
 
         private void btnJuego3_Click(object sender, EventArgs e)

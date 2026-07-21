@@ -86,6 +86,7 @@ namespace SistemaAcademico1
             lblTiempo.Size = new Size(135, 45);
             lblTiempo.TabIndex = 2;
             lblTiempo.Text = "00:60";
+            lblTiempo.Click += lblTiempo_Click;
             // 
             // lblPuntuacion
             // 

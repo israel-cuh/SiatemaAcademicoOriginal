@@ -401,5 +401,10 @@ namespace SistemaAcademico1
         {
 
         }
+
+        private void lblTiempo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

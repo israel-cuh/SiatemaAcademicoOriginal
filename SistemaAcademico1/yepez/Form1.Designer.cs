@@ -47,7 +47,8 @@
             btnIngresar.BackColor = Color.Transparent;
             btnIngresar.BackgroundImage = (Image)resources.GetObject("btnIngresar.BackgroundImage");
             btnIngresar.BackgroundImageLayout = ImageLayout.Stretch;
-            btnIngresar.FlatStyle = FlatStyle.Popup;
+            btnIngresar.FlatAppearance.BorderSize = 0;
+            btnIngresar.FlatStyle = FlatStyle.Flat;
             btnIngresar.Font = new Font("Arial Narrow", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnIngresar.ForeColor = Color.White;
             btnIngresar.Location = new Point(449, 390);

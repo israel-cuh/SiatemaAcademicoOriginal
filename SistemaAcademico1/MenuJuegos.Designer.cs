@@ -220,7 +220,7 @@ namespace SistemaAcademico1
             btnJuego2.Name = "btnJuego2";
             btnJuego2.Size = new Size(220, 45);
             btnJuego2.TabIndex = 2;
-            btnJuego2.Text = "Pendiente";
+            btnJuego2.Text = "🎮   CodiMemo";
             btnJuego2.UseVisualStyleBackColor = false;
             btnJuego2.Click += btnJuego2_Click;
             // 
@@ -232,7 +232,7 @@ namespace SistemaAcademico1
             lblJuego2Descripcion.Name = "lblJuego2Descripcion";
             lblJuego2Descripcion.Size = new Size(220, 125);
             lblJuego2Descripcion.TabIndex = 1;
-            lblJuego2Descripcion.Text = "Espacio reservado para el segundo minijuego del equipo.";
+            lblJuego2Descripcion.Text = "Juego de memoria CodiMemo: encuentra la carta correcta sobre variables.";
             // 
             // lblJuego2Titulo
             // 
@@ -242,7 +242,7 @@ namespace SistemaAcademico1
             lblJuego2Titulo.Name = "lblJuego2Titulo";
             lblJuego2Titulo.Size = new Size(220, 70);
             lblJuego2Titulo.TabIndex = 0;
-            lblJuego2Titulo.Text = "Juego 2";
+            lblJuego2Titulo.Text = "CodiMemo";
             // 
             // tarjetaOrdenarCodigo
             // 

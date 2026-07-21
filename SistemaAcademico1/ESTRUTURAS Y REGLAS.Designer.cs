@@ -131,7 +131,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.WhatsApp_Image_2026_07_20_at_17_45_03;
+          //  pictureBox1.Image = Properties.Resources.WhatsApp_Image_2026_07_20_at_17_45_03;
             pictureBox1.Location = new Point(18, 16);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(132, 100);

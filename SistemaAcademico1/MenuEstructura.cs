@@ -128,7 +128,7 @@ namespace SistemaAcademico1
         private void ConfigurarEventosDelMenu()
         {
             btnMinimizar.Click += btnMinimizar_Click;
-          //  btnTemas.Click += btnTemas_Click;
+            //  btnTemas.Click += btnTemas_Click;
             btnJuego.Click += btnJuego_Click;
             btnCiclos.Click += btnCiclos_Click;
             btnAlgoritmos.Click += btnAlgoritmos_Click;
@@ -203,7 +203,7 @@ namespace SistemaAcademico1
 
         private void MostrarProximamente(string tema)
         {
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -236,6 +236,11 @@ namespace SistemaAcademico1
 
         private void btnAlgoritmos_Click_1(object sender, EventArgs e)
         {
+        }
+
+        private void btnJuego_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
