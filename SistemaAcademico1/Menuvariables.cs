@@ -44,25 +44,17 @@ namespace SistemaAcademico1
 
         private void btnCodiMemo_Click(object? sender, EventArgs e)
         {
-            MessageBox.Show(
-                "El juego CodiMemo todavía está pendiente de conectar.",
-                "CodeNova",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+           
         }
 
         private void MostrarPendiente(string tema)
         {
-            MessageBox.Show(
-                $"El tema {tema} todavía está pendiente de crear.",
-                "CodeNova",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+            
         }
 
         private void btnCodiMemo_Click_1(object sender, EventArgs e)
         {
-            FrmCodiMemo juego = new FrmCodiMemo();
+            CodeMemo2 juego = new CodeMemo2();
             juego.Show();
             this.Hide();
         }

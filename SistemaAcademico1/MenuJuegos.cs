@@ -31,7 +31,9 @@ namespace SistemaAcademico1
 
         private void btnJuego2_Click(object sender, EventArgs e)
         {
-            MostrarPendiente("Juego 2");
+            CodeMemo2 juego = new CodeMemo2();
+            juego.Show();
+            this.Hide();
         }
 
         private void btnJuego3_Click(object sender, EventArgs e)
@@ -53,11 +55,7 @@ namespace SistemaAcademico1
 
         private void MostrarPendiente(string nombreJuego)
         {
-            MessageBox.Show(
-                $"{nombreJuego} todavía está pendiente. Aquí podrá ir el juego de otro integrante del equipo.",
-                "CodeNova - Juegos",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+            
         }
     }
 }

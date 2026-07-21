@@ -10,10 +10,10 @@ namespace SistemaAcademico1
 {
     public partial class FrmCodiMemo : Form
     {
-        Random rnd= new Random();
+        Random rnd = new Random();
         PictureBox correcta;
         int Tiempo = 20;
-        Image imagenReverso = Properties.Resources.;
+        //Image imagenReverso = Properties.Resources.;
 
         public FrmCodiMemo()
         {
@@ -36,6 +36,11 @@ namespace SistemaAcademico1
         }
 
         private void FrmCodiMemo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTiempo_Click(object sender, EventArgs e)
         {
 
         }

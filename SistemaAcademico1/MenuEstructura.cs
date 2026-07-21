@@ -203,11 +203,7 @@ namespace SistemaAcademico1
 
         private void MostrarProximamente(string tema)
         {
-            MessageBox.Show(
-                $"El tema {tema} todavía está en preparación.",
-                "CodeNova",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
