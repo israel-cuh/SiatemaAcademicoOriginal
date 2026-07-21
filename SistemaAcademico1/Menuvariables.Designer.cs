@@ -332,6 +332,7 @@
             btnCodiMemo.TabIndex = 9;
             btnCodiMemo.Text = "🎮 Jugar CodiMemo";
             btnCodiMemo.UseVisualStyleBackColor = false;
+            btnCodiMemo.Click += btnCodiMemo_Click_1;
             // 
             // panel10
             // 

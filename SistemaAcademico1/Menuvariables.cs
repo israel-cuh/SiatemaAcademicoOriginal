@@ -59,5 +59,12 @@ namespace SistemaAcademico1
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
         }
+
+        private void btnCodiMemo_Click_1(object sender, EventArgs e)
+        {
+            FrmCodiMemo juego = new FrmCodiMemo();
+            juego.Show();
+            this.Hide();
+        }
     }
 }
