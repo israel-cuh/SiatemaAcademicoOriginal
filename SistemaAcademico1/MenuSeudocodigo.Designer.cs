@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panelmenu = new Panel();
-            buttonvolveralinicio = new Button();
-            buttoninicio = new Button();
-            labeltitulo = new Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             panelcontenido = new Panel();
+            label19 = new Label();
+            pictureBox1 = new PictureBox();
+            label18 = new Label();
             pictureBox6 = new PictureBox();
             pictureBox4 = new PictureBox();
             label21 = new Label();
@@ -67,9 +67,8 @@
             label1 = new Label();
             labelmoduloprofesor = new Label();
             pictureprofesor = new PictureBox();
-            labellogica = new Label();
-            panelmenu.SuspendLayout();
             panelcontenido.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             panel2.SuspendLayout();
@@ -80,51 +79,13 @@
             ((System.ComponentModel.ISupportInitialize)pictureprofesor).BeginInit();
             SuspendLayout();
             // 
-            // panelmenu
-            // 
-            panelmenu.Controls.Add(buttonvolveralinicio);
-            panelmenu.Controls.Add(buttoninicio);
-            panelmenu.Controls.Add(labeltitulo);
-            panelmenu.Dock = DockStyle.Left;
-            panelmenu.Location = new Point(0, 0);
-            panelmenu.Margin = new Padding(3, 4, 3, 4);
-            panelmenu.Name = "panelmenu";
-            panelmenu.Size = new Size(189, 600);
-            panelmenu.TabIndex = 0;
-            // 
-            // buttonvolveralinicio
-            // 
-            buttonvolveralinicio.Location = new Point(14, 524);
-            buttonvolveralinicio.Margin = new Padding(3, 4, 3, 4);
-            buttonvolveralinicio.Name = "buttonvolveralinicio";
-            buttonvolveralinicio.Size = new Size(137, 31);
-            buttonvolveralinicio.TabIndex = 2;
-            buttonvolveralinicio.Text = "Volver al inicio";
-            buttonvolveralinicio.UseVisualStyleBackColor = true;
-            buttonvolveralinicio.Click += buttonvolveralinicio_Click;
-            // 
-            // buttoninicio
-            // 
-            buttoninicio.Location = new Point(29, 99);
-            buttoninicio.Margin = new Padding(3, 4, 3, 4);
-            buttoninicio.Name = "buttoninicio";
-            buttoninicio.Size = new Size(102, 44);
-            buttoninicio.TabIndex = 1;
-            buttoninicio.Text = "Inicio";
-            buttoninicio.UseVisualStyleBackColor = true;
-            // 
-            // labeltitulo
-            // 
-            labeltitulo.AutoSize = true;
-            labeltitulo.Location = new Point(14, 12);
-            labeltitulo.Name = "labeltitulo";
-            labeltitulo.Size = new Size(79, 20);
-            labeltitulo.TabIndex = 0;
-            labeltitulo.Text = "CodeNova";
-            // 
             // panelcontenido
             // 
             panelcontenido.BackColor = Color.White;
+            panelcontenido.BackgroundImage = (Image)resources.GetObject("panelcontenido.BackgroundImage");
+            panelcontenido.Controls.Add(label19);
+            panelcontenido.Controls.Add(pictureBox1);
+            panelcontenido.Controls.Add(label18);
             panelcontenido.Controls.Add(pictureBox6);
             panelcontenido.Controls.Add(pictureBox4);
             panelcontenido.Controls.Add(label21);
@@ -132,21 +93,56 @@
             panelcontenido.Controls.Add(panel2);
             panelcontenido.Controls.Add(panel1);
             panelcontenido.Controls.Add(panelprofesor);
-            panelcontenido.Controls.Add(labellogica);
-            panelcontenido.Location = new Point(195, 0);
+            panelcontenido.ForeColor = SystemColors.ControlText;
+            panelcontenido.Location = new Point(45, 16);
             panelcontenido.Margin = new Padding(3, 4, 3, 4);
             panelcontenido.Name = "panelcontenido";
-            panelcontenido.Size = new Size(782, 600);
+            panelcontenido.Size = new Size(1194, 765);
             panelcontenido.TabIndex = 1;
             panelcontenido.Paint += panelcontenido_Paint;
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.BackColor = Color.Transparent;
+            label19.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label19.ForeColor = SystemColors.ButtonFace;
+            label19.Location = new Point(214, 47);
+            label19.Name = "label19";
+            label19.Size = new Size(502, 81);
+            label19.TabIndex = 11;
+            label19.Text = "PSEUDOCODIGO";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(30, 20);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(141, 160);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 10;
+            pictureBox1.TabStop = false;
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.BackColor = Color.Transparent;
+            label18.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label18.ForeColor = SystemColors.ButtonFace;
+            label18.Location = new Point(193, 24);
+            label18.Name = "label18";
+            label18.Size = new Size(87, 23);
+            label18.TabIndex = 9;
+            label18.Text = "APRENDE";
             // 
             // pictureBox6
             // 
             pictureBox6.Image = Properties.Resources.pseudocodigo;
-            pictureBox6.Location = new Point(595, 33);
+            pictureBox6.Location = new Point(927, 20);
             pictureBox6.Margin = new Padding(3, 4, 3, 4);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(114, 107);
+            pictureBox6.Size = new Size(157, 135);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 8;
             pictureBox6.TabStop = false;
@@ -154,27 +150,33 @@
             // pictureBox4
             // 
             pictureBox4.Image = Properties.Resources.lapto;
-            pictureBox4.Location = new Point(422, 33);
+            pictureBox4.Location = new Point(816, 47);
             pictureBox4.Margin = new Padding(3, 4, 3, 4);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(104, 93);
+            pictureBox4.Size = new Size(104, 108);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 6;
             pictureBox4.TabStop = false;
+            pictureBox4.Click += pictureBox4_Click;
             // 
             // label21
             // 
             label21.AutoSize = true;
-            label21.Location = new Point(30, 117);
+            label21.BackColor = Color.Transparent;
+            label21.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label21.ForeColor = SystemColors.ButtonFace;
+            label21.Location = new Point(30, 224);
             label21.Name = "label21";
-            label21.Size = new Size(223, 20);
+            label21.Size = new Size(230, 20);
             label21.TabIndex = 5;
             label21.Text = "Elige una opcion para comenzar";
             // 
             // label20
             // 
             label20.AutoSize = true;
-            label20.Location = new Point(56, 65);
+            label20.BackColor = Color.Transparent;
+            label20.ForeColor = SystemColors.ButtonFace;
+            label20.Location = new Point(177, 137);
             label20.Name = "label20";
             label20.Size = new Size(342, 20);
             label20.TabIndex = 4;
@@ -182,6 +184,7 @@
             // 
             // panel2
             // 
+            panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
             panel2.Controls.Add(buttonJUEGO);
             panel2.Controls.Add(panel4);
             panel2.Controls.Add(label17);
@@ -191,7 +194,7 @@
             panel2.Controls.Add(label9);
             panel2.Controls.Add(label7);
             panel2.Controls.Add(pictureBox3);
-            panel2.Location = new Point(530, 141);
+            panel2.Location = new Point(805, 248);
             panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
             panel2.Size = new Size(229, 385);
@@ -199,6 +202,8 @@
             // 
             // buttonJUEGO
             // 
+            buttonJUEGO.BackgroundImage = (Image)resources.GetObject("buttonJUEGO.BackgroundImage");
+            buttonJUEGO.ForeColor = SystemColors.ButtonFace;
             buttonJUEGO.Location = new Point(67, 333);
             buttonJUEGO.Margin = new Padding(3, 4, 3, 4);
             buttonJUEGO.Name = "buttonJUEGO";
@@ -218,6 +223,8 @@
             // label17
             // 
             label17.AutoSize = true;
+            label17.BackColor = Color.Transparent;
+            label17.ForeColor = SystemColors.ButtonFace;
             label17.Location = new Point(56, 277);
             label17.Name = "label17";
             label17.Size = new Size(133, 20);
@@ -227,6 +234,8 @@
             // label16
             // 
             label16.AutoSize = true;
+            label16.BackColor = Color.Transparent;
+            label16.ForeColor = SystemColors.ButtonFace;
             label16.Location = new Point(54, 257);
             label16.Name = "label16";
             label16.Size = new Size(126, 20);
@@ -236,6 +245,8 @@
             // label15
             // 
             label15.AutoSize = true;
+            label15.BackColor = Color.Transparent;
+            label15.ForeColor = SystemColors.ButtonFace;
             label15.Location = new Point(56, 237);
             label15.Name = "label15";
             label15.Size = new Size(136, 20);
@@ -245,6 +256,8 @@
             // label14
             // 
             label14.AutoSize = true;
+            label14.BackColor = Color.Transparent;
+            label14.ForeColor = SystemColors.ButtonFace;
             label14.Location = new Point(54, 217);
             label14.Name = "label14";
             label14.Size = new Size(144, 20);
@@ -253,6 +266,8 @@
             // 
             // label9
             // 
+            label9.BackColor = Color.Transparent;
+            label9.ForeColor = SystemColors.ButtonFace;
             label9.Location = new Point(3, 127);
             label9.Name = "label9";
             label9.Size = new Size(222, 80);
@@ -262,9 +277,12 @@
             // label7
             // 
             label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = SystemColors.ButtonFace;
             label7.Location = new Point(54, 107);
             label7.Name = "label7";
-            label7.Size = new Size(145, 20);
+            label7.Size = new Size(155, 20);
             label7.TabIndex = 2;
             label7.Text = "JUEGO RECREATIVO ";
             // 
@@ -281,6 +299,7 @@
             // 
             // panel1
             // 
+            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.Controls.Add(buttonMODULODEESTUDIANTE);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(label13);
@@ -290,7 +309,7 @@
             panel1.Controls.Add(label8);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(pictureBox2);
-            panel1.Location = new Point(280, 141);
+            panel1.Location = new Point(424, 248);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
             panel1.Size = new Size(229, 385);
@@ -298,6 +317,8 @@
             // 
             // buttonMODULODEESTUDIANTE
             // 
+            buttonMODULODEESTUDIANTE.BackgroundImage = (Image)resources.GetObject("buttonMODULODEESTUDIANTE.BackgroundImage");
+            buttonMODULODEESTUDIANTE.ForeColor = SystemColors.ButtonFace;
             buttonMODULODEESTUDIANTE.Location = new Point(61, 333);
             buttonMODULODEESTUDIANTE.Margin = new Padding(3, 4, 3, 4);
             buttonMODULODEESTUDIANTE.Name = "buttonMODULODEESTUDIANTE";
@@ -317,6 +338,8 @@
             // label13
             // 
             label13.AutoSize = true;
+            label13.BackColor = Color.Transparent;
+            label13.ForeColor = SystemColors.ButtonFace;
             label13.Location = new Point(61, 277);
             label13.Name = "label13";
             label13.Size = new Size(127, 20);
@@ -326,6 +349,8 @@
             // label12
             // 
             label12.AutoSize = true;
+            label12.BackColor = Color.Transparent;
+            label12.ForeColor = SystemColors.ButtonFace;
             label12.Location = new Point(61, 257);
             label12.Name = "label12";
             label12.Size = new Size(89, 20);
@@ -335,6 +360,8 @@
             // label11
             // 
             label11.AutoSize = true;
+            label11.BackColor = Color.Transparent;
+            label11.ForeColor = SystemColors.ButtonFace;
             label11.Location = new Point(61, 237);
             label11.Name = "label11";
             label11.Size = new Size(173, 20);
@@ -344,6 +371,8 @@
             // label10
             // 
             label10.AutoSize = true;
+            label10.BackColor = Color.Transparent;
+            label10.ForeColor = SystemColors.ButtonFace;
             label10.Location = new Point(61, 217);
             label10.Name = "label10";
             label10.Size = new Size(132, 20);
@@ -352,6 +381,8 @@
             // 
             // label8
             // 
+            label8.BackColor = Color.Transparent;
+            label8.ForeColor = SystemColors.ButtonFace;
             label8.Location = new Point(3, 127);
             label8.Name = "label8";
             label8.Size = new Size(214, 80);
@@ -361,9 +392,12 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
+            label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = SystemColors.ButtonFace;
             label6.Location = new Point(40, 107);
             label6.Name = "label6";
-            label6.Size = new Size(195, 20);
+            label6.Size = new Size(206, 20);
             label6.TabIndex = 2;
             label6.Text = "MODULO DEL ESTUDIANTE ";
             // 
@@ -380,6 +414,8 @@
             // 
             // panelprofesor
             // 
+            panelprofesor.BackColor = Color.Transparent;
+            panelprofesor.BackgroundImage = (Image)resources.GetObject("panelprofesor.BackgroundImage");
             panelprofesor.Controls.Add(buttoniraprofesor);
             panelprofesor.Controls.Add(panellineaprofesor);
             panelprofesor.Controls.Add(label5);
@@ -389,14 +425,17 @@
             panelprofesor.Controls.Add(label1);
             panelprofesor.Controls.Add(labelmoduloprofesor);
             panelprofesor.Controls.Add(pictureprofesor);
-            panelprofesor.Location = new Point(30, 141);
+            panelprofesor.ForeColor = SystemColors.ButtonFace;
+            panelprofesor.Location = new Point(50, 248);
             panelprofesor.Margin = new Padding(3, 4, 3, 4);
             panelprofesor.Name = "panelprofesor";
-            panelprofesor.Size = new Size(226, 385);
+            panelprofesor.Size = new Size(235, 385);
             panelprofesor.TabIndex = 1;
             // 
             // buttoniraprofesor
             // 
+            buttoniraprofesor.BackgroundImage = (Image)resources.GetObject("buttoniraprofesor.BackgroundImage");
+            buttoniraprofesor.ForeColor = SystemColors.ButtonFace;
             buttoniraprofesor.Location = new Point(11, 333);
             buttoniraprofesor.Margin = new Padding(3, 4, 3, 4);
             buttoniraprofesor.Name = "buttoniraprofesor";
@@ -408,6 +447,7 @@
             // 
             // panellineaprofesor
             // 
+            panellineaprofesor.ForeColor = Color.Red;
             panellineaprofesor.Location = new Point(5, 191);
             panellineaprofesor.Margin = new Padding(3, 4, 3, 4);
             panellineaprofesor.Name = "panellineaprofesor";
@@ -419,9 +459,9 @@
             label5.AutoSize = true;
             label5.Location = new Point(30, 277);
             label5.Name = "label5";
-            label5.Size = new Size(161, 20);
+            label5.Size = new Size(167, 20);
             label5.TabIndex = 7;
-            label5.Text = "Consejos para enseñar ";
+            label5.Text = "*Consejos para enseñar ";
             label5.Click += label5_Click;
             // 
             // label4
@@ -429,19 +469,19 @@
             label4.AutoSize = true;
             label4.Location = new Point(30, 257);
             label4.Name = "label4";
-            label4.Size = new Size(134, 20);
+            label4.Size = new Size(140, 20);
             label4.TabIndex = 6;
-            label4.Text = "Ejemplos practicos";
+            label4.Text = "*Ejemplos practicos";
             label4.Click += label4_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(26, 237);
+            label3.Location = new Point(30, 237);
             label3.Name = "label3";
-            label3.Size = new Size(191, 20);
+            label3.Size = new Size(197, 20);
             label3.TabIndex = 5;
-            label3.Text = "Estructuras y reglas basicas ";
+            label3.Text = "*Estructuras y reglas basicas ";
             label3.Click += label3_Click;
             // 
             // label2
@@ -449,9 +489,10 @@
             label2.AutoSize = true;
             label2.Location = new Point(30, 217);
             label2.Name = "label2";
-            label2.Size = new Size(188, 20);
+            label2.Size = new Size(194, 20);
             label2.TabIndex = 4;
-            label2.Text = "¿Que es un pseudocodigo?";
+            label2.Text = "*¿Que es un pseudocodigo?";
+            label2.Click += label2_Click;
             // 
             // label1
             // 
@@ -465,9 +506,10 @@
             // labelmoduloprofesor
             // 
             labelmoduloprofesor.AutoSize = true;
+            labelmoduloprofesor.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelmoduloprofesor.Location = new Point(30, 107);
             labelmoduloprofesor.Name = "labelmoduloprofesor";
-            labelmoduloprofesor.Size = new Size(180, 20);
+            labelmoduloprofesor.Size = new Size(189, 20);
             labelmoduloprofesor.TabIndex = 1;
             labelmoduloprofesor.Text = "MODULO DEL PROFESOR ";
             // 
@@ -482,32 +524,22 @@
             pictureprofesor.TabIndex = 0;
             pictureprofesor.TabStop = false;
             // 
-            // labellogica
-            // 
-            labellogica.AutoSize = true;
-            labellogica.Location = new Point(30, 45);
-            labellogica.Name = "labellogica";
-            labellogica.Size = new Size(226, 20);
-            labellogica.TabIndex = 0;
-            labellogica.Text = "LOGICA  DE LA PROGRAMACION";
-            // 
             // frmPrincipal
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(991, 600);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(1300, 793);
             Controls.Add(panelcontenido);
-            Controls.Add(panelmenu);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 4, 3, 4);
             Name = "frmPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CodeNova";
             Load += frmPrincipal_Load;
-            panelmenu.ResumeLayout(false);
-            panelmenu.PerformLayout();
             panelcontenido.ResumeLayout(false);
             panelcontenido.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             panel2.ResumeLayout(false);
@@ -522,17 +554,9 @@
             ResumeLayout(false);
         }
 
-        
-
         #endregion
-
-        private Panel panelmenu;
         private Panel panelcontenido;
-        private Label labeltitulo;
-        private Button buttonvolveralinicio;
-        private Button buttoninicio;
         private Panel panelprofesor;
-        private Label labellogica;
         private Label labelmoduloprofesor;
         private PictureBox pictureprofesor;
         private Label label1;
@@ -566,5 +590,8 @@
         private Button buttonJUEGO;
         private Button buttonMODULODEESTUDIANTE;
         private Button buttoniraprofesor;
+        private Label label19;
+        private PictureBox pictureBox1;
+        private Label label18;
     }
 }

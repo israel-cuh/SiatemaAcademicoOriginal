@@ -14,5 +14,39 @@ namespace SistemaAcademico1
         {
             InitializeComponent();
         }
+
+        private void lbltexto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbltextosabias_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ESTRUTURAS_Y_REGLAS form = new ESTRUTURAS_Y_REGLAS();
+            form.Show();
+            Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmPrincipal frm = new frmPrincipal();
+            frm.Show();
+            Hide(); 
+        }
     }
 }

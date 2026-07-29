@@ -63,7 +63,7 @@ namespace SistemaAcademico1
         private Button btnJuego = null!;
         private Button btnVariables = null!;
         private Button btnCiclos = null!;
-        private Button btnAlgoritmos = null!;
+        private Button btnSeudocodigo = null!;
         private Button btnCondicionales = null!;
         private Button btnAccesoJuego = null!;
         private Button btnAccesoVariables = null!;
@@ -117,7 +117,7 @@ namespace SistemaAcademico1
             lblIconoAlgoritmos = new Label();
             lblTituloAlgoritmos = new Label();
             lblDescripcionAlgoritmos = new Label();
-            btnAlgoritmos = new Button();
+            btnSeudocodigo = new Button();
             tarjetaVariables = new Panel();
             lblNumeroVariables = new Label();
             lblIconoVariables = new Label();
@@ -566,7 +566,7 @@ namespace SistemaAcademico1
             tarjetaAlgoritmos.Controls.Add(lblIconoAlgoritmos);
             tarjetaAlgoritmos.Controls.Add(lblTituloAlgoritmos);
             tarjetaAlgoritmos.Controls.Add(lblDescripcionAlgoritmos);
-            tarjetaAlgoritmos.Controls.Add(btnAlgoritmos);
+            tarjetaAlgoritmos.Controls.Add(btnSeudocodigo);
             tarjetaAlgoritmos.Location = new Point(0, 0);
             tarjetaAlgoritmos.Name = "tarjetaAlgoritmos";
             tarjetaAlgoritmos.Size = new Size(230, 285);
@@ -603,7 +603,7 @@ namespace SistemaAcademico1
             lblTituloAlgoritmos.Name = "lblTituloAlgoritmos";
             lblTituloAlgoritmos.Size = new Size(200, 35);
             lblTituloAlgoritmos.TabIndex = 2;
-            lblTituloAlgoritmos.Text = "Algoritmos";
+            lblTituloAlgoritmos.Text = "Seudocodigo";
             lblTituloAlgoritmos.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblDescripcionAlgoritmos
@@ -616,18 +616,18 @@ namespace SistemaAcademico1
             lblDescripcionAlgoritmos.Text = "Diseño de pasos lógicos para resolver problemas.";
             lblDescripcionAlgoritmos.TextAlign = ContentAlignment.TopCenter;
             // 
-            // btnAlgoritmos
+            // btnSeudocodigo
             // 
-            btnAlgoritmos.BackColor = Color.Transparent;
-            btnAlgoritmos.FlatStyle = FlatStyle.Flat;
-            btnAlgoritmos.ForeColor = Color.MediumPurple;
-            btnAlgoritmos.Location = new Point(18, 245);
-            btnAlgoritmos.Name = "btnAlgoritmos";
-            btnAlgoritmos.Size = new Size(194, 32);
-            btnAlgoritmos.TabIndex = 4;
-            btnAlgoritmos.Text = "Ver tema";
-            btnAlgoritmos.UseVisualStyleBackColor = false;
-            btnAlgoritmos.Click += btnAlgoritmos_Click_1;
+            btnSeudocodigo.BackColor = Color.Transparent;
+            btnSeudocodigo.FlatStyle = FlatStyle.Flat;
+            btnSeudocodigo.ForeColor = Color.MediumPurple;
+            btnSeudocodigo.Location = new Point(18, 245);
+            btnSeudocodigo.Name = "btnSeudocodigo";
+            btnSeudocodigo.Size = new Size(194, 32);
+            btnSeudocodigo.TabIndex = 4;
+            btnSeudocodigo.Text = "Ver tema";
+            btnSeudocodigo.UseVisualStyleBackColor = false;
+            btnSeudocodigo.Click += btnAlgoritmos_Click_1;
             // 
             // tarjetaVariables
             // 
@@ -743,7 +743,7 @@ namespace SistemaAcademico1
             lblTituloCondicionales.Name = "lblTituloCondicionales";
             lblTituloCondicionales.Size = new Size(200, 35);
             lblTituloCondicionales.TabIndex = 2;
-            lblTituloCondicionales.Text = "Condicionales";
+            lblTituloCondicionales.Text = "Diagrama de flujos";
             lblTituloCondicionales.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblDescripcionCondicionales

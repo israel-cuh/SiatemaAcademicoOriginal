@@ -117,4 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label3.Text" xml:space="preserve">
+    <value>1. Escribir instrucciones claras
+Usa palabras sencillas para que cualquier persona entienda el algoritmo.
+
+2. Mantener un orden lógico
+Organiza los pasos de inicio a fin siguiendo una secuencia correcta.
+
+3. Usar estructuras correctamente
+Aplica Secuencia, Selección y Repetición según lo requiera el problema.
+
+4. Usar palabras clave consistentes
+Emplea términos como Inicio, Fin, Si, Entonces, Mientras y Para de forma adecuada.
+
+5. Indentar (sangría) las estructuras
+La sangría ayuda a organizar el pseudocódigo y facilita su lectura.</value>
+  </data>
 </root>

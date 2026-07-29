@@ -51,11 +51,12 @@ namespace SistemaAcademico1
         {
             MODULODEPROFESOR profesor = new MODULODEPROFESOR();
             profesor.Show();
+            Hide();
         }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            
+
         }
         private void buttonvolveralinicio_Click(object sender, EventArgs e)
         {
@@ -70,8 +71,18 @@ namespace SistemaAcademico1
                 MenuEstructura menuEstructura = new MenuEstructura();
                 menuEstructura.Show();
                 Hide();
-                
+
             }
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

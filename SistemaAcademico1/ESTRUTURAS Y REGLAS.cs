@@ -34,5 +34,19 @@ namespace SistemaAcademico1
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MODULODEPROFESOR form = new MODULODEPROFESOR();
+            form.Show();
+            Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            pseudocodigoprof frm = new pseudocodigoprof();
+            frm.Show();
+            Hide();
+        }
     }
 }

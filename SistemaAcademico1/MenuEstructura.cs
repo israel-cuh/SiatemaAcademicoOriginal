@@ -73,7 +73,7 @@ namespace SistemaAcademico1
             tarjetaCondicionales.Size = new Size(anchoTarjeta, 285);
             tarjetaCiclos.Size = new Size(anchoTarjeta, 285);
 
-            AjustarContenidoTarjetaTema(tarjetaAlgoritmos, lblIconoAlgoritmos, lblTituloAlgoritmos, lblDescripcionAlgoritmos, btnAlgoritmos, anchoTarjeta);
+            AjustarContenidoTarjetaTema(tarjetaAlgoritmos, lblIconoAlgoritmos, lblTituloAlgoritmos, lblDescripcionAlgoritmos, btnSeudocodigo, anchoTarjeta);
             AjustarContenidoTarjetaTema(tarjetaVariables, lblIconoVariables, lblTituloVariables, lblDescripcionVariables, btnVariables, anchoTarjeta);
             AjustarContenidoTarjetaTema(tarjetaCondicionales, lblIconoCondicionales, lblTituloCondicionales, lblDescripcionCondicionales, btnCondicionales, anchoTarjeta);
             AjustarContenidoTarjetaTema(tarjetaCiclos, lblIconoCiclos, lblTituloCiclos, lblDescripcionCiclos, btnCiclos, anchoTarjeta);
@@ -131,7 +131,7 @@ namespace SistemaAcademico1
             //  btnTemas.Click += btnTemas_Click;
             btnJuego.Click += btnJuego_Click;
             btnCiclos.Click += btnCiclos_Click;
-            btnAlgoritmos.Click += btnAlgoritmos_Click;
+            btnSeudocodigo.Click += btnAlgoritmos_Click;
             btnCondicionales.Click += btnCondicionales_Click;
             btnAccesoJuego.Click += btnJuego_Click;
             btnAccesoVariables.Click += btnVariables_Click;
@@ -193,12 +193,12 @@ namespace SistemaAcademico1
 
         private void btnAlgoritmos_Click(object? sender, EventArgs e)
         {
-            MostrarProximamente("Algoritmos");
+           
         }
 
         private void btnCondicionales_Click(object? sender, EventArgs e)
         {
-            MostrarProximamente("Condicionales");
+            
         }
 
         private void MostrarProximamente(string tema)
@@ -236,6 +236,9 @@ namespace SistemaAcademico1
 
         private void btnAlgoritmos_Click_1(object sender, EventArgs e)
         {
+            frmPrincipal frmPrincipal = new frmPrincipal();
+            frmPrincipal.Show();
+            Hide();
         }
 
         private void btnJuego_Click_1(object sender, EventArgs e)
