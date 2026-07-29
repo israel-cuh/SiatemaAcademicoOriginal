@@ -38,10 +38,11 @@
             label1titulo = new Label();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
-            button2 = new Button();
-            button1 = new Button();
+            panel4 = new Panel();
             label = new Label();
             labeltexpis = new Label();
+            button2 = new Button();
+            button1 = new Button();
             rbIntalacion = new RadioButton();
             rbDEPURACION = new RadioButton();
             buttoncomprobar = new Button();
@@ -52,14 +53,13 @@
             panel3 = new Panel();
             labelideadelsabias = new Label();
             labelsabias = new Label();
-            panel4 = new Panel();
             panel1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
-            panel3.SuspendLayout();
             panel4.SuspendLayout();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -70,9 +70,10 @@
             panel1.Controls.Add(lblexplicacion);
             panel1.Controls.Add(label1titulo);
             panel1.Controls.Add(pictureBox1);
-            panel1.Location = new Point(23, 33);
+            panel1.Location = new Point(26, 44);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(659, 597);
+            panel1.Size = new Size(753, 796);
             panel1.TabIndex = 0;
             // 
             // groupBox2
@@ -81,9 +82,11 @@
             groupBox2.Controls.Add(lBLREGLAS);
             groupBox2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox2.ForeColor = SystemColors.Control;
-            groupBox2.Location = new Point(42, 398);
+            groupBox2.Location = new Point(48, 531);
+            groupBox2.Margin = new Padding(3, 4, 3, 4);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(575, 162);
+            groupBox2.Padding = new Padding(3, 4, 3, 4);
+            groupBox2.Size = new Size(657, 216);
             groupBox2.TabIndex = 5;
             groupBox2.TabStop = false;
             groupBox2.Text = "📌Reglas basicas ";
@@ -93,9 +96,9 @@
             lBLREGLAS.BackColor = Color.Transparent;
             lBLREGLAS.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lBLREGLAS.ForeColor = SystemColors.ButtonFace;
-            lBLREGLAS.Location = new Point(24, 19);
+            lBLREGLAS.Location = new Point(27, 25);
             lBLREGLAS.Name = "lBLREGLAS";
-            lBLREGLAS.Size = new Size(309, 137);
+            lBLREGLAS.Size = new Size(353, 183);
             lBLREGLAS.TabIndex = 0;
             lBLREGLAS.Text = resources.GetString("lBLREGLAS.Text");
             // 
@@ -104,9 +107,11 @@
             groupBox1.BackgroundImage = (Image)resources.GetObject("groupBox1.BackgroundImage");
             groupBox1.Controls.Add(lblestructura);
             groupBox1.ForeColor = SystemColors.Control;
-            groupBox1.Location = new Point(42, 167);
+            groupBox1.Location = new Point(48, 223);
+            groupBox1.Margin = new Padding(3, 4, 3, 4);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(575, 216);
+            groupBox1.Padding = new Padding(3, 4, 3, 4);
+            groupBox1.Size = new Size(657, 288);
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             groupBox1.Text = "Estructuras basicas ";
@@ -115,9 +120,9 @@
             // 
             lblestructura.BackColor = Color.Transparent;
             lblestructura.ForeColor = SystemColors.ButtonFace;
-            lblestructura.Location = new Point(15, 29);
+            lblestructura.Location = new Point(17, 39);
             lblestructura.Name = "lblestructura";
-            lblestructura.Size = new Size(259, 150);
+            lblestructura.Size = new Size(296, 200);
             lblestructura.TabIndex = 0;
             lblestructura.Text = "1. SECUENCIA.\r\nLas instrucciones se ejecutan una tras otra.\r\n\r\n2. SELECCION.\r\nPermite tomar decisiones usando Si...Entonces.\r\n\r\n3. REPETICION\r\n\r\nRepite instrucciones mediante Mientras, Para o Repetir.";
             // 
@@ -126,9 +131,9 @@
             lblexplicacion.BackColor = Color.Transparent;
             lblexplicacion.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblexplicacion.ForeColor = SystemColors.ButtonFace;
-            lblexplicacion.Location = new Point(167, 63);
+            lblexplicacion.Location = new Point(191, 84);
             lblexplicacion.Name = "lblexplicacion";
-            lblexplicacion.Size = new Size(460, 72);
+            lblexplicacion.Size = new Size(526, 96);
             lblexplicacion.TabIndex = 3;
             lblexplicacion.Text = resources.GetString("lblexplicacion.Text");
             // 
@@ -138,18 +143,19 @@
             label1titulo.BackColor = Color.Transparent;
             label1titulo.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1titulo.ForeColor = SystemColors.ButtonFace;
-            label1titulo.Location = new Point(156, 16);
+            label1titulo.Location = new Point(178, 21);
             label1titulo.Name = "label1titulo";
-            label1titulo.Size = new Size(334, 32);
+            label1titulo.Size = new Size(407, 41);
             label1titulo.TabIndex = 2;
             label1titulo.Text = "Estructuras y reglas basicas.";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 16);
+            pictureBox1.Location = new Point(14, 21);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(138, 120);
+            pictureBox1.Size = new Size(158, 160);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -168,32 +174,22 @@
             panel2.Controls.Add(lblpregunta);
             panel2.Controls.Add(lblopcion);
             panel2.Controls.Add(panel3);
-            panel2.Location = new Point(688, 33);
+            panel2.Location = new Point(786, 44);
+            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(334, 597);
+            panel2.Size = new Size(382, 796);
             panel2.TabIndex = 1;
             // 
-            // button2
+            // panel4
             // 
-            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
-            button2.ForeColor = SystemColors.ButtonFace;
-            button2.Location = new Point(227, 550);
-            button2.Name = "button2";
-            button2.Size = new Size(80, 23);
-            button2.TabIndex = 14;
-            button2.Text = "Siguiente ";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
-            button1.ForeColor = SystemColors.ButtonFace;
-            button1.Location = new Point(24, 550);
-            button1.Name = "button1";
-            button1.Size = new Size(80, 23);
-            button1.TabIndex = 13;
-            button1.Text = "Anterior ";
-            button1.UseVisualStyleBackColor = true;
+            panel4.BackgroundImage = (Image)resources.GetObject("panel4.BackgroundImage");
+            panel4.Controls.Add(label);
+            panel4.Controls.Add(labeltexpis);
+            panel4.Location = new Point(33, 592);
+            panel4.Margin = new Padding(3, 4, 3, 4);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(298, 133);
+            panel4.TabIndex = 15;
             // 
             // label
             // 
@@ -201,9 +197,9 @@
             label.BackColor = Color.Transparent;
             label.Font = new Font("Segoe UI Emoji", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label.ForeColor = SystemColors.ButtonFace;
-            label.Location = new Point(16, 11);
+            label.Location = new Point(18, 15);
             label.Name = "label";
-            label.Size = new Size(64, 17);
+            label.Size = new Size(81, 22);
             label.TabIndex = 12;
             label.Text = "💡 Pista";
             label.Click += label_Click;
@@ -212,20 +208,47 @@
             // 
             labeltexpis.BackColor = Color.Transparent;
             labeltexpis.ForeColor = SystemColors.ButtonFace;
-            labeltexpis.Location = new Point(16, 28);
+            labeltexpis.Location = new Point(18, 37);
             labeltexpis.Name = "labeltexpis";
-            labeltexpis.Size = new Size(237, 49);
+            labeltexpis.Size = new Size(271, 65);
             labeltexpis.TabIndex = 11;
             labeltexpis.Text = "Las estructuras basicas son las que permiten organizar el flujo de un algoritmo";
+            // 
+            // button2
+            // 
+            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
+            button2.ForeColor = SystemColors.ButtonFace;
+            button2.Location = new Point(259, 733);
+            button2.Margin = new Padding(3, 4, 3, 4);
+            button2.Name = "button2";
+            button2.Size = new Size(91, 31);
+            button2.TabIndex = 14;
+            button2.Text = "Siguiente ";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click_1;
+            // 
+            // button1
+            // 
+            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
+            button1.ForeColor = SystemColors.ButtonFace;
+            button1.Location = new Point(27, 733);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(91, 31);
+            button1.TabIndex = 13;
+            button1.Text = "Anterior ";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
             // 
             // rbIntalacion
             // 
             rbIntalacion.AutoSize = true;
             rbIntalacion.BackColor = Color.Transparent;
             rbIntalacion.ForeColor = SystemColors.ButtonFace;
-            rbIntalacion.Location = new Point(45, 364);
+            rbIntalacion.Location = new Point(51, 485);
+            rbIntalacion.Margin = new Padding(3, 4, 3, 4);
             rbIntalacion.Name = "rbIntalacion";
-            rbIntalacion.Size = new Size(94, 19);
+            rbIntalacion.Size = new Size(117, 24);
             rbIntalacion.TabIndex = 9;
             rbIntalacion.TabStop = true;
             rbIntalacion.Text = "d) Intalacion ";
@@ -236,9 +259,10 @@
             rbDEPURACION.AutoSize = true;
             rbDEPURACION.BackColor = Color.Transparent;
             rbDEPURACION.ForeColor = SystemColors.ButtonFace;
-            rbDEPURACION.Location = new Point(40, 327);
+            rbDEPURACION.Location = new Point(46, 436);
+            rbDEPURACION.Margin = new Padding(3, 4, 3, 4);
             rbDEPURACION.Name = "rbDEPURACION";
-            rbDEPURACION.Size = new Size(99, 19);
+            rbDEPURACION.Size = new Size(123, 24);
             rbDEPURACION.TabIndex = 8;
             rbDEPURACION.TabStop = true;
             rbDEPURACION.Text = "c) Depuracion";
@@ -249,9 +273,10 @@
             buttoncomprobar.BackColor = Color.Transparent;
             buttoncomprobar.BackgroundImage = (Image)resources.GetObject("buttoncomprobar.BackgroundImage");
             buttoncomprobar.ForeColor = SystemColors.ButtonFace;
-            buttoncomprobar.Location = new Point(96, 417);
+            buttoncomprobar.Location = new Point(110, 556);
+            buttoncomprobar.Margin = new Padding(3, 4, 3, 4);
             buttoncomprobar.Name = "buttoncomprobar";
-            buttoncomprobar.Size = new Size(91, 23);
+            buttoncomprobar.Size = new Size(104, 31);
             buttoncomprobar.TabIndex = 7;
             buttoncomprobar.Text = "Comprobar";
             buttoncomprobar.UseVisualStyleBackColor = false;
@@ -261,9 +286,10 @@
             rbcompilacion.AutoSize = true;
             rbcompilacion.BackColor = Color.Transparent;
             rbcompilacion.ForeColor = SystemColors.ButtonFace;
-            rbcompilacion.Location = new Point(40, 291);
+            rbcompilacion.Location = new Point(46, 388);
+            rbcompilacion.Margin = new Padding(3, 4, 3, 4);
             rbcompilacion.Name = "rbcompilacion";
-            rbcompilacion.Size = new Size(107, 19);
+            rbcompilacion.Size = new Size(132, 24);
             rbcompilacion.TabIndex = 4;
             rbcompilacion.TabStop = true;
             rbcompilacion.Text = "b) Compilacion";
@@ -275,9 +301,10 @@
             rbsecuencia.AutoSize = true;
             rbsecuencia.BackColor = Color.Transparent;
             rbsecuencia.ForeColor = SystemColors.ButtonFace;
-            rbsecuencia.Location = new Point(40, 250);
+            rbsecuencia.Location = new Point(46, 333);
+            rbsecuencia.Margin = new Padding(3, 4, 3, 4);
             rbsecuencia.Name = "rbsecuencia";
-            rbsecuencia.Size = new Size(94, 19);
+            rbsecuencia.Size = new Size(117, 24);
             rbsecuencia.TabIndex = 3;
             rbsecuencia.TabStop = true;
             rbsecuencia.Text = "a) Secuencia ";
@@ -288,9 +315,9 @@
             lblpregunta.BackColor = Color.Transparent;
             lblpregunta.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblpregunta.ForeColor = SystemColors.ButtonFace;
-            lblpregunta.Location = new Point(29, 196);
+            lblpregunta.Location = new Point(33, 261);
             lblpregunta.Name = "lblpregunta";
-            lblpregunta.Size = new Size(278, 39);
+            lblpregunta.Size = new Size(318, 52);
             lblpregunta.TabIndex = 2;
             lblpregunta.Text = "¿Cuál de las siguientes es una estructura básica del pseudocódigo?";
             // 
@@ -300,9 +327,9 @@
             lblopcion.BackColor = Color.Transparent;
             lblopcion.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblopcion.ForeColor = SystemColors.ButtonFace;
-            lblopcion.Location = new Point(16, 157);
+            lblopcion.Location = new Point(18, 209);
             lblopcion.Name = "lblopcion";
-            lblopcion.Size = new Size(190, 17);
+            lblopcion.Size = new Size(246, 23);
             lblopcion.TabIndex = 1;
             lblopcion.Text = "Selecciona la opcion correcta:";
             // 
@@ -313,16 +340,17 @@
             panel3.Controls.Add(labelideadelsabias);
             panel3.Controls.Add(labelsabias);
             panel3.ForeColor = SystemColors.ButtonFace;
-            panel3.Location = new Point(64, 16);
+            panel3.Location = new Point(73, 21);
+            panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(200, 119);
+            panel3.Size = new Size(229, 159);
             panel3.TabIndex = 0;
             // 
             // labelideadelsabias
             // 
-            labelideadelsabias.Location = new Point(16, 29);
+            labelideadelsabias.Location = new Point(18, 39);
             labelideadelsabias.Name = "labelideadelsabias";
-            labelideadelsabias.Size = new Size(181, 71);
+            labelideadelsabias.Size = new Size(207, 95);
             labelideadelsabias.TabIndex = 2;
             labelideadelsabias.Text = "Una buena estructura en el pseudocódigo facilita convertir el algoritmo a cualquier lenguaje de programación.";
             labelideadelsabias.Click += label2_Click;
@@ -331,30 +359,21 @@
             // 
             labelsabias.AutoSize = true;
             labelsabias.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelsabias.Location = new Point(44, 12);
+            labelsabias.Location = new Point(50, 16);
             labelsabias.Name = "labelsabias";
-            labelsabias.Size = new Size(109, 17);
+            labelsabias.Size = new Size(139, 23);
             labelsabias.TabIndex = 1;
             labelsabias.Text = "💡 ¿Sabías qué?";
             // 
-            // panel4
-            // 
-            panel4.BackgroundImage = (Image)resources.GetObject("panel4.BackgroundImage");
-            panel4.Controls.Add(label);
-            panel4.Controls.Add(labeltexpis);
-            panel4.Location = new Point(29, 444);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(261, 100);
-            panel4.TabIndex = 15;
-            // 
             // ESTRUTURAS_Y_REGLAS
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(1188, 642);
+            ClientSize = new Size(1358, 856);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "ESTRUTURAS_Y_REGLAS";
             Text = "ESTRUTURAS_Y_REGLAS";
             Load += ESTRUTURAS_Y_REGLAS_Load;
@@ -365,10 +384,10 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             ResumeLayout(false);
         }
 

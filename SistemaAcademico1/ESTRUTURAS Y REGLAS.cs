@@ -13,6 +13,8 @@ namespace SistemaAcademico1
         public ESTRUTURAS_Y_REGLAS()
         {
             InitializeComponent();
+            ControlesVentanaHelper.Agregar(this, cerrarAplicacion: false);
+            MenuLateralHelper.AgregarMenu(this, "Inicio");
         }
 
         private void ESTRUTURAS_Y_REGLAS_Load(object sender, EventArgs e)
@@ -46,6 +48,20 @@ namespace SistemaAcademico1
         {
             pseudocodigoprof frm = new pseudocodigoprof();
             frm.Show();
+            Hide();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            MODULODEPROFESOR frms = new MODULODEPROFESOR();
+            frms.Show();
+            Hide();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            pseudocodigoprof frmsa = new pseudocodigoprof();
+            frmsa.Show();
             Hide();
         }
     }

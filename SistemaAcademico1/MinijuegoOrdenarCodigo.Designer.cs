@@ -32,6 +32,7 @@ namespace SistemaAcademico1
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MinijuegoOrdenarCodigo));
             temporizador = new System.Windows.Forms.Timer(components);
             lblTiempo = new Label();
             lblPuntuacion = new Label();
@@ -79,6 +80,7 @@ namespace SistemaAcademico1
             // 
             // lblTiempo
             // 
+            lblTiempo.BackColor = Color.Transparent;
             lblTiempo.Font = new Font("Segoe UI", 22F, FontStyle.Bold);
             lblTiempo.ForeColor = Color.White;
             lblTiempo.Location = new Point(75, 38);
@@ -90,6 +92,7 @@ namespace SistemaAcademico1
             // 
             // lblPuntuacion
             // 
+            lblPuntuacion.BackColor = Color.Transparent;
             lblPuntuacion.Font = new Font("Segoe UI", 22F, FontStyle.Bold);
             lblPuntuacion.ForeColor = Color.White;
             lblPuntuacion.Location = new Point(74, 35);
@@ -100,6 +103,7 @@ namespace SistemaAcademico1
             // 
             // lblNivel
             // 
+            lblNivel.BackColor = Color.Transparent;
             lblNivel.Font = new Font("Segoe UI", 17F, FontStyle.Bold);
             lblNivel.ForeColor = Color.White;
             lblNivel.Location = new Point(22, 55);
@@ -110,6 +114,7 @@ namespace SistemaAcademico1
             // 
             // lblInstruccion
             // 
+            lblInstruccion.BackColor = Color.Transparent;
             lblInstruccion.Font = new Font("Segoe UI", 10.5F);
             lblInstruccion.ForeColor = Color.Gainsboro;
             lblInstruccion.Location = new Point(22, 135);
@@ -120,6 +125,7 @@ namespace SistemaAcademico1
             // 
             // lblPista
             // 
+            lblPista.BackColor = Color.Transparent;
             lblPista.ForeColor = Color.Gainsboro;
             lblPista.Location = new Point(15, 45);
             lblPista.Name = "lblPista";
@@ -129,6 +135,7 @@ namespace SistemaAcademico1
             // 
             // lblResultado
             // 
+            lblResultado.BackColor = Color.Transparent;
             lblResultado.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblResultado.ForeColor = Color.LightSkyBlue;
             lblResultado.Location = new Point(22, 402);
@@ -139,6 +146,7 @@ namespace SistemaAcademico1
             // 
             // lblProgreso
             // 
+            lblProgreso.BackColor = Color.Transparent;
             lblProgreso.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
             lblProgreso.ForeColor = Color.Gainsboro;
             lblProgreso.Location = new Point(35, 638);
@@ -174,6 +182,7 @@ namespace SistemaAcademico1
             // btnVerificar
             // 
             btnVerificar.BackColor = Color.FromArgb(55, 174, 52);
+            btnVerificar.BackgroundImage = (Image)resources.GetObject("btnVerificar.BackgroundImage");
             btnVerificar.FlatAppearance.BorderSize = 0;
             btnVerificar.FlatStyle = FlatStyle.Flat;
             btnVerificar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
@@ -188,6 +197,7 @@ namespace SistemaAcademico1
             // btnSiguiente
             // 
             btnSiguiente.BackColor = Color.FromArgb(132, 78, 255);
+            btnSiguiente.BackgroundImage = (Image)resources.GetObject("btnSiguiente.BackgroundImage");
             btnSiguiente.Enabled = false;
             btnSiguiente.FlatAppearance.BorderSize = 0;
             btnSiguiente.FlatStyle = FlatStyle.Flat;
@@ -203,11 +213,12 @@ namespace SistemaAcademico1
             // btnPausa
             // 
             btnPausa.BackColor = Color.FromArgb(30, 35, 88);
+            btnPausa.BackgroundImage = (Image)resources.GetObject("btnPausa.BackgroundImage");
             btnPausa.FlatAppearance.BorderSize = 0;
             btnPausa.FlatStyle = FlatStyle.Flat;
             btnPausa.Font = new Font("Segoe UI", 17F, FontStyle.Bold);
-            btnPausa.ForeColor = Color.White;
-            btnPausa.Location = new Point(1155, 57);
+            btnPausa.ForeColor = Color.Peru;
+            btnPausa.Location = new Point(1155, 48);
             btnPausa.Name = "btnPausa";
             btnPausa.Size = new Size(50, 58);
             btnPausa.TabIndex = 4;
@@ -217,6 +228,7 @@ namespace SistemaAcademico1
             // btnReiniciar
             // 
             btnReiniciar.BackColor = Color.FromArgb(38, 48, 100);
+            btnReiniciar.BackgroundImage = (Image)resources.GetObject("btnReiniciar.BackgroundImage");
             btnReiniciar.FlatAppearance.BorderSize = 0;
             btnReiniciar.FlatStyle = FlatStyle.Flat;
             btnReiniciar.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
@@ -231,10 +243,11 @@ namespace SistemaAcademico1
             // btnRegresar
             // 
             btnRegresar.BackColor = Color.FromArgb(70, 40, 83);
+            btnRegresar.BackgroundImage = (Image)resources.GetObject("btnRegresar.BackgroundImage");
             btnRegresar.FlatAppearance.BorderSize = 0;
             btnRegresar.FlatStyle = FlatStyle.Flat;
             btnRegresar.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            btnRegresar.ForeColor = Color.White;
+            btnRegresar.ForeColor = Color.Brown;
             btnRegresar.Location = new Point(163, 382);
             btnRegresar.Name = "btnRegresar";
             btnRegresar.Size = new Size(135, 44);
@@ -245,6 +258,7 @@ namespace SistemaAcademico1
             // btnSubir
             // 
             btnSubir.BackColor = Color.FromArgb(67, 65, 160);
+            btnSubir.BackgroundImage = (Image)resources.GetObject("btnSubir.BackgroundImage");
             btnSubir.FlatAppearance.BorderSize = 0;
             btnSubir.FlatStyle = FlatStyle.Flat;
             btnSubir.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
@@ -259,6 +273,7 @@ namespace SistemaAcademico1
             // btnBajar
             // 
             btnBajar.BackColor = Color.FromArgb(67, 65, 160);
+            btnBajar.BackgroundImage = (Image)resources.GetObject("btnBajar.BackgroundImage");
             btnBajar.FlatAppearance.BorderSize = 0;
             btnBajar.FlatStyle = FlatStyle.Flat;
             btnBajar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
@@ -273,6 +288,8 @@ namespace SistemaAcademico1
             // tarjetaTiempo
             // 
             tarjetaTiempo.BackColor = Color.FromArgb(20, 24, 66);
+            tarjetaTiempo.BackgroundImage = (Image)resources.GetObject("tarjetaTiempo.BackgroundImage");
+            tarjetaTiempo.BackgroundImageLayout = ImageLayout.Stretch;
             tarjetaTiempo.BorderStyle = BorderStyle.FixedSingle;
             tarjetaTiempo.Controls.Add(iconoTiempo);
             tarjetaTiempo.Controls.Add(tituloTiempo);
@@ -284,6 +301,7 @@ namespace SistemaAcademico1
             // 
             // iconoTiempo
             // 
+            iconoTiempo.BackColor = Color.Transparent;
             iconoTiempo.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
             iconoTiempo.ForeColor = Color.FromArgb(56, 145, 255);
             iconoTiempo.Location = new Point(22, 25);
@@ -294,6 +312,7 @@ namespace SistemaAcademico1
             // 
             // tituloTiempo
             // 
+            tituloTiempo.BackColor = Color.Transparent;
             tituloTiempo.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             tituloTiempo.ForeColor = Color.LightSkyBlue;
             tituloTiempo.Location = new Point(78, 15);
@@ -305,6 +324,7 @@ namespace SistemaAcademico1
             // 
             // tituloPrincipal
             // 
+            tituloPrincipal.BackColor = Color.Transparent;
             tituloPrincipal.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
             tituloPrincipal.ForeColor = Color.White;
             tituloPrincipal.Location = new Point(365, 25);
@@ -316,6 +336,7 @@ namespace SistemaAcademico1
             // 
             // subtitulo
             // 
+            subtitulo.BackColor = Color.Transparent;
             subtitulo.Font = new Font("Segoe UI", 11F);
             subtitulo.ForeColor = Color.Gainsboro;
             subtitulo.Location = new Point(355, 75);
@@ -328,6 +349,7 @@ namespace SistemaAcademico1
             // tarjetaPuntos
             // 
             tarjetaPuntos.BackColor = Color.FromArgb(20, 24, 66);
+            tarjetaPuntos.BackgroundImage = (Image)resources.GetObject("tarjetaPuntos.BackgroundImage");
             tarjetaPuntos.BorderStyle = BorderStyle.FixedSingle;
             tarjetaPuntos.Controls.Add(iconoPuntos);
             tarjetaPuntos.Controls.Add(tituloPuntos);
@@ -339,6 +361,7 @@ namespace SistemaAcademico1
             // 
             // iconoPuntos
             // 
+            iconoPuntos.BackColor = Color.Transparent;
             iconoPuntos.Font = new Font("Segoe UI", 22F, FontStyle.Bold);
             iconoPuntos.ForeColor = Color.Gold;
             iconoPuntos.Location = new Point(3, 35);
@@ -349,6 +372,7 @@ namespace SistemaAcademico1
             // 
             // tituloPuntos
             // 
+            tituloPuntos.BackColor = Color.Transparent;
             tituloPuntos.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             tituloPuntos.ForeColor = Color.LightSkyBlue;
             tituloPuntos.Location = new Point(39, 10);
@@ -360,6 +384,8 @@ namespace SistemaAcademico1
             // contenedor
             // 
             contenedor.BackColor = Color.FromArgb(20, 24, 66);
+            contenedor.BackgroundImage = (Image)resources.GetObject("contenedor.BackgroundImage");
+            contenedor.BackgroundImageLayout = ImageLayout.Stretch;
             contenedor.BorderStyle = BorderStyle.FixedSingle;
             contenedor.Controls.Add(panelLateral);
             contenedor.Controls.Add(panelCodigo);
@@ -371,6 +397,8 @@ namespace SistemaAcademico1
             // panelLateral
             // 
             panelLateral.BackColor = Color.FromArgb(25, 25, 72);
+            panelLateral.BackgroundImage = (Image)resources.GetObject("panelLateral.BackgroundImage");
+            panelLateral.BackgroundImageLayout = ImageLayout.Stretch;
             panelLateral.Controls.Add(tituloDesafio);
             panelLateral.Controls.Add(lblNivel);
             panelLateral.Controls.Add(lblInstruccion);
@@ -384,6 +412,7 @@ namespace SistemaAcademico1
             // 
             // tituloDesafio
             // 
+            tituloDesafio.BackColor = Color.Transparent;
             tituloDesafio.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
             tituloDesafio.ForeColor = Color.FromArgb(185, 115, 255);
             tituloDesafio.Location = new Point(22, 22);
@@ -395,6 +424,7 @@ namespace SistemaAcademico1
             // cajaPista
             // 
             cajaPista.BackColor = Color.FromArgb(34, 43, 92);
+            cajaPista.BackgroundImage = (Image)resources.GetObject("cajaPista.BackgroundImage");
             cajaPista.Controls.Add(tituloPista);
             cajaPista.Controls.Add(lblPista);
             cajaPista.Location = new Point(18, 235);
@@ -404,6 +434,7 @@ namespace SistemaAcademico1
             // 
             // tituloPista
             // 
+            tituloPista.BackColor = Color.Transparent;
             tituloPista.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             tituloPista.ForeColor = Color.LightSkyBlue;
             tituloPista.Location = new Point(15, 12);
@@ -415,6 +446,8 @@ namespace SistemaAcademico1
             // panelCodigo
             // 
             panelCodigo.BackColor = Color.FromArgb(11, 14, 48);
+            panelCodigo.BackgroundImage = (Image)resources.GetObject("panelCodigo.BackgroundImage");
+            panelCodigo.BackgroundImageLayout = ImageLayout.Stretch;
             panelCodigo.Controls.Add(tituloBloques);
             panelCodigo.Controls.Add(ayudaArrastre);
             panelCodigo.Controls.Add(lstCodigo);
@@ -451,6 +484,8 @@ namespace SistemaAcademico1
             AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(8, 10, 38);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1220, 720);
             Controls.Add(tarjetaTiempo);
             Controls.Add(tituloPrincipal);

@@ -46,7 +46,9 @@ namespace SistemaAcademico1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MostrarEnPreparacion("Algoritmo");
+            frmPrincipal pseus = new frmPrincipal();
+            pseus.Show();
+            Hide();
         }
 
         private void btnVariables_Click(object sender, EventArgs e)
@@ -56,7 +58,7 @@ namespace SistemaAcademico1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MostrarEnPreparacion("Condicionales");
+            MostrarEnPreparacion("Diagramas de Flujos ");
         }
 
         private void btnCiclos_Click(object sender, EventArgs e)

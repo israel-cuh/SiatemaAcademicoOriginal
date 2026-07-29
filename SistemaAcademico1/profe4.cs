@@ -13,6 +13,8 @@ namespace SistemaAcademico1
         public profe4()
         {
             InitializeComponent();
+            ControlesVentanaHelper.Agregar(this, cerrarAplicacion: false);
+            MenuLateralHelper.AgregarMenu(this, "Inicio");
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)

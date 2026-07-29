@@ -15,6 +15,8 @@ namespace SistemaAcademico1
         public frmPrincipal()
         {
             InitializeComponent();
+            ControlesVentanaHelper.Agregar(this, cerrarAplicacion: true);
+            MenuLateralHelper.AgregarMenu(this, "Inicio");
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -49,9 +51,9 @@ namespace SistemaAcademico1
 
         private void buttoniraprofesor_Click(object sender, EventArgs e)
         {
-            MODULODEPROFESOR profesor = new MODULODEPROFESOR();
-            profesor.Show();
-            Hide();
+            MODULODEPROFESOR frm = new MODULODEPROFESOR();
+            frm.Show();
+            Hide(); 
         }
 
         private void frmPrincipal_Load(object sender, EventArgs e)

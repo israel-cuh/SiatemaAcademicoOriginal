@@ -13,6 +13,8 @@ namespace SistemaAcademico1
         public MODULODEPROFESOR()
         {
             InitializeComponent();
+            ControlesVentanaHelper.Agregar(this, cerrarAplicacion: false);
+            MenuLateralHelper.AgregarMenu(this, "Inicio");
         }
 
         private void lbltexto_Click(object sender, EventArgs e)
@@ -37,8 +39,8 @@ namespace SistemaAcademico1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ESTRUTURAS_Y_REGLAS form = new ESTRUTURAS_Y_REGLAS();
-            form.Show();
+            ESTRUTURAS_Y_REGLAS frms = new ESTRUTURAS_Y_REGLAS();
+            frms.Show();
             Hide();
         }
 

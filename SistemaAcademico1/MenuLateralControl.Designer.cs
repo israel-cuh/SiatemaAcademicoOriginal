@@ -166,7 +166,7 @@ namespace SistemaAcademico1
             button1.Padding = new Padding(20, 0, 0, 0);
             button1.Size = new Size(230, 48);
             button1.TabIndex = 8;
-            button1.Text = "Algoritmo";
+            button1.Text = "Pseudocodigo";
             button1.TextAlign = ContentAlignment.MiddleLeft;
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
@@ -183,7 +183,7 @@ namespace SistemaAcademico1
             button2.Padding = new Padding(20, 0, 0, 0);
             button2.Size = new Size(230, 48);
             button2.TabIndex = 9;
-            button2.Text = "Condicionales";
+            button2.Text = "Diagramas de Flujo";
             button2.TextAlign = ContentAlignment.MiddleLeft;
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;

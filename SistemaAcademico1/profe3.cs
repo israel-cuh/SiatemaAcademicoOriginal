@@ -13,6 +13,8 @@ namespace SistemaAcademico1
         public pseudocodigoprof()
         {
             InitializeComponent();
+            ControlesVentanaHelper.Agregar(this, cerrarAplicacion: false);
+            MenuLateralHelper.AgregarMenu(this, "Inicio");
         }
 
         private void label2_Click(object sender, EventArgs e)
