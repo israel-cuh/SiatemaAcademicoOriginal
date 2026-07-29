@@ -14,5 +14,25 @@ namespace SistemaAcademico1
         {
             InitializeComponent();
         }
+
+        private void lbltexto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbltextosabias_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

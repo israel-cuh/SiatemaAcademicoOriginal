@@ -38,6 +38,10 @@
             label1titulo = new Label();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
+            button2 = new Button();
+            button1 = new Button();
+            label = new Label();
+            labeltexpis = new Label();
             rbIntalacion = new RadioButton();
             rbDEPURACION = new RadioButton();
             buttoncomprobar = new Button();
@@ -48,20 +52,19 @@
             panel3 = new Panel();
             labelideadelsabias = new Label();
             labelsabias = new Label();
-            labeltexpis = new Label();
-            label = new Label();
-            button1 = new Button();
-            button2 = new Button();
+            panel4 = new Panel();
             panel1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
+            panel4.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.Controls.Add(groupBox2);
             panel1.Controls.Add(groupBox1);
             panel1.Controls.Add(lblexplicacion);
@@ -74,18 +77,22 @@
             // 
             // groupBox2
             // 
+            groupBox2.BackgroundImage = (Image)resources.GetObject("groupBox2.BackgroundImage");
             groupBox2.Controls.Add(lBLREGLAS);
             groupBox2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            groupBox2.ForeColor = SystemColors.Control;
             groupBox2.Location = new Point(42, 398);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(575, 159);
+            groupBox2.Size = new Size(575, 162);
             groupBox2.TabIndex = 5;
             groupBox2.TabStop = false;
             groupBox2.Text = "📌Reglas basicas ";
             // 
             // lBLREGLAS
             // 
+            lBLREGLAS.BackColor = Color.Transparent;
             lBLREGLAS.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lBLREGLAS.ForeColor = SystemColors.ButtonFace;
             lBLREGLAS.Location = new Point(24, 19);
             lBLREGLAS.Name = "lBLREGLAS";
             lBLREGLAS.Size = new Size(309, 137);
@@ -94,7 +101,9 @@
             // 
             // groupBox1
             // 
+            groupBox1.BackgroundImage = (Image)resources.GetObject("groupBox1.BackgroundImage");
             groupBox1.Controls.Add(lblestructura);
+            groupBox1.ForeColor = SystemColors.Control;
             groupBox1.Location = new Point(42, 167);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(575, 216);
@@ -104,6 +113,8 @@
             // 
             // lblestructura
             // 
+            lblestructura.BackColor = Color.Transparent;
+            lblestructura.ForeColor = SystemColors.ButtonFace;
             lblestructura.Location = new Point(15, 29);
             lblestructura.Name = "lblestructura";
             lblestructura.Size = new Size(259, 150);
@@ -112,7 +123,9 @@
             // 
             // lblexplicacion
             // 
+            lblexplicacion.BackColor = Color.Transparent;
             lblexplicacion.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblexplicacion.ForeColor = SystemColors.ButtonFace;
             lblexplicacion.Location = new Point(167, 63);
             lblexplicacion.Name = "lblexplicacion";
             lblexplicacion.Size = new Size(460, 72);
@@ -122,7 +135,9 @@
             // label1titulo
             // 
             label1titulo.AutoSize = true;
+            label1titulo.BackColor = Color.Transparent;
             label1titulo.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1titulo.ForeColor = SystemColors.ButtonFace;
             label1titulo.Location = new Point(156, 16);
             label1titulo.Name = "label1titulo";
             label1titulo.Size = new Size(334, 32);
@@ -131,20 +146,20 @@
             // 
             // pictureBox1
             // 
-          //  pictureBox1.Image = Properties.Resources.WhatsApp_Image_2026_07_20_at_17_45_03;
-            pictureBox1.Location = new Point(18, 16);
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(12, 16);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(132, 100);
+            pictureBox1.Size = new Size(138, 120);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
             // panel2
             // 
+            panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
+            panel2.Controls.Add(panel4);
             panel2.Controls.Add(button2);
             panel2.Controls.Add(button1);
-            panel2.Controls.Add(label);
-            panel2.Controls.Add(labeltexpis);
             panel2.Controls.Add(rbIntalacion);
             panel2.Controls.Add(rbDEPURACION);
             panel2.Controls.Add(buttoncomprobar);
@@ -158,63 +173,121 @@
             panel2.Size = new Size(334, 597);
             panel2.TabIndex = 1;
             // 
+            // button2
+            // 
+            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
+            button2.ForeColor = SystemColors.ButtonFace;
+            button2.Location = new Point(227, 550);
+            button2.Name = "button2";
+            button2.Size = new Size(80, 23);
+            button2.TabIndex = 14;
+            button2.Text = "Siguiente ";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
+            button1.ForeColor = SystemColors.ButtonFace;
+            button1.Location = new Point(24, 550);
+            button1.Name = "button1";
+            button1.Size = new Size(80, 23);
+            button1.TabIndex = 13;
+            button1.Text = "Anterior ";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // label
+            // 
+            label.AutoSize = true;
+            label.BackColor = Color.Transparent;
+            label.Font = new Font("Segoe UI Emoji", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label.ForeColor = SystemColors.ButtonFace;
+            label.Location = new Point(16, 11);
+            label.Name = "label";
+            label.Size = new Size(64, 17);
+            label.TabIndex = 12;
+            label.Text = "💡 Pista";
+            label.Click += label_Click;
+            // 
+            // labeltexpis
+            // 
+            labeltexpis.BackColor = Color.Transparent;
+            labeltexpis.ForeColor = SystemColors.ButtonFace;
+            labeltexpis.Location = new Point(16, 28);
+            labeltexpis.Name = "labeltexpis";
+            labeltexpis.Size = new Size(237, 49);
+            labeltexpis.TabIndex = 11;
+            labeltexpis.Text = "Las estructuras basicas son las que permiten organizar el flujo de un algoritmo";
+            // 
             // rbIntalacion
             // 
             rbIntalacion.AutoSize = true;
-            rbIntalacion.Location = new Point(49, 364);
+            rbIntalacion.BackColor = Color.Transparent;
+            rbIntalacion.ForeColor = SystemColors.ButtonFace;
+            rbIntalacion.Location = new Point(45, 364);
             rbIntalacion.Name = "rbIntalacion";
             rbIntalacion.Size = new Size(94, 19);
             rbIntalacion.TabIndex = 9;
             rbIntalacion.TabStop = true;
             rbIntalacion.Text = "d) Intalacion ";
-            rbIntalacion.UseVisualStyleBackColor = true;
+            rbIntalacion.UseVisualStyleBackColor = false;
             // 
             // rbDEPURACION
             // 
             rbDEPURACION.AutoSize = true;
+            rbDEPURACION.BackColor = Color.Transparent;
+            rbDEPURACION.ForeColor = SystemColors.ButtonFace;
             rbDEPURACION.Location = new Point(40, 327);
             rbDEPURACION.Name = "rbDEPURACION";
             rbDEPURACION.Size = new Size(99, 19);
             rbDEPURACION.TabIndex = 8;
             rbDEPURACION.TabStop = true;
             rbDEPURACION.Text = "c) Depuracion";
-            rbDEPURACION.UseVisualStyleBackColor = true;
+            rbDEPURACION.UseVisualStyleBackColor = false;
             // 
             // buttoncomprobar
             // 
+            buttoncomprobar.BackColor = Color.Transparent;
+            buttoncomprobar.BackgroundImage = (Image)resources.GetObject("buttoncomprobar.BackgroundImage");
+            buttoncomprobar.ForeColor = SystemColors.ButtonFace;
             buttoncomprobar.Location = new Point(96, 417);
             buttoncomprobar.Name = "buttoncomprobar";
             buttoncomprobar.Size = new Size(91, 23);
             buttoncomprobar.TabIndex = 7;
             buttoncomprobar.Text = "Comprobar";
-            buttoncomprobar.UseVisualStyleBackColor = true;
+            buttoncomprobar.UseVisualStyleBackColor = false;
             // 
             // rbcompilacion
             // 
             rbcompilacion.AutoSize = true;
+            rbcompilacion.BackColor = Color.Transparent;
+            rbcompilacion.ForeColor = SystemColors.ButtonFace;
             rbcompilacion.Location = new Point(40, 291);
             rbcompilacion.Name = "rbcompilacion";
             rbcompilacion.Size = new Size(107, 19);
             rbcompilacion.TabIndex = 4;
             rbcompilacion.TabStop = true;
             rbcompilacion.Text = "b) Compilacion";
-            rbcompilacion.UseVisualStyleBackColor = true;
+            rbcompilacion.UseVisualStyleBackColor = false;
             rbcompilacion.CheckedChanged += radioButton2_CheckedChanged;
             // 
             // rbsecuencia
             // 
             rbsecuencia.AutoSize = true;
+            rbsecuencia.BackColor = Color.Transparent;
+            rbsecuencia.ForeColor = SystemColors.ButtonFace;
             rbsecuencia.Location = new Point(40, 250);
             rbsecuencia.Name = "rbsecuencia";
             rbsecuencia.Size = new Size(94, 19);
             rbsecuencia.TabIndex = 3;
             rbsecuencia.TabStop = true;
             rbsecuencia.Text = "a) Secuencia ";
-            rbsecuencia.UseVisualStyleBackColor = true;
+            rbsecuencia.UseVisualStyleBackColor = false;
             // 
             // lblpregunta
             // 
+            lblpregunta.BackColor = Color.Transparent;
             lblpregunta.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblpregunta.ForeColor = SystemColors.ButtonFace;
             lblpregunta.Location = new Point(29, 196);
             lblpregunta.Name = "lblpregunta";
             lblpregunta.Size = new Size(278, 39);
@@ -224,7 +297,9 @@
             // lblopcion
             // 
             lblopcion.AutoSize = true;
+            lblopcion.BackColor = Color.Transparent;
             lblopcion.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblopcion.ForeColor = SystemColors.ButtonFace;
             lblopcion.Location = new Point(16, 157);
             lblopcion.Name = "lblopcion";
             lblopcion.Size = new Size(190, 17);
@@ -233,8 +308,11 @@
             // 
             // panel3
             // 
+            panel3.BackColor = Color.Transparent;
+            panel3.BackgroundImage = (Image)resources.GetObject("panel3.BackgroundImage");
             panel3.Controls.Add(labelideadelsabias);
             panel3.Controls.Add(labelsabias);
+            panel3.ForeColor = SystemColors.ButtonFace;
             panel3.Location = new Point(64, 16);
             panel3.Name = "panel3";
             panel3.Size = new Size(200, 119);
@@ -259,47 +337,21 @@
             labelsabias.TabIndex = 1;
             labelsabias.Text = "💡 ¿Sabías qué?";
             // 
-            // labeltexpis
+            // panel4
             // 
-            labeltexpis.Location = new Point(24, 477);
-            labeltexpis.Name = "labeltexpis";
-            labeltexpis.Size = new Size(168, 49);
-            labeltexpis.TabIndex = 11;
-            labeltexpis.Text = "Las estructuras basicas son las que permiten organizar el flujo de un algoritmo";
-            // 
-            // label
-            // 
-            label.AutoSize = true;
-            label.Font = new Font("Segoe UI Emoji", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label.Location = new Point(40, 460);
-            label.Name = "label";
-            label.Size = new Size(64, 17);
-            label.TabIndex = 12;
-            label.Text = "💡 Pista";
-            label.Click += label_Click;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(24, 550);
-            button1.Name = "button1";
-            button1.Size = new Size(80, 23);
-            button1.TabIndex = 13;
-            button1.Text = "Anterior ";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(227, 550);
-            button2.Name = "button2";
-            button2.Size = new Size(80, 23);
-            button2.TabIndex = 14;
-            button2.Text = "Siguiente ";
-            button2.UseVisualStyleBackColor = true;
+            panel4.BackgroundImage = (Image)resources.GetObject("panel4.BackgroundImage");
+            panel4.Controls.Add(label);
+            panel4.Controls.Add(labeltexpis);
+            panel4.Location = new Point(29, 444);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(261, 100);
+            panel4.TabIndex = 15;
             // 
             // ESTRUTURAS_Y_REGLAS
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1188, 642);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -315,6 +367,8 @@
             panel2.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -347,5 +401,6 @@
         private Label labeltexpis;
         private Button button2;
         private Button button1;
+        private Panel panel4;
     }
 }
