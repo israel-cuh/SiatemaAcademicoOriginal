@@ -222,6 +222,7 @@
             btnTiposDatos.TabIndex = 4;
             btnTiposDatos.Text = "📖 Ir a aprender";
             btnTiposDatos.UseVisualStyleBackColor = false;
+            btnTiposDatos.Click += btnTiposDatos_Click_1;
             // 
             // panel7
             // 

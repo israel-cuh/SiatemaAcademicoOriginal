@@ -44,12 +44,12 @@ namespace SistemaAcademico1
 
         private void btnCodiMemo_Click(object? sender, EventArgs e)
         {
-           
+
         }
 
         private void MostrarPendiente(string tema)
         {
-            
+
         }
 
         private void btnCodiMemo_Click_1(object sender, EventArgs e)
@@ -57,6 +57,13 @@ namespace SistemaAcademico1
             CodeMemo2 juego = new CodeMemo2();
             juego.Show();
             this.Hide();
+        }
+
+        private void btnTiposDatos_Click_1(object sender, EventArgs e)
+        {
+            FrmTiposDatos frm = new FrmTiposDatos();
+            frm.Show();
+            Hide();
         }
     }
 }
