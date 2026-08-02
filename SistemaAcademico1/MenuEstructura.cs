@@ -131,7 +131,11 @@ namespace SistemaAcademico1
             //  btnTemas.Click += btnTemas_Click;
             btnJuego.Click += btnJuego_Click;
             btnCiclos.Click += btnCiclos_Click;
-            btnSeudocodigo.Click += btnAlgoritmos_Click;
+            // El diseñador ya puede haber asignado un manejador; asegurar que solo se asigne el correcto
+            // Asegurar que no haya asignaciones duplicadas (puede venir del diseñador)
+            btnSeudocodigo.Click -= btnAlgoritmos_Click;
+            btnSeudocodigo.Click -= btnAlgoritmos_Click_1;
+            btnSeudocodigo.Click += btnAlgoritmos_Click_1;
             btnCondicionales.Click += btnCondicionales_Click;
             btnAccesoJuego.Click += btnJuego_Click;
             btnAccesoVariables.Click += btnVariables_Click;

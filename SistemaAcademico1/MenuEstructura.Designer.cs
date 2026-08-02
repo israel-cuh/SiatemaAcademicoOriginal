@@ -169,7 +169,7 @@ namespace SistemaAcademico1
             panelSuperior.Dock = DockStyle.Top;
             panelSuperior.Location = new Point(0, 0);
             panelSuperior.Name = "panelSuperior";
-            panelSuperior.Size = new Size(1280, 48);
+            panelSuperior.Size = new Size(1293, 48);
             panelSuperior.TabIndex = 2;
             // 
             // lblMarca
@@ -385,7 +385,7 @@ namespace SistemaAcademico1
             panelContenido.Dock = DockStyle.Fill;
             panelContenido.Location = new Point(270, 48);
             panelContenido.Name = "panelContenido";
-            panelContenido.Size = new Size(1010, 752);
+            panelContenido.Size = new Size(1023, 752);
             panelContenido.TabIndex = 0;
             // 
             // lblBienvenida
@@ -449,7 +449,7 @@ namespace SistemaAcademico1
             panelEstadisticas.Controls.Add(tarjetaCantidadTemas);
             panelEstadisticas.Location = new Point(35, 125);
             panelEstadisticas.Name = "panelEstadisticas";
-            panelEstadisticas.Size = new Size(990, 105);
+            panelEstadisticas.Size = new Size(985, 105);
             panelEstadisticas.TabIndex = 3;
             // 
             // tarjetaDocentes
@@ -918,7 +918,7 @@ namespace SistemaAcademico1
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(5, 16, 43);
-            ClientSize = new Size(1280, 800);
+            ClientSize = new Size(1293, 800);
             Controls.Add(panelContenido);
             Controls.Add(panelLateral);
             Controls.Add(panelSuperior);
