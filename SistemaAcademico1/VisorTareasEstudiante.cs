@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Text;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -16,9 +17,27 @@ namespace SistemaAcademico1
         private List<TareaCompletada> historialCompletadas;
         private Tarea tareaSeleccionada;
 
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            this.ClientSize = new Size(1000, 600);
+            this.Name = "VisorTareasEstudiante";
+            this.Text = "Visor de Tareas";
+            this.ResumeLayout(false);
+        }
+
         public VisorTareasEstudiante()
         {
             InitializeComponent();
+            this.ClientSize = new Size(1560, 850);
+            this.MinimumSize = new Size(1560, 850);
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            if (System.ComponentModel.LicenseManager.UsageMode != System.ComponentModel.LicenseUsageMode.Designtime)
+            {
+                ControlesVentanaHelper.Agregar(this, cerrarAplicacion: false);
+            }
+
             todasLasTareas = new List<Tarea>();
             tareasActivas = new List<Tarea>();
             historialCompletadas = new List<TareaCompletada>();
@@ -28,40 +47,62 @@ namespace SistemaAcademico1
 
         private void ConfigurarFormulario()
         {
-            // Panel Superior con Título
+            // 1. Panel Superior con Título (PRIMERO para que quede arriba)aaaaaaaaaaaaaaaaa
             Panel panelSuperior = new Panel
             {
                 Dock = DockStyle.Top,
-                Height = 60,
-                BackColor = Color.FromArgb(132, 78, 255)
+                Height = 40,
+                BackColor = Color.FromArgb(12, 83, 175)
             };
 
             Label lblTitulo = new Label
             {
-                Text = "📚 Mis Tareas - Estudiante",
+                Text = ",,,📚 Mis Tareas - Estudiante",
                 Font = new Font("Segoe UI", 18, FontStyle.Bold),
                 ForeColor = Color.White,
                 Dock = DockStyle.Fill,
                 TextAlign = ContentAlignment.MiddleLeft,
                 Padding = new Padding(20, 0, 0, 0)
             };
+            // Botón de regreso al menú principal
+            Button btnRegresar = new Button
+            {
+                Name = "btnRegresar",
+                Text = "←",
+                Width = 50,
+                Dock = DockStyle.Left,
+                FlatStyle = FlatStyle.Flat,
+                BackColor = Color.FromArgb(132, 78, 255),
+                ForeColor = Color.White,
+                Font = new Font("Segoe UI", 12, FontStyle.Bold)
+            };
+            btnRegresar.FlatAppearance.BorderSize = 0;
+            btnRegresar.Click += (s, e) =>
+            {
+                MenuEstructura estructura = new MenuEstructura("Estudiante");
+                estructura.Show();
+                this.Close();
+            };
 
+            
+            panelSuperior.Controls.Add(btnRegresar);
             panelSuperior.Controls.Add(lblTitulo);
             Controls.Add(panelSuperior);
+            
 
-            // Panel de Búsqueda y Filtros
+            // 2. Panel de Búsqueda y Filtros (SEGUNDO para que quede debajo del título)
             Panel panelBusqueda = new Panel
             {
                 Dock = DockStyle.Top,
-                Height = 80,
-                BackColor = Color.FromArgb(240, 240, 240),
-                BorderStyle = BorderStyle.FixedSingle,
+                Height = 40,
+                BackColor = Color.FromArgb(230, 243, 255),
+                BorderStyle = BorderStyle.None,
                 Padding = new Padding(10)
             };
 
             Label lblBuscar = new Label
             {
-                Text = "🔍 Buscar:",
+                Text = "🔍:",
                 Location = new Point(10, 10),
                 AutoSize = true,
                 Font = new Font("Segoe UI", 10, FontStyle.Bold)
@@ -79,10 +120,11 @@ namespace SistemaAcademico1
             };
             txtBusqueda.TextChanged += (s, e) => FiltrarTareas(txtBusqueda.Text, (ComboBox)panelBusqueda.Controls["cmbFiltroTema"]);
             panelBusqueda.Controls.Add(txtBusqueda);
+            
 
             Label lblFiltro = new Label
             {
-                Text = "Tema:",
+                Text = "Tema",
                 Location = new Point(350, 10),
                 AutoSize = true,
                 Font = new Font("Segoe UI", 10, FontStyle.Bold)
@@ -106,7 +148,7 @@ namespace SistemaAcademico1
 
             Label lblEstado = new Label
             {
-                Text = "Estado:",
+                Text = "Estado",
                 Location = new Point(570, 10),
                 AutoSize = true,
                 Font = new Font("Segoe UI", 10, FontStyle.Bold)
@@ -168,16 +210,108 @@ namespace SistemaAcademico1
             panelBusqueda.Controls.Add(lblAvisosContenido);
 
             Controls.Add(panelBusqueda);
+            // Panel contenedor central (gestiona correctamente el espacio entre header y footer)
+            Panel panelContenido = new Panel
+            {
+                Name = "panelContenido",
+                Dock = DockStyle.Fill,
+                BackColor = Color.Transparent,
+                // Dejar espacio superior para separar encabezado/búsqueda de la lista
+                Padding = new Padding(0, 80, 0, 0)
+            };
 
-            // Panel Central - Tabs
+            // 3. Panel Inferior - Detalles y Botones (DockStyle.Bottom antes del Fill)
+            Panel panelInferior = new Panel
+            {
+                Dock = DockStyle.Bottom,
+                Height = 200,
+                BackColor = Color.FromArgb(245, 245, 245),
+                BorderStyle = BorderStyle.None,
+                Padding = new Padding(15)
+            };
+
+            Label lblDetalles = new Label
+            {
+                Text = "📌 Detalles de la Tarea",
+                Location = new Point(10, 5),
+                AutoSize = true,
+                Font = new Font("Segoe UI", 11, FontStyle.Bold)
+            };
+            panelInferior.Controls.Add(lblDetalles);
+
+            Panel panelBotones = new Panel
+            {
+                Dock = DockStyle.Right,
+                Width = 260,
+                BackColor = Color.Transparent
+            };
+
+            Button btnDescargar = new Button
+            {
+                Text = "📥 Descargar",
+                Location = new Point(20, 30),
+                Width = 220,
+                Height = 40,
+                Font = new Font("Segoe UI", 10, FontStyle.Bold),
+                BackColor = Color.FromArgb(33, 150, 243),
+                ForeColor = Color.White,
+                FlatStyle = FlatStyle.Flat,
+                Name = "btnDescargar"
+            };
+            btnDescargar.Click += (s, e) => DescargarArchivo();
+            panelBotones.Controls.Add(btnDescargar);
+
+            Button btnMarcarCompletada = new Button
+            {
+                Text = "✅ Completar",
+                Location = new Point(20, 80),
+                Width = 220,
+                Height = 40,
+                Font = new Font("Segoe UI", 10, FontStyle.Bold),
+                BackColor = Color.FromArgb(76, 175, 80),
+                ForeColor = Color.White,
+                FlatStyle = FlatStyle.Flat,
+                Name = "btnMarcarCompletada"
+            };
+            btnMarcarCompletada.Click += (s, e) => MarcarTareaCompletada();
+            panelBotones.Controls.Add(btnMarcarCompletada);
+
+            panelInferior.Controls.Add(panelBotones);
+
+            RichTextBox rtxDetalles = new RichTextBox
+            {
+                Name = "rtxDetalles",
+                Dock = DockStyle.Fill,
+                Font = new Font("Segoe UI", 9),
+                ReadOnly = true,
+                BackColor = Color.White,
+                BorderStyle = BorderStyle.FixedSingle
+            };
+            panelInferior.Controls.Add(rtxDetalles);
+
+            Label lblSinSeleccion = new Label
+            {
+                Name = "lblSinSeleccion",
+                Text = "Selecciona una tarea para ver los detalles",
+                Location = new Point(10, 70),
+                Font = new Font("Segoe UI", 10, FontStyle.Italic),
+                ForeColor = Color.Gray
+            };
+            panelInferior.Controls.Add(lblSinSeleccion);
+
+            Controls.Add(panelInferior);
+            // Añadir el panelContenido después del panelInferior para que DockStyle.Bottom y DockStyle.Fill funcionen correctamente
+            Controls.Add(panelContenido);
+
+            // 4. Panel Central - Tabs (ÚLTIMO con DockStyle.Fill para ocupar el espacio restante del medio)
             TabControl tabControl = new TabControl
             {
                 Name = "tabControl",
                 Dock = DockStyle.Fill,
-                Font = new Font("Segoe UI", 10)
+                Font = new Font("Segoe UI", 10),
+                BackColor = Color.FromArgb(245, 250, 255)
             };
 
-            // Tab 1: Tareas Activas
             TabPage tabActivas = new TabPage("📋 Tareas Activas");
             DataGridView dgvTareasActivas = CrearDataGridViewTareas("dgvTareasActivas");
             dgvTareasActivas.Dock = DockStyle.Fill;
@@ -194,13 +328,12 @@ namespace SistemaAcademico1
             Panel panelActivas = new Panel
             {
                 Dock = DockStyle.Fill,
-                BackColor = Color.White
+                BackColor = Color.FromArgb(250, 253, 255)
             };
             panelActivas.Controls.Add(dgvTareasActivas);
             tabActivas.Controls.Add(panelActivas);
             tabControl.TabPages.Add(tabActivas);
 
-            // Tab 2: Historial de Completadas
             TabPage tabHistorial = new TabPage("✅ Historial Completadas");
             DataGridView dgvHistorial = new DataGridView
             {
@@ -226,89 +359,14 @@ namespace SistemaAcademico1
             Panel panelHistorial = new Panel
             {
                 Dock = DockStyle.Fill,
-                BackColor = Color.White
+                BackColor = Color.FromArgb(250, 253, 255)
             };
             panelHistorial.Controls.Add(dgvHistorial);
             tabHistorial.Controls.Add(panelHistorial);
             tabControl.TabPages.Add(tabHistorial);
 
-            Controls.Add(tabControl);
+            panelContenido.Controls.Add(tabControl);
 
-            // Panel Inferior - Detalles y Botones
-            Panel panelInferior = new Panel
-            {
-                Dock = DockStyle.Bottom,
-                Height = 200,
-                BackColor = Color.FromArgb(245, 245, 245),
-                BorderStyle = BorderStyle.FixedSingle,
-                Padding = new Padding(15)
-            };
-
-            Label lblDetalles = new Label
-            {
-                Text = "📌 Detalles de la Tarea",
-                Location = new Point(10, 5),
-                AutoSize = true,
-                Font = new Font("Segoe UI", 11, FontStyle.Bold)
-            };
-            panelInferior.Controls.Add(lblDetalles);
-
-            RichTextBox rtxDetalles = new RichTextBox
-            {
-                Name = "rtxDetalles",
-                Location = new Point(10, 30),
-                Width = panelInferior.Width - 250,
-                Height = 150,
-                Font = new Font("Segoe UI", 9),
-                ReadOnly = true,
-                BackColor = Color.White,
-                BorderStyle = BorderStyle.FixedSingle
-            };
-            panelInferior.Controls.Add(rtxDetalles);
-
-            Button btnDescargar = new Button
-            {
-                Text = "📥 Descargar",
-                Location = new Point(panelInferior.Width - 230, 30),
-                Width = 100,
-                Height = 40,
-                Font = new Font("Segoe UI", 10, FontStyle.Bold),
-                BackColor = Color.FromArgb(33, 150, 243),
-                ForeColor = Color.White,
-                FlatStyle = FlatStyle.Flat,
-                Name = "btnDescargar"
-            };
-            btnDescargar.Click += (s, e) => DescargarArchivo();
-            panelInferior.Controls.Add(btnDescargar);
-
-            Button btnMarcarCompletada = new Button
-            {
-                Text = "✅ Completar",
-                Location = new Point(panelInferior.Width - 125, 30),
-                Width = 110,
-                Height = 40,
-                Font = new Font("Segoe UI", 10, FontStyle.Bold),
-                BackColor = Color.FromArgb(76, 175, 80),
-                ForeColor = Color.White,
-                FlatStyle = FlatStyle.Flat,
-                Name = "btnMarcarCompletada"
-            };
-            btnMarcarCompletada.Click += (s, e) => MarcarTareaCompletada();
-            panelInferior.Controls.Add(btnMarcarCompletada);
-
-            Label lblSinSeleccion = new Label
-            {
-                Name = "lblSinSeleccion",
-                Text = "Selecciona una tarea para ver los detalles",
-                Location = new Point(10, 70),
-                Font = new Font("Segoe UI", 10, FontStyle.Italic),
-                ForeColor = Color.Gray
-            };
-            panelInferior.Controls.Add(lblSinSeleccion);
-
-            Controls.Add(panelInferior);
-
-            // Configuración del formulario
             Tag = new Dictionary<string, Control>
             {
                 { "txtBusqueda", txtBusqueda },
@@ -321,11 +379,13 @@ namespace SistemaAcademico1
                 { "lblAvisosContenido", lblAvisosContenido }
             };
 
+            FiltrarTareas(txtBusqueda.Text, cmbFiltroTema);
+
             Text = "Mis Tareas - Estudiante";
-            Size = new Size(1400, 800);
+            Size = new Size(1560, 850);
             StartPosition = FormStartPosition.CenterScreen;
-            FormBorderStyle = FormBorderStyle.Sizable;
-            BackColor = Color.White;
+            FormBorderStyle = FormBorderStyle.None;
+            BackColor = Color.FromArgb(245, 250, 255);
         }
 
         private DataGridView CrearDataGridViewTareas(string nombre)
@@ -364,30 +424,85 @@ namespace SistemaAcademico1
 
         private void ActualizarDataGridView(List<Tarea> tareas)
         {
-            var dict = Tag as Dictionary<string, Control>;
-            var dgvTareasActivas = dict["dgvTareasActivas"] as DataGridView;
-            dgvTareasActivas.Rows.Clear();
-
-            foreach (var tarea in tareas)
+            try
             {
-                int diasRestantes = (int)(tarea.FechaEntrega - DateTime.Now).TotalDays;
-                string estado = diasRestantes < 0 ? "Vencida" : (diasRestantes <= 3 ? "Próxima a vencer" : "Activa");
+                var dict = Tag as Dictionary<string, Control>;
+                if (dict == null)
+                {
+                    MessageBox.Show("Error interno: Tag no inicializado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-                dgvTareasActivas.Rows.Add(
-                    tarea.Id,
-                    tarea.Titulo,
-                    tarea.TemaAsociado,
-                    tarea.FechaEntrega.ToString("dd/MM/yyyy"),
-                    diasRestantes < 0 ? "Vencida" : diasRestantes.ToString(),
-                    estado
-                );
+                var dgvTareasActivas = dict.ContainsKey("dgvTareasActivas") ? dict["dgvTareasActivas"] as DataGridView : null;
+                if (dgvTareasActivas == null)
+                {
+                    MessageBox.Show("No se encontró el control dgvTareasActivas.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-                // Colorear según estado
-                int lastRowIndex = dgvTareasActivas.Rows.Count - 1;
-                if (estado == "Vencida")
-                    dgvTareasActivas.Rows[lastRowIndex].DefaultCellStyle.BackColor = Color.FromArgb(255, 200, 200);
-                else if (estado == "Próxima a vencer")
-                    dgvTareasActivas.Rows[lastRowIndex].DefaultCellStyle.BackColor = Color.FromArgb(255, 255, 200);
+                todasLasTareas = TareaService.ObtenerTodasLasTareas();
+
+                // Asegurar que las columnas existen
+                if (dgvTareasActivas.Columns.Count < 6)
+                {
+                    dgvTareasActivas.Columns.Clear();
+                    dgvTareasActivas.Columns.Add("Id", "ID");
+                    dgvTareasActivas.Columns.Add("Titulo", "Título");
+                    dgvTareasActivas.Columns.Add("TemaAsociado", "Tema");
+                    dgvTareasActivas.Columns.Add("FechaEntrega", "Fecha Entrega");
+                    dgvTareasActivas.Columns.Add("DiasRestantes", "Días Restantes");
+                    dgvTareasActivas.Columns.Add("Estado", "Estado");
+                }
+
+                dgvTareasActivas.Rows.Clear();
+
+                // Añadir filas
+                foreach (var tarea in tareas)
+                {
+                    int diasRestantes = (int)(tarea.FechaEntrega - DateTime.Now).TotalDays;
+                    string estado = diasRestantes < 0 ? "Vencida" : (diasRestantes <= 3 ? "Próxima a vencer" : "Activa");
+
+                    dgvTareasActivas.Rows.Add(
+                        tarea.Id,
+                        tarea.Titulo,
+                        tarea.TemaAsociado,
+                        tarea.FechaEntrega.ToString("dd/MM/yyyy"),
+                        diasRestantes < 0 ? "Vencida" : diasRestantes.ToString(),
+                        estado
+                    );
+
+                    int lastRowIndex = dgvTareasActivas.Rows.Count - 1;
+                    if (estado == "Vencida")
+                        dgvTareasActivas.Rows[lastRowIndex].DefaultCellStyle.BackColor = Color.FromArgb(255, 200, 200);
+                    else if (estado == "Próxima a vencer")
+                        dgvTareasActivas.Rows[lastRowIndex].DefaultCellStyle.BackColor = Color.FromArgb(255, 255, 200);
+                }
+
+                // Asegurar que las columnas y filas se redimensionan y el control es visible
+                try
+                {
+                    if (dgvTareasActivas.Rows.Count > 0)
+                    {
+                        dgvTareasActivas.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+                        dgvTareasActivas.AutoResizeRows(DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
+                    }
+                    dgvTareasActivas.Visible = true;
+                    dgvTareasActivas.ClearSelection();
+                    dgvTareasActivas.Refresh();
+                    dgvTareasActivas.BringToFront();
+                // DEBUG: mostrar conteo para verificar que las filas se añadieron
+                try
+                {
+                    int totalEnServicio = TareaService.ObtenerTodasLasTareas().Count;
+                    MessageBox.Show($"[DEBUG] Tareas servicio: {totalEnServicio} | Tareas filtradas: {tareas.Count} | Filas en grid: {dgvTareasActivas.Rows.Count}", "Debug", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch { }
+                }
+                catch { }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error actualizando la lista de tareas:\n{ex}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -414,18 +529,42 @@ namespace SistemaAcademico1
 
         private void FiltrarTareas(string busqueda, ComboBox cmbTema)
         {
-            var tareasFiltradasPorTema = todasLasTareas
-                .Where(t => !t.Completada &&
-                    (cmbTema.SelectedIndex == 0 || t.TemaAsociado == cmbTema.SelectedItem.ToString()))
-                .ToList();
+            ComboBox cmbEstado = Controls.Find("cmbEstado", true).FirstOrDefault() as ComboBox;
+            var query = todasLasTareas.AsEnumerable();
 
-            var tareasFiltradasPorBusqueda = tareasFiltradasPorTema
-                .Where(t => string.IsNullOrEmpty(busqueda) ||
-                    t.Titulo.IndexOf(busqueda, StringComparison.OrdinalIgnoreCase) >= 0 ||
-                    t.Descripcion.IndexOf(busqueda, StringComparison.OrdinalIgnoreCase) >= 0)
-                .ToList();
+            if (cmbTema != null && cmbTema.SelectedIndex > 0)
+                query = query.Where(t => t.TemaAsociado == cmbTema.SelectedItem.ToString());
 
-            ActualizarDataGridView(tareasFiltradasPorBusqueda);
+            if (cmbEstado != null)
+            {
+                string estadoSel = cmbEstado.SelectedItem?.ToString() ?? "Todas";
+                if (estadoSel == "Pendientes")
+                {
+                    query = query.Where(t => !t.Completada);
+                }
+                else if (estadoSel == "Completadas")
+                {
+                    query = query.Where(t => t.Completada);
+                }
+                else if (estadoSel == "Próximas a vencer")
+                {
+                    query = query.Where(t => !t.Completada && (t.FechaEntrega - DateTime.Now).TotalDays <= 3 && (t.FechaEntrega - DateTime.Now).TotalDays > 0);
+                }
+            }
+            else
+            {
+                query = query.Where(t => !t.Completada);
+            }
+
+            if (!string.IsNullOrEmpty(busqueda))
+            {
+                query = query.Where(t =>
+                    (t.Titulo != null && t.Titulo.IndexOf(busqueda, StringComparison.OrdinalIgnoreCase) >= 0) ||
+                    (t.Descripcion != null && t.Descripcion.IndexOf(busqueda, StringComparison.OrdinalIgnoreCase) >= 0));
+            }
+
+            var tareasFiltradas = query.ToList();
+            ActualizarDataGridView(tareasFiltradas);
         }
 
         private void MostrarDetallesTarea()

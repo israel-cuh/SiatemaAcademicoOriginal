@@ -33,7 +33,7 @@ namespace SistemaAcademico1
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            MenuEstructura estructura = new MenuEstructura(rolUsuario);
+            CodeNovaDashboard estructura = new CodeNovaDashboard ();
             estructura.Show();
             Hide();
         }

@@ -1,6 +1,7 @@
 using System;
 using System.Drawing;
 using System.Globalization;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace SistemaAcademico1
@@ -22,11 +23,11 @@ namespace SistemaAcademico1
             ConfigurarPantallaPrincipal();
             ConfigurarEventosDelMenu();
         }
-
+        //1293; 800
         private void AjustarTamanoComun()
         {
-            ClientSize = new Size(1560, 850);
-            MinimumSize = new Size(1560, 850);
+            ClientSize = new Size(1293, 850);
+            MinimumSize = new Size(1293, 850);
             btnMinimizar.Location = new Point(ClientSize.Width - 105, 4);
             btnCerrar.Location = new Point(ClientSize.Width - 55, 4);
         }
@@ -88,6 +89,43 @@ namespace SistemaAcademico1
             btnAccesoCiclos.Size = new Size(195, 45);
 
             lblPie.Location = new Point((anchoContenido - lblPie.Width) / 2, 770);
+
+            // Añadir botón de acceso rápido a 'panelAccesos' junto a los otros accesos rápidos
+            var btnAccesoExistente = panelAccesos.Controls.Find("btnAccesoMisTareas", true).FirstOrDefault() as Button;
+            if (btnAccesoExistente == null)
+            {
+                Button btnAccesoMisTareas = new Button
+                {
+                    Name = "btnAccesoMisTareas",
+                    Text = "Mis tareas",
+                    Size = new Size(195, 45),
+                    BackColor = Color.FromArgb(132, 78, 255),
+                    ForeColor = Color.White,
+                    FlatStyle = FlatStyle.Flat,
+                    Font = new Font("Segoe UI", 10, FontStyle.Bold)
+                };
+                btnAccesoMisTareas.Click += (s, e) =>
+                {
+                    VisorTareasEstudiante visor = new VisorTareasEstudiante();
+                    visor.Show();
+                    Hide();
+                };
+                // Posicionar junto a los botones existentes
+                int separacionAccesos = 215; // coincide con el espaciado usado arriba
+                int posX = btnAccesoCiclos.Location.X + separacionAccesos;
+                btnAccesoMisTareas.Location = new Point(posX, btnAccesoCiclos.Location.Y);
+                panelAccesos.Controls.Add(btnAccesoMisTareas);
+                btnAccesoMisTareas.BringToFront();
+                btnAccesoExistente = btnAccesoMisTareas;
+            }
+            else
+            {
+                // Asegurar que esté visible y en la posición correcta
+                btnAccesoExistente.BringToFront();
+                int separacionAccesos = 215;
+                int posX = btnAccesoCiclos.Location.X + separacionAccesos;
+                btnAccesoExistente.Location = new Point(posX, btnAccesoCiclos.Location.Y);
+            }
         }
 
         private void AjustarContenidoTarjetaTema(Panel tarjeta, Label icono, Label titulo, Label descripcion, Button boton, int anchoTarjeta)
@@ -197,12 +235,12 @@ namespace SistemaAcademico1
 
         private void btnAlgoritmos_Click(object? sender, EventArgs e)
         {
-           
+
         }
 
         private void btnCondicionales_Click(object? sender, EventArgs e)
         {
-            
+
         }
 
         private void MostrarProximamente(string tema)
@@ -249,5 +287,21 @@ namespace SistemaAcademico1
         {
 
         }
+
+        private void btnMisTareas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelAccesos_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void MenuEstructura_Load(object sender, EventArgs e)
+        {
+
+        }
     }
+
 }

@@ -16,6 +16,16 @@ namespace SistemaAcademico1
         private List<Tarea> tareasCargadas;
         private Tarea tareaSeleccionada;
 
+        private void InitializeComponent()
+        {
+            // Método generado manualmente para evitar error CS0103 si falta el Designer
+            this.SuspendLayout();
+            this.ClientSize = new Size(1000, 700);
+            this.Name = "GestorTareas";
+            this.Text = "Gestor de Tareas";
+            this.ResumeLayout(false);
+        }
+
         public GestorTareas()
         {
             InitializeComponent();
@@ -30,10 +40,11 @@ namespace SistemaAcademico1
             Panel panelSuperior = new Panel
             {
                 Dock = DockStyle.Top,
-                Height = 60,
+                Height = 50,
                 BackColor = Color.FromArgb(132, 78, 255)
             };
-
+            
+          
             Label lblTitulo = new Label
             {
                 Text = "📋 Gestor de Tareas para Docentes",
@@ -43,6 +54,8 @@ namespace SistemaAcademico1
                 TextAlign = ContentAlignment.MiddleLeft,
                 Padding = new Padding(20, 0, 0, 0)
             };
+
+            
 
             panelSuperior.Controls.Add(lblTitulo);
             Controls.Add(panelSuperior);
@@ -248,6 +261,28 @@ namespace SistemaAcademico1
             };
             btnLimpiar.Click += (s, e) => LimpiarFormulario(txtTitulo, txtDescripcion, dtpFecha, cmbTema, txtRutaArchivo);
             panelFormulario.Controls.Add(btnLimpiar);
+            posY += 50;
+            // botón de regresar al menú principal
+            Button btnRegresar = new Button
+            {
+                Text = "⬅️ Regresar",
+                Location = new Point(10, posY),
+                Width = 370,
+                Height = 40,
+                Font = new Font("Segoe UI", 10, FontStyle.Bold),
+                BackColor = Color.FromArgb(108, 117, 125),
+                ForeColor = Color.White,
+                FlatStyle = FlatStyle.Flat,
+                Name = "btnRegresar"
+            };
+            btnRegresar.Click += (s, e) =>
+            {
+                CodeNovaDashboard estructura = new CodeNovaDashboard();
+                estructura.Show();
+                this.Close();
+                Hide();
+            };
+            panelFormulario.Controls.Add(btnRegresar);
 
             Controls.Add(panelFormulario);
 
@@ -272,10 +307,8 @@ namespace SistemaAcademico1
             DataGridView dgvTareas = new DataGridView
             {
                 Name = "dgvTareas",
-                Location = new Point(10, 40),
-                Width = panelLista.Width - 25,
-                Height = panelLista.Height - 120,
-                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells,
+                Dock = DockStyle.Fill,
+                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
                 AllowUserToAddRows = false,
                 AllowUserToDeleteRows = false,
                 SelectionMode = DataGridViewSelectionMode.FullRowSelect,
@@ -284,6 +317,9 @@ namespace SistemaAcademico1
                 BackgroundColor = Color.WhiteSmoke,
                 BorderStyle = BorderStyle.Fixed3D
             };
+            // Mejor visibilidad: filas más altas
+            dgvTareas.RowTemplate.Height = 40;
+            dgvTareas.AllowUserToResizeRows = false;
 
             dgvTareas.Columns.Add("Id", "ID");
             dgvTareas.Columns.Add("Titulo", "Título");
@@ -301,13 +337,12 @@ namespace SistemaAcademico1
                 }
             };
 
-            panelLista.Controls.Add(dgvTareas);
+            // (dgvTareas will be added later together with panelEstadisticas to ensure proper docking)
 
             // Panel de Estadísticas
             Panel panelEstadisticas = new Panel
             {
-                Location = new Point(10, dgvTareas.Bottom + 10),
-                Width = panelLista.Width - 25,
+                Dock = DockStyle.Bottom,
                 Height = 50,
                 BackColor = Color.FromArgb(240, 240, 240),
                 BorderStyle = BorderStyle.FixedSingle
@@ -323,13 +358,15 @@ namespace SistemaAcademico1
                 ForeColor = Color.FromArgb(132, 78, 255)
             };
             panelEstadisticas.Controls.Add(lblEstadisticas);
+            // añadir controles: primero el DataGridView (Fill), luego el panel de estadísticas (Bottom)
+            panelLista.Controls.Add(dgvTareas);
             panelLista.Controls.Add(panelEstadisticas);
 
             Controls.Add(panelLista);
 
             // Configuración del formulario
             Text = "Gestor de Tareas - Docentes";
-            Size = new Size(1200, 700);
+            Size = new Size(1350, 830);
             StartPosition = FormStartPosition.CenterScreen;
             FormBorderStyle = FormBorderStyle.Sizable;
             BackColor = Color.White;
@@ -412,6 +449,14 @@ namespace SistemaAcademico1
                 );
 
                 MessageBox.Show("✅ Tarea creada exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Debug: mostrar conteo de tareas para verificar persistencia en memoria
+                try
+                {
+                    int total = TareaService.ObtenerCantidadTareas();
+                    var titulos = string.Join(", ", TareaService.ObtenerTodasLasTareas().Select(t => t.Titulo));
+                    MessageBox.Show($"Tareas en memoria: {total}\nTítulos: {titulos}", "Depuración", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch { }
                 LimpiarFormulario(txtTitulo, txtDescripcion, dtpFecha, cmbTema, txtRutaArchivo);
                 CargarTareas();
             }
