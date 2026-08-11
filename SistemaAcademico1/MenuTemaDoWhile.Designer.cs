@@ -44,8 +44,8 @@ namespace SistemaAcademico1
             lblDescripcionTema = new Label();
             lblTituloTema = new Label();
             panelDerecho = new Panel();
-            lblQuePasa = new Label();
             lblExplicacionCodigo = new Label();
+            lblQuePasa = new Label();
             btnLimpiar = new Button();
             btnEjecutar = new Button();
             lblSalida = new Label();
@@ -402,6 +402,17 @@ namespace SistemaAcademico1
             panelDerecho.Size = new Size(455, 520);
             panelDerecho.TabIndex = 3;
             // 
+            // lblExplicacionCodigo
+            // 
+            lblExplicacionCodigo.BackColor = Color.Transparent;
+            lblExplicacionCodigo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblExplicacionCodigo.ForeColor = Color.Gainsboro;
+            lblExplicacionCodigo.Location = new Point(24, 450);
+            lblExplicacionCodigo.Name = "lblExplicacionCodigo";
+            lblExplicacionCodigo.Size = new Size(358, 62);
+            lblExplicacionCodigo.TabIndex = 6;
+            lblExplicacionCodigo.Text = "El ciclo ejecuta el bloque por primera vez con i = 1. Luego, mientras i sea menor o igual a 5, se imprime su valor y se incrementa en 1. Cuando i llega a 6, la condición es falsa y el ciclo termina.";
+            // 
             // lblQuePasa
             // 
             lblQuePasa.AutoSize = true;
@@ -413,17 +424,6 @@ namespace SistemaAcademico1
             lblQuePasa.Size = new Size(185, 25);
             lblQuePasa.TabIndex = 7;
             lblQuePasa.Text = "¿Qué está pasando?";
-            // 
-            // lblExplicacionCodigo
-            // 
-            lblExplicacionCodigo.BackColor = Color.Transparent;
-            lblExplicacionCodigo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblExplicacionCodigo.ForeColor = Color.Gainsboro;
-            lblExplicacionCodigo.Location = new Point(24, 450);
-            lblExplicacionCodigo.Name = "lblExplicacionCodigo";
-            lblExplicacionCodigo.Size = new Size(358, 62);
-            lblExplicacionCodigo.TabIndex = 6;
-            lblExplicacionCodigo.Text = "El ciclo ejecuta el bloque por primera vez con i = 1. Luego, mientras i sea menor o igual a 5, se imprime su valor y se incrementa en 1. Cuando i llega a 6, la condición es falsa y el ciclo termina.";
             // 
             // btnLimpiar
             // 
@@ -591,6 +591,7 @@ namespace SistemaAcademico1
             Name = "MenuTemaDoWhile";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Ciclo Do While";
+            Load += MenuTemaDoWhile_Load;
             panelSubMenu.ResumeLayout(false);
             panelTitulo.ResumeLayout(false);
             panelTitulo.PerformLayout();

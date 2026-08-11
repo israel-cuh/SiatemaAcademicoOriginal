@@ -47,8 +47,8 @@ namespace SistemaAcademico1
             lblDescripcionTema = new Label();
             lblTituloTema = new Label();
             panelDerecho = new Panel();
-            lblQuePasa = new Label();
             lblExplicacionCodigo = new Label();
+            lblQuePasa = new Label();
             btnLimpiar = new Button();
             btnEjecutar = new Button();
             lblSalida = new Label();
@@ -443,6 +443,17 @@ namespace SistemaAcademico1
             panelDerecho.Size = new Size(455, 520);
             panelDerecho.TabIndex = 3;
             // 
+            // lblExplicacionCodigo
+            // 
+            lblExplicacionCodigo.BackColor = Color.Transparent;
+            lblExplicacionCodigo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblExplicacionCodigo.ForeColor = Color.Gainsboro;
+            lblExplicacionCodigo.Location = new Point(24, 450);
+            lblExplicacionCodigo.Name = "lblExplicacionCodigo";
+            lblExplicacionCodigo.Size = new Size(405, 55);
+            lblExplicacionCodigo.TabIndex = 6;
+            lblExplicacionCodigo.Text = "El ciclo comienza en i = 1. Mientras i sea menor o igual a 5, imprime su valor y luego aumenta en 1.";
+            // 
             // lblQuePasa
             // 
             lblQuePasa.AutoSize = true;
@@ -454,17 +465,6 @@ namespace SistemaAcademico1
             lblQuePasa.Size = new Size(185, 25);
             lblQuePasa.TabIndex = 7;
             lblQuePasa.Text = "¿Qué está pasando?";
-            // 
-            // lblExplicacionCodigo
-            // 
-            lblExplicacionCodigo.BackColor = Color.Transparent;
-            lblExplicacionCodigo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblExplicacionCodigo.ForeColor = Color.Gainsboro;
-            lblExplicacionCodigo.Location = new Point(24, 450);
-            lblExplicacionCodigo.Name = "lblExplicacionCodigo";
-            lblExplicacionCodigo.Size = new Size(405, 55);
-            lblExplicacionCodigo.TabIndex = 6;
-            lblExplicacionCodigo.Text = "El ciclo comienza en i = 1. Mientras i sea menor o igual a 5, imprime su valor y luego aumenta en 1.";
             // 
             // btnLimpiar
             // 

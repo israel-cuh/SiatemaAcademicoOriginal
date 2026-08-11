@@ -37,11 +37,11 @@ namespace SistemaAcademico1
 
         private void btnSubAnidados_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(
-                "El formulario de Ciclos Anidados todavía está pendiente.",
-                "CodeNova",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+            // Abrir el menú de Ciclos y seleccionar el tema "Anidados" para mantener la misma interfaz
+            MenuTemaCiclo ventana = new MenuTemaCiclo();
+            ventana.Show();
+            ventana.SeleccionarTemaAnidados();
+            Hide();
         }
 
         private void btnEjecutar_Click(object sender, EventArgs e)

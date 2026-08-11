@@ -187,6 +187,12 @@ namespace SistemaAcademico1
                 "Por cada repetición del ciclo externo, el ciclo interno se ejecuta completamente.");
         }
 
+        // Método público para permitir que otras ventanas seleccionen directamente el tema "Anidados"
+        public void SeleccionarTemaAnidados()
+        {
+            MostrarAnidados();
+        }
+
         private void MarcarBotonActivo(Button botonActivo)
         {
             Button[] botones = { btnWhile, btnFor, btnDoWhile, btnAnidados };
