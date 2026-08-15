@@ -63,8 +63,8 @@
             richTextBox1 = new RichTextBox();
             panel3 = new Panel();
             panel5 = new Panel();
-            btnLimpiar = new Button();
             label3 = new Label();
+            btnLimpiar = new Button();
             label2 = new Label();
             label1 = new Label();
             btnEjecutar = new Button();
@@ -510,6 +510,18 @@
             panel5.Size = new Size(496, 495);
             panel5.TabIndex = 4;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = SystemColors.ButtonFace;
+            label3.Location = new Point(18, 431);
+            label3.Name = "label3";
+            label3.Size = new Size(414, 40);
+            label3.TabIndex = 5;
+            label3.Text = "El ciclo comienza en i = 1 . mientras sea menor o igual a 5,\r\nse imprime su valor y luego se incrementa en 1\r\n";
+            // 
             // btnLimpiar
             // 
             btnLimpiar.BackColor = Color.FromArgb(192, 0, 192);
@@ -523,18 +535,6 @@
             btnLimpiar.Text = "Limpiar";
             btnLimpiar.UseVisualStyleBackColor = false;
             btnLimpiar.Click += btnLimpiar_Click;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = SystemColors.ButtonFace;
-            label3.Location = new Point(18, 431);
-            label3.Name = "label3";
-            label3.Size = new Size(414, 40);
-            label3.TabIndex = 5;
-            label3.Text = "El ciclo comienza en i = 1 . mientras sea menor o igual a 5,\r\nse imprime su valor y luego se incrementa en 1\r\n";
             // 
             // label2
             // 
@@ -658,7 +658,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             DoubleBuffered = true;
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             Name = "MenuTemaCiclo";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MenuTema";

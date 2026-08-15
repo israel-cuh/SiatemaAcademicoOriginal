@@ -176,7 +176,7 @@
             Controls.Add(txtClave);
             Controls.Add(txtUsuario);
             Controls.Add(btnIngresar);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";

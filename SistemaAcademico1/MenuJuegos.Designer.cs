@@ -17,6 +17,7 @@ namespace SistemaAcademico1
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuJuegos));
             panelTitulo = new Panel();
             btnRegresar = new Button();
             lblSubtitulo = new Label();
@@ -29,7 +30,7 @@ namespace SistemaAcademico1
             tarjetaJuego3 = new Panel();
             btnJuego3 = new Button();
             lblJuego3Descripcion = new Label();
-            lblJuego3Titulo = new Label();
+            LogiFlow = new Label();
             tarjetaJuego2 = new Panel();
             btnJuego2 = new Button();
             lblJuego2Descripcion = new Label();
@@ -39,7 +40,6 @@ namespace SistemaAcademico1
             lblOrdenarDescripcion = new Label();
             lblOrdenarTitulo = new Label();
             panelInfo = new Panel();
-            lblInfoTexto = new Label();
             lblInfoTitulo = new Label();
             panelTitulo.SuspendLayout();
             panelJuegos.SuspendLayout();
@@ -53,6 +53,7 @@ namespace SistemaAcademico1
             // panelTitulo
             // 
             panelTitulo.BackColor = Color.FromArgb(8, 22, 56);
+            panelTitulo.BackgroundImage = (Image)resources.GetObject("panelTitulo.BackgroundImage");
             panelTitulo.Controls.Add(btnRegresar);
             panelTitulo.Controls.Add(lblSubtitulo);
             panelTitulo.Controls.Add(lblTitulo);
@@ -78,22 +79,24 @@ namespace SistemaAcademico1
             // lblSubtitulo
             // 
             lblSubtitulo.AutoSize = true;
+            lblSubtitulo.BackColor = Color.Transparent;
             lblSubtitulo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblSubtitulo.ForeColor = Color.Gainsboro;
             lblSubtitulo.Location = new Point(35, 82);
             lblSubtitulo.Name = "lblSubtitulo";
-            lblSubtitulo.Size = new Size(658, 28);
+            lblSubtitulo.Size = new Size(662, 28);
             lblSubtitulo.TabIndex = 1;
             lblSubtitulo.Text = "Selecciona un minijuego para practicar programación de forma interactiva.";
             // 
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
+            lblTitulo.BackColor = Color.Transparent;
             lblTitulo.Font = new Font("Segoe UI", 26F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitulo.ForeColor = Color.White;
             lblTitulo.Location = new Point(30, 20);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(434, 60);
+            lblTitulo.Size = new Size(426, 60);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "Juegos Interactivos";
             // 
@@ -122,7 +125,7 @@ namespace SistemaAcademico1
             // 
             // btnJuego4
             // 
-            btnJuego4.BackColor = Color.FromArgb(10, 25, 65);
+            btnJuego4.BackColor = Color.FromArgb(132, 78, 255);
             btnJuego4.FlatStyle = FlatStyle.Flat;
             btnJuego4.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnJuego4.ForeColor = Color.White;
@@ -159,7 +162,7 @@ namespace SistemaAcademico1
             tarjetaJuego3.BackColor = Color.FromArgb(13, 35, 79);
             tarjetaJuego3.Controls.Add(btnJuego3);
             tarjetaJuego3.Controls.Add(lblJuego3Descripcion);
-            tarjetaJuego3.Controls.Add(lblJuego3Titulo);
+            tarjetaJuego3.Controls.Add(LogiFlow);
             tarjetaJuego3.Location = new Point(620, 10);
             tarjetaJuego3.Name = "tarjetaJuego3";
             tarjetaJuego3.Size = new Size(270, 355);
@@ -167,7 +170,7 @@ namespace SistemaAcademico1
             // 
             // btnJuego3
             // 
-            btnJuego3.BackColor = Color.FromArgb(10, 25, 65);
+            btnJuego3.BackColor = Color.FromArgb(132, 78, 255);
             btnJuego3.FlatStyle = FlatStyle.Flat;
             btnJuego3.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnJuego3.ForeColor = Color.White;
@@ -175,7 +178,7 @@ namespace SistemaAcademico1
             btnJuego3.Name = "btnJuego3";
             btnJuego3.Size = new Size(220, 45);
             btnJuego3.TabIndex = 2;
-            btnJuego3.Text = "Pendiente";
+            btnJuego3.Text = "Jugar";
             btnJuego3.UseVisualStyleBackColor = false;
             btnJuego3.Click += btnJuego3_Click;
             // 
@@ -187,17 +190,17 @@ namespace SistemaAcademico1
             lblJuego3Descripcion.Name = "lblJuego3Descripcion";
             lblJuego3Descripcion.Size = new Size(220, 125);
             lblJuego3Descripcion.TabIndex = 1;
-            lblJuego3Descripcion.Text = "Espacio reservado para el tercer minijuego del equipo.";
+            lblJuego3Descripcion.Text = "Juego de rompecabezas en el que el jugador debe ordenar y unir las piezas correctamente para completar una imagen, poniendo a prueba su lógica, concentración y rapidez.\r\n";
             // 
-            // lblJuego3Titulo
+            // LogiFlow
             // 
-            lblJuego3Titulo.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblJuego3Titulo.ForeColor = Color.FromArgb(95, 210, 255);
-            lblJuego3Titulo.Location = new Point(25, 30);
-            lblJuego3Titulo.Name = "lblJuego3Titulo";
-            lblJuego3Titulo.Size = new Size(220, 70);
-            lblJuego3Titulo.TabIndex = 0;
-            lblJuego3Titulo.Text = "Juego 3";
+            LogiFlow.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LogiFlow.ForeColor = Color.FromArgb(95, 210, 255);
+            LogiFlow.Location = new Point(25, 19);
+            LogiFlow.Name = "LogiFlow";
+            LogiFlow.Size = new Size(220, 70);
+            LogiFlow.TabIndex = 0;
+            LogiFlow.Text = "LogiFlow";
             // 
             // tarjetaJuego2
             // 
@@ -212,7 +215,7 @@ namespace SistemaAcademico1
             // 
             // btnJuego2
             // 
-            btnJuego2.BackColor = Color.FromArgb(10, 25, 65);
+            btnJuego2.BackColor = Color.FromArgb(132, 78, 255);
             btnJuego2.FlatStyle = FlatStyle.Flat;
             btnJuego2.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnJuego2.ForeColor = Color.White;
@@ -220,7 +223,7 @@ namespace SistemaAcademico1
             btnJuego2.Name = "btnJuego2";
             btnJuego2.Size = new Size(220, 45);
             btnJuego2.TabIndex = 2;
-            btnJuego2.Text = "🎮   CodiMemo";
+            btnJuego2.Text = "Jugar";
             btnJuego2.UseVisualStyleBackColor = false;
             btnJuego2.Click += btnJuego2_Click;
             // 
@@ -287,36 +290,27 @@ namespace SistemaAcademico1
             lblOrdenarTitulo.Name = "lblOrdenarTitulo";
             lblOrdenarTitulo.Size = new Size(220, 70);
             lblOrdenarTitulo.TabIndex = 0;
-            lblOrdenarTitulo.Text = "Ordenar Código";
+            lblOrdenarTitulo.Text = "LoopMaster";
             // 
             // panelInfo
             // 
             panelInfo.BackColor = Color.FromArgb(8, 22, 56);
-            panelInfo.Controls.Add(lblInfoTexto);
+            panelInfo.BackgroundImage = (Image)resources.GetObject("panelInfo.BackgroundImage");
             panelInfo.Controls.Add(lblInfoTitulo);
             panelInfo.Location = new Point(40, 625);
             panelInfo.Name = "panelInfo";
             panelInfo.Size = new Size(1200, 120);
             panelInfo.TabIndex = 2;
             // 
-            // lblInfoTexto
-            // 
-            lblInfoTexto.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblInfoTexto.ForeColor = Color.Gainsboro;
-            lblInfoTexto.Location = new Point(35, 58);
-            lblInfoTexto.Name = "lblInfoTexto";
-            lblInfoTexto.Size = new Size(1080, 35);
-            lblInfoTexto.TabIndex = 1;
-            lblInfoTexto.Text = "Este menú permite integrar los cuatro juegos del equipo sin mezclar formularios. Cada integrante puede conectar su propio botón.";
-            // 
             // lblInfoTitulo
             // 
             lblInfoTitulo.AutoSize = true;
+            lblInfoTitulo.BackColor = Color.Transparent;
             lblInfoTitulo.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblInfoTitulo.ForeColor = Color.White;
-            lblInfoTitulo.Location = new Point(35, 20);
+            lblInfoTitulo.Location = new Point(442, 42);
             lblInfoTitulo.Name = "lblInfoTitulo";
-            lblInfoTitulo.Size = new Size(251, 35);
+            lblInfoTitulo.Size = new Size(242, 35);
             lblInfoTitulo.TabIndex = 0;
             lblInfoTitulo.Text = "Centro de prácticas";
             // 
@@ -325,11 +319,14 @@ namespace SistemaAcademico1
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(6, 16, 41);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1290, 790);
             Controls.Add(panelInfo);
             Controls.Add(panelJuegos);
             Controls.Add(panelTitulo);
-            FormBorderStyle = FormBorderStyle.None;
+            DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "MenuJuegos";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MenuJuegos";
@@ -363,13 +360,12 @@ namespace SistemaAcademico1
         private Panel tarjetaJuego3;
         private Button btnJuego3;
         private Label lblJuego3Descripcion;
-        private Label lblJuego3Titulo;
+        private Label LogiFlow;
         private Panel tarjetaJuego4;
         private Button btnJuego4;
         private Label lblJuego4Descripcion;
         private Label lblJuego4Titulo;
         private Panel panelInfo;
         private Label lblInfoTitulo;
-        private Label lblInfoTexto;
     }
 }

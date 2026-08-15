@@ -94,6 +94,11 @@ namespace SistemaAcademico1
             }
         }
 
+        private void InitializeComponent()
+        {
+
+        }
+
         private void BtnVolver_Click(object? sender, EventArgs e)
         {
             MenuTemaDoWhile ventana = new MenuTemaDoWhile();

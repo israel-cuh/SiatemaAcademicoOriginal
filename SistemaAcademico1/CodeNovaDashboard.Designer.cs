@@ -775,7 +775,7 @@ namespace SistemaAcademico1
             Controls.Add(panelHeader);
             Controls.Add(panelSidebar);
             DoubleBuffered = true;
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             Name = "CodeNovaDashboard";
             StartPosition = FormStartPosition.CenterScreen;
             panelSidebar.ResumeLayout(false);

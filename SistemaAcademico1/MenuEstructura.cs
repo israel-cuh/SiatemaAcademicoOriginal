@@ -302,6 +302,18 @@ namespace SistemaAcademico1
         {
 
         }
+
+        private void BtnCondicionales_Click(object sender, EventArgs e)
+        {
+            MenuPrinciDiagram menuPrinciDiagram = new MenuPrinciDiagram();
+            menuPrinciDiagram.Show();
+            Hide();
+        }
+
+        private void btnAccesoCiclos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

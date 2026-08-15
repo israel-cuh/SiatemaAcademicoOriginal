@@ -386,7 +386,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(label1);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             Name = "Menuvariables";
             Text = "Menuvariables";
             panel2.ResumeLayout(false);

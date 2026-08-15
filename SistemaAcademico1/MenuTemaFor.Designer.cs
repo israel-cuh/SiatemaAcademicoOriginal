@@ -628,7 +628,7 @@ namespace SistemaAcademico1
             Controls.Add(panelTitulo);
             Controls.Add(panelSubMenu);
             DoubleBuffered = true;
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             Name = "MenuTemaFor";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Ciclo For";

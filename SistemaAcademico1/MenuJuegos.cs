@@ -38,12 +38,17 @@ namespace SistemaAcademico1
 
         private void btnJuego3_Click(object sender, EventArgs e)
         {
-            MostrarPendiente("Juego 3");
+            MenuLevelFlujogramForm menuNiveles = new MenuLevelFlujogramForm();
+            menuNiveles.Show();
+            this.Hide();
         }
 
         private void btnJuego4_Click(object sender, EventArgs e)
         {
-            MostrarPendiente("Juego 4");
+            ahorcadocs juego = new ahorcadocs();
+            juego.Show();
+            Hide();
+
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)

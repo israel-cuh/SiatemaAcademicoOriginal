@@ -631,7 +631,7 @@ namespace SistemaAcademico1
             Controls.Add(panelActividad);
             Controls.Add(panelTarjetas);
             Controls.Add(panelHeader);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             MinimumSize = new Size(1560, 850);
             Name = "DashboardPrincipal";
             StartPosition = FormStartPosition.CenterScreen;

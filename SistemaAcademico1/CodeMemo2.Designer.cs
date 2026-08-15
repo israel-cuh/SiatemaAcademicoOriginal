@@ -334,6 +334,7 @@
             Controls.Add(panel3);
             Controls.Add(panel4);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             Name = "CodeMemo2";
             Text = "   ";
             panel1.ResumeLayout(false);

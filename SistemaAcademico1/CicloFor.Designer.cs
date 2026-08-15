@@ -348,7 +348,7 @@ namespace SistemaAcademico1
             Controls.Add(panelDerecho);
             Controls.Add(panelIzquierdo);
             Controls.Add(panelTitulo);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             Name = "CicloFor";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Ciclo For";

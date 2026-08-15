@@ -144,7 +144,7 @@ namespace SistemaAcademico1
             btnCerrarSesion.FlatStyle = FlatStyle.Flat;
             btnCerrarSesion.Font = new Font("Segoe UI", 11F);
             btnCerrarSesion.ForeColor = Color.Gainsboro;
-            btnCerrarSesion.Location = new Point(15, 686);
+            btnCerrarSesion.Location = new Point(15, 682);
             btnCerrarSesion.Name = "btnCerrarSesion";
             btnCerrarSesion.Padding = new Padding(20, 0, 0, 0);
             btnCerrarSesion.Size = new Size(230, 48);
@@ -193,6 +193,7 @@ namespace SistemaAcademico1
             BackColor = Color.FromArgb(6, 16, 45);
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
+            BorderStyle = BorderStyle.Fixed3D;
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(lblLogo);
@@ -205,7 +206,7 @@ namespace SistemaAcademico1
             Controls.Add(btnCerrarSesion);
             DoubleBuffered = true;
             Name = "MenuLateralControl";
-            Size = new Size(270, 752);
+            Size = new Size(266, 748);
             Load += MenuLateralControl_Load;
             ResumeLayout(false);
         }

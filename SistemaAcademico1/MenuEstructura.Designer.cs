@@ -96,6 +96,7 @@ namespace SistemaAcademico1
             lblUsuario = new Label();
             lblRol = new Label();
             panelContenido = new Panel();
+            lblPie = new Label();
             lblBienvenida = new Label();
             lblSubtitulo = new Label();
             tarjetaFecha = new Panel();
@@ -141,7 +142,6 @@ namespace SistemaAcademico1
             btnAccesoJuego = new Button();
             btnAccesoVariables = new Button();
             btnAccesoCiclos = new Button();
-            lblPie = new Label();
             panelSuperior.SuspendLayout();
             panelLateral.SuspendLayout();
             tarjetaUsuario.SuspendLayout();
@@ -385,6 +385,16 @@ namespace SistemaAcademico1
             panelContenido.Name = "panelContenido";
             panelContenido.Size = new Size(1023, 752);
             panelContenido.TabIndex = 0;
+            // 
+            // lblPie
+            // 
+            lblPie.ForeColor = Color.FromArgb(110, 130, 190);
+            lblPie.Location = new Point(320, 724);
+            lblPie.Name = "lblPie";
+            lblPie.Size = new Size(430, 25);
+            lblPie.TabIndex = 7;
+            lblPie.Text = "CodeNova  •  Aprende  •  Practica  •  Innova";
+            lblPie.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblBienvenida
             // 
@@ -765,8 +775,10 @@ namespace SistemaAcademico1
             btnCondicionales.TabIndex = 4;
             btnCondicionales.Text = "Ver tema";
             btnCondicionales.UseVisualStyleBackColor = false;
+            btnCondicionales.Click += BtnCondicionales_Click;
             // 
             // tarjetaCiclos
+
             // 
             tarjetaCiclos.BackColor = Color.FromArgb(11, 29, 68);
             tarjetaCiclos.Controls.Add(lblNumeroCiclos);
@@ -901,16 +913,7 @@ namespace SistemaAcademico1
             btnAccesoCiclos.TabIndex = 3;
             btnAccesoCiclos.Text = "↻  Ciclos";
             btnAccesoCiclos.UseVisualStyleBackColor = false;
-            // 
-            // lblPie
-            // 
-            lblPie.ForeColor = Color.FromArgb(110, 130, 190);
-            lblPie.Location = new Point(320, 724);
-            lblPie.Name = "lblPie";
-            lblPie.Size = new Size(430, 25);
-            lblPie.TabIndex = 7;
-            lblPie.Text = "CodeNova  •  Aprende  •  Practica  •  Innova";
-            lblPie.TextAlign = ContentAlignment.MiddleCenter;
+            btnAccesoCiclos.Click += btnAccesoCiclos_Click;
             // 
             // MenuEstructura
             // 
@@ -921,7 +924,7 @@ namespace SistemaAcademico1
             Controls.Add(panelContenido);
             Controls.Add(panelLateral);
             Controls.Add(panelSuperior);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             MinimumSize = new Size(1180, 760);
             Name = "MenuEstructura";
             StartPosition = FormStartPosition.CenterScreen;

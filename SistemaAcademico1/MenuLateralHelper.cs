@@ -23,6 +23,7 @@ namespace SistemaAcademico1
             formulario.ClientSize = TamanoComun;
             formulario.MinimumSize = TamanoComun;
             formulario.StartPosition = FormStartPosition.CenterScreen;
+            formulario.AutoScroll = true;
 
             MenuLateralControl menu = new MenuLateralControl
             {

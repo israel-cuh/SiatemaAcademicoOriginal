@@ -493,8 +493,7 @@ namespace SistemaAcademico1
                 // DEBUG: mostrar conteo para verificar que las filas se añadieron
                 try
                 {
-                    int totalEnServicio = TareaService.ObtenerTodasLasTareas().Count;
-                    MessageBox.Show($"[DEBUG] Tareas servicio: {totalEnServicio} | Tareas filtradas: {tareas.Count} | Filas en grid: {dgvTareasActivas.Rows.Count}", "Debug", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
                 }
                 catch { }
                 }

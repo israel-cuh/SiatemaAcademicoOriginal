@@ -56,7 +56,7 @@ namespace SistemaAcademico1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MostrarEnPreparacion("Diagramas de Flujos ");
+            AbrirFormulario(new MenuPrinciDiagram(), "Diagramas de flujo");
         }
 
         private void btnCiclos_Click(object sender, EventArgs e)
