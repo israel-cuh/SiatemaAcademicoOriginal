@@ -278,9 +278,7 @@ namespace SistemaAcademico1
 
         private void btnAlgoritmos_Click_1(object sender, EventArgs e)
         {
-            frmPrincipal frmPrincipal = new frmPrincipal();
-            frmPrincipal.Show();
-            Hide();
+            
         }
 
         private void btnJuego_Click_1(object sender, EventArgs e)

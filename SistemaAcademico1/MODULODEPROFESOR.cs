@@ -48,7 +48,12 @@ namespace SistemaAcademico1
         {
             frmPrincipal frm = new frmPrincipal();
             frm.Show();
-            Hide(); 
+            Hide();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
