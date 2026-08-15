@@ -70,6 +70,7 @@
             btnComprobar = new Button();
             label6 = new Label();
             label5 = new Label();
+            btnSiguiente = new Button();
             panel1.SuspendLayout();
             pnlRegresar.SuspendLayout();
             pnlContenido.SuspendLayout();
@@ -561,12 +562,26 @@
             label5.TabIndex = 0;
             label5.Text = " 🎯 Practica lo aprendido";
             // 
+            // btnSiguiente
+            // 
+            btnSiguiente.BackColor = Color.DarkViolet;
+            btnSiguiente.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSiguiente.ForeColor = SystemColors.ButtonHighlight;
+            btnSiguiente.Location = new Point(878, 703);
+            btnSiguiente.Name = "btnSiguiente";
+            btnSiguiente.Size = new Size(188, 38);
+            btnSiguiente.TabIndex = 6;
+            btnSiguiente.Text = "Suiguiente";
+            btnSiguiente.UseVisualStyleBackColor = false;
+            btnSiguiente.Click += btnSiguiente_Click;
+            // 
             // FrmTiposDatos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1231, 753);
+            Controls.Add(btnSiguiente);
             Controls.Add(pnlPractica);
             Controls.Add(pnlContenido);
             Controls.Add(panel1);
@@ -628,5 +643,6 @@
         private Button btnPuntoA;
         private Button btnPunto95;
         private Button btnPuntoMaria;
+        private Button btnSiguiente;
     }
 }

@@ -158,5 +158,12 @@ namespace SistemaAcademico1
                 }
             }
         }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            FrmTiposNumericos frm = new FrmTiposNumericos();
+            frm.Show();
+            this.Close();
+        }
     }
 }

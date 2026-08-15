@@ -316,5 +316,40 @@
   <data name="sectima" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sectima.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
->>>>>>> nuevo contenido Merge branch 'master' of https://github.com/israel-cuh/SiatemaAcademicoOriginalIntegrar modulo de diagramas de flujo
+  <data name="CartaInt2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CartaInt2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CartaDouble2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CartaDouble2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CartaString2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CartaString2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CartaChar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CartaChar2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CartaBool2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CartaBool2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CartaFloat2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CartaFloat2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="And1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\And1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="And2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\And2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Or1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Or1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Or2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Or2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Not1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Not1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Not2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Not2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

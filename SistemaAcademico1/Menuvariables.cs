@@ -65,5 +65,12 @@ namespace SistemaAcademico1
             frm.Show();
             Hide();
         }
+
+        private void btnOperadores_Click_1(object sender, EventArgs e)
+        {
+            FrmOperadores frm = new FrmOperadores();
+            frm.Show();
+            Hide();
+        }
     }
 }

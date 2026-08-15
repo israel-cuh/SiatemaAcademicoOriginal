@@ -1,6 +1,6 @@
 ﻿namespace SistemaAcademico1
 {
-    partial class FrmDeclaracionVariables
+    partial class FrmUsoCondiciones
     {
         /// <summary>
         /// Required designer variable.
@@ -28,33 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDeclaracionVariables));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsoCondiciones));
             panel1 = new Panel();
             lblPagina = new Label();
             label1 = new Label();
             pnlRegresar = new Panel();
             lblRegresar = new Label();
             pnlContenido = new Panel();
+            panel10 = new Panel();
+            panel3 = new Panel();
+            label2 = new Label();
             lblTitulo = new Label();
+            panel2 = new Panel();
             pnlPractica = new Panel();
+            panel5 = new Panel();
+            cmbPregunta5 = new ComboBox();
+            cmbPregunta4 = new ComboBox();
+            cmbPregunta3 = new ComboBox();
+            cmbPregunta2 = new ComboBox();
+            cmbPregunta1 = new ComboBox();
             lblResultado = new Label();
             btnComprobar = new Button();
-            panel5 = new Panel();
-            cmbLetra = new ComboBox();
-            cmbActivo = new ComboBox();
-            cmbPromedio = new ComboBox();
-            cmbEdad = new ComboBox();
-            cmbNombre = new ComboBox();
             label6 = new Label();
             label5 = new Label();
             btnAnterior = new Button();
             btnSiguiente = new Button();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            panel3 = new Panel();
-            panel4 = new Panel();
-            panel2 = new Panel();
             panel1.SuspendLayout();
             pnlRegresar.SuspendLayout();
             pnlContenido.SuspendLayout();
@@ -68,10 +66,10 @@
             panel1.Controls.Add(lblPagina);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(pnlRegresar);
-            panel1.Location = new Point(12, 21);
+            panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
             panel1.Size = new Size(1207, 81);
-            panel1.TabIndex = 1;
+            panel1.TabIndex = 5;
             // 
             // lblPagina
             // 
@@ -82,18 +80,18 @@
             lblPagina.Name = "lblPagina";
             lblPagina.Size = new Size(50, 31);
             lblPagina.TabIndex = 3;
-            lblPagina.Text = "2/5";
+            lblPagina.Text = "4/5";
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(224, 224, 224);
-            label1.Location = new Point(571, 27);
+            label1.Location = new Point(506, 21);
             label1.Name = "label1";
-            label1.Size = new Size(165, 38);
+            label1.Size = new Size(324, 38);
             label1.TabIndex = 2;
-            label1.Text = "VARIABLES";
+            label1.Text = "OPERADORES LÓGICOS";
             // 
             // pnlRegresar
             // 
@@ -104,7 +102,6 @@
             pnlRegresar.Size = new Size(164, 44);
             pnlRegresar.TabIndex = 1;
             pnlRegresar.Click += pnlRegresar_Click;
-            pnlRegresar.Paint += pnlRegresar_Paint;
             // 
             // lblRegresar
             // 
@@ -122,48 +119,143 @@
             // pnlContenido
             // 
             pnlContenido.BackColor = Color.MidnightBlue;
-            pnlContenido.Controls.Add(label4);
-            pnlContenido.Controls.Add(label3);
-            pnlContenido.Controls.Add(panel4);
+            pnlContenido.Controls.Add(panel10);
             pnlContenido.Controls.Add(panel3);
             pnlContenido.Controls.Add(label2);
             pnlContenido.Controls.Add(lblTitulo);
             pnlContenido.Controls.Add(panel2);
-            pnlContenido.Location = new Point(12, 108);
+            pnlContenido.Location = new Point(12, 99);
             pnlContenido.Name = "pnlContenido";
-            pnlContenido.Size = new Size(755, 571);
-            pnlContenido.TabIndex = 2;
+            pnlContenido.Size = new Size(714, 599);
+            pnlContenido.TabIndex = 6;
+            // 
+            // panel10
+            // 
+            panel10.BackgroundImage = (Image)resources.GetObject("panel10.BackgroundImage");
+            panel10.BackgroundImageLayout = ImageLayout.Zoom;
+            panel10.Location = new Point(45, 438);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(492, 148);
+            panel10.TabIndex = 5;
+            // 
+            // panel3
+            // 
+            panel3.BackgroundImage = (Image)resources.GetObject("panel3.BackgroundImage");
+            panel3.BackgroundImageLayout = ImageLayout.Stretch;
+            panel3.Location = new Point(133, 132);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(475, 288);
+            panel3.TabIndex = 3;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = SystemColors.ButtonFace;
+            label2.Location = new Point(124, 59);
+            label2.Name = "label2";
+            label2.Size = new Size(535, 56);
+            label2.TabIndex = 2;
+            label2.Text = "Las condiciones permiten tomar decisiones en un programa \r\nsegún se cumpla o no una expresión lógica.";
             // 
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
             lblTitulo.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitulo.ForeColor = Color.Magenta;
-            lblTitulo.Location = new Point(137, 23);
+            lblTitulo.Location = new Point(124, 18);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(358, 41);
+            lblTitulo.Size = new Size(444, 41);
             lblTitulo.TabIndex = 1;
-            lblTitulo.Text = " Declaración de variables";
+            lblTitulo.Text = "¿QUÉ SON LAS CONDICIONES?";
+            // 
+            // panel2
+            // 
+            panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
+            panel2.BackgroundImageLayout = ImageLayout.Stretch;
+            panel2.Location = new Point(24, 23);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(94, 104);
+            panel2.TabIndex = 0;
             // 
             // pnlPractica
             // 
             pnlPractica.BackColor = Color.MidnightBlue;
+            pnlPractica.Controls.Add(panel5);
             pnlPractica.Controls.Add(lblResultado);
             pnlPractica.Controls.Add(btnComprobar);
-            pnlPractica.Controls.Add(panel5);
             pnlPractica.Controls.Add(label6);
             pnlPractica.Controls.Add(label5);
-            pnlPractica.Location = new Point(773, 108);
+            pnlPractica.Location = new Point(732, 99);
             pnlPractica.Name = "pnlPractica";
-            pnlPractica.Size = new Size(446, 571);
-            pnlPractica.TabIndex = 3;
+            pnlPractica.Size = new Size(487, 599);
+            pnlPractica.TabIndex = 7;
+            // 
+            // panel5
+            // 
+            panel5.BackgroundImage = (Image)resources.GetObject("panel5.BackgroundImage");
+            panel5.BackgroundImageLayout = ImageLayout.Zoom;
+            panel5.Controls.Add(cmbPregunta5);
+            panel5.Controls.Add(cmbPregunta4);
+            panel5.Controls.Add(cmbPregunta3);
+            panel5.Controls.Add(cmbPregunta2);
+            panel5.Controls.Add(cmbPregunta1);
+            panel5.Location = new Point(10, 84);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(477, 371);
+            panel5.TabIndex = 5;
+            // 
+            // cmbPregunta5
+            // 
+            cmbPregunta5.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbPregunta5.FormattingEnabled = true;
+            cmbPregunta5.Location = new Point(88, 318);
+            cmbPregunta5.Name = "cmbPregunta5";
+            cmbPregunta5.Size = new Size(74, 28);
+            cmbPregunta5.TabIndex = 4;
+            // 
+            // cmbPregunta4
+            // 
+            cmbPregunta4.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbPregunta4.FormattingEnabled = true;
+            cmbPregunta4.Location = new Point(176, 247);
+            cmbPregunta4.Name = "cmbPregunta4";
+            cmbPregunta4.Size = new Size(74, 28);
+            cmbPregunta4.TabIndex = 3;
+            // 
+            // cmbPregunta3
+            // 
+            cmbPregunta3.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbPregunta3.FormattingEnabled = true;
+            cmbPregunta3.Location = new Point(88, 187);
+            cmbPregunta3.Name = "cmbPregunta3";
+            cmbPregunta3.Size = new Size(74, 28);
+            cmbPregunta3.TabIndex = 2;
+            // 
+            // cmbPregunta2
+            // 
+            cmbPregunta2.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbPregunta2.FormattingEnabled = true;
+            cmbPregunta2.Location = new Point(214, 124);
+            cmbPregunta2.Name = "cmbPregunta2";
+            cmbPregunta2.Size = new Size(74, 28);
+            cmbPregunta2.TabIndex = 1;
+            // 
+            // cmbPregunta1
+            // 
+            cmbPregunta1.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbPregunta1.FormattingEnabled = true;
+            cmbPregunta1.Location = new Point(167, 61);
+            cmbPregunta1.Name = "cmbPregunta1";
+            cmbPregunta1.Size = new Size(74, 28);
+            cmbPregunta1.TabIndex = 0;
             // 
             // lblResultado
             // 
             lblResultado.AutoSize = true;
             lblResultado.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblResultado.ForeColor = SystemColors.ButtonFace;
-            lblResultado.Location = new Point(36, 491);
+            lblResultado.Location = new Point(10, 506);
             lblResultado.Name = "lblResultado";
             lblResultado.Size = new Size(18, 23);
             lblResultado.TabIndex = 4;
@@ -174,7 +266,7 @@
             btnComprobar.BackColor = Color.DarkOrchid;
             btnComprobar.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnComprobar.ForeColor = SystemColors.ButtonHighlight;
-            btnComprobar.Location = new Point(131, 440);
+            btnComprobar.Location = new Point(147, 461);
             btnComprobar.Name = "btnComprobar";
             btnComprobar.Size = new Size(165, 40);
             btnComprobar.TabIndex = 3;
@@ -182,82 +274,23 @@
             btnComprobar.UseVisualStyleBackColor = false;
             btnComprobar.Click += btnComprobar_Click;
             // 
-            // panel5
-            // 
-            panel5.BackgroundImage = (Image)resources.GetObject("panel5.BackgroundImage");
-            panel5.BackgroundImageLayout = ImageLayout.Stretch;
-            panel5.Controls.Add(cmbLetra);
-            panel5.Controls.Add(cmbActivo);
-            panel5.Controls.Add(cmbPromedio);
-            panel5.Controls.Add(cmbEdad);
-            panel5.Controls.Add(cmbNombre);
-            panel5.Location = new Point(23, 134);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(397, 300);
-            panel5.TabIndex = 2;
-            // 
-            // cmbLetra
-            // 
-            cmbLetra.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbLetra.FormattingEnabled = true;
-            cmbLetra.Location = new Point(192, 258);
-            cmbLetra.Name = "cmbLetra";
-            cmbLetra.Size = new Size(172, 28);
-            cmbLetra.TabIndex = 4;
-            // 
-            // cmbActivo
-            // 
-            cmbActivo.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbActivo.FormattingEnabled = true;
-            cmbActivo.Location = new Point(190, 209);
-            cmbActivo.Name = "cmbActivo";
-            cmbActivo.Size = new Size(174, 28);
-            cmbActivo.TabIndex = 3;
-            // 
-            // cmbPromedio
-            // 
-            cmbPromedio.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbPromedio.FormattingEnabled = true;
-            cmbPromedio.Location = new Point(192, 159);
-            cmbPromedio.Name = "cmbPromedio";
-            cmbPromedio.Size = new Size(172, 28);
-            cmbPromedio.TabIndex = 2;
-            // 
-            // cmbEdad
-            // 
-            cmbEdad.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbEdad.FormattingEnabled = true;
-            cmbEdad.Location = new Point(192, 110);
-            cmbEdad.Name = "cmbEdad";
-            cmbEdad.Size = new Size(172, 28);
-            cmbEdad.TabIndex = 1;
-            // 
-            // cmbNombre
-            // 
-            cmbNombre.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbNombre.FormattingEnabled = true;
-            cmbNombre.Location = new Point(190, 59);
-            cmbNombre.Name = "cmbNombre";
-            cmbNombre.Size = new Size(174, 28);
-            cmbNombre.TabIndex = 0;
-            // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.ForeColor = SystemColors.ButtonFace;
-            label6.Location = new Point(23, 43);
+            label6.Location = new Point(24, 31);
             label6.Name = "label6";
-            label6.Size = new Size(368, 75);
+            label6.Size = new Size(372, 50);
             label6.TabIndex = 1;
-            label6.Text = "Completa la tabla asignando un tipo de dato\r\nadecuado a cada variable según la \r\ninformación que almacenará.";
+            label6.Text = "Completa el operador lógico que falta en \r\ncada condición. Selecciona la opción correcta.";
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Fuchsia;
-            label5.Location = new Point(36, 12);
+            label5.Location = new Point(37, 0);
             label5.Name = "label5";
             label5.Size = new Size(275, 31);
             label5.TabIndex = 0;
@@ -268,10 +301,10 @@
             btnAnterior.BackColor = Color.BlueViolet;
             btnAnterior.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAnterior.ForeColor = SystemColors.ButtonHighlight;
-            btnAnterior.Location = new Point(389, 697);
+            btnAnterior.Location = new Point(426, 704);
             btnAnterior.Name = "btnAnterior";
             btnAnterior.Size = new Size(183, 44);
-            btnAnterior.TabIndex = 4;
+            btnAnterior.TabIndex = 14;
             btnAnterior.Text = " <<Anterior";
             btnAnterior.UseVisualStyleBackColor = false;
             btnAnterior.Click += btnAnterior_Click;
@@ -281,75 +314,15 @@
             btnSiguiente.BackColor = Color.BlueViolet;
             btnSiguiente.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSiguiente.ForeColor = SystemColors.ButtonHighlight;
-            btnSiguiente.Location = new Point(598, 697);
+            btnSiguiente.Location = new Point(639, 704);
             btnSiguiente.Name = "btnSiguiente";
             btnSiguiente.Size = new Size(187, 44);
-            btnSiguiente.TabIndex = 5;
+            btnSiguiente.TabIndex = 15;
             btnSiguiente.Text = "Siguiente >>";
             btnSiguiente.UseVisualStyleBackColor = false;
             btnSiguiente.Click += btnSiguiente_Click;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = SystemColors.ButtonFace;
-            label2.Location = new Point(150, 82);
-            label2.Name = "label2";
-            label2.Size = new Size(457, 28);
-            label2.TabIndex = 2;
-            label2.Text = "Una variable necesita un tipo de dato y un nombre.";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Cyan;
-            label3.Location = new Point(163, 357);
-            label3.Name = "label3";
-            label3.Size = new Size(100, 28);
-            label3.TabIndex = 5;
-            label3.Text = "Recuerda:";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.ForeColor = SystemColors.ButtonHighlight;
-            label4.Location = new Point(172, 397);
-            label4.Name = "label4";
-            label4.Size = new Size(525, 50);
-            label4.TabIndex = 6;
-            label4.Text = "Cada variable debe tener un nombre que describa la información\r\nque almacena.";
-            // 
-            // panel3
-            // 
-            panel3.BackgroundImage = (Image)resources.GetObject("panel3.BackgroundImage");
-            panel3.BackgroundImageLayout = ImageLayout.Stretch;
-            panel3.Location = new Point(160, 134);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(447, 188);
-            panel3.TabIndex = 3;
-            // 
-            // panel4
-            // 
-            panel4.BackgroundImage = (Image)resources.GetObject("panel4.BackgroundImage");
-            panel4.BackgroundImageLayout = ImageLayout.Stretch;
-            panel4.Location = new Point(49, 362);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(95, 84);
-            panel4.TabIndex = 4;
-            // 
-            // panel2
-            // 
-            panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
-            panel2.BackgroundImageLayout = ImageLayout.Stretch;
-            panel2.Location = new Point(24, 23);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(94, 112);
-            panel2.TabIndex = 0;
-            // 
-            // FrmDeclaracionVariables
+            // FrmUsoCondiciones
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -360,9 +333,9 @@
             Controls.Add(pnlPractica);
             Controls.Add(pnlContenido);
             Controls.Add(panel1);
-            Name = "FrmDeclaracionVariables";
-            Text = "FrmDeclaracionVariables";
-            Load += FrmDeclaracionVariables_Load;
+            Name = "FrmUsoCondiciones";
+            Text = "FrmUsoCondiciones";
+            Load += FrmUsoCondiciones_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             pnlRegresar.ResumeLayout(false);
@@ -383,25 +356,23 @@
         private Panel pnlRegresar;
         private Label lblRegresar;
         private Panel pnlContenido;
-        private Panel pnlPractica;
-        private Label lblTitulo;
-        private Label label6;
-        private Label label5;
-        private Panel panel5;
-        private ComboBox cmbLetra;
-        private ComboBox cmbActivo;
-        private ComboBox cmbPromedio;
-        private ComboBox cmbEdad;
-        private ComboBox cmbNombre;
-        private Label lblResultado;
-        private Button btnComprobar;
-        private Button btnAnterior;
-        private Button btnSiguiente;
-        private Label label4;
-        private Label label3;
-        private Panel panel4;
+        private Panel panel10;
         private Panel panel3;
         private Label label2;
+        private Label lblTitulo;
         private Panel panel2;
+        private Panel pnlPractica;
+        private Panel panel5;
+        private Label lblResultado;
+        private Button btnComprobar;
+        private Label label6;
+        private Label label5;
+        private ComboBox cmbPregunta5;
+        private ComboBox cmbPregunta4;
+        private ComboBox cmbPregunta3;
+        private ComboBox cmbPregunta2;
+        private ComboBox cmbPregunta1;
+        private Button btnAnterior;
+        private Button btnSiguiente;
     }
 }

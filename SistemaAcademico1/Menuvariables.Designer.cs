@@ -280,6 +280,7 @@
             btnOperadores.TabIndex = 5;
             btnOperadores.Text = "📖 Ir a aprender";
             btnOperadores.UseVisualStyleBackColor = false;
+            btnOperadores.Click += btnOperadores_Click_1;
             // 
             // panel8
             // 
