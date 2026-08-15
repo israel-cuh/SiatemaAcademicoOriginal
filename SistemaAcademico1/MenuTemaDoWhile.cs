@@ -87,5 +87,19 @@ namespace SistemaAcademico1
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MenuTemaIF menuTemaIF = new MenuTemaIF();
+            menuTemaIF.Show(this);
+            Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            menuTemaif_else menuTemaIfElse = new menuTemaif_else();
+            menuTemaIfElse.Show(this);
+            Hide();
+        }
     }
 }

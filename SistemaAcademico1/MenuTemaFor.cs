@@ -72,5 +72,19 @@ namespace SistemaAcademico1
             using MinijuegoOrdenarCodigo juego = new MinijuegoOrdenarCodigo();
             juego.ShowDialog(this);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MenuTemaIF menuTemaIF = new MenuTemaIF();
+            menuTemaIF.Show();
+            Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            menuTemaif_else menuTemaIfElse = new menuTemaif_else();
+            menuTemaIfElse.Show(this);
+            Hide();
+        }
     }
 }

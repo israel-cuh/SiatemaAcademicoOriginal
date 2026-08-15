@@ -19,6 +19,7 @@ namespace SistemaAcademico1
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuTemaDoWhile));
             panelSubMenu = new Panel();
+            button1 = new Button();
             btnSubAnidados = new Button();
             btnSubDoWhile = new Button();
             btnSubFor = new Button();
@@ -53,10 +54,9 @@ namespace SistemaAcademico1
             lblCodigo = new Label();
             txtCodigo = new RichTextBox();
             panelInferior = new Panel();
-            btnAnterior = new Button();
-            btnSiguiente = new Button();
             btnPracticar = new Button();
             panelConsejo = new Panel();
+            button3 = new Button();
             panelSubMenu.SuspendLayout();
             panelTitulo.SuspendLayout();
             panelIzquierdo.SuspendLayout();
@@ -68,14 +68,30 @@ namespace SistemaAcademico1
             // 
             panelSubMenu.BackColor = Color.FromArgb(8, 22, 56);
             panelSubMenu.BackgroundImage = (Image)resources.GetObject("panelSubMenu.BackgroundImage");
+            panelSubMenu.Controls.Add(button3);
+            panelSubMenu.Controls.Add(button1);
             panelSubMenu.Controls.Add(btnSubAnidados);
             panelSubMenu.Controls.Add(btnSubDoWhile);
             panelSubMenu.Controls.Add(btnSubFor);
             panelSubMenu.Controls.Add(btnSubWhile);
             panelSubMenu.Location = new Point(30, 25);
             panelSubMenu.Name = "panelSubMenu";
-            panelSubMenu.Size = new Size(250, 390);
+            panelSubMenu.Size = new Size(250, 459);
             panelSubMenu.TabIndex = 0;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.Transparent;
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.ForeColor = SystemColors.ButtonFace;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.Location = new Point(20, 286);
+            button1.Name = "button1";
+            button1.Size = new Size(210, 49);
+            button1.TabIndex = 6;
+            button1.Text = "Estructura IF";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // btnSubAnidados
             // 
@@ -508,43 +524,11 @@ namespace SistemaAcademico1
             panelInferior.BackColor = Color.FromArgb(8, 22, 56);
             panelInferior.BackgroundImage = (Image)resources.GetObject("panelInferior.BackgroundImage");
             panelInferior.BackgroundImageLayout = ImageLayout.Stretch;
-            panelInferior.Controls.Add(btnAnterior);
-            panelInferior.Controls.Add(btnSiguiente);
             panelInferior.Controls.Add(btnPracticar);
             panelInferior.Location = new Point(30, 677);
             panelInferior.Name = "panelInferior";
             panelInferior.Size = new Size(1200, 85);
             panelInferior.TabIndex = 4;
-            // 
-            // btnAnterior
-            // 
-            btnAnterior.BackColor = Color.Tomato;
-            btnAnterior.BackgroundImage = (Image)resources.GetObject("btnAnterior.BackgroundImage");
-            btnAnterior.FlatStyle = FlatStyle.Popup;
-            btnAnterior.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAnterior.ForeColor = Color.White;
-            btnAnterior.Location = new Point(24, 10);
-            btnAnterior.Name = "btnAnterior";
-            btnAnterior.Size = new Size(217, 67);
-            btnAnterior.TabIndex = 0;
-            btnAnterior.Text = "← Anterior\r\nCiclo For";
-            btnAnterior.UseVisualStyleBackColor = false;
-            btnAnterior.Click += btnAnterior_Click;
-            // 
-            // btnSiguiente
-            // 
-            btnSiguiente.BackColor = Color.FromArgb(132, 78, 255);
-            btnSiguiente.BackgroundImage = (Image)resources.GetObject("btnSiguiente.BackgroundImage");
-            btnSiguiente.FlatStyle = FlatStyle.Popup;
-            btnSiguiente.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSiguiente.ForeColor = Color.White;
-            btnSiguiente.Location = new Point(274, 10);
-            btnSiguiente.Name = "btnSiguiente";
-            btnSiguiente.Size = new Size(217, 64);
-            btnSiguiente.TabIndex = 1;
-            btnSiguiente.Text = "Siguiente →\r\nCiclos Anidados";
-            btnSiguiente.UseVisualStyleBackColor = false;
-            btnSiguiente.Click += btnSiguiente_Click;
             // 
             // btnPracticar
             // 
@@ -571,6 +555,20 @@ namespace SistemaAcademico1
             panelConsejo.Name = "panelConsejo";
             panelConsejo.Size = new Size(250, 168);
             panelConsejo.TabIndex = 5;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.Transparent;
+            button3.FlatStyle = FlatStyle.Popup;
+            button3.ForeColor = SystemColors.ButtonFace;
+            button3.Image = (Image)resources.GetObject("button3.Image");
+            button3.Location = new Point(20, 363);
+            button3.Name = "button3";
+            button3.Size = new Size(210, 49);
+            button3.TabIndex = 8;
+            button3.Text = "Estructura If-else";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // MenuTemaDoWhile
             // 
@@ -631,8 +629,6 @@ namespace SistemaAcademico1
         private Label lblCodigo;
         private RichTextBox txtCodigo;
         private Panel panelInferior;
-        private Button btnAnterior;
-        private Button btnSiguiente;
         private Button btnPracticar;
         private Panel panelConsejo;
         private Panel panelImportante;
@@ -644,5 +640,7 @@ namespace SistemaAcademico1
         private Label lblExpVerdadera;
         private Label lblExp4;
         private Label lblExpFalsa;
+        private Button button1;
+        private Button button3;
     }
 }

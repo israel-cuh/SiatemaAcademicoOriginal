@@ -146,11 +146,11 @@ namespace SistemaAcademico1
         // ==========================================
         private void ActualizarCorazones()
         {
-    // Usar ResourceManager.GetObject evita referencias a propiedades fuertemente tipadas inexistentes.
-    var rm = Properties.Resources.ResourceManager;
-    if (picVida1 != null) picVida1.Image = (vidas >= 1) ? (Image)rm.GetObject("lleno") : (Image)rm.GetObject("vacio");
-    if (picVida2 != null) picVida2.Image = (vidas >= 2) ? (Image)rm.GetObject("lleno") : (Image)rm.GetObject("vacio");
-    if (picVida3 != null) picVida3.Image = (vidas >= 3) ? (Image)rm.GetObject("lleno") : (Image)rm.GetObject("vacio");
+            // Usar ResourceManager.GetObject evita referencias a propiedades fuertemente tipadas inexistentes.
+            var rm = Properties.Resources.ResourceManager;
+            if (picVida1 != null) picVida1.Image = (vidas >= 1) ? (Image)rm.GetObject("lleno") : (Image)rm.GetObject("vacio");
+            if (picVida2 != null) picVida2.Image = (vidas >= 2) ? (Image)rm.GetObject("lleno") : (Image)rm.GetObject("vacio");
+            if (picVida3 != null) picVida3.Image = (vidas >= 3) ? (Image)rm.GetObject("lleno") : (Image)rm.GetObject("vacio");
         }
 
         // ==========================================
@@ -486,6 +486,11 @@ namespace SistemaAcademico1
         }
 
         private void lblTiempo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picVida1_Click(object sender, EventArgs e)
         {
 
         }

@@ -92,5 +92,12 @@ namespace SistemaAcademico1
         {
 
         }
+
+        private void buttonJUEGO_Click(object sender, EventArgs e)
+        {
+            ahorcadocs ahorcadocs = new ahorcadocs();
+            ahorcadocs.Show();
+            Hide();
+        }
     }
 }

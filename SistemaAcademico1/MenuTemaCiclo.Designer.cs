@@ -37,6 +37,7 @@
             lblDescripcion = new Label();
             lblTitulo = new Label();
             panel2 = new Panel();
+            button2 = new Button();
             btnAnidados = new Button();
             btnDoWhile = new Button();
             btnFor = new Button();
@@ -73,6 +74,7 @@
             panel6 = new Panel();
             button1 = new Button();
             btnjuego = new Button();
+            button3 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picboxInfinito).BeginInit();
             panel2.SuspendLayout();
@@ -170,14 +172,30 @@
             // 
             panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
             panel2.BackgroundImageLayout = ImageLayout.Stretch;
+            panel2.Controls.Add(button3);
+            panel2.Controls.Add(button2);
             panel2.Controls.Add(btnAnidados);
             panel2.Controls.Add(btnDoWhile);
             panel2.Controls.Add(btnFor);
             panel2.Controls.Add(btnWhile);
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(250, 393);
+            panel2.Size = new Size(250, 467);
             panel2.TabIndex = 1;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.Transparent;
+            button2.FlatStyle = FlatStyle.Popup;
+            button2.ForeColor = SystemColors.ButtonFace;
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.Location = new Point(12, 306);
+            button2.Name = "button2";
+            button2.Size = new Size(218, 49);
+            button2.TabIndex = 6;
+            button2.Text = "Estructura IF";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // btnAnidados
             // 
@@ -185,12 +203,13 @@
             btnAnidados.FlatStyle = FlatStyle.Popup;
             btnAnidados.ForeColor = SystemColors.ButtonFace;
             btnAnidados.Image = (Image)resources.GetObject("btnAnidados.Image");
-            btnAnidados.Location = new Point(12, 247);
+            btnAnidados.Location = new Point(12, 235);
             btnAnidados.Name = "btnAnidados";
             btnAnidados.Size = new Size(218, 49);
             btnAnidados.TabIndex = 4;
             btnAnidados.Text = "Ciclos Anidados";
             btnAnidados.UseVisualStyleBackColor = false;
+            btnAnidados.Click += btnAnidados_Click;
             // 
             // btnDoWhile
             // 
@@ -616,7 +635,6 @@
             // button1
             // 
             button1.BackColor = Color.Transparent;
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
             button1.BackgroundImageLayout = ImageLayout.Stretch;
             button1.FlatStyle = FlatStyle.Popup;
             button1.ForeColor = SystemColors.ButtonFace;
@@ -642,6 +660,21 @@
             btnjuego.TabIndex = 7;
             btnjuego.Text = "🎮 Practicar lo aprendido";
             btnjuego.UseVisualStyleBackColor = false;
+            btnjuego.Click += btnjuego_Click_1;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.Transparent;
+            button3.FlatStyle = FlatStyle.Popup;
+            button3.ForeColor = SystemColors.ButtonFace;
+            button3.Image = (Image)resources.GetObject("button3.Image");
+            button3.Location = new Point(12, 377);
+            button3.Name = "button3";
+            button3.Size = new Size(218, 49);
+            button3.TabIndex = 7;
+            button3.Text = "Estructura If-else";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // MenuTemaCiclo
             // 
@@ -720,5 +753,7 @@
         private Label label19;
         private Label label18;
         private Panel panel3;
+        private Button button2;
+        private Button button3;
     }
 }

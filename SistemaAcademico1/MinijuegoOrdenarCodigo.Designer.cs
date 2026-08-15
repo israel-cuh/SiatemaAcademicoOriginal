@@ -254,6 +254,7 @@ namespace SistemaAcademico1
             btnRegresar.TabIndex = 5;
             btnRegresar.Text = "←  REGRESAR";
             btnRegresar.UseVisualStyleBackColor = false;
+            btnRegresar.Click += btnRegresar_Click;
             // 
             // btnSubir
             // 

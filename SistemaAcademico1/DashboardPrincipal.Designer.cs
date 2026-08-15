@@ -19,7 +19,6 @@ namespace SistemaAcademico1
         {
             panelHeader = new Panel();
             btnCerrarSesion = new Button();
-            btnEntrar = new Button();
             lblUsuario = new Label();
             lblSubtitulo = new Label();
             lblTitulo = new Label();
@@ -83,7 +82,6 @@ namespace SistemaAcademico1
             // 
             panelHeader.BackColor = Color.FromArgb(9, 25, 62);
             panelHeader.Controls.Add(btnCerrarSesion);
-            panelHeader.Controls.Add(btnEntrar);
             panelHeader.Controls.Add(lblUsuario);
             panelHeader.Controls.Add(lblSubtitulo);
             panelHeader.Controls.Add(lblTitulo);
@@ -98,27 +96,13 @@ namespace SistemaAcademico1
             btnCerrarSesion.FlatStyle = FlatStyle.Popup;
             btnCerrarSesion.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCerrarSesion.ForeColor = Color.White;
-            btnCerrarSesion.Location = new Point(1120, 53);
+            btnCerrarSesion.Location = new Point(1296, 52);
             btnCerrarSesion.Name = "btnCerrarSesion";
             btnCerrarSesion.Size = new Size(160, 50);
             btnCerrarSesion.TabIndex = 4;
-            btnCerrarSesion.Text = "Cerrar sesión";
+            btnCerrarSesion.Text = "Regresar";
             btnCerrarSesion.UseVisualStyleBackColor = false;
             btnCerrarSesion.Click += btnCerrarSesion_Click;
-            // 
-            // btnEntrar
-            // 
-            btnEntrar.BackColor = Color.FromArgb(132, 78, 255);
-            btnEntrar.FlatStyle = FlatStyle.Popup;
-            btnEntrar.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEntrar.ForeColor = Color.White;
-            btnEntrar.Location = new Point(1300, 53);
-            btnEntrar.Name = "btnEntrar";
-            btnEntrar.Size = new Size(155, 50);
-            btnEntrar.TabIndex = 3;
-            btnEntrar.Text = "Entrar";
-            btnEntrar.UseVisualStyleBackColor = false;
-            btnEntrar.Click += btnEntrar_Click;
             // 
             // lblUsuario
             // 
@@ -664,7 +648,6 @@ namespace SistemaAcademico1
         private Label lblTitulo;
         private Label lblSubtitulo;
         private Label lblUsuario;
-        private Button btnEntrar;
         private Button btnCerrarSesion;
         private Panel panelTarjetas;
         private Panel tarjetaEstudiantes;

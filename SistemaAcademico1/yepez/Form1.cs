@@ -97,8 +97,8 @@ namespace SistemaAcademico1
             }
             else if (usuario == "docente" && clave == "1234")
             {
-                DashboardPrincipal dashboard = new DashboardPrincipal("Docente");
-                dashboard.Show();
+                CodeNovaDashboard frm = new CodeNovaDashboard();
+                frm.Show();
                 Hide();
             }
             else

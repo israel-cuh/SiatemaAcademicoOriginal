@@ -33,7 +33,7 @@ namespace SistemaAcademico1
         {
             CodeMemo2 juego = new CodeMemo2();
             juego.Show();
-            
+
         }
 
         private void btnJuego3_Click(object sender, EventArgs e)
@@ -60,7 +60,14 @@ namespace SistemaAcademico1
 
         private void MostrarPendiente(string nombreJuego)
         {
-            
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MenuTutorialOrdenar menuTutorial = new MenuTutorialOrdenar();
+            menuTutorial.Show();
+            Hide();
         }
     }
 }

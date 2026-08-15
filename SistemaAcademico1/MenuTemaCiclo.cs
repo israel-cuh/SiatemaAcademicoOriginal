@@ -261,6 +261,8 @@ namespace SistemaAcademico1
                             txtSalida.AppendText($"i={i}, j={j}{Environment.NewLine}");
                     }
                     break;
+
+
             }
         }
 
@@ -305,6 +307,31 @@ namespace SistemaAcademico1
         private void btnDoWhile_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MenuTemaIF menuTemaIF = new MenuTemaIF();
+            menuTemaIF.Show();
+            Hide();
+        }
+
+        private void btnAnidados_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnjuego_Click_1(object sender, EventArgs e)
+        {
+            using MinijuegoOrdenarCodigo juego = new MinijuegoOrdenarCodigo();
+            juego.ShowDialog(this);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            menuTemaif_else menuTemaif_Else = new menuTemaif_else();
+            menuTemaif_Else.Show();
+            Hide();
         }
     }
 }
