@@ -41,19 +41,17 @@ namespace SistemaAcademico1
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(new MenuEstructura(), OpcionActiva == "Inicio");
+            AbrirFormulario(new MenuEstructura(), "Inicio");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmPrincipal pseus = new frmPrincipal();
-            pseus.Show();
-            Hide();
+            AbrirFormulario(new frmPrincipal(), "Algoritmo");
         }
 
         private void btnVariables_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(new Menuvariables(), OpcionActiva == "Variables");
+            AbrirFormulario(new Menuvariables(), "Variables");
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -63,12 +61,12 @@ namespace SistemaAcademico1
 
         private void btnCiclos_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(new MenuTemaCiclo(), OpcionActiva == "Ciclos");
+            AbrirFormulario(new MenuTemaCiclo(), "Ciclos");
         }
 
         private void btnJuego_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(new MenuJuegos(), OpcionActiva == "Juego");
+            AbrirFormulario(new MenuJuegos(), "Juego");
         }
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
@@ -96,17 +94,46 @@ namespace SistemaAcademico1
                 MessageBoxIcon.Information);
         }
 
-        private void AbrirFormulario(Form siguiente, bool yaEstoyAqui)
+        private void AbrirFormulario(Form siguiente, string opcionNombre)
         {
+            bool yaEstoyAqui = OpcionActiva == opcionNombre;
+
             if (yaEstoyAqui)
             {
                 siguiente.Dispose();
                 return;
             }
 
+            // Si ya hay una instancia abierta del mismo tipo, reutilizarla
+            Type tipo = siguiente.GetType();
+            foreach (Form abierto in Application.OpenForms)
+            {
+                if (abierto.GetType() == tipo)
+                {
+                    abierto.StartPosition = FormStartPosition.CenterScreen;
+                    abierto.Show();
+                    abierto.BringToFront();
+                    siguiente.Dispose();
+                    // Ocultar el formulario actual en lugar de cerrarlo para evitar que la aplicación termine
+                    (FormularioActual ?? FindForm())?.Hide();
+                    return;
+                }
+            }
+
+            // Asegurar que el formulario siguiente también tenga el menú lateral
+            try
+            {
+                MenuLateralHelper.AgregarMenu(siguiente, opcionNombre);
+            }
+            catch
+            {
+                // Si falla por cualquier motivo, continuar sin detener la navegación
+            }
+
             siguiente.StartPosition = FormStartPosition.CenterScreen;
             siguiente.Show();
-            (FormularioActual ?? FindForm())?.Close();
+            // Ocultar el formulario actual en lugar de cerrarlo para mantener la aplicación activa
+            (FormularioActual ?? FindForm())?.Hide();
         }
 
         private void MenuLateralControl_Load(object sender, EventArgs e)

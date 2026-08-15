@@ -16,7 +16,8 @@ namespace SistemaAcademico1
         {
             InitializeComponent();
             ControlesVentanaHelper.Agregar(this, cerrarAplicacion: true);
-            MenuLateralHelper.AgregarMenu(this, "Inicio");
+            // Este formulario corresponde a Pseudocódigo / Algoritmos, marcar la opción correcta
+            MenuLateralHelper.AgregarMenu(this, "Algoritmo");
         }
 
         private void label1_Click(object sender, EventArgs e)

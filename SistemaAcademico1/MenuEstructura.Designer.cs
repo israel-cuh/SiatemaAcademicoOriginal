@@ -166,10 +166,9 @@ namespace SistemaAcademico1
             panelSuperior.Controls.Add(lblMarca);
             panelSuperior.Controls.Add(btnMinimizar);
             panelSuperior.Controls.Add(btnCerrar);
-            panelSuperior.Dock = DockStyle.Top;
             panelSuperior.Location = new Point(0, 0);
             panelSuperior.Name = "panelSuperior";
-            panelSuperior.Size = new Size(1280, 48);
+            panelSuperior.Size = new Size(1293, 800);
             panelSuperior.TabIndex = 2;
             // 
             // lblMarca
@@ -188,7 +187,7 @@ namespace SistemaAcademico1
             btnMinimizar.FlatAppearance.BorderSize = 0;
             btnMinimizar.FlatStyle = FlatStyle.Flat;
             btnMinimizar.ForeColor = Color.White;
-            btnMinimizar.Location = new Point(1174, 4);
+            btnMinimizar.Location = new Point(1171, 8);
             btnMinimizar.Name = "btnMinimizar";
             btnMinimizar.Size = new Size(45, 38);
             btnMinimizar.TabIndex = 1;
@@ -223,9 +222,9 @@ namespace SistemaAcademico1
             panelLateral.Controls.Add(btnCerrarSesion);
             panelLateral.Controls.Add(tarjetaUsuario);
             panelLateral.Dock = DockStyle.Left;
-            panelLateral.Location = new Point(0, 48);
+            panelLateral.Location = new Point(0, 0);
             panelLateral.Name = "panelLateral";
-            panelLateral.Size = new Size(270, 752);
+            panelLateral.Size = new Size(270, 800);
             panelLateral.TabIndex = 1;
             // 
             // btnInicio
@@ -263,7 +262,7 @@ namespace SistemaAcademico1
             lblNombre.ForeColor = Color.White;
             lblNombre.Location = new Point(30, 98);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(215, 48);
+            lblNombre.Size = new Size(230, 48);
             lblNombre.TabIndex = 1;
             lblNombre.Text = "CodeNova";
             lblNombre.TextAlign = ContentAlignment.MiddleCenter;
@@ -374,6 +373,7 @@ namespace SistemaAcademico1
             panelContenido.BackColor = Color.FromArgb(5, 16, 43);
             panelContenido.BackgroundImage = (Image)resources.GetObject("panelContenido.BackgroundImage");
             panelContenido.BackgroundImageLayout = ImageLayout.Stretch;
+            panelContenido.Controls.Add(lblPie);
             panelContenido.Controls.Add(lblBienvenida);
             panelContenido.Controls.Add(lblSubtitulo);
             panelContenido.Controls.Add(tarjetaFecha);
@@ -381,11 +381,9 @@ namespace SistemaAcademico1
             panelContenido.Controls.Add(lblTituloTemas);
             panelContenido.Controls.Add(panelTemas);
             panelContenido.Controls.Add(panelAccesos);
-            panelContenido.Controls.Add(lblPie);
-            panelContenido.Dock = DockStyle.Fill;
             panelContenido.Location = new Point(270, 48);
             panelContenido.Name = "panelContenido";
-            panelContenido.Size = new Size(1010, 752);
+            panelContenido.Size = new Size(1023, 752);
             panelContenido.TabIndex = 0;
             // 
             // lblBienvenida
@@ -449,7 +447,7 @@ namespace SistemaAcademico1
             panelEstadisticas.Controls.Add(tarjetaCantidadTemas);
             panelEstadisticas.Location = new Point(35, 125);
             panelEstadisticas.Name = "panelEstadisticas";
-            panelEstadisticas.Size = new Size(990, 105);
+            panelEstadisticas.Size = new Size(986, 92);
             panelEstadisticas.TabIndex = 3;
             // 
             // tarjetaDocentes
@@ -847,8 +845,9 @@ namespace SistemaAcademico1
             panelAccesos.Controls.Add(btnAccesoCiclos);
             panelAccesos.Location = new Point(35, 615);
             panelAccesos.Name = "panelAccesos";
-            panelAccesos.Size = new Size(990, 105);
+            panelAccesos.Size = new Size(976, 105);
             panelAccesos.TabIndex = 6;
+            panelAccesos.Paint += panelAccesos_Paint;
             // 
             // lblAccesos
             // 
@@ -918,7 +917,7 @@ namespace SistemaAcademico1
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(5, 16, 43);
-            ClientSize = new Size(1280, 800);
+            ClientSize = new Size(1293, 800);
             Controls.Add(panelContenido);
             Controls.Add(panelLateral);
             Controls.Add(panelSuperior);
@@ -927,6 +926,7 @@ namespace SistemaAcademico1
             Name = "MenuEstructura";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CodeNova - Menú principal";
+            Load += MenuEstructura_Load;
             panelSuperior.ResumeLayout(false);
             panelLateral.ResumeLayout(false);
             tarjetaUsuario.ResumeLayout(false);
