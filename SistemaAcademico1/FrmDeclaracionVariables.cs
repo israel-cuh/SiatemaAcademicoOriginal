@@ -113,5 +113,10 @@ namespace SistemaAcademico1
             frm.Show();
             this.Hide();
         }
+
+        private void pnlRegresar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

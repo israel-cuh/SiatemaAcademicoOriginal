@@ -63,6 +63,36 @@ namespace SistemaAcademico1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Booleano {
+            get {
+                object obj = ResourceManager.GetObject("Booleano", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cadena {
+            get {
+                object obj = ResourceManager.GetObject("Cadena", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Entero {
+            get {
+                object obj = ResourceManager.GetObject("Entero", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap estudiante_ {
             get {
                 object obj = ResourceManager.GetObject("estudiante ", resourceCulture);
@@ -106,6 +136,26 @@ namespace SistemaAcademico1.Properties {
         internal static System.Drawing.Bitmap pseudocodigo {
             get {
                 object obj = ResourceManager.GetObject("pseudocodigo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Variable {
+            get {
+                object obj = ResourceManager.GetObject("Variable", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Volteada {
+            get {
+                object obj = ResourceManager.GetObject("Volteada", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

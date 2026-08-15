@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CodeMemo2));
             panel1 = new Panel();
             label2 = new Label();
@@ -45,21 +46,26 @@
             btnReiniciar = new Button();
             btnIniciarJuego = new Button();
             label6 = new Label();
-            label5 = new Label();
+            lblPregunta = new Label();
             label4 = new Label();
             label3 = new Label();
+            pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
-            pictureBox4 = new PictureBox();
+            timerJuego = new System.Windows.Forms.Timer(components);
+            timerMostrar = new System.Windows.Forms.Timer(components);
+            timerJuegoo = new System.Windows.Forms.Timer(components);
+            timer1 = new System.Windows.Forms.Timer(components);
+            timerJuego2 = new System.Windows.Forms.Timer(components);
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel4.SuspendLayout();
             panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -109,9 +115,9 @@
             lblTiempo.BorderStyle = BorderStyle.FixedSingle;
             lblTiempo.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTiempo.ForeColor = Color.FromArgb(128, 255, 128);
-            lblTiempo.Location = new Point(99, 42);
+            lblTiempo.Location = new Point(60, 32);
             lblTiempo.Name = "lblTiempo";
-            lblTiempo.Size = new Size(62, 25);
+            lblTiempo.Size = new Size(175, 55);
             lblTiempo.TabIndex = 1;
             lblTiempo.Text = ".";
             // 
@@ -194,17 +200,18 @@
             panel3.Controls.Add(btnReiniciar);
             panel3.Controls.Add(btnIniciarJuego);
             panel3.Controls.Add(label6);
-            panel3.Controls.Add(label5);
+            panel3.Controls.Add(lblPregunta);
             panel3.Controls.Add(label4);
             panel3.Controls.Add(label3);
+            panel3.Controls.Add(pictureBox4);
             panel3.Controls.Add(pictureBox3);
             panel3.Controls.Add(pictureBox2);
             panel3.Controls.Add(pictureBox1);
-            panel3.Controls.Add(pictureBox4);
             panel3.Location = new Point(16, 143);
             panel3.Name = "panel3";
             panel3.Size = new Size(923, 551);
             panel3.TabIndex = 8;
+            panel3.Paint += panel3_Paint;
             // 
             // btnReiniciar
             // 
@@ -214,6 +221,7 @@
             btnReiniciar.TabIndex = 13;
             btnReiniciar.Text = "Reiniciar";
             btnReiniciar.UseVisualStyleBackColor = true;
+            btnReiniciar.Click += btnReiniciar_Click;
             // 
             // btnIniciarJuego
             // 
@@ -223,6 +231,7 @@
             btnIniciarJuego.TabIndex = 12;
             btnIniciarJuego.Text = "Iniciar Juego";
             btnIniciarJuego.UseVisualStyleBackColor = true;
+            btnIniciarJuego.Click += btnIniciarJuego_Click;
             // 
             // label6
             // 
@@ -235,16 +244,16 @@
             label6.TabIndex = 11;
             label6.Text = "👁 Observa las cartas durante unos segundos y memorízalas.";
             // 
-            // label5
+            // lblPregunta
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = SystemColors.ButtonFace;
-            label5.Location = new Point(40, 79);
-            label5.Name = "label5";
-            label5.Size = new Size(854, 28);
-            label5.TabIndex = 10;
-            label5.Text = "¿Qué estructura se utiliza para almacenar un valor durante la ejecución de un programa?";
+            lblPregunta.AutoSize = true;
+            lblPregunta.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPregunta.ForeColor = SystemColors.ButtonFace;
+            lblPregunta.Location = new Point(40, 79);
+            lblPregunta.Name = "lblPregunta";
+            lblPregunta.Size = new Size(854, 28);
+            lblPregunta.TabIndex = 10;
+            lblPregunta.Text = "¿Qué estructura se utiliza para almacenar un valor durante la ejecución de un programa?";
             // 
             // label4
             // 
@@ -268,45 +277,53 @@
             label3.TabIndex = 8;
             label3.Text = "🎯 Nivel 1 - Básico";
             // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(692, 169);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(182, 259);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 7;
+            pictureBox4.TabStop = false;
+            // 
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(692, 169);
+            pictureBox3.Location = new Point(473, 166);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(182, 259);
+            pictureBox3.Size = new Size(182, 262);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 7;
+            pictureBox3.TabIndex = 6;
             pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(473, 166);
+            pictureBox2.Location = new Point(248, 166);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(182, 262);
+            pictureBox2.Size = new Size(183, 262);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 6;
+            pictureBox2.TabIndex = 5;
             pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(248, 166);
+            pictureBox1.Location = new Point(40, 166);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(183, 262);
+            pictureBox1.Size = new Size(177, 262);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 5;
+            pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
             // 
-            // pictureBox4
+            // timerJuego
             // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(40, 166);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(177, 262);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 4;
-            pictureBox4.TabStop = false;
+            timerJuego.Enabled = true;
+            // 
+            // timerJuego2
+            // 
+            timerJuego2.Interval = 1000;
             // 
             // CodeMemo2
             // 
@@ -318,7 +335,7 @@
             Controls.Add(panel4);
             Controls.Add(panel1);
             Name = "CodeMemo2";
-            Text = "CodeMemo2";
+            Text = "   ";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
@@ -327,10 +344,10 @@
             panel4.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
         }
 
@@ -352,12 +369,17 @@
         private Button btnReiniciar;
         private Button btnIniciarJuego;
         private Label label6;
-        private Label label5;
+        private Label lblPregunta;
         private Label label4;
         private Label label3;
+        private PictureBox pictureBox4;
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
-        private PictureBox pictureBox4;
+        private System.Windows.Forms.Timer timerJuego;
+        private System.Windows.Forms.Timer timerMostrar;
+        private System.Windows.Forms.Timer timerJuegoo;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timerJuego2;
     }
 }

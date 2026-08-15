@@ -104,6 +104,7 @@
             pnlRegresar.Size = new Size(164, 44);
             pnlRegresar.TabIndex = 1;
             pnlRegresar.Click += pnlRegresar_Click;
+            pnlRegresar.Paint += pnlRegresar_Paint;
             // 
             // lblRegresar
             // 
