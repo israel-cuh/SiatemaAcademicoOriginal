@@ -54,7 +54,7 @@ namespace SistemaAcademico1
         {
             MODULODEPROFESOR frm = new MODULODEPROFESOR();
             frm.Show();
-            Hide(); 
+            Hide();
         }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
@@ -84,6 +84,11 @@ namespace SistemaAcademico1
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
         {
 
         }
