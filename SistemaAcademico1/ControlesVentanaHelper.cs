@@ -14,6 +14,7 @@ namespace SistemaAcademico1
             if (formulario.Controls.Find("ventanaControlSistema", true).Any())
                 return;
 
+            formulario.FormBorderStyle = FormBorderStyle.None;
             OcultarBotonesViejos(formulario);
 
             VentanaControl controlVentana = new VentanaControl

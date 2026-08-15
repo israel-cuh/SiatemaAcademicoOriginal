@@ -13,6 +13,12 @@ namespace SistemaAcademico1
         public Juego()
         {
             InitializeComponent();
+
+            if (LicenseManager.UsageMode != LicenseUsageMode.Designtime)
+            {
+                MenuLateralHelper.AgregarMenu(this, "Juego");
+                ControlesVentanaHelper.Agregar(this, cerrarAplicacion: true);
+            }
         }
     }
 }

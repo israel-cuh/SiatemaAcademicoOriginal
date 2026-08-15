@@ -49,6 +49,114 @@
     <Compile Update="FrmDeclaracionVariables.Designer.cs">
       <DependentUpon>FrmDeclaracionVariables.cs</DependentUpon>
     </Compile>
+    <Compile Update="FrmAsignacionVariables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmAsignacionVariables.Designer.cs">
+      <DependentUpon>FrmAsignacionVariables.cs</DependentUpon>
+    </Compile>
+    <Compile Update="FrmCodiMemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmCodiMemo.Designer.cs">
+      <DependentUpon>FrmCodiMemo.cs</DependentUpon>
+    </Compile>
+    <Compile Update="CodeMemo2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CodeMemo2.Designer.cs">
+      <DependentUpon>CodeMemo2.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Juego.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Juego.Designer.cs">
+      <DependentUpon>Juego.cs</DependentUpon>
+    </Compile>
+    <Compile Update="estudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="estudiante.Designer.cs">
+      <DependentUpon>estudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Update="MenuEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MenuEstudiante.Designer.cs">
+      <DependentUpon>MenuEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Update="MenuSeudocodigo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MenuSeudocodigo.Designer.cs">
+      <DependentUpon>MenuSeudocodigo.cs</DependentUpon>
+    </Compile>
+    <Compile Update="MODULODEPROFESOR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MODULODEPROFESOR.Designer.cs">
+      <DependentUpon>MODULODEPROFESOR.cs</DependentUpon>
+    </Compile>
+    <Compile Update="ESTRUTURAS Y REGLAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ESTRUTURAS Y REGLAS.Designer.cs">
+      <DependentUpon>ESTRUTURAS Y REGLAS.cs</DependentUpon>
+    </Compile>
+    <Compile Update="profe3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="profe3.Designer.cs">
+      <DependentUpon>profe3.cs</DependentUpon>
+    </Compile>
+    <Compile Update="profe4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="profe4.Designer.cs">
+      <DependentUpon>profe4.cs</DependentUpon>
+    </Compile>
+    <Compile Update="EstudianteDiagramaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="EstudianteDiagramaForm.Designer.cs">
+      <DependentUpon>EstudianteDiagramaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Update="LogiFlowLvl1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LogiFlowLvl1.Designer.cs">
+      <DependentUpon>LogiFlowLvl1.cs</DependentUpon>
+    </Compile>
+    <Compile Update="LogiFlowLvl2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LogiFlowLvl2.Designer.cs">
+      <DependentUpon>LogiFlowLvl2.cs</DependentUpon>
+    </Compile>
+    <Compile Update="LogiFlowLvl3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LogiFlowLvl3.Designer.cs">
+      <DependentUpon>LogiFlowLvl3.cs</DependentUpon>
+    </Compile>
+    <Compile Update="MenuLevelFlujogramForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MenuLevelFlujogramForm.Designer.cs">
+      <DependentUpon>MenuLevelFlujogramForm.cs</DependentUpon>
+    </Compile>
+    <Compile Update="MenuPrinciDiagram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MenuPrinciDiagram.Designer.cs">
+      <DependentUpon>MenuPrinciDiagram.cs</DependentUpon>
+    </Compile>
+    <Compile Update="ProfesorDiagramFlujoForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ProfesorDiagramFlujoForm2.Designer.cs">
+      <DependentUpon>ProfesorDiagramFlujoForm2.cs</DependentUpon>
+    </Compile>
     <Compile Update="DashboardPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +200,60 @@
     </EmbeddedResource>
     <EmbeddedResource Update="FrmDeclaracionVariables.resx">
       <DependentUpon>FrmDeclaracionVariables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="FrmAsignacionVariables.resx">
+      <DependentUpon>FrmAsignacionVariables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="FrmCodiMemo.resx">
+      <DependentUpon>FrmCodiMemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="CodeMemo2.resx">
+      <DependentUpon>CodeMemo2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Juego.resx">
+      <DependentUpon>Juego.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="estudiante.resx">
+      <DependentUpon>estudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MenuEstudiante.resx">
+      <DependentUpon>MenuEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MenuSeudocodigo.resx">
+      <DependentUpon>MenuSeudocodigo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MODULODEPROFESOR.resx">
+      <DependentUpon>MODULODEPROFESOR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ESTRUTURAS Y REGLAS.resx">
+      <DependentUpon>ESTRUTURAS Y REGLAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="profe3.resx">
+      <DependentUpon>profe3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="profe4.resx">
+      <DependentUpon>profe4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="EstudianteDiagramaForm.resx">
+      <DependentUpon>EstudianteDiagramaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="LogiFlowLvl1.resx">
+      <DependentUpon>LogiFlowLvl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="LogiFlowLvl2.resx">
+      <DependentUpon>LogiFlowLvl2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="LogiFlowLvl3.resx">
+      <DependentUpon>LogiFlowLvl3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MenuLevelFlujogramForm.resx">
+      <DependentUpon>MenuLevelFlujogramForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MenuPrinciDiagram.resx">
+      <DependentUpon>MenuPrinciDiagram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ProfesorDiagramFlujoForm2.resx">
+      <DependentUpon>ProfesorDiagramFlujoForm2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Update="DashboardPrincipal.resx">
       <DependentUpon>DashboardPrincipal.cs</DependentUpon>

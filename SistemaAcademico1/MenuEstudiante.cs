@@ -13,7 +13,12 @@ namespace SistemaAcademico1
         public MenuEstudiante()
         {
             InitializeComponent();
-            ControlesVentanaHelper.Agregar(this, cerrarAplicacion: true);
+
+            if (LicenseManager.UsageMode != LicenseUsageMode.Designtime)
+            {
+                MenuLateralHelper.AgregarMenu(this, "Inicio");
+                ControlesVentanaHelper.Agregar(this, cerrarAplicacion: true);
+            }
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

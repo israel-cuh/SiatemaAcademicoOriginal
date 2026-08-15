@@ -148,4 +148,151 @@
   <data name="Volteada" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Volteada.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="img_concepto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_concepto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img_conector_circulo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_conector_circulo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img_conector_pagina" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_conector_pagina.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img_decision" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_decision.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img_entrada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_entrada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img_entrada_salida" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_entrada_salida.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img_impresora" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_impresora.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img_inicio_fin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_inicio_fin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img_linea_flujo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_linea_flujo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img_pantalla" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_pantalla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img_proceso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_proceso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img_teclado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_teclado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza1_00" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza1_00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza1_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza1_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza1_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza1_02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza1_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza1_10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza1_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza1_11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza1_12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza1_12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza1_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza1_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza1_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza1_21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza1_22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza1_22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza2_00" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza2_00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza2_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza2_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza2_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza2_02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza2_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza2_10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza2_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza2_11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza2_12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza2_12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza2_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza2_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza2_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza2_21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza2_22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza2_22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza2_30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza2_30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza2_31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza2_31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza2_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza2_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza3_00" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza3_00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza3_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza3_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza3_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza3_02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza3_03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza3_03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza3_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza3_10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza3_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza3_11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza3_12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza3_12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza3_13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza3_13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza3_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza3_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza3_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza3_21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza3_22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza3_22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza3_23" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza3_23.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza3_30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza3_30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza3_31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza3_31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza3_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza3_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieza3_33" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pieza3_33.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

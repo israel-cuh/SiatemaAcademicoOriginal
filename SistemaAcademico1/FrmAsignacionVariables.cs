@@ -13,6 +13,12 @@ namespace SistemaAcademico1
         public FrmAsignacionVariables()
         {
             InitializeComponent();
+
+            if (LicenseManager.UsageMode != LicenseUsageMode.Designtime)
+            {
+                MenuLateralHelper.AgregarMenu(this, "Variables");
+                ControlesVentanaHelper.Agregar(this, cerrarAplicacion: true);
+            }
         }
 
         private void lblRegresar_Click(object sender, EventArgs e)
