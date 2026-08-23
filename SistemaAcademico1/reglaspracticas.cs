@@ -13,6 +13,8 @@ namespace SistemaAcademico1
         public reglaspracticas()
         {
             InitializeComponent();
+            ControlesVentanaHelper.Agregar(this, cerrarAplicacion: false);
+            MenuLateralHelper.AgregarMenu(this, "Inicio");
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -93,7 +95,7 @@ namespace SistemaAcademico1
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
 
-                button4.Enabled = false;
+                //button4.Enabled = false;
             }
         }
 
@@ -104,8 +106,10 @@ namespace SistemaAcademico1
 
                 textBox5.BackColor = Color.White;
 
-                button4.Enabled = false;
+                // button4.Enabled = false;
             }
         }
+
+        
     }
 }

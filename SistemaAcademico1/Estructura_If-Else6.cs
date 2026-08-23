@@ -32,9 +32,9 @@ namespace SistemaAcademico1
             lblVariable.Text = $"int edad = {edadActual};";
             lblValorEdad.Text = $"Valor Actual: {edadActual}";
 
-            // Restablecer el color oscuro de ambos paneles mientras el usuario mueve la barra
-            pnlIf.BackColor = Color.FromArgb(30, 30, 45);
-            pnlElse.BackColor = Color.FromArgb(30, 30, 45);
+            // Restablecer el color  de ambos paneles mientras el usuario mueve la barra
+            pnlIf.BackColor = Color.FromArgb(255, 224, 192);
+            pnlElse.BackColor = Color.FromArgb(255, 224, 192);
         }
 
         private void btnEjecutar_Click(object sender, EventArgs e)
@@ -118,6 +118,13 @@ namespace SistemaAcademico1
         {
             using MinijuegoOrdenarCodigo juego = new MinijuegoOrdenarCodigo();
             juego.ShowDialog(this);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Esructura_Swich7 esructura_Swich7 = new Esructura_Swich7();
+            esructura_Swich7.Show();
+            Hide();
         }
     }
 }

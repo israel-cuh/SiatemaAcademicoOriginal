@@ -21,5 +21,24 @@ namespace SistemaAcademico1
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MenuEstudiante menuEstudiante = new MenuEstudiante();
+            menuEstudiante.Show();
+            Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            reglaspracticas reglaspracticas = new reglaspracticas();
+            reglaspracticas.Show();
+            Hide();
+        }
+
+        private void profe4_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

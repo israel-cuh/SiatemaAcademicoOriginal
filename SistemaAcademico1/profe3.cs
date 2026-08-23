@@ -29,15 +29,15 @@ namespace SistemaAcademico1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            profe4 frm = new profe4();
-            frm.Show();
+            estudiante estudiante = new estudiante();
+            estudiante.Show();
             Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ESTRUTURAS_Y_REGLAS frm = new ESTRUTURAS_Y_REGLAS();
-            frm.Show();
+            MODULODEPROFESOR mODULODEPROFESOR = new MODULODEPROFESOR();
+            mODULODEPROFESOR.Show();
             Hide();
         }
     }

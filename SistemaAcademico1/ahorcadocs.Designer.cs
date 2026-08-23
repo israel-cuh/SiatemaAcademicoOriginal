@@ -159,9 +159,9 @@
             lblPista.BackColor = Color.Transparent;
             lblPista.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblPista.ForeColor = Color.FromArgb(128, 255, 255);
-            lblPista.Location = new Point(26, 84);
+            lblPista.Location = new Point(12, 84);
             lblPista.Name = "lblPista";
-            lblPista.Size = new Size(198, 76);
+            lblPista.Size = new Size(212, 108);
             lblPista.TabIndex = 1;
             lblPista.Text = "Es un lenguaje de programacion muy usado en aplicacion web.";
             // 
@@ -195,9 +195,9 @@
             label2.ForeColor = Color.FromArgb(128, 255, 128);
             label2.Location = new Point(26, 59);
             label2.Name = "label2";
-            label2.Size = new Size(198, 79);
+            label2.Size = new Size(208, 137);
             label2.TabIndex = 1;
-            label2.Text = "Adivina la palabra oculta letra por letra antes de que se complete el ahorcado.";
+            label2.Text = "Adivina la palabra oculta letra por letra antes de que se complete \r\nel ahorcado.";
             // 
             // label1
             // 
@@ -298,10 +298,10 @@
             panel8.BackgroundImage = (Image)resources.GetObject("panel8.BackgroundImage");
             panel8.Controls.Add(lblEstrella);
             panel8.Controls.Add(lblPuntos);
-            panel8.Location = new Point(1133, 48);
+            panel8.Location = new Point(1099, 43);
             panel8.Margin = new Padding(3, 4, 3, 4);
             panel8.Name = "panel8";
-            panel8.Size = new Size(144, 92);
+            panel8.Size = new Size(231, 92);
             panel8.TabIndex = 5;
             // 
             // lblEstrella
@@ -311,7 +311,7 @@
             lblEstrella.FlatStyle = FlatStyle.Flat;
             lblEstrella.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblEstrella.ForeColor = Color.Yellow;
-            lblEstrella.Location = new Point(3, 5);
+            lblEstrella.Location = new Point(0, 5);
             lblEstrella.Name = "lblEstrella";
             lblEstrella.Size = new Size(88, 81);
             lblEstrella.TabIndex = 1;
@@ -322,7 +322,7 @@
             lblPuntos.AutoSize = true;
             lblPuntos.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblPuntos.ForeColor = SystemColors.ButtonFace;
-            lblPuntos.Location = new Point(77, 16);
+            lblPuntos.Location = new Point(117, 21);
             lblPuntos.Name = "lblPuntos";
             lblPuntos.Size = new Size(69, 54);
             lblPuntos.TabIndex = 0;
@@ -425,7 +425,7 @@
             panel7.Location = new Point(320, 657);
             panel7.Margin = new Padding(3, 4, 3, 4);
             panel7.Name = "panel7";
-            panel7.Size = new Size(558, 88);
+            panel7.Size = new Size(617, 88);
             panel7.TabIndex = 10;
             // 
             // pictureBox2
@@ -455,6 +455,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 224, 192);
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1330, 856);
             Controls.Add(panel7);
             Controls.Add(pictureBox1);

@@ -67,6 +67,7 @@
             lblResultado = new Label();
             btnjuego = new Button();
             button2 = new Button();
+            button4 = new Button();
             panelSubMenu.SuspendLayout();
             panelTitulo.SuspendLayout();
             panel1.SuspendLayout();
@@ -76,6 +77,7 @@
             // 
             panelSubMenu.BackColor = Color.FromArgb(8, 22, 56);
             panelSubMenu.BackgroundImage = (Image)resources.GetObject("panelSubMenu.BackgroundImage");
+            panelSubMenu.Controls.Add(button4);
             panelSubMenu.Controls.Add(button3);
             panelSubMenu.Controls.Add(button1);
             panelSubMenu.Controls.Add(btnSubAnidados);
@@ -84,7 +86,7 @@
             panelSubMenu.Controls.Add(btnSubWhile);
             panelSubMenu.Location = new Point(0, 4);
             panelSubMenu.Name = "panelSubMenu";
-            panelSubMenu.Size = new Size(250, 459);
+            panelSubMenu.Size = new Size(250, 490);
             panelSubMenu.TabIndex = 2;
             // 
             // button3
@@ -544,6 +546,20 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
+            // button4
+            // 
+            button4.BackColor = Color.Transparent;
+            button4.FlatStyle = FlatStyle.Popup;
+            button4.ForeColor = SystemColors.ButtonFace;
+            button4.Image = (Image)resources.GetObject("button4.Image");
+            button4.Location = new Point(20, 425);
+            button4.Name = "button4";
+            button4.Size = new Size(210, 49);
+            button4.TabIndex = 9;
+            button4.Text = "Estructura Swich";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
+            // 
             // CicloAnidados4
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -628,5 +644,6 @@
         private Label lblResultado;
         private Button btnjuego;
         private Button button2;
+        private Button button4;
     }
 }

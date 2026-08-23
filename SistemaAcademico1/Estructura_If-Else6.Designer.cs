@@ -83,6 +83,7 @@
             pictureBox5 = new PictureBox();
             btnPracticar = new Button();
             button1 = new Button();
+            button4 = new Button();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
@@ -100,6 +101,7 @@
             // 
             panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
             panel2.BackgroundImageLayout = ImageLayout.Stretch;
+            panel2.Controls.Add(button4);
             panel2.Controls.Add(button3);
             panel2.Controls.Add(button2);
             panel2.Controls.Add(btnAnidados);
@@ -108,7 +110,7 @@
             panel2.Controls.Add(btnWhile);
             panel2.Location = new Point(2, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(250, 467);
+            panel2.Size = new Size(250, 515);
             panel2.TabIndex = 4;
             // 
             // button3
@@ -749,6 +751,20 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
+            // button4
+            // 
+            button4.BackColor = Color.Transparent;
+            button4.FlatStyle = FlatStyle.Popup;
+            button4.ForeColor = SystemColors.ButtonFace;
+            button4.Image = (Image)resources.GetObject("button4.Image");
+            button4.Location = new Point(12, 455);
+            button4.Name = "button4";
+            button4.Size = new Size(218, 49);
+            button4.TabIndex = 15;
+            button4.Text = "Estructura Swich";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
+            // 
             // Estructura_If_Else6
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -857,5 +873,6 @@
         private PictureBox pictureBox5;
         private Button btnPracticar;
         private Button button1;
+        private Button button4;
     }
 }

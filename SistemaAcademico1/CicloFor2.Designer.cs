@@ -86,6 +86,7 @@
             txtCodigo = new RichTextBox();
             btnjuego = new Button();
             button1 = new Button();
+            button4 = new Button();
             panel2.SuspendLayout();
             panelTitulo.SuspendLayout();
             panelDerecho.SuspendLayout();
@@ -97,6 +98,7 @@
             // 
             panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
             panel2.BackgroundImageLayout = ImageLayout.Stretch;
+            panel2.Controls.Add(button4);
             panel2.Controls.Add(button3);
             panel2.Controls.Add(button2);
             panel2.Controls.Add(btnAnidados);
@@ -105,7 +107,7 @@
             panel2.Controls.Add(btnWhile);
             panel2.Location = new Point(3, 12);
             panel2.Name = "panel2";
-            panel2.Size = new Size(250, 476);
+            panel2.Size = new Size(250, 496);
             panel2.TabIndex = 3;
             // 
             // button3
@@ -822,6 +824,20 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
+            // button4
+            // 
+            button4.BackColor = Color.Transparent;
+            button4.FlatStyle = FlatStyle.Popup;
+            button4.ForeColor = SystemColors.ButtonFace;
+            button4.Image = (Image)resources.GetObject("button4.Image");
+            button4.Location = new Point(12, 437);
+            button4.Name = "button4";
+            button4.Size = new Size(218, 49);
+            button4.TabIndex = 9;
+            button4.Text = "Estructura Swich";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
+            // 
             // CicloFor2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -926,5 +942,6 @@
         private Label lblResultado;
         private Panel panel4;
         private Panel panel5;
+        private Button button4;
     }
 }

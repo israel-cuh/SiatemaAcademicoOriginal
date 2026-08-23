@@ -77,7 +77,7 @@
             // 
             panelcontenido.BackColor = Color.White;
             panelcontenido.BackgroundImage = (Image)resources.GetObject("panelcontenido.BackgroundImage");
-            panelcontenido.Controls.Add(label19);
+            panelcontenido.BackgroundImageLayout = ImageLayout.Stretch;
             panelcontenido.Controls.Add(pictureBox1);
             panelcontenido.Controls.Add(label18);
             panelcontenido.Controls.Add(pictureBox6);
@@ -87,6 +87,7 @@
             panelcontenido.Controls.Add(panel2);
             panelcontenido.Controls.Add(panel1);
             panelcontenido.Controls.Add(panelprofesor);
+            panelcontenido.Controls.Add(label19);
             panelcontenido.ForeColor = SystemColors.ControlText;
             panelcontenido.Location = new Point(43, 16);
             panelcontenido.Margin = new Padding(3, 4, 3, 4);
@@ -274,6 +275,7 @@
             buttonMODULODEESTUDIANTE.TabIndex = 11;
             buttonMODULODEESTUDIANTE.Text = "VER";
             buttonMODULODEESTUDIANTE.UseVisualStyleBackColor = true;
+            buttonMODULODEESTUDIANTE.Click += buttonMODULODEESTUDIANTE_Click;
             // 
             // panel3
             // 
@@ -392,6 +394,7 @@
             // panel5
             // 
             panel5.BackgroundImage = (Image)resources.GetObject("panel5.BackgroundImage");
+            panel5.BackgroundImageLayout = ImageLayout.Stretch;
             panel5.Controls.Add(label3);
             panel5.Controls.Add(label2);
             panel5.Controls.Add(pictureBox5);
@@ -441,6 +444,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1330, 856);
             Controls.Add(panel5);
             Controls.Add(panelcontenido);

@@ -110,5 +110,17 @@ namespace SistemaAcademico1
             estructura_If_Else6.Show();
             Hide();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Esructura_Swich7 esructura_Swich7 = new Esructura_Swich7();
+            esructura_Swich7.Show();
+            Hide();
+        }
+
+        private void CicloDoWhile3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

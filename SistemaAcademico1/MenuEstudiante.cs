@@ -47,5 +47,19 @@ namespace SistemaAcademico1
             MenuTemaCiclo menuTema = new MenuTemaCiclo();
             menuTema.Show();
         }
+
+        private void btnanterior_Click(object sender, EventArgs e)
+        {
+            frmPrincipal frmPrincipal = new frmPrincipal();
+            frmPrincipal.Show();
+            Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            profe4 profe4 = new profe4();
+            profe4.Show();
+            Hide();
+        }
     }
 }

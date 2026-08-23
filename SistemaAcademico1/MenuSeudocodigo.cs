@@ -99,5 +99,12 @@ namespace SistemaAcademico1
             ahorcadocs.Show();
             Hide();
         }
+
+        private void buttonMODULODEESTUDIANTE_Click(object sender, EventArgs e)
+        {
+            MenuEstudiante estudiante = new MenuEstudiante();
+            estudiante.Show();
+            Hide() ;
+        }
     }
 }

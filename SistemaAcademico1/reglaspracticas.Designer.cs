@@ -54,7 +54,6 @@
             label4 = new Label();
             label3 = new Label();
             panel5 = new Panel();
-            button4 = new Button();
             button3 = new Button();
             button2 = new Button();
             textBox5 = new TextBox();
@@ -76,9 +75,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 12);
+            pictureBox1.Location = new Point(14, 16);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 79);
+            pictureBox1.Size = new Size(114, 105);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -91,17 +91,19 @@
             panel1.Controls.Add(label7);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(label5);
-            panel1.Location = new Point(12, 97);
+            panel1.Location = new Point(14, 129);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(461, 242);
+            panel1.Size = new Size(527, 323);
             panel1.TabIndex = 1;
             // 
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(282, 89);
+            pictureBox3.Location = new Point(322, 119);
+            pictureBox3.Margin = new Padding(3, 4, 3, 4);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(129, 129);
+            pictureBox3.Size = new Size(147, 172);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 4;
             pictureBox3.TabStop = false;
@@ -112,9 +114,9 @@
             label8.BackColor = Color.Transparent;
             label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.FromArgb(255, 255, 128);
-            label8.Location = new Point(18, 124);
+            label8.Location = new Point(21, 165);
             label8.Name = "label8";
-            label8.Size = new Size(115, 75);
+            label8.Size = new Size(147, 100);
             label8.TabIndex = 3;
             label8.Text = "* Leer nota 1\n* Leer nota 2\n* Leer nota 3\n* Calcular promedio\n* Mostrar resultado";
             // 
@@ -124,9 +126,9 @@
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = SystemColors.ButtonFace;
-            label7.Location = new Point(3, 82);
+            label7.Location = new Point(3, 109);
             label7.Name = "label7";
-            label7.Size = new Size(111, 20);
+            label7.Size = new Size(140, 25);
             label7.TabIndex = 2;
             label7.Text = "Pasos a seguir.";
             // 
@@ -135,9 +137,9 @@
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = SystemColors.ButtonFace;
-            label6.Location = new Point(12, 49);
+            label6.Location = new Point(14, 65);
             label6.Name = "label6";
-            label6.Size = new Size(446, 33);
+            label6.Size = new Size(510, 44);
             label6.TabIndex = 1;
             label6.Text = "Se quiere leer tres notas de un estudiante, calcular su promedio arimetico y mostrar el resultado.";
             // 
@@ -147,9 +149,9 @@
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = SystemColors.ButtonFace;
-            label5.Location = new Point(12, 18);
+            label5.Location = new Point(14, 24);
             label5.Name = "label5";
-            label5.Size = new Size(182, 17);
+            label5.Size = new Size(238, 23);
             label5.TabIndex = 0;
             label5.Text = "PROMEDIO DE TRES NOTAS.";
             // 
@@ -164,32 +166,36 @@
             panel2.Controls.Add(label10);
             panel2.Controls.Add(label11);
             panel2.Controls.Add(label9);
-            panel2.Location = new Point(12, 372);
+            panel2.Location = new Point(14, 496);
+            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(200, 166);
+            panel2.Size = new Size(229, 221);
             panel2.TabIndex = 2;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(54, 120);
+            textBox3.Location = new Point(62, 160);
+            textBox3.Margin = new Padding(3, 4, 3, 4);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(60, 23);
+            textBox3.Size = new Size(68, 27);
             textBox3.TabIndex = 8;
             textBox3.Text = "7,5";
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(54, 88);
+            textBox2.Location = new Point(62, 117);
+            textBox2.Margin = new Padding(3, 4, 3, 4);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(60, 23);
+            textBox2.Size = new Size(68, 27);
             textBox2.TabIndex = 11;
             textBox2.Text = "9,0";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(54, 60);
+            textBox1.Location = new Point(62, 80);
+            textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(60, 23);
+            textBox1.Size = new Size(68, 27);
             textBox1.TabIndex = 10;
             textBox1.Text = "8,5";
             // 
@@ -199,9 +205,9 @@
             label13.BackColor = Color.Transparent;
             label13.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label13.ForeColor = SystemColors.ButtonFace;
-            label13.Location = new Point(3, 126);
+            label13.Location = new Point(3, 168);
             label13.Name = "label13";
-            label13.Size = new Size(45, 17);
+            label13.Size = new Size(59, 23);
             label13.TabIndex = 0;
             label13.Text = "Nota3";
             // 
@@ -211,9 +217,9 @@
             label12.BackColor = Color.Transparent;
             label12.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label12.ForeColor = SystemColors.ButtonFace;
-            label12.Location = new Point(3, 94);
+            label12.Location = new Point(3, 125);
             label12.Name = "label12";
-            label12.Size = new Size(45, 17);
+            label12.Size = new Size(59, 23);
             label12.TabIndex = 9;
             label12.Text = "Nota2";
             label12.Click += label12_Click;
@@ -222,9 +228,9 @@
             // 
             label10.BackColor = Color.Transparent;
             label10.ForeColor = Color.Transparent;
-            label10.Location = new Point(3, 26);
+            label10.Location = new Point(3, 35);
             label10.Name = "label10";
-            label10.Size = new Size(191, 36);
+            label10.Size = new Size(218, 48);
             label10.TabIndex = 1;
             label10.Text = "Volores de ejemplo para probar tu pseudocodigo.";
             // 
@@ -234,9 +240,9 @@
             label11.BackColor = Color.Transparent;
             label11.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label11.ForeColor = SystemColors.ButtonFace;
-            label11.Location = new Point(3, 66);
+            label11.Location = new Point(3, 88);
             label11.Name = "label11";
-            label11.Size = new Size(45, 17);
+            label11.Size = new Size(59, 23);
             label11.TabIndex = 8;
             label11.Text = "Nota1";
             // 
@@ -246,9 +252,9 @@
             label9.BackColor = Color.Transparent;
             label9.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label9.ForeColor = SystemColors.ButtonFace;
-            label9.Location = new Point(3, 9);
+            label9.Location = new Point(3, 12);
             label9.Name = "label9";
-            label9.Size = new Size(143, 17);
+            label9.Size = new Size(187, 23);
             label9.TabIndex = 0;
             label9.Text = "ENTRADA DE PRUEBA";
             // 
@@ -258,16 +264,18 @@
             panel3.Controls.Add(textBox4);
             panel3.Controls.Add(label15);
             panel3.Controls.Add(label14);
-            panel3.Location = new Point(244, 372);
+            panel3.Location = new Point(279, 496);
+            panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(157, 166);
+            panel3.Size = new Size(179, 221);
             panel3.TabIndex = 3;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(20, 88);
+            textBox4.Location = new Point(23, 117);
+            textBox4.Margin = new Padding(3, 4, 3, 4);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(110, 23);
+            textBox4.Size = new Size(125, 27);
             textBox4.TabIndex = 2;
             textBox4.Text = "Promedio: 8,33";
             // 
@@ -275,9 +283,9 @@
             // 
             label15.BackColor = Color.Transparent;
             label15.ForeColor = SystemColors.ButtonFace;
-            label15.Location = new Point(3, 26);
+            label15.Location = new Point(3, 35);
             label15.Name = "label15";
-            label15.Size = new Size(151, 36);
+            label15.Size = new Size(173, 48);
             label15.TabIndex = 1;
             label15.Text = "El pseudocodigo debe mostar:";
             // 
@@ -287,9 +295,9 @@
             label14.BackColor = Color.Transparent;
             label14.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label14.ForeColor = SystemColors.ButtonFace;
-            label14.Location = new Point(3, 9);
+            label14.Location = new Point(3, 12);
             label14.Name = "label14";
-            label14.Size = new Size(127, 17);
+            label14.Size = new Size(167, 23);
             label14.TabIndex = 0;
             label14.Text = "SALIDA ESPERADA.";
             // 
@@ -299,17 +307,19 @@
             panel4.Controls.Add(pictureBox2);
             panel4.Controls.Add(label4);
             panel4.Controls.Add(label3);
-            panel4.Location = new Point(749, 3);
+            panel4.Location = new Point(856, 4);
+            panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(302, 88);
+            panel4.Size = new Size(345, 117);
             panel4.TabIndex = 4;
             // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.Location = new Point(0, 0);
+            pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(100, 88);
+            pictureBox2.Size = new Size(114, 117);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 2;
             pictureBox2.TabStop = false;
@@ -318,9 +328,9 @@
             // 
             label4.BackColor = Color.Transparent;
             label4.ForeColor = SystemColors.ButtonHighlight;
-            label4.Location = new Point(106, 29);
+            label4.Location = new Point(121, 39);
             label4.Name = "label4";
-            label4.Size = new Size(188, 51);
+            label4.Size = new Size(215, 68);
             label4.TabIndex = 1;
             label4.Text = "*Escribe el pseudocodigo que permita calcular el promedio de notas.";
             label4.Click += label4_Click;
@@ -331,9 +341,9 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Yellow;
-            label3.Location = new Point(106, 9);
+            label3.Location = new Point(121, 12);
             label3.Name = "label3";
-            label3.Size = new Size(73, 17);
+            label3.Size = new Size(94, 23);
             label3.TabIndex = 0;
             label3.Text = "OBJETIVO.";
             label3.Click += label3_Click;
@@ -341,39 +351,27 @@
             // panel5
             // 
             panel5.BackgroundImage = (Image)resources.GetObject("panel5.BackgroundImage");
-            panel5.Controls.Add(button4);
             panel5.Controls.Add(button3);
             panel5.Controls.Add(button2);
             panel5.Controls.Add(textBox5);
             panel5.Controls.Add(button1);
             panel5.Controls.Add(label17);
             panel5.Controls.Add(label16);
-            panel5.Location = new Point(548, 97);
+            panel5.Location = new Point(626, 129);
+            panel5.Margin = new Padding(3, 4, 3, 4);
             panel5.Name = "panel5";
-            panel5.Size = new Size(515, 507);
+            panel5.Size = new Size(589, 676);
             panel5.TabIndex = 5;
-            // 
-            // button4
-            // 
-            button4.BackgroundImage = (Image)resources.GetObject("button4.BackgroundImage");
-            button4.Enabled = false;
-            button4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.ForeColor = Color.Cyan;
-            button4.Location = new Point(424, 473);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 31);
-            button4.TabIndex = 6;
-            button4.Text = "Siguiente";
-            button4.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
             button3.BackgroundImage = (Image)resources.GetObject("button3.BackgroundImage");
             button3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button3.ForeColor = Color.Cyan;
-            button3.Location = new Point(52, 473);
+            button3.Location = new Point(59, 631);
+            button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
-            button3.Size = new Size(75, 31);
+            button3.Size = new Size(86, 41);
             button3.TabIndex = 5;
             button3.Text = "Atras";
             button3.UseVisualStyleBackColor = true;
@@ -384,9 +382,10 @@
             button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
             button2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.Fuchsia;
-            button2.Location = new Point(231, 418);
+            button2.Location = new Point(76, 557);
+            button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
-            button2.Size = new Size(88, 23);
+            button2.Size = new Size(129, 31);
             button2.TabIndex = 4;
             button2.Text = "Comprobar";
             button2.UseVisualStyleBackColor = true;
@@ -395,11 +394,12 @@
             // textBox5
             // 
             textBox5.AcceptsReturn = true;
-            textBox5.Location = new Point(27, 89);
+            textBox5.Location = new Point(31, 119);
+            textBox5.Margin = new Padding(3, 4, 3, 4);
             textBox5.Multiline = true;
             textBox5.Name = "textBox5";
             textBox5.ScrollBars = ScrollBars.Vertical;
-            textBox5.Size = new Size(468, 297);
+            textBox5.Size = new Size(534, 395);
             textBox5.TabIndex = 3;
             // 
             // button1
@@ -408,9 +408,10 @@
             button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
             button1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.Fuchsia;
-            button1.Location = new Point(420, 60);
+            button1.Location = new Point(412, 557);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(86, 31);
             button1.TabIndex = 2;
             button1.Text = "Limpiar";
             button1.UseVisualStyleBackColor = false;
@@ -422,9 +423,9 @@
             label17.BackColor = Color.Transparent;
             label17.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label17.ForeColor = SystemColors.ButtonFace;
-            label17.Location = new Point(13, 49);
+            label17.Location = new Point(15, 65);
             label17.Name = "label17";
-            label17.Size = new Size(387, 17);
+            label17.Size = new Size(501, 23);
             label17.TabIndex = 1;
             label17.Text = "Escriba el pseudocodigo que resuelva el problema planteado.";
             // 
@@ -434,9 +435,9 @@
             label16.BackColor = Color.Transparent;
             label16.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label16.ForeColor = SystemColors.ButtonFace;
-            label16.Location = new Point(13, 18);
+            label16.Location = new Point(15, 24);
             label16.Name = "label16";
-            label16.Size = new Size(87, 21);
+            label16.Size = new Size(107, 28);
             label16.TabIndex = 0;
             label16.Text = "EJERCICIO";
             // 
@@ -446,9 +447,9 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI Black", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(118, 12);
+            label1.Location = new Point(135, 16);
             label1.Name = "label1";
-            label1.Size = new Size(416, 50);
+            label1.Size = new Size(531, 62);
             label1.TabIndex = 6;
             label1.Text = "EJERCICIO PRACTICO.";
             // 
@@ -458,18 +459,18 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.ButtonFace;
-            label2.Location = new Point(118, 62);
+            label2.Location = new Point(135, 83);
             label2.Name = "label2";
-            label2.Size = new Size(231, 21);
+            label2.Size = new Size(289, 28);
             label2.TabIndex = 7;
             label2.Text = "APLICA LO QUE APRENDISTE.";
             // 
             // reglaspracticas
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(1164, 642);
+            ClientSize = new Size(1330, 856);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(panel5);
@@ -478,9 +479,9 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(pictureBox1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "reglaspracticas";
             Text = "reglaspracticas";
-            WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -531,7 +532,6 @@
         private Button button1;
         private Label label17;
         private Label label16;
-        private Button button4;
         private Button button3;
         private Button button2;
     }

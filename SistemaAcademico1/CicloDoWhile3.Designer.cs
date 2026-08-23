@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CicloDoWhile3));
             panelSubMenu = new Panel();
+            button4 = new Button();
             button3 = new Button();
             button1 = new Button();
             btnSubAnidados = new Button();
@@ -81,6 +82,7 @@
             // 
             panelSubMenu.BackColor = Color.FromArgb(8, 22, 56);
             panelSubMenu.BackgroundImage = (Image)resources.GetObject("panelSubMenu.BackgroundImage");
+            panelSubMenu.Controls.Add(button4);
             panelSubMenu.Controls.Add(button3);
             panelSubMenu.Controls.Add(button1);
             panelSubMenu.Controls.Add(btnSubAnidados);
@@ -89,8 +91,22 @@
             panelSubMenu.Controls.Add(btnSubWhile);
             panelSubMenu.Location = new Point(2, 2);
             panelSubMenu.Name = "panelSubMenu";
-            panelSubMenu.Size = new Size(250, 459);
+            panelSubMenu.Size = new Size(250, 495);
             panelSubMenu.TabIndex = 1;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.Transparent;
+            button4.FlatStyle = FlatStyle.Popup;
+            button4.ForeColor = SystemColors.ButtonFace;
+            button4.Image = (Image)resources.GetObject("button4.Image");
+            button4.Location = new Point(20, 426);
+            button4.Name = "button4";
+            button4.Size = new Size(210, 49);
+            button4.TabIndex = 9;
+            button4.Text = "Estructura Swich";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -663,6 +679,7 @@
             DoubleBuffered = true;
             Name = "CicloDoWhile3";
             Text = "CicloDoWhile3";
+            Load += CicloDoWhile3_Load;
             panelSubMenu.ResumeLayout(false);
             panelTitulo.ResumeLayout(false);
             panelTitulo.PerformLayout();
@@ -716,5 +733,6 @@
         private Label lblResultado;
         private Button btnjuego;
         private Button button2;
+        private Button button4;
     }
 }
