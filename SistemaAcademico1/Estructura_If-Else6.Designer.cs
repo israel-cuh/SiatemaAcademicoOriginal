@@ -1,6 +1,6 @@
 ﻿namespace SistemaAcademico1
 {
-    partial class menuTemaif_else
+    partial class Estructura_If_Else6
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menuTemaif_else));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Estructura_If_Else6));
             panel2 = new Panel();
             button3 = new Button();
             button2 = new Button();
@@ -37,17 +37,21 @@
             btnFor = new Button();
             btnWhile = new Button();
             panel1 = new Panel();
-            picboxInfinito = new PictureBox();
             label11 = new Label();
             label9 = new Label();
             lblDescripcion = new Label();
             lblTitulo = new Label();
-            panelConsejo = new Panel();
             panel4 = new Panel();
+            lblsintaxis = new Label();
+            label6 = new Label();
+            label20 = new Label();
+            label21 = new Label();
+            label4 = new Label();
             label2 = new Label();
             label1 = new Label();
             label7 = new Label();
             label18 = new Label();
+            label5 = new Label();
             label17 = new Label();
             label15 = new Label();
             label8 = new Label();
@@ -56,30 +60,40 @@
             label14 = new Label();
             label13 = new Label();
             label12 = new Label();
-            label6 = new Label();
-            label5 = new Label();
-            lblsintaxis = new Label();
             lblTituloTema = new Label();
-            panel3 = new Panel();
-            label20 = new Label();
-            label4 = new Label();
-            label22 = new Label();
-            label21 = new Label();
             richTextBox1 = new RichTextBox();
-            txtCodigo = new RichTextBox();
-            label3 = new Label();
-            btnLimpiar = new Button();
+            panelConsejo = new Panel();
+            tbEdad = new TrackBar();
+            lblVariable = new Label();
+            lblValorEdad = new Label();
+            lblTextoIf = new Label();
             btnEjecutar = new Button();
-            txtSalida = new RichTextBox();
+            rtbConsola = new RichTextBox();
+            pnlIf = new Panel();
+            pnlElse = new Panel();
+            lblTextoElse = new Label();
+            label3 = new Label();
             label10 = new Label();
             label19 = new Label();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            label22 = new Label();
+            pictureBox5 = new PictureBox();
             btnPracticar = new Button();
             button1 = new Button();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)picboxInfinito).BeginInit();
             panel4.SuspendLayout();
-            panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)tbEdad).BeginInit();
+            pnlIf.SuspendLayout();
+            pnlElse.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             SuspendLayout();
             // 
             // panel2
@@ -92,14 +106,14 @@
             panel2.Controls.Add(btnDoWhile);
             panel2.Controls.Add(btnFor);
             panel2.Controls.Add(btnWhile);
-            panel2.Location = new Point(12, 12);
+            panel2.Location = new Point(2, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(250, 467);
-            panel2.TabIndex = 3;
+            panel2.TabIndex = 4;
             // 
             // button3
             // 
-            button3.BackColor = Color.Transparent;
+            button3.BackColor = Color.Violet;
             button3.FlatStyle = FlatStyle.Popup;
             button3.ForeColor = SystemColors.ButtonFace;
             button3.Image = (Image)resources.GetObject("button3.Image");
@@ -168,7 +182,7 @@
             // 
             // btnWhile
             // 
-            btnWhile.BackColor = Color.Violet;
+            btnWhile.BackColor = Color.Transparent;
             btnWhile.FlatStyle = FlatStyle.Popup;
             btnWhile.ForeColor = SystemColors.ButtonHighlight;
             btnWhile.Image = (Image)resources.GetObject("btnWhile.Image");
@@ -184,26 +198,14 @@
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            panel1.Controls.Add(picboxInfinito);
             panel1.Controls.Add(label11);
             panel1.Controls.Add(label9);
             panel1.Controls.Add(lblDescripcion);
             panel1.Controls.Add(lblTitulo);
-            panel1.Location = new Point(268, 12);
+            panel1.Location = new Point(258, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(973, 117);
-            panel1.TabIndex = 6;
-            // 
-            // picboxInfinito
-            // 
-            picboxInfinito.BackColor = Color.Transparent;
-            picboxInfinito.BackgroundImage = (Image)resources.GetObject("picboxInfinito.BackgroundImage");
-            picboxInfinito.BackgroundImageLayout = ImageLayout.Stretch;
-            picboxInfinito.Location = new Point(683, 3);
-            picboxInfinito.Name = "picboxInfinito";
-            picboxInfinito.Size = new Size(287, 114);
-            picboxInfinito.TabIndex = 2;
-            picboxInfinito.TabStop = false;
+            panel1.Size = new Size(540, 105);
+            panel1.TabIndex = 7;
             // 
             // label11
             // 
@@ -252,24 +254,21 @@
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "Aprender\r\n";
             // 
-            // panelConsejo
-            // 
-            panelConsejo.BackgroundImage = (Image)resources.GetObject("panelConsejo.BackgroundImage");
-            panelConsejo.BackgroundImageLayout = ImageLayout.Stretch;
-            panelConsejo.Location = new Point(15, 517);
-            panelConsejo.Name = "panelConsejo";
-            panelConsejo.Size = new Size(247, 150);
-            panelConsejo.TabIndex = 7;
-            // 
             // panel4
             // 
             panel4.BackColor = Color.White;
             panel4.BackgroundImage = (Image)resources.GetObject("panel4.BackgroundImage");
             panel4.BackgroundImageLayout = ImageLayout.Stretch;
+            panel4.Controls.Add(lblsintaxis);
+            panel4.Controls.Add(label6);
+            panel4.Controls.Add(label20);
+            panel4.Controls.Add(label21);
+            panel4.Controls.Add(label4);
             panel4.Controls.Add(label2);
             panel4.Controls.Add(label1);
             panel4.Controls.Add(label7);
             panel4.Controls.Add(label18);
+            panel4.Controls.Add(label5);
             panel4.Controls.Add(label17);
             panel4.Controls.Add(label15);
             panel4.Controls.Add(label8);
@@ -278,15 +277,72 @@
             panel4.Controls.Add(label14);
             panel4.Controls.Add(label13);
             panel4.Controls.Add(label12);
-            panel4.Controls.Add(label6);
-            panel4.Controls.Add(label5);
-            panel4.Controls.Add(lblsintaxis);
             panel4.Controls.Add(lblTituloTema);
-            panel4.Controls.Add(panel3);
-            panel4.Location = new Point(272, 180);
+            panel4.Controls.Add(richTextBox1);
+            panel4.Location = new Point(258, 132);
             panel4.Name = "panel4";
-            panel4.Size = new Size(540, 495);
-            panel4.TabIndex = 8;
+            panel4.Size = new Size(540, 549);
+            panel4.TabIndex = 9;
+            // 
+            // lblsintaxis
+            // 
+            lblsintaxis.AutoSize = true;
+            lblsintaxis.BackColor = Color.Transparent;
+            lblsintaxis.Font = new Font("Arial Black", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblsintaxis.ForeColor = SystemColors.ButtonFace;
+            lblsintaxis.Location = new Point(15, 76);
+            lblsintaxis.Name = "lblsintaxis";
+            lblsintaxis.Size = new Size(85, 24);
+            lblsintaxis.TabIndex = 3;
+            lblsintaxis.Text = "Sintaxis";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.FromArgb(6, 16, 41);
+            label6.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.Green;
+            label6.Location = new Point(68, 183);
+            label6.Name = "label6";
+            label6.Size = new Size(310, 20);
+            label6.TabIndex = 8;
+            label6.Text = "// Intrucciones a ejecutar si es verdadero ";
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.BackColor = Color.FromArgb(6, 16, 41);
+            label20.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label20.ForeColor = Color.Green;
+            label20.Location = new Point(66, 203);
+            label20.Name = "label20";
+            label20.Size = new Size(195, 20);
+            label20.TabIndex = 22;
+            label20.Text = "// Intrucciones si es falso \r\n";
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.BackColor = Color.FromArgb(6, 16, 41);
+            label21.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label21.ForeColor = Color.DarkViolet;
+            label21.Location = new Point(41, 144);
+            label21.Name = "label21";
+            label21.Size = new Size(22, 20);
+            label21.TabIndex = 23;
+            label21.Text = "IF";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = Color.FromArgb(6, 16, 41);
+            label4.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.DarkViolet;
+            label4.Location = new Point(26, 203);
+            label4.Name = "label4";
+            label4.Size = new Size(37, 20);
+            label4.TabIndex = 6;
+            label4.Text = "else";
             // 
             // label2
             // 
@@ -294,7 +350,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.ButtonFace;
-            label2.Location = new Point(7, 406);
+            label2.Location = new Point(12, 474);
             label2.Name = "label2";
             label2.Size = new Size(478, 36);
             label2.TabIndex = 21;
@@ -306,7 +362,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.DarkViolet;
-            label1.Location = new Point(12, 373);
+            label1.Location = new Point(12, 439);
             label1.Name = "label1";
             label1.Size = new Size(87, 20);
             label1.TabIndex = 20;
@@ -330,11 +386,23 @@
             label18.BackColor = Color.Transparent;
             label18.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label18.ForeColor = Color.Crimson;
-            label18.Location = new Point(66, 306);
+            label18.Location = new Point(57, 323);
             label18.Name = "label18";
             label18.Size = new Size(43, 20);
             label18.TabIndex = 17;
             label18.Text = "falsa";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.FromArgb(6, 16, 41);
+            label5.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.DodgerBlue;
+            label5.Location = new Point(84, 144);
+            label5.Name = "label5";
+            label5.Size = new Size(83, 20);
+            label5.TabIndex = 7;
+            label5.Text = "Condicion";
             // 
             // label17
             // 
@@ -342,7 +410,7 @@
             label17.BackColor = Color.Transparent;
             label17.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label17.ForeColor = SystemColors.ButtonFace;
-            label17.Location = new Point(3, 326);
+            label17.Location = new Point(4, 343);
             label17.Name = "label17";
             label17.Size = new Size(530, 18);
             label17.TabIndex = 16;
@@ -354,7 +422,7 @@
             label15.BackColor = Color.Transparent;
             label15.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label15.ForeColor = Color.Green;
-            label15.Location = new Point(66, 286);
+            label15.Location = new Point(57, 305);
             label15.Name = "label15";
             label15.Size = new Size(84, 20);
             label15.TabIndex = 14;
@@ -390,7 +458,7 @@
             label16.BackColor = Color.Transparent;
             label16.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label16.ForeColor = SystemColors.ButtonFace;
-            label16.Location = new Point(12, 308);
+            label16.Location = new Point(3, 325);
             label16.Name = "label16";
             label16.Size = new Size(237, 36);
             label16.TabIndex = 15;
@@ -402,7 +470,7 @@
             label14.BackColor = Color.Transparent;
             label14.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label14.ForeColor = SystemColors.ButtonFace;
-            label14.Location = new Point(12, 288);
+            label14.Location = new Point(4, 305);
             label14.Name = "label14";
             label14.Size = new Size(521, 36);
             label14.TabIndex = 13;
@@ -414,7 +482,7 @@
             label13.BackColor = Color.Transparent;
             label13.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label13.ForeColor = SystemColors.ButtonFace;
-            label13.Location = new Point(12, 270);
+            label13.Location = new Point(4, 287);
             label13.Name = "label13";
             label13.Size = new Size(183, 18);
             label13.TabIndex = 12;
@@ -426,47 +494,11 @@
             label12.BackColor = Color.Transparent;
             label12.Font = new Font("Arial Black", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label12.ForeColor = SystemColors.ButtonFace;
-            label12.Location = new Point(12, 246);
+            label12.Location = new Point(4, 263);
             label12.Name = "label12";
             label12.Size = new Size(123, 24);
             label12.TabIndex = 11;
             label12.Text = "Explicacion ";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.BackColor = Color.FromArgb(6, 16, 41);
-            label6.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.Green;
-            label6.Location = new Point(76, 178);
-            label6.Name = "label6";
-            label6.Size = new Size(310, 20);
-            label6.TabIndex = 8;
-            label6.Text = "// Intrucciones a ejecutar si es verdadero ";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.FromArgb(6, 16, 41);
-            label5.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.DodgerBlue;
-            label5.Location = new Point(93, 153);
-            label5.Name = "label5";
-            label5.Size = new Size(83, 20);
-            label5.TabIndex = 7;
-            label5.Text = "Condicion";
-            // 
-            // lblsintaxis
-            // 
-            lblsintaxis.AutoSize = true;
-            lblsintaxis.BackColor = Color.Transparent;
-            lblsintaxis.Font = new Font("Arial Black", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblsintaxis.ForeColor = SystemColors.ButtonFace;
-            lblsintaxis.Location = new Point(12, 85);
-            lblsintaxis.Name = "lblsintaxis";
-            lblsintaxis.Size = new Size(85, 24);
-            lblsintaxis.TabIndex = 3;
-            lblsintaxis.Text = "Sintaxis";
             // 
             // lblTituloTema
             // 
@@ -480,67 +512,6 @@
             lblTituloTema.TabIndex = 0;
             lblTituloTema.Text = "Estructura If Else";
             // 
-            // panel3
-            // 
-            panel3.BackColor = Color.Transparent;
-            panel3.Controls.Add(label20);
-            panel3.Controls.Add(label4);
-            panel3.Controls.Add(label22);
-            panel3.Controls.Add(label21);
-            panel3.Controls.Add(richTextBox1);
-            panel3.Location = new Point(12, 112);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(378, 105);
-            panel3.TabIndex = 19;
-            // 
-            // label20
-            // 
-            label20.AutoSize = true;
-            label20.BackColor = Color.FromArgb(6, 16, 41);
-            label20.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label20.ForeColor = Color.Green;
-            label20.Location = new Point(65, 86);
-            label20.Name = "label20";
-            label20.Size = new Size(195, 20);
-            label20.TabIndex = 22;
-            label20.Text = "// Intrucciones si es falso \r\n";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.FromArgb(6, 16, 41);
-            label4.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.DarkViolet;
-            label4.Location = new Point(10, 66);
-            label4.Name = "label4";
-            label4.Size = new Size(37, 20);
-            label4.TabIndex = 6;
-            label4.Text = "else";
-            // 
-            // label22
-            // 
-            label22.AutoSize = true;
-            label22.BackColor = Color.FromArgb(6, 16, 41);
-            label22.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label22.ForeColor = Color.DarkViolet;
-            label22.Location = new Point(238, 66);
-            label22.Name = "label22";
-            label22.Size = new Size(22, 20);
-            label22.TabIndex = 23;
-            label22.Text = "IF";
-            // 
-            // label21
-            // 
-            label21.AutoSize = true;
-            label21.BackColor = Color.FromArgb(6, 16, 41);
-            label21.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label21.ForeColor = Color.DarkViolet;
-            label21.Location = new Point(10, 26);
-            label21.Name = "label21";
-            label21.Size = new Size(22, 20);
-            label21.TabIndex = 23;
-            label21.Text = "IF";
-            // 
             // richTextBox1
             // 
             richTextBox1.BackColor = Color.FromArgb(6, 16, 41);
@@ -548,99 +519,205 @@
             richTextBox1.Cursor = Cursors.No;
             richTextBox1.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             richTextBox1.ForeColor = Color.White;
-            richTextBox1.Location = new Point(-8, -24);
+            richTextBox1.Location = new Point(4, 103);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.Size = new Size(436, 155);
             richTextBox1.TabIndex = 2;
             richTextBox1.Text = "      \n\n                 (                       ) {\n      \n\n            \n   }";
             // 
-            // txtCodigo
+            // panelConsejo
             // 
-            txtCodigo.BackColor = Color.FromArgb(6, 16, 41);
-            txtCodigo.BorderStyle = BorderStyle.None;
-            txtCodigo.Cursor = Cursors.No;
-            txtCodigo.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtCodigo.ForeColor = Color.White;
-            txtCodigo.Location = new Point(818, 180);
-            txtCodigo.Name = "txtCodigo";
-            txtCodigo.Size = new Size(442, 148);
-            txtCodigo.TabIndex = 9;
-            txtCodigo.Text = "int i = 1;\nif (i <= 5) {\n    Console.WriteLine(i);\n} else {\n    Console.WriteLine(\"Mayor\");\n}\n";
+            panelConsejo.BackgroundImage = (Image)resources.GetObject("panelConsejo.BackgroundImage");
+            panelConsejo.BackgroundImageLayout = ImageLayout.Stretch;
+            panelConsejo.Location = new Point(5, 531);
+            panelConsejo.Name = "panelConsejo";
+            panelConsejo.Size = new Size(247, 150);
+            panelConsejo.TabIndex = 10;
+            // 
+            // tbEdad
+            // 
+            tbEdad.Location = new Point(804, 123);
+            tbEdad.Maximum = 30;
+            tbEdad.Minimum = 10;
+            tbEdad.Name = "tbEdad";
+            tbEdad.Size = new Size(475, 56);
+            tbEdad.TabIndex = 11;
+            tbEdad.Value = 16;
+            tbEdad.Scroll += tbEdad_Scroll;
+            // 
+            // lblVariable
+            // 
+            lblVariable.AutoSize = true;
+            lblVariable.BackColor = Color.Transparent;
+            lblVariable.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblVariable.ForeColor = SystemColors.Highlight;
+            lblVariable.Location = new Point(970, 220);
+            lblVariable.Name = "lblVariable";
+            lblVariable.Size = new Size(150, 25);
+            lblVariable.TabIndex = 12;
+            lblVariable.Text = "int edad = 16;";
+            // 
+            // lblValorEdad
+            // 
+            lblValorEdad.AutoSize = true;
+            lblValorEdad.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblValorEdad.Location = new Point(1151, 160);
+            lblValorEdad.Name = "lblValorEdad";
+            lblValorEdad.Size = new Size(128, 19);
+            lblValorEdad.TabIndex = 13;
+            lblValorEdad.Text = "Valor Actual: 16";
+            // 
+            // lblTextoIf
+            // 
+            lblTextoIf.AutoSize = true;
+            lblTextoIf.Location = new Point(29, 30);
+            lblTextoIf.Name = "lblTextoIf";
+            lblTextoIf.Size = new Size(149, 40);
+            lblTextoIf.TabIndex = 14;
+            lblTextoIf.Text = "Console.WriteLine\r\n(\"Acceso Permitido\");";
+            // 
+            // btnEjecutar
+            // 
+            btnEjecutar.BackColor = Color.Violet;
+            btnEjecutar.FlatStyle = FlatStyle.Popup;
+            btnEjecutar.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEjecutar.Location = new Point(949, 419);
+            btnEjecutar.Name = "btnEjecutar";
+            btnEjecutar.Size = new Size(254, 29);
+            btnEjecutar.TabIndex = 15;
+            btnEjecutar.Text = "EJECUTAR SIMULACIÓN (►)";
+            btnEjecutar.UseVisualStyleBackColor = false;
+            btnEjecutar.Click += btnEjecutar_Click;
+            // 
+            // rtbConsola
+            // 
+            rtbConsola.BackColor = Color.Black;
+            rtbConsola.BorderStyle = BorderStyle.None;
+            rtbConsola.ForeColor = Color.LimeGreen;
+            rtbConsola.Location = new Point(833, 531);
+            rtbConsola.Name = "rtbConsola";
+            rtbConsola.ReadOnly = true;
+            rtbConsola.Size = new Size(431, 148);
+            rtbConsola.TabIndex = 16;
+            rtbConsola.Text = "";
+            // 
+            // pnlIf
+            // 
+            pnlIf.BackColor = Color.FromArgb(255, 224, 192);
+            pnlIf.Controls.Add(lblTextoIf);
+            pnlIf.Location = new Point(804, 284);
+            pnlIf.Name = "pnlIf";
+            pnlIf.Size = new Size(220, 129);
+            pnlIf.TabIndex = 17;
+            // 
+            // pnlElse
+            // 
+            pnlElse.BackColor = Color.FromArgb(255, 224, 192);
+            pnlElse.Controls.Add(lblTextoElse);
+            pnlElse.Location = new Point(1070, 284);
+            pnlElse.Name = "pnlElse";
+            pnlElse.Size = new Size(209, 129);
+            pnlElse.TabIndex = 18;
+            // 
+            // lblTextoElse
+            // 
+            lblTextoElse.AutoSize = true;
+            lblTextoElse.Location = new Point(39, 30);
+            lblTextoElse.Name = "lblTextoElse";
+            lblTextoElse.Size = new Size(155, 40);
+            lblTextoElse.TabIndex = 15;
+            lblTextoElse.Text = "Console.WriteLine\r\n(\"Acceso Denegado\");";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Segoe UI Black", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = SystemColors.ButtonFace;
-            label3.Location = new Point(818, 344);
+            label3.Font = new Font("Arial Black", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.BlanchedAlmond;
+            label3.Location = new Point(847, 30);
             label3.Name = "label3";
-            label3.Size = new Size(156, 23);
-            label3.TabIndex = 10;
-            label3.Text = "Salida de consola";
-            // 
-            // btnLimpiar
-            // 
-            btnLimpiar.BackColor = Color.FromArgb(192, 0, 192);
-            btnLimpiar.FlatStyle = FlatStyle.Popup;
-            btnLimpiar.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLimpiar.ForeColor = SystemColors.ButtonFace;
-            btnLimpiar.Location = new Point(1011, 344);
-            btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(94, 29);
-            btnLimpiar.TabIndex = 11;
-            btnLimpiar.Text = "Limpiar";
-            btnLimpiar.UseVisualStyleBackColor = false;
-            // 
-            // btnEjecutar
-            // 
-            btnEjecutar.BackColor = Color.FromArgb(192, 0, 192);
-            btnEjecutar.FlatStyle = FlatStyle.Popup;
-            btnEjecutar.Font = new Font("Arial Narrow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEjecutar.ForeColor = SystemColors.ButtonHighlight;
-            btnEjecutar.Location = new Point(1166, 342);
-            btnEjecutar.Name = "btnEjecutar";
-            btnEjecutar.Size = new Size(94, 29);
-            btnEjecutar.TabIndex = 12;
-            btnEjecutar.Text = "Ejecutar";
-            btnEjecutar.UseVisualStyleBackColor = false;
-            // 
-            // txtSalida
-            // 
-            txtSalida.BackColor = Color.FromArgb(6, 16, 41);
-            txtSalida.BorderStyle = BorderStyle.None;
-            txtSalida.Cursor = Cursors.No;
-            txtSalida.Font = new Font("Arial Black", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtSalida.ForeColor = Color.Green;
-            txtSalida.Location = new Point(818, 400);
-            txtSalida.Name = "txtSalida";
-            txtSalida.Size = new Size(442, 160);
-            txtSalida.TabIndex = 13;
-            txtSalida.Text = "1";
+            label3.Size = new Size(387, 24);
+            label3.TabIndex = 24;
+            label3.Text = "Simulador de Flujo Interactivo ( IF-ELSE)";
             // 
             // label10
             // 
             label10.AutoSize = true;
             label10.BackColor = Color.Transparent;
-            label10.Font = new Font("Segoe UI Black", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.Font = new Font("Arial Black", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label10.ForeColor = SystemColors.ButtonFace;
-            label10.Location = new Point(818, 563);
+            label10.Location = new Point(817, 72);
             label10.Name = "label10";
-            label10.Size = new Size(185, 23);
-            label10.TabIndex = 14;
-            label10.Text = "¿ Que esta pasando ?\r\n";
+            label10.Size = new Size(240, 24);
+            label10.TabIndex = 25;
+            label10.Text = "Ajuste de variable : Edad";
             // 
             // label19
             // 
             label19.AutoSize = true;
-            label19.BackColor = Color.Transparent;
-            label19.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label19.ForeColor = SystemColors.ButtonFace;
-            label19.Location = new Point(818, 595);
+            label19.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label19.Location = new Point(804, 160);
             label19.Name = "label19";
-            label19.Size = new Size(345, 80);
-            label19.TabIndex = 15;
-            label19.Text = "El programa inicializa i en 1. La condición i <= 5 \r\nse evalúa como verdadera\r\n. Se ejecuta el bloque if, imprimiendo su valor. \r\nEl bloque else se omite.";
+            label19.Size = new Size(108, 19);
+            label19.TabIndex = 26;
+            label19.Text = "Rango: 10-30";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = SystemColors.ActiveCaptionText;
+            pictureBox1.Location = new Point(893, 235);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(82, 10);
+            pictureBox1.TabIndex = 27;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = SystemColors.ActiveCaptionText;
+            pictureBox2.Location = new Point(893, 245);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(10, 39);
+            pictureBox2.TabIndex = 28;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackColor = SystemColors.ActiveCaptionText;
+            pictureBox3.Location = new Point(1111, 235);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(82, 10);
+            pictureBox3.TabIndex = 29;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.BackColor = SystemColors.ActiveCaptionText;
+            pictureBox4.Location = new Point(1183, 245);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(10, 39);
+            pictureBox4.TabIndex = 30;
+            pictureBox4.TabStop = false;
+            // 
+            // label22
+            // 
+            label22.AutoSize = true;
+            label22.BackColor = Color.Transparent;
+            label22.Font = new Font("Arial Black", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label22.ForeColor = Color.BlanchedAlmond;
+            label22.Location = new Point(926, 491);
+            label22.Name = "label22";
+            label22.Size = new Size(277, 24);
+            label22.TabIndex = 31;
+            label22.Text = "Salida de Simulacion en Vivo";
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.BackColor = SystemColors.ActiveCaptionText;
+            pictureBox5.Location = new Point(1033, 178);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(10, 39);
+            pictureBox5.TabIndex = 33;
+            pictureBox5.TabStop = false;
             // 
             // btnPracticar
             // 
@@ -650,10 +727,10 @@
             btnPracticar.FlatStyle = FlatStyle.Popup;
             btnPracticar.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnPracticar.ForeColor = Color.White;
-            btnPracticar.Location = new Point(1023, 693);
+            btnPracticar.Location = new Point(979, 731);
             btnPracticar.Name = "btnPracticar";
             btnPracticar.Size = new Size(237, 50);
-            btnPracticar.TabIndex = 16;
+            btnPracticar.TabIndex = 34;
             btnPracticar.Text = "🎮 Practicar lo aprendido";
             btnPracticar.UseVisualStyleBackColor = false;
             btnPracticar.Click += btnPracticar_Click;
@@ -664,46 +741,62 @@
             button1.BackgroundImageLayout = ImageLayout.Stretch;
             button1.FlatStyle = FlatStyle.Popup;
             button1.ForeColor = SystemColors.ButtonFace;
-            button1.Location = new Point(25, 691);
+            button1.Location = new Point(65, 724);
             button1.Name = "button1";
             button1.Size = new Size(237, 57);
-            button1.TabIndex = 17;
+            button1.TabIndex = 35;
             button1.Text = "Regresar";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // menuTemaif_else
+            // Estructura_If_Else6
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1282, 755);
+            ClientSize = new Size(1341, 858);
             Controls.Add(button1);
             Controls.Add(btnPracticar);
+            Controls.Add(pictureBox5);
+            Controls.Add(label22);
+            Controls.Add(pictureBox4);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox1);
             Controls.Add(label19);
             Controls.Add(label10);
-            Controls.Add(txtSalida);
-            Controls.Add(btnEjecutar);
-            Controls.Add(btnLimpiar);
             Controls.Add(label3);
-            Controls.Add(txtCodigo);
-            Controls.Add(panel4);
+            Controls.Add(pnlElse);
+            Controls.Add(pnlIf);
+            Controls.Add(rtbConsola);
+            Controls.Add(btnEjecutar);
+            Controls.Add(lblValorEdad);
+            Controls.Add(lblVariable);
+            Controls.Add(tbEdad);
             Controls.Add(panelConsejo);
+            Controls.Add(panel4);
             Controls.Add(panel1);
             Controls.Add(panel2);
             DoubleBuffered = true;
-            Name = "menuTemaif_else";
-            Text = "menuTemaif_else";
-            Load += menuTemaif_else_Load;
+            Name = "Estructura_If_Else6";
+            Text = "Estructura_If_Else6";
+            Load += Estructura_If_Else6_Load;
             panel2.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)picboxInfinito).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)tbEdad).EndInit();
+            pnlIf.ResumeLayout(false);
+            pnlIf.PerformLayout();
+            pnlElse.ResumeLayout(false);
+            pnlElse.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -718,12 +811,10 @@
         private Button btnFor;
         private Button btnWhile;
         private Panel panel1;
-        private PictureBox picboxInfinito;
         private Label label11;
         private Label label9;
         private Label lblDescripcion;
         private Label lblTitulo;
-        private Panel panelConsejo;
         private Panel panel4;
         private Label label2;
         private Label label1;
@@ -739,22 +830,32 @@
         private Label label12;
         private Label label6;
         private Label label5;
-        private Label label4;
         private Label lblsintaxis;
         private Label lblTituloTema;
+        private Label label20;
+        private Label label4;
+        private Label label21;
         private RichTextBox richTextBox1;
-        private Panel panel3;
-        private RichTextBox txtCodigo;
-        private Label label3;
-        private Button btnLimpiar;
+        private Panel panelConsejo;
+        private TrackBar tbEdad;
+        private Label lblVariable;
+        private Label lblValorEdad;
+        private Label lblTextoIf;
         private Button btnEjecutar;
-        private RichTextBox txtSalida;
+        private RichTextBox rtbConsola;
+        private Panel pnlIf;
+        private Panel pnlElse;
+        private Label lblTextoElse;
+        private Label label3;
         private Label label10;
         private Label label19;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox4;
+        private Label label22;
+        private PictureBox pictureBox5;
         private Button btnPracticar;
         private Button button1;
-        private Label label20;
-        private Label label22;
-        private Label label21;
     }
 }

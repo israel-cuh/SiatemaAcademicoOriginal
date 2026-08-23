@@ -1,6 +1,6 @@
 ﻿namespace SistemaAcademico1
 {
-    partial class MenuTemaCiclo
+    partial class CicloWhile1
     {
         /// <summary>
         /// Required designer variable.
@@ -28,14 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuTemaCiclo));
-            panel1 = new Panel();
-            picboxInfinito = new PictureBox();
-            label11 = new Label();
-            label10 = new Label();
-            label9 = new Label();
-            lblDescripcion = new Label();
-            lblTitulo = new Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CicloWhile1));
             panel2 = new Panel();
             button3 = new Button();
             button2 = new Button();
@@ -43,7 +36,6 @@
             btnDoWhile = new Button();
             btnFor = new Button();
             btnWhile = new Button();
-            panelConsejo = new Panel();
             panel4 = new Panel();
             label19 = new Label();
             label18 = new Label();
@@ -59,6 +51,13 @@
             lblDescripcionTema = new Label();
             lblTituloTema = new Label();
             richTextBox1 = new RichTextBox();
+            panel1 = new Panel();
+            picboxInfinito = new PictureBox();
+            label11 = new Label();
+            label10 = new Label();
+            label9 = new Label();
+            lblDescripcion = new Label();
+            lblTitulo = new Label();
             panel5 = new Panel();
             txtCodigo = new RichTextBox();
             label1 = new Label();
@@ -70,100 +69,15 @@
             rbOpcionC = new RadioButton();
             rbOpcionB = new RadioButton();
             rbOpcionA = new RadioButton();
-            button1 = new Button();
+            panelConsejo = new Panel();
             btnjuego = new Button();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)picboxInfinito).BeginInit();
+            button1 = new Button();
             panel2.SuspendLayout();
             panel4.SuspendLayout();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picboxInfinito).BeginInit();
             panel5.SuspendLayout();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
-            panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            panel1.Controls.Add(picboxInfinito);
-            panel1.Controls.Add(label11);
-            panel1.Controls.Add(label10);
-            panel1.Controls.Add(label9);
-            panel1.Controls.Add(lblDescripcion);
-            panel1.Controls.Add(lblTitulo);
-            panel1.Location = new Point(256, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1100, 117);
-            panel1.TabIndex = 0;
-            // 
-            // picboxInfinito
-            // 
-            picboxInfinito.BackColor = Color.Transparent;
-            picboxInfinito.BackgroundImage = (Image)resources.GetObject("picboxInfinito.BackgroundImage");
-            picboxInfinito.BackgroundImageLayout = ImageLayout.Stretch;
-            picboxInfinito.Location = new Point(662, 0);
-            picboxInfinito.Name = "picboxInfinito";
-            picboxInfinito.Size = new Size(435, 126);
-            picboxInfinito.TabIndex = 2;
-            picboxInfinito.TabStop = false;
-            picboxInfinito.Click += picboxInfinito_Click;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.BackColor = Color.Transparent;
-            label11.Font = new Font("Arial", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label11.ForeColor = Color.Blue;
-            label11.Location = new Point(347, 18);
-            label11.Name = "label11";
-            label11.Size = new Size(124, 40);
-            label11.TabIndex = 5;
-            label11.Text = "bucles";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.BackColor = Color.Transparent;
-            label10.Font = new Font("Arial", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.ForeColor = Color.Blue;
-            label10.Location = new Point(317, 20);
-            label10.Name = "label10";
-            label10.Size = new Size(37, 40);
-            label10.TabIndex = 4;
-            label10.Text = "y";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.Transparent;
-            label9.Font = new Font("Arial", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.ForeColor = Color.Blue;
-            label9.Location = new Point(191, 20);
-            label9.Name = "label9";
-            label9.Size = new Size(119, 40);
-            label9.TabIndex = 3;
-            label9.Text = "Ciclos";
-            // 
-            // lblDescripcion
-            // 
-            lblDescripcion.AutoSize = true;
-            lblDescripcion.BackColor = Color.Transparent;
-            lblDescripcion.ForeColor = SystemColors.ButtonFace;
-            lblDescripcion.Location = new Point(83, 60);
-            lblDescripcion.Name = "lblDescripcion";
-            lblDescripcion.Size = new Size(461, 40);
-            lblDescripcion.TabIndex = 1;
-            lblDescripcion.Text = "Conprende como funcionan los ciclos en programacion para repetir \r\nla condicion de manera verdadera ";
-            // 
-            // lblTitulo
-            // 
-            lblTitulo.AutoSize = true;
-            lblTitulo.BackColor = Color.Transparent;
-            lblTitulo.Font = new Font("Arial", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitulo.ForeColor = SystemColors.ButtonFace;
-            lblTitulo.Location = new Point(12, 19);
-            lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(168, 40);
-            lblTitulo.TabIndex = 0;
-            lblTitulo.Text = "Aprender\r\n";
             // 
             // panel2
             // 
@@ -175,10 +89,10 @@
             panel2.Controls.Add(btnDoWhile);
             panel2.Controls.Add(btnFor);
             panel2.Controls.Add(btnWhile);
-            panel2.Location = new Point(0, 0);
+            panel2.Location = new Point(0, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(250, 467);
-            panel2.TabIndex = 1;
+            panel2.Size = new Size(250, 476);
+            panel2.TabIndex = 2;
             // 
             // button3
             // 
@@ -248,6 +162,7 @@
             btnFor.TabIndex = 2;
             btnFor.Text = "Ciclo For";
             btnFor.UseVisualStyleBackColor = false;
+            btnFor.Click += btnFor_Click;
             // 
             // btnWhile
             // 
@@ -261,15 +176,6 @@
             btnWhile.TabIndex = 1;
             btnWhile.Text = "Ciclo while";
             btnWhile.UseVisualStyleBackColor = false;
-            // 
-            // panelConsejo
-            // 
-            panelConsejo.BackgroundImage = (Image)resources.GetObject("panelConsejo.BackgroundImage");
-            panelConsejo.BackgroundImageLayout = ImageLayout.Stretch;
-            panelConsejo.Location = new Point(6, 578);
-            panelConsejo.Name = "panelConsejo";
-            panelConsejo.Size = new Size(247, 150);
-            panelConsejo.TabIndex = 2;
             // 
             // panel4
             // 
@@ -290,10 +196,10 @@
             panel4.Controls.Add(lblDescripcionTema);
             panel4.Controls.Add(lblTituloTema);
             panel4.Controls.Add(richTextBox1);
-            panel4.Location = new Point(256, 123);
+            panel4.Location = new Point(256, 106);
             panel4.Name = "panel4";
-            panel4.Size = new Size(586, 659);
-            panel4.TabIndex = 3;
+            panel4.Size = new Size(1049, 659);
+            panel4.TabIndex = 4;
             // 
             // label19
             // 
@@ -390,7 +296,6 @@
             label6.Size = new Size(194, 20);
             label6.TabIndex = 8;
             label6.Text = "// Intrucciones a ejecutar ";
-            label6.Click += label6_Click;
             // 
             // label5
             // 
@@ -464,7 +369,91 @@
             richTextBox1.Size = new Size(436, 129);
             richTextBox1.TabIndex = 2;
             richTextBox1.Text = "      \n\n                 (                       ) {\n                  \n   }";
-            richTextBox1.TextChanged += richTextBox1_TextChanged;
+            // 
+            // panel1
+            // 
+            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Controls.Add(picboxInfinito);
+            panel1.Controls.Add(label11);
+            panel1.Controls.Add(label10);
+            panel1.Controls.Add(label9);
+            panel1.Controls.Add(lblDescripcion);
+            panel1.Controls.Add(lblTitulo);
+            panel1.Location = new Point(256, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1052, 117);
+            panel1.TabIndex = 19;
+            // 
+            // picboxInfinito
+            // 
+            picboxInfinito.BackColor = Color.Transparent;
+            picboxInfinito.BackgroundImage = (Image)resources.GetObject("picboxInfinito.BackgroundImage");
+            picboxInfinito.BackgroundImageLayout = ImageLayout.Stretch;
+            picboxInfinito.Location = new Point(606, 0);
+            picboxInfinito.Name = "picboxInfinito";
+            picboxInfinito.Size = new Size(435, 117);
+            picboxInfinito.TabIndex = 2;
+            picboxInfinito.TabStop = false;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.BackColor = Color.Transparent;
+            label11.Font = new Font("Arial", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label11.ForeColor = Color.Blue;
+            label11.Location = new Point(347, 18);
+            label11.Name = "label11";
+            label11.Size = new Size(124, 40);
+            label11.TabIndex = 5;
+            label11.Text = "bucles";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.BackColor = Color.Transparent;
+            label10.Font = new Font("Arial", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.ForeColor = Color.Blue;
+            label10.Location = new Point(317, 20);
+            label10.Name = "label10";
+            label10.Size = new Size(37, 40);
+            label10.TabIndex = 4;
+            label10.Text = "y";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.BackColor = Color.Transparent;
+            label9.Font = new Font("Arial", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.ForeColor = Color.Blue;
+            label9.Location = new Point(191, 20);
+            label9.Name = "label9";
+            label9.Size = new Size(119, 40);
+            label9.TabIndex = 3;
+            label9.Text = "Ciclos";
+            // 
+            // lblDescripcion
+            // 
+            lblDescripcion.AutoSize = true;
+            lblDescripcion.BackColor = Color.Transparent;
+            lblDescripcion.ForeColor = SystemColors.ButtonFace;
+            lblDescripcion.Location = new Point(83, 60);
+            lblDescripcion.Name = "lblDescripcion";
+            lblDescripcion.Size = new Size(461, 40);
+            lblDescripcion.TabIndex = 1;
+            lblDescripcion.Text = "Conprende como funcionan los ciclos en programacion para repetir \r\nla condicion de manera verdadera ";
+            // 
+            // lblTitulo
+            // 
+            lblTitulo.AutoSize = true;
+            lblTitulo.BackColor = Color.Transparent;
+            lblTitulo.Font = new Font("Arial", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.ForeColor = SystemColors.ButtonFace;
+            lblTitulo.Location = new Point(12, 19);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(168, 40);
+            lblTitulo.TabIndex = 0;
+            lblTitulo.Text = "Aprender\r\n";
             // 
             // panel5
             // 
@@ -480,10 +469,10 @@
             panel5.Controls.Add(rbOpcionC);
             panel5.Controls.Add(rbOpcionB);
             panel5.Controls.Add(rbOpcionA);
-            panel5.Location = new Point(848, 132);
+            panel5.Location = new Point(848, 126);
             panel5.Name = "panel5";
-            panel5.Size = new Size(502, 650);
-            panel5.TabIndex = 4;
+            panel5.Size = new Size(460, 639);
+            panel5.TabIndex = 20;
             // 
             // txtCodigo
             // 
@@ -494,10 +483,9 @@
             txtCodigo.ForeColor = Color.White;
             txtCodigo.Location = new Point(18, 10);
             txtCodigo.Name = "txtCodigo";
-            txtCodigo.Size = new Size(442, 148);
+            txtCodigo.Size = new Size(431, 148);
             txtCodigo.TabIndex = 0;
             txtCodigo.Text = "1     int i = 1;\n2\n3     while (i <= 5)\n4     {\n5         Console.WriteLine(i);\n6         i++;\n7     }";
-            txtCodigo.TextChanged += txtCodigo_TextChanged;
             // 
             // label1
             // 
@@ -541,11 +529,11 @@
             lblResultado.BackColor = Color.Transparent;
             lblResultado.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblResultado.ForeColor = SystemColors.ButtonFace;
-            lblResultado.Location = new Point(137, 463);
+            lblResultado.Location = new Point(114, 502);
             lblResultado.Name = "lblResultado";
-            lblResultado.Size = new Size(69, 23);
+            lblResultado.Size = new Size(205, 23);
             lblResultado.TabIndex = 13;
-            lblResultado.Text = "label12";
+            lblResultado.Text = "Selecione una respuesta ";
             // 
             // btnComprobar
             // 
@@ -554,7 +542,7 @@
             btnComprobar.BackgroundImageLayout = ImageLayout.Stretch;
             btnComprobar.FlatStyle = FlatStyle.Popup;
             btnComprobar.ForeColor = Color.Transparent;
-            btnComprobar.Location = new Point(108, 489);
+            btnComprobar.Location = new Point(175, 557);
             btnComprobar.Name = "btnComprobar";
             btnComprobar.Size = new Size(158, 29);
             btnComprobar.TabIndex = 12;
@@ -614,19 +602,14 @@
             rbOpcionA.Text = "a) i = 1; while (i < 3)";
             rbOpcionA.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // panelConsejo
             // 
-            button1.BackColor = Color.Transparent;
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.ForeColor = SystemColors.ButtonFace;
-            button1.Location = new Point(6, 788);
-            button1.Name = "button1";
-            button1.Size = new Size(237, 57);
-            button1.TabIndex = 6;
-            button1.Text = "Regresar";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            panelConsejo.BackgroundImage = (Image)resources.GetObject("panelConsejo.BackgroundImage");
+            panelConsejo.BackgroundImageLayout = ImageLayout.Stretch;
+            panelConsejo.Location = new Point(3, 615);
+            panelConsejo.Name = "panelConsejo";
+            panelConsejo.Size = new Size(247, 150);
+            panelConsejo.TabIndex = 14;
             // 
             // btnjuego
             // 
@@ -636,40 +619,54 @@
             btnjuego.FlatStyle = FlatStyle.Popup;
             btnjuego.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnjuego.ForeColor = SystemColors.ButtonFace;
-            btnjuego.Location = new Point(1082, 788);
+            btnjuego.Location = new Point(1001, 786);
             btnjuego.Name = "btnjuego";
             btnjuego.Size = new Size(237, 57);
-            btnjuego.TabIndex = 7;
+            btnjuego.TabIndex = 21;
             btnjuego.Text = "🎮 Practicar lo aprendido";
             btnjuego.UseVisualStyleBackColor = false;
-            btnjuego.Click += btnjuego_Click_1;
+            btnjuego.Click += btnjuego_Click;
             // 
-            // MenuTemaCiclo
+            // button1
+            // 
+            button1.BackColor = Color.Transparent;
+            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
+            button1.BackgroundImageLayout = ImageLayout.Stretch;
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = SystemColors.ButtonFace;
+            button1.Location = new Point(27, 786);
+            button1.Name = "button1";
+            button1.Size = new Size(237, 57);
+            button1.TabIndex = 22;
+            button1.Text = "Regresar";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // CicloWhile1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(6, 16, 41);
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1354, 851);
+            ClientSize = new Size(1322, 877);
             Controls.Add(button1);
             Controls.Add(btnjuego);
-            Controls.Add(panel5);
-            Controls.Add(panel4);
             Controls.Add(panelConsejo);
-            Controls.Add(panel2);
+            Controls.Add(panel5);
             Controls.Add(panel1);
+            Controls.Add(panel4);
+            Controls.Add(panel2);
             DoubleBuffered = true;
-            FormBorderStyle = FormBorderStyle.Fixed3D;
-            Name = "MenuTemaCiclo";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "MenuTema";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)picboxInfinito).EndInit();
+            Name = "CicloWhile1";
+            Text = "CicloWhile1";
+            Load += CicloWhile1_Load;
             panel2.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)picboxInfinito).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             ResumeLayout(false);
@@ -677,48 +674,48 @@
 
         #endregion
 
-        private Panel panel1;
         private Panel panel2;
-        private Panel panelConsejo;
-        private Panel panel4;
-        private Panel panel5;
+        private Button button3;
+        private Button button2;
         private Button btnAnidados;
         private Button btnDoWhile;
         private Button btnFor;
         private Button btnWhile;
-        private Button btnjuego;
-        private PictureBox picboxInfinito;
-        private Label lblDescripcion;
-        private Label lblTitulo;
-        private Label lblsintaxis;
-        private RichTextBox richTextBox1;
-        private Label lblDescripcionTema;
-        private Label lblTituloTema;
-        private RichTextBox txtCodigo;
-        private Button button1;
-        private Label label6;
-        private Label label5;
-        private Label label4;
-        private Label label9;
-        private Label label11;
-        private Label label10;
-        private Label label13;
+        private Panel panel4;
+        private Label label19;
+        private Label label18;
         private Label label17;
         private Label label15;
         private Label label16;
         private Label label14;
-        private Label label19;
-        private Label label18;
-        private Button button2;
-        private Button button3;
-        private Label label7;
+        private Label label13;
+        private Label label6;
+        private Label label5;
+        private Label label4;
+        private Label lblsintaxis;
+        private Label lblDescripcionTema;
+        private Label lblTituloTema;
+        private RichTextBox richTextBox1;
+        private Panel panel1;
+        private PictureBox picboxInfinito;
+        private Label label11;
+        private Label label10;
+        private Label label9;
+        private Label lblDescripcion;
+        private Label lblTitulo;
+        private Panel panel5;
+        private RichTextBox txtCodigo;
         private Label label1;
+        private Label label7;
+        private Label label8;
+        private Label lblResultado;
+        private Button btnComprobar;
         private RadioButton rbOpcionD;
         private RadioButton rbOpcionC;
         private RadioButton rbOpcionB;
         private RadioButton rbOpcionA;
-        private Label label8;
-        private Button btnComprobar;
-        private Label lblResultado;
+        private Panel panelConsejo;
+        private Button btnjuego;
+        private Button button1;
     }
 }

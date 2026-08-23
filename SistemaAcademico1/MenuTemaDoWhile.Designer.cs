@@ -19,6 +19,7 @@ namespace SistemaAcademico1
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuTemaDoWhile));
             panelSubMenu = new Panel();
+            button3 = new Button();
             button1 = new Button();
             btnSubAnidados = new Button();
             btnSubDoWhile = new Button();
@@ -56,7 +57,6 @@ namespace SistemaAcademico1
             panelInferior = new Panel();
             btnPracticar = new Button();
             panelConsejo = new Panel();
-            button3 = new Button();
             panelSubMenu.SuspendLayout();
             panelTitulo.SuspendLayout();
             panelIzquierdo.SuspendLayout();
@@ -78,6 +78,20 @@ namespace SistemaAcademico1
             panelSubMenu.Name = "panelSubMenu";
             panelSubMenu.Size = new Size(250, 459);
             panelSubMenu.TabIndex = 0;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.Transparent;
+            button3.FlatStyle = FlatStyle.Popup;
+            button3.ForeColor = SystemColors.ButtonFace;
+            button3.Image = (Image)resources.GetObject("button3.Image");
+            button3.Location = new Point(20, 363);
+            button3.Name = "button3";
+            button3.Size = new Size(210, 49);
+            button3.TabIndex = 8;
+            button3.Text = "Estructura If-else";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button1
             // 
@@ -314,7 +328,7 @@ namespace SistemaAcademico1
             lblSyntaxComentario.BackColor = Color.FromArgb(6, 16, 41);
             lblSyntaxComentario.Font = new Font("Consolas", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblSyntaxComentario.ForeColor = Color.Green;
-            lblSyntaxComentario.Location = new Point(82, 195);
+            lblSyntaxComentario.Location = new Point(82, 189);
             lblSyntaxComentario.Name = "lblSyntaxComentario";
             lblSyntaxComentario.Size = new Size(252, 20);
             lblSyntaxComentario.TabIndex = 7;
@@ -555,20 +569,6 @@ namespace SistemaAcademico1
             panelConsejo.Name = "panelConsejo";
             panelConsejo.Size = new Size(250, 168);
             panelConsejo.TabIndex = 5;
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.Transparent;
-            button3.FlatStyle = FlatStyle.Popup;
-            button3.ForeColor = SystemColors.ButtonFace;
-            button3.Image = (Image)resources.GetObject("button3.Image");
-            button3.Location = new Point(20, 363);
-            button3.Name = "button3";
-            button3.Size = new Size(210, 49);
-            button3.TabIndex = 8;
-            button3.Text = "Estructura If-else";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
             // 
             // MenuTemaDoWhile
             // 

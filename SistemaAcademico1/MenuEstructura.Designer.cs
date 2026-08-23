@@ -62,12 +62,10 @@ namespace SistemaAcademico1
         private Button btnCerrarSesion = null!;
         private Button btnJuego = null!;
         private Button btnVariables = null!;
-        private Button btnCiclos = null!;
         private Button btnSeudocodigo = null!;
         private Button btnCondicionales = null!;
         private Button btnAccesoJuego = null!;
         private Button btnAccesoVariables = null!;
-        private Button btnAccesoCiclos = null!;
 
         protected override void Dispose(bool disposing)
         {
@@ -132,16 +130,15 @@ namespace SistemaAcademico1
             lblDescripcionCondicionales = new Label();
             btnCondicionales = new Button();
             tarjetaCiclos = new Panel();
+            button1 = new Button();
             lblNumeroCiclos = new Label();
             lblIconoCiclos = new Label();
             lblTituloCiclos = new Label();
             lblDescripcionCiclos = new Label();
-            btnCiclos = new Button();
             panelAccesos = new Panel();
             lblAccesos = new Label();
             btnAccesoJuego = new Button();
             btnAccesoVariables = new Button();
-            btnAccesoCiclos = new Button();
             panelSuperior.SuspendLayout();
             panelLateral.SuspendLayout();
             tarjetaUsuario.SuspendLayout();
@@ -780,15 +777,27 @@ namespace SistemaAcademico1
             // tarjetaCiclos
             // 
             tarjetaCiclos.BackColor = Color.FromArgb(11, 29, 68);
+            tarjetaCiclos.Controls.Add(button1);
             tarjetaCiclos.Controls.Add(lblNumeroCiclos);
             tarjetaCiclos.Controls.Add(lblIconoCiclos);
             tarjetaCiclos.Controls.Add(lblTituloCiclos);
             tarjetaCiclos.Controls.Add(lblDescripcionCiclos);
-            tarjetaCiclos.Controls.Add(btnCiclos);
             tarjetaCiclos.Location = new Point(741, 0);
             tarjetaCiclos.Name = "tarjetaCiclos";
             tarjetaCiclos.Size = new Size(230, 285);
             tarjetaCiclos.TabIndex = 3;
+            // 
+            // button1
+            // 
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.ForeColor = Color.Teal;
+            button1.Location = new Point(15, 245);
+            button1.Name = "button1";
+            button1.Size = new Size(185, 29);
+            button1.TabIndex = 4;
+            button1.Text = "Ver tema";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
             // 
             // lblNumeroCiclos
             // 
@@ -817,7 +826,7 @@ namespace SistemaAcademico1
             // 
             lblTituloCiclos.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             lblTituloCiclos.ForeColor = Color.DodgerBlue;
-            lblTituloCiclos.Location = new Point(12, 97);
+            lblTituloCiclos.Location = new Point(18, 97);
             lblTituloCiclos.Name = "lblTituloCiclos";
             lblTituloCiclos.Size = new Size(200, 73);
             lblTituloCiclos.TabIndex = 2;
@@ -834,18 +843,6 @@ namespace SistemaAcademico1
             lblDescripcionCiclos.Text = "Estructuras para tomar decisiones y repetir instrucciones varias veces.\r\n";
             lblDescripcionCiclos.TextAlign = ContentAlignment.TopCenter;
             // 
-            // btnCiclos
-            // 
-            btnCiclos.BackColor = Color.Transparent;
-            btnCiclos.FlatStyle = FlatStyle.Flat;
-            btnCiclos.ForeColor = Color.DodgerBlue;
-            btnCiclos.Location = new Point(18, 245);
-            btnCiclos.Name = "btnCiclos";
-            btnCiclos.Size = new Size(194, 32);
-            btnCiclos.TabIndex = 4;
-            btnCiclos.Text = "Ver tema";
-            btnCiclos.UseVisualStyleBackColor = false;
-            // 
             // panelAccesos
             // 
             panelAccesos.BackColor = Color.FromArgb(10, 27, 64);
@@ -853,7 +850,6 @@ namespace SistemaAcademico1
             panelAccesos.Controls.Add(lblAccesos);
             panelAccesos.Controls.Add(btnAccesoJuego);
             panelAccesos.Controls.Add(btnAccesoVariables);
-            panelAccesos.Controls.Add(btnAccesoCiclos);
             panelAccesos.Location = new Point(35, 615);
             panelAccesos.Name = "panelAccesos";
             panelAccesos.Size = new Size(976, 105);
@@ -899,21 +895,6 @@ namespace SistemaAcademico1
             btnAccesoVariables.Text = "{ }  Variables";
             btnAccesoVariables.UseVisualStyleBackColor = false;
             // 
-            // btnAccesoCiclos
-            // 
-            btnAccesoCiclos.BackColor = Color.FromArgb(43, 104, 224);
-            btnAccesoCiclos.FlatAppearance.BorderSize = 0;
-            btnAccesoCiclos.FlatStyle = FlatStyle.Flat;
-            btnAccesoCiclos.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            btnAccesoCiclos.ForeColor = Color.White;
-            btnAccesoCiclos.Location = new Point(430, 50);
-            btnAccesoCiclos.Name = "btnAccesoCiclos";
-            btnAccesoCiclos.Size = new Size(185, 42);
-            btnAccesoCiclos.TabIndex = 3;
-            btnAccesoCiclos.Text = "↻  Ciclos";
-            btnAccesoCiclos.UseVisualStyleBackColor = false;
-            btnAccesoCiclos.Click += btnAccesoCiclos_Click;
-            // 
             // MenuEstructura
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -949,5 +930,6 @@ namespace SistemaAcademico1
         }
 
         private Button btnInicio;
+        private Button button1;
     }
 }

@@ -87,22 +87,22 @@ namespace SistemaAcademico1
 
             panel4.Location = new Point(margenIzquierdo + 270, 145);
             panel4.Size = new Size(500, altoPaneles);
-            panelImportante.Location = new Point(12, panel4.Height - 105);
-            panelImportante.Size = new Size(468, 87);
+          //  panelImportante.Location = new Point(12, panel4.Height - 105);
+          //  panelImportante.Size = new Size(468, 87);
 
             panel5.Location = new Point(margenIzquierdo + 790, 145);
             panel5.Size = new Size(Math.Max(420, anchoContenido - 790), altoPaneles);
             txtCodigo.Size = new Size(panel5.Width - 54, 160);
-            txtSalida.Size = new Size(panel5.Width - 54, Math.Max(175, panel5.Height - 360));
-            label3.Location = new Point(label3.Left, txtSalida.Bottom + 10);
-            label3.Size = new Size(panel5.Width - 54, 55);
-            btnLimpiar.Location = new Point(panel5.Width - 248, 205);
-            btnEjecutar.Location = new Point(panel5.Width - 128, 205);
+           // txtSalida.Size = new Size(panel5.Width - 54, Math.Max(175, panel5.Height - 360));
+           // label3.Location = new Point(label3.Left, txtSalida.Bottom + 10);
+           // label3.Size = new Size(panel5.Width - 54, 55);
+           // btnLimpiar.Location = new Point(panel5.Width - 248, 205);
+           // btnEjecutar.Location = new Point(panel5.Width - 128, 205);
 
-            panel6.Location = new Point(margenIzquierdo, posicionPanelInferior);
-            panel6.Size = new Size(anchoContenido, 105);
+           // panel6.Location = new Point(margenIzquierdo, posicionPanelInferior);
+           // panel6.Size = new Size(anchoContenido, 105);
             button1.Location = new Point(45, 38);
-            btnjuego.Location = new Point(panel6.Width - btnjuego.Width - 28, 28);
+            //btnjuego.Location = new Point(panel6.Width - btnjuego.Width - 28, 28);
         }
 
         private void MostrarTema(
@@ -119,8 +119,8 @@ namespace SistemaAcademico1
             lblDescripcionTema.Text = descripcion;
             richTextBox1.Text = sintaxis;
             txtCodigo.Text = ejemplo;
-            label3.Text = explicacion;
-            txtSalida.Clear();
+           // label3.Text = explicacion;
+          //  txtSalida.Clear();
             MostrarExplicacionConColores(tema == TemaCiclo.While);
             MarcarBotonActivo(botonActivo);
         }
@@ -129,7 +129,8 @@ namespace SistemaAcademico1
         {
             Control[] explicacionColores =
             {
-                label12, label13, label14, label15, label16,
+               // label12, 
+                label13, label14, label15, label16,
                 label17, label18, label19
             };
 
@@ -217,7 +218,7 @@ namespace SistemaAcademico1
             Control[] textosFijos =
             {
                 label4, label5, label6, label7, label8,
-                panel3
+               // panel3
             };
 
             foreach (Control control in textosFijos)
@@ -226,7 +227,7 @@ namespace SistemaAcademico1
 
         private void btnEjecutar_Click(object sender, EventArgs e)
         {
-            txtSalida.Clear();
+           // txtSalida.Clear();
 
             switch (temaActual)
             {
@@ -234,21 +235,21 @@ namespace SistemaAcademico1
                     int numeroWhile = 1;
                     while (numeroWhile <= 5)
                     {
-                        txtSalida.AppendText(numeroWhile + Environment.NewLine);
+                       // txtSalida.AppendText(numeroWhile + Environment.NewLine);
                         numeroWhile++;
                     }
                     break;
 
-                case TemaCiclo.For:
+               // case TemaCiclo.For:
                     for (int i = 1; i <= 5; i++)
-                        txtSalida.AppendText(i + Environment.NewLine);
+                        //txtSalida.AppendText(i + Environment.NewLine);
                     break;
 
                 case TemaCiclo.DoWhile:
                     int numeroDoWhile = 1;
                     do
                     {
-                        txtSalida.AppendText(numeroDoWhile + Environment.NewLine);
+                        //txtSalida.AppendText(numeroDoWhile + Environment.NewLine);
                         numeroDoWhile++;
                     }
                     while (numeroDoWhile <= 5);
@@ -257,8 +258,8 @@ namespace SistemaAcademico1
                 case TemaCiclo.Anidados:
                     for (int i = 1; i <= 3; i++)
                     {
-                        for (int j = 1; j <= 2; j++)
-                            txtSalida.AppendText($"i={i}, j={j}{Environment.NewLine}");
+                       // for (int j = 1; j <= 2; j++)
+                         //   txtSalida.AppendText($"i={i}, j={j}{Environment.NewLine}");
                     }
                     break;
 
@@ -275,7 +276,7 @@ namespace SistemaAcademico1
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            txtSalida.Clear();
+          //  txtSalida.Clear();
         }
 
         private void txtSalida_TextChanged(object sender, EventArgs e)
@@ -332,6 +333,38 @@ namespace SistemaAcademico1
             menuTemaif_else menuTemaif_Else = new menuTemaif_else();
             menuTemaif_Else.Show();
             Hide();
+        }
+
+        private void picboxInfinito_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnComprobar_Click(object sender, EventArgs e)
+        {
+            // Verificamos cuál RadioButton está seleccionado
+            if (rbOpcionA.Checked)
+            {
+                // Supongamos que la opción 'a' es la correcta (ajusta según tu lógica)
+                lblResultado.Text = "¡Respuesta correcta!";
+                lblResultado.ForeColor = System.Drawing.Color.Green;
+            }
+            else if (rbOpcionB.Checked || rbOpcionC.Checked || rbOpcionD.Checked)
+            {
+                lblResultado.Text = "Respuesta incorrecta. Inténtalo de nuevo.";
+                lblResultado.ForeColor = System.Drawing.Color.Red;
+            }
+            else
+            {
+                // Por si el usuario hace clic en comprobar sin seleccionar nada
+                lblResultado.Text = "Por favor, selecciona una opción.";
+                lblResultado.ForeColor = System.Drawing.Color.Yellow;
+            }
         }
     }
 }
