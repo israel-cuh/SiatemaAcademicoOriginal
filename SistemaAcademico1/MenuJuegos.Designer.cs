@@ -134,7 +134,7 @@ namespace SistemaAcademico1
             btnJuego4.Name = "btnJuego4";
             btnJuego4.Size = new Size(220, 45);
             btnJuego4.TabIndex = 2;
-            btnJuego4.Text = "Pendiente";
+            btnJuego4.Text = "Jugar";
             btnJuego4.UseVisualStyleBackColor = false;
             btnJuego4.Click += btnJuego4_Click;
             // 
