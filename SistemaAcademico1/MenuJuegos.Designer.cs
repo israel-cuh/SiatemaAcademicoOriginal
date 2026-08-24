@@ -36,6 +36,7 @@ namespace SistemaAcademico1
             lblJuego2Descripcion = new Label();
             lblJuego2Titulo = new Label();
             tarjetaOrdenarCodigo = new Panel();
+            button1 = new Button();
             btnOrdenarCodigo = new Button();
             lblOrdenarDescripcion = new Label();
             lblOrdenarTitulo = new Label();
@@ -133,7 +134,7 @@ namespace SistemaAcademico1
             btnJuego4.Name = "btnJuego4";
             btnJuego4.Size = new Size(220, 45);
             btnJuego4.TabIndex = 2;
-            btnJuego4.Text = "Pendiente";
+            btnJuego4.Text = "Jugar";
             btnJuego4.UseVisualStyleBackColor = false;
             btnJuego4.Click += btnJuego4_Click;
             // 
@@ -145,17 +146,17 @@ namespace SistemaAcademico1
             lblJuego4Descripcion.Name = "lblJuego4Descripcion";
             lblJuego4Descripcion.Size = new Size(220, 125);
             lblJuego4Descripcion.TabIndex = 1;
-            lblJuego4Descripcion.Text = "Espacio reservado para el cuarto minijuego del equipo.";
+            lblJuego4Descripcion.Text = "Selecciona las letras que creas correctas y completa la palabra antes de quedarte sin intentos";
             // 
             // lblJuego4Titulo
             // 
             lblJuego4Titulo.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblJuego4Titulo.ForeColor = Color.FromArgb(255, 190, 70);
-            lblJuego4Titulo.Location = new Point(25, 30);
+            lblJuego4Titulo.Location = new Point(79, 19);
             lblJuego4Titulo.Name = "lblJuego4Titulo";
             lblJuego4Titulo.Size = new Size(220, 70);
             lblJuego4Titulo.TabIndex = 0;
-            lblJuego4Titulo.Text = "Juego 4";
+            lblJuego4Titulo.Text = "Codix";
             // 
             // tarjetaJuego3
             // 
@@ -250,6 +251,7 @@ namespace SistemaAcademico1
             // tarjetaOrdenarCodigo
             // 
             tarjetaOrdenarCodigo.BackColor = Color.FromArgb(13, 35, 79);
+            tarjetaOrdenarCodigo.Controls.Add(button1);
             tarjetaOrdenarCodigo.Controls.Add(btnOrdenarCodigo);
             tarjetaOrdenarCodigo.Controls.Add(lblOrdenarDescripcion);
             tarjetaOrdenarCodigo.Controls.Add(lblOrdenarTitulo);
@@ -258,13 +260,27 @@ namespace SistemaAcademico1
             tarjetaOrdenarCodigo.Size = new Size(270, 355);
             tarjetaOrdenarCodigo.TabIndex = 0;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(132, 78, 255);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(25, 285);
+            button1.Name = "button1";
+            button1.Size = new Size(220, 45);
+            button1.TabIndex = 3;
+            button1.Text = "Tutorial";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // btnOrdenarCodigo
             // 
             btnOrdenarCodigo.BackColor = Color.FromArgb(132, 78, 255);
             btnOrdenarCodigo.FlatStyle = FlatStyle.Flat;
             btnOrdenarCodigo.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnOrdenarCodigo.ForeColor = Color.White;
-            btnOrdenarCodigo.Location = new Point(25, 285);
+            btnOrdenarCodigo.Location = new Point(25, 226);
             btnOrdenarCodigo.Name = "btnOrdenarCodigo";
             btnOrdenarCodigo.Size = new Size(220, 45);
             btnOrdenarCodigo.TabIndex = 2;
@@ -367,5 +383,6 @@ namespace SistemaAcademico1
         private Label lblJuego4Titulo;
         private Panel panelInfo;
         private Label lblInfoTitulo;
+        private Button button1;
     }
 }

@@ -280,6 +280,7 @@
             buttoncomprobar.TabIndex = 7;
             buttoncomprobar.Text = "Comprobar";
             buttoncomprobar.UseVisualStyleBackColor = false;
+            buttoncomprobar.Click += buttoncomprobar_Click;
             // 
             // rbcompilacion
             // 

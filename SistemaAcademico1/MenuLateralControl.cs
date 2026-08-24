@@ -61,7 +61,7 @@ namespace SistemaAcademico1
 
         private void btnCiclos_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(new MenuTemaCiclo(), "Ciclos");
+            AbrirFormulario(new CicloWhile1(), "Ciclos");
         }
 
         private void btnJuego_Click(object sender, EventArgs e)

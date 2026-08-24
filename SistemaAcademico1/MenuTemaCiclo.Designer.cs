@@ -37,6 +37,8 @@
             lblDescripcion = new Label();
             lblTitulo = new Label();
             panel2 = new Panel();
+            button3 = new Button();
+            button2 = new Button();
             btnAnidados = new Button();
             btnDoWhile = new Button();
             btnFor = new Button();
@@ -50,27 +52,24 @@
             label16 = new Label();
             label14 = new Label();
             label13 = new Label();
-            label12 = new Label();
-            label8 = new Label();
-            label7 = new Label();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
-            panelImportante = new Panel();
             lblsintaxis = new Label();
             lblDescripcionTema = new Label();
             lblTituloTema = new Label();
             richTextBox1 = new RichTextBox();
-            panel3 = new Panel();
             panel5 = new Panel();
-            label3 = new Label();
-            btnLimpiar = new Button();
-            label2 = new Label();
-            label1 = new Label();
-            btnEjecutar = new Button();
-            txtSalida = new RichTextBox();
             txtCodigo = new RichTextBox();
-            panel6 = new Panel();
+            label1 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            lblResultado = new Label();
+            btnComprobar = new Button();
+            rbOpcionD = new RadioButton();
+            rbOpcionC = new RadioButton();
+            rbOpcionB = new RadioButton();
+            rbOpcionA = new RadioButton();
             button1 = new Button();
             btnjuego = new Button();
             panel1.SuspendLayout();
@@ -78,7 +77,6 @@
             panel2.SuspendLayout();
             panel4.SuspendLayout();
             panel5.SuspendLayout();
-            panel6.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -93,7 +91,7 @@
             panel1.Controls.Add(lblTitulo);
             panel1.Location = new Point(256, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(973, 117);
+            panel1.Size = new Size(1100, 117);
             panel1.TabIndex = 0;
             // 
             // picboxInfinito
@@ -101,11 +99,12 @@
             picboxInfinito.BackColor = Color.Transparent;
             picboxInfinito.BackgroundImage = (Image)resources.GetObject("picboxInfinito.BackgroundImage");
             picboxInfinito.BackgroundImageLayout = ImageLayout.Stretch;
-            picboxInfinito.Location = new Point(550, 0);
+            picboxInfinito.Location = new Point(662, 0);
             picboxInfinito.Name = "picboxInfinito";
             picboxInfinito.Size = new Size(435, 126);
             picboxInfinito.TabIndex = 2;
             picboxInfinito.TabStop = false;
+            picboxInfinito.Click += picboxInfinito_Click;
             // 
             // label11
             // 
@@ -170,14 +169,44 @@
             // 
             panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
             panel2.BackgroundImageLayout = ImageLayout.Stretch;
+            panel2.Controls.Add(button3);
+            panel2.Controls.Add(button2);
             panel2.Controls.Add(btnAnidados);
             panel2.Controls.Add(btnDoWhile);
             panel2.Controls.Add(btnFor);
             panel2.Controls.Add(btnWhile);
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(250, 393);
+            panel2.Size = new Size(250, 467);
             panel2.TabIndex = 1;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.Transparent;
+            button3.FlatStyle = FlatStyle.Popup;
+            button3.ForeColor = SystemColors.ButtonFace;
+            button3.Image = (Image)resources.GetObject("button3.Image");
+            button3.Location = new Point(12, 377);
+            button3.Name = "button3";
+            button3.Size = new Size(218, 49);
+            button3.TabIndex = 7;
+            button3.Text = "Estructura If-else";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.Transparent;
+            button2.FlatStyle = FlatStyle.Popup;
+            button2.ForeColor = SystemColors.ButtonFace;
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.Location = new Point(12, 306);
+            button2.Name = "button2";
+            button2.Size = new Size(218, 49);
+            button2.TabIndex = 6;
+            button2.Text = "Estructura IF";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // btnAnidados
             // 
@@ -185,12 +214,13 @@
             btnAnidados.FlatStyle = FlatStyle.Popup;
             btnAnidados.ForeColor = SystemColors.ButtonFace;
             btnAnidados.Image = (Image)resources.GetObject("btnAnidados.Image");
-            btnAnidados.Location = new Point(12, 247);
+            btnAnidados.Location = new Point(12, 235);
             btnAnidados.Name = "btnAnidados";
             btnAnidados.Size = new Size(218, 49);
             btnAnidados.TabIndex = 4;
             btnAnidados.Text = "Ciclos Anidados";
             btnAnidados.UseVisualStyleBackColor = false;
+            btnAnidados.Click += btnAnidados_Click;
             // 
             // btnDoWhile
             // 
@@ -236,7 +266,7 @@
             // 
             panelConsejo.BackgroundImage = (Image)resources.GetObject("panelConsejo.BackgroundImage");
             panelConsejo.BackgroundImageLayout = ImageLayout.Stretch;
-            panelConsejo.Location = new Point(3, 468);
+            panelConsejo.Location = new Point(6, 578);
             panelConsejo.Name = "panelConsejo";
             panelConsejo.Size = new Size(247, 150);
             panelConsejo.TabIndex = 2;
@@ -253,21 +283,16 @@
             panel4.Controls.Add(label16);
             panel4.Controls.Add(label14);
             panel4.Controls.Add(label13);
-            panel4.Controls.Add(label12);
-            panel4.Controls.Add(label8);
-            panel4.Controls.Add(label7);
             panel4.Controls.Add(label6);
             panel4.Controls.Add(label5);
             panel4.Controls.Add(label4);
-            panel4.Controls.Add(panelImportante);
             panel4.Controls.Add(lblsintaxis);
             panel4.Controls.Add(lblDescripcionTema);
             panel4.Controls.Add(lblTituloTema);
             panel4.Controls.Add(richTextBox1);
-            panel4.Controls.Add(panel3);
             panel4.Location = new Point(256, 123);
             panel4.Name = "panel4";
-            panel4.Size = new Size(471, 495);
+            panel4.Size = new Size(586, 659);
             panel4.TabIndex = 3;
             // 
             // label19
@@ -276,7 +301,7 @@
             label19.BackColor = Color.Transparent;
             label19.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label19.ForeColor = Color.White;
-            label19.Location = new Point(340, 326);
+            label19.Location = new Point(360, 559);
             label19.Name = "label19";
             label19.Size = new Size(14, 20);
             label19.TabIndex = 18;
@@ -288,7 +313,7 @@
             label18.BackColor = Color.Transparent;
             label18.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label18.ForeColor = Color.Crimson;
-            label18.Location = new Point(301, 326);
+            label18.Location = new Point(311, 557);
             label18.Name = "label18";
             label18.Size = new Size(43, 20);
             label18.TabIndex = 17;
@@ -300,7 +325,7 @@
             label17.BackColor = Color.Transparent;
             label17.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label17.ForeColor = SystemColors.ButtonFace;
-            label17.Location = new Point(12, 326);
+            label17.Location = new Point(12, 559);
             label17.Name = "label17";
             label17.Size = new Size(298, 18);
             label17.TabIndex = 16;
@@ -312,7 +337,7 @@
             label15.BackColor = Color.Transparent;
             label15.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label15.ForeColor = Color.Green;
-            label15.Location = new Point(66, 286);
+            label15.Location = new Point(69, 496);
             label15.Name = "label15";
             label15.Size = new Size(84, 20);
             label15.TabIndex = 14;
@@ -324,7 +349,7 @@
             label16.BackColor = Color.Transparent;
             label16.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label16.ForeColor = SystemColors.ButtonFace;
-            label16.Location = new Point(12, 308);
+            label16.Location = new Point(13, 526);
             label16.Name = "label16";
             label16.Size = new Size(297, 18);
             label16.TabIndex = 15;
@@ -336,7 +361,7 @@
             label14.BackColor = Color.Transparent;
             label14.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label14.ForeColor = SystemColors.ButtonFace;
-            label14.Location = new Point(12, 288);
+            label14.Location = new Point(12, 498);
             label14.Name = "label14";
             label14.Size = new Size(428, 18);
             label14.TabIndex = 13;
@@ -348,47 +373,11 @@
             label13.BackColor = Color.Transparent;
             label13.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label13.ForeColor = SystemColors.ButtonFace;
-            label13.Location = new Point(12, 270);
+            label13.Location = new Point(13, 455);
             label13.Name = "label13";
             label13.Size = new Size(183, 18);
             label13.TabIndex = 12;
             label13.Text = "1.Se evalua la condición.\r\n";
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.BackColor = Color.Transparent;
-            label12.Font = new Font("Arial Black", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label12.ForeColor = SystemColors.ButtonFace;
-            label12.Location = new Point(12, 246);
-            label12.Name = "label12";
-            label12.Size = new Size(123, 24);
-            label12.TabIndex = 11;
-            label12.Text = "Explicacion ";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.BackColor = Color.Transparent;
-            label8.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.ForeColor = Color.DarkViolet;
-            label8.Location = new Point(145, 59);
-            label8.Name = "label8";
-            label8.Size = new Size(84, 20);
-            label8.TabIndex = 10;
-            label8.Text = "verdadera";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.BackColor = Color.Transparent;
-            label7.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.DarkViolet;
-            label7.Location = new Point(83, 43);
-            label7.Name = "label7";
-            label7.Size = new Size(52, 20);
-            label7.TabIndex = 9;
-            label7.Text = "While";
             // 
             // label6
             // 
@@ -396,7 +385,7 @@
             label6.BackColor = Color.FromArgb(6, 16, 41);
             label6.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.Green;
-            label6.Location = new Point(76, 178);
+            label6.Location = new Point(35, 367);
             label6.Name = "label6";
             label6.Size = new Size(194, 20);
             label6.TabIndex = 8;
@@ -409,7 +398,7 @@
             label5.BackColor = Color.FromArgb(6, 16, 41);
             label5.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.DodgerBlue;
-            label5.Location = new Point(93, 153);
+            label5.Location = new Point(97, 309);
             label5.Name = "label5";
             label5.Size = new Size(83, 20);
             label5.TabIndex = 7;
@@ -421,20 +410,11 @@
             label4.BackColor = Color.FromArgb(6, 16, 41);
             label4.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.DarkViolet;
-            label4.Location = new Point(26, 153);
+            label4.Location = new Point(26, 309);
             label4.Name = "label4";
             label4.Size = new Size(52, 20);
             label4.TabIndex = 6;
             label4.Text = "While";
-            // 
-            // panelImportante
-            // 
-            panelImportante.BackgroundImage = (Image)resources.GetObject("panelImportante.BackgroundImage");
-            panelImportante.BackgroundImageLayout = ImageLayout.Stretch;
-            panelImportante.Location = new Point(12, 391);
-            panelImportante.Name = "panelImportante";
-            panelImportante.Size = new Size(436, 87);
-            panelImportante.TabIndex = 5;
             // 
             // lblsintaxis
             // 
@@ -442,7 +422,7 @@
             lblsintaxis.BackColor = Color.Transparent;
             lblsintaxis.Font = new Font("Arial Black", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblsintaxis.ForeColor = SystemColors.ButtonFace;
-            lblsintaxis.Location = new Point(12, 85);
+            lblsintaxis.Location = new Point(12, 231);
             lblsintaxis.Name = "lblsintaxis";
             lblsintaxis.Size = new Size(85, 24);
             lblsintaxis.TabIndex = 3;
@@ -452,23 +432,23 @@
             // 
             lblDescripcionTema.AutoSize = true;
             lblDescripcionTema.BackColor = Color.Transparent;
-            lblDescripcionTema.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDescripcionTema.Font = new Font("Arial", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDescripcionTema.ForeColor = SystemColors.ButtonFace;
-            lblDescripcionTema.Location = new Point(26, 43);
+            lblDescripcionTema.Location = new Point(17, 93);
             lblDescripcionTema.Name = "lblDescripcionTema";
-            lblDescripcionTema.Size = new Size(385, 54);
+            lblDescripcionTema.Size = new Size(475, 84);
             lblDescripcionTema.TabIndex = 1;
-            lblDescripcionTema.Text = "El ciclo              ejecuta un bloque de codigo mientras \r\nla condicion sea\r\n\r\n";
+            lblDescripcionTema.Text = resources.GetString("lblDescripcionTema.Text");
             // 
             // lblTituloTema
             // 
             lblTituloTema.AutoSize = true;
             lblTituloTema.BackColor = Color.Transparent;
-            lblTituloTema.Font = new Font("Arial Black", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTituloTema.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTituloTema.ForeColor = SystemColors.ButtonFace;
-            lblTituloTema.Location = new Point(26, 14);
+            lblTituloTema.Location = new Point(17, 41);
             lblTituloTema.Name = "lblTituloTema";
-            lblTituloTema.Size = new Size(115, 24);
+            lblTituloTema.Size = new Size(124, 25);
             lblTituloTema.TabIndex = 0;
             lblTituloTema.Text = "Ciclo While";
             // 
@@ -479,114 +459,31 @@
             richTextBox1.Cursor = Cursors.No;
             richTextBox1.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             richTextBox1.ForeColor = Color.White;
-            richTextBox1.Location = new Point(12, 112);
+            richTextBox1.Location = new Point(12, 268);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.Size = new Size(436, 129);
             richTextBox1.TabIndex = 2;
             richTextBox1.Text = "      \n\n                 (                       ) {\n                  \n   }";
             richTextBox1.TextChanged += richTextBox1_TextChanged;
             // 
-            // panel3
-            // 
-            panel3.BackColor = Color.Transparent;
-            panel3.Location = new Point(12, 112);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(378, 105);
-            panel3.TabIndex = 19;
-            // 
             // panel5
             // 
             panel5.BackgroundImage = (Image)resources.GetObject("panel5.BackgroundImage");
             panel5.BackgroundImageLayout = ImageLayout.Stretch;
-            panel5.Controls.Add(label3);
-            panel5.Controls.Add(btnLimpiar);
-            panel5.Controls.Add(label2);
-            panel5.Controls.Add(label1);
-            panel5.Controls.Add(btnEjecutar);
-            panel5.Controls.Add(txtSalida);
             panel5.Controls.Add(txtCodigo);
-            panel5.Location = new Point(733, 123);
+            panel5.Controls.Add(label1);
+            panel5.Controls.Add(label7);
+            panel5.Controls.Add(label8);
+            panel5.Controls.Add(lblResultado);
+            panel5.Controls.Add(btnComprobar);
+            panel5.Controls.Add(rbOpcionD);
+            panel5.Controls.Add(rbOpcionC);
+            panel5.Controls.Add(rbOpcionB);
+            panel5.Controls.Add(rbOpcionA);
+            panel5.Location = new Point(848, 132);
             panel5.Name = "panel5";
-            panel5.Size = new Size(496, 495);
+            panel5.Size = new Size(502, 650);
             panel5.TabIndex = 4;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = SystemColors.ButtonFace;
-            label3.Location = new Point(18, 431);
-            label3.Name = "label3";
-            label3.Size = new Size(414, 40);
-            label3.TabIndex = 5;
-            label3.Text = "El ciclo comienza en i = 1 . mientras sea menor o igual a 5,\r\nse imprime su valor y luego se incrementa en 1\r\n";
-            // 
-            // btnLimpiar
-            // 
-            btnLimpiar.BackColor = Color.FromArgb(192, 0, 192);
-            btnLimpiar.FlatStyle = FlatStyle.Popup;
-            btnLimpiar.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLimpiar.ForeColor = SystemColors.ButtonFace;
-            btnLimpiar.Location = new Point(247, 205);
-            btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(94, 29);
-            btnLimpiar.TabIndex = 6;
-            btnLimpiar.Text = "Limpiar";
-            btnLimpiar.UseVisualStyleBackColor = false;
-            btnLimpiar.Click += btnLimpiar_Click;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Segoe UI Black", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = SystemColors.ButtonFace;
-            label2.Location = new Point(18, 408);
-            label2.Name = "label2";
-            label2.Size = new Size(185, 23);
-            label2.TabIndex = 4;
-            label2.Text = "¿ Que esta pasando ?\r\n";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI Black", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(18, 209);
-            label1.Name = "label1";
-            label1.Size = new Size(156, 23);
-            label1.TabIndex = 3;
-            label1.Text = "Salida de consola";
-            // 
-            // btnEjecutar
-            // 
-            btnEjecutar.BackColor = Color.FromArgb(192, 0, 192);
-            btnEjecutar.FlatStyle = FlatStyle.Popup;
-            btnEjecutar.Font = new Font("Arial Narrow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEjecutar.ForeColor = SystemColors.ButtonHighlight;
-            btnEjecutar.Location = new Point(366, 205);
-            btnEjecutar.Name = "btnEjecutar";
-            btnEjecutar.Size = new Size(94, 29);
-            btnEjecutar.TabIndex = 2;
-            btnEjecutar.Text = "Ejecutar";
-            btnEjecutar.UseVisualStyleBackColor = false;
-            btnEjecutar.Click += btnEjecutar_Click;
-            // 
-            // txtSalida
-            // 
-            txtSalida.BackColor = Color.FromArgb(6, 16, 41);
-            txtSalida.BorderStyle = BorderStyle.None;
-            txtSalida.Cursor = Cursors.No;
-            txtSalida.Font = new Font("Arial Black", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtSalida.ForeColor = Color.Green;
-            txtSalida.Location = new Point(18, 245);
-            txtSalida.Name = "txtSalida";
-            txtSalida.Size = new Size(442, 160);
-            txtSalida.TabIndex = 1;
-            txtSalida.Text = "";
-            txtSalida.TextChanged += txtSalida_TextChanged;
             // 
             // txtCodigo
             // 
@@ -595,32 +492,135 @@
             txtCodigo.Cursor = Cursors.No;
             txtCodigo.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtCodigo.ForeColor = Color.White;
-            txtCodigo.Location = new Point(18, 42);
+            txtCodigo.Location = new Point(18, 10);
             txtCodigo.Name = "txtCodigo";
             txtCodigo.Size = new Size(442, 148);
             txtCodigo.TabIndex = 0;
             txtCodigo.Text = "1     int i = 1;\n2\n3     while (i <= 5)\n4     {\n5         Console.WriteLine(i);\n6         i++;\n7     }";
             txtCodigo.TextChanged += txtCodigo_TextChanged;
             // 
-            // panel6
+            // label1
             // 
-            panel6.BackgroundImage = (Image)resources.GetObject("panel6.BackgroundImage");
-            panel6.BackgroundImageLayout = ImageLayout.Stretch;
-            panel6.Controls.Add(button1);
-            panel6.Controls.Add(btnjuego);
-            panel6.Location = new Point(0, 635);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(1241, 105);
-            panel6.TabIndex = 5;
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI Black", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ButtonFace;
+            label1.Location = new Point(18, 161);
+            label1.Name = "label1";
+            label1.Size = new Size(77, 23);
+            label1.TabIndex = 3;
+            label1.Text = "Consola";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Segoe UI Black", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = SystemColors.ButtonFace;
+            label7.Location = new Point(3, 192);
+            label7.Name = "label7";
+            label7.Size = new Size(273, 23);
+            label7.TabIndex = 6;
+            label7.Text = "Sección de Práctica: Ciclo While";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.BackColor = Color.Transparent;
+            label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.ForeColor = SystemColors.ButtonFace;
+            label8.Location = new Point(3, 222);
+            label8.Name = "label8";
+            label8.Size = new Size(446, 60);
+            label8.TabIndex = 7;
+            label8.Text = "¿Cuál de las siguientes condiciones asegura que el bloque de\r\n código del bucle while se ejecute correctamente para imprimir\r\n 'Hola' tres veces?";
+            // 
+            // lblResultado
+            // 
+            lblResultado.AutoSize = true;
+            lblResultado.BackColor = Color.Transparent;
+            lblResultado.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblResultado.ForeColor = SystemColors.ButtonFace;
+            lblResultado.Location = new Point(137, 463);
+            lblResultado.Name = "lblResultado";
+            lblResultado.Size = new Size(69, 23);
+            lblResultado.TabIndex = 13;
+            lblResultado.Text = "label12";
+            // 
+            // btnComprobar
+            // 
+            btnComprobar.BackColor = Color.Transparent;
+            btnComprobar.BackgroundImage = (Image)resources.GetObject("btnComprobar.BackgroundImage");
+            btnComprobar.BackgroundImageLayout = ImageLayout.Stretch;
+            btnComprobar.FlatStyle = FlatStyle.Popup;
+            btnComprobar.ForeColor = Color.Transparent;
+            btnComprobar.Location = new Point(108, 489);
+            btnComprobar.Name = "btnComprobar";
+            btnComprobar.Size = new Size(158, 29);
+            btnComprobar.TabIndex = 12;
+            btnComprobar.Text = "Comprobar";
+            btnComprobar.UseVisualStyleBackColor = false;
+            btnComprobar.Click += btnComprobar_Click;
+            // 
+            // rbOpcionD
+            // 
+            rbOpcionD.AutoSize = true;
+            rbOpcionD.BackColor = Color.Transparent;
+            rbOpcionD.ForeColor = Color.WhiteSmoke;
+            rbOpcionD.Location = new Point(32, 430);
+            rbOpcionD.Name = "rbOpcionD";
+            rbOpcionD.Size = new Size(164, 24);
+            rbOpcionD.TabIndex = 11;
+            rbOpcionD.TabStop = true;
+            rbOpcionD.Text = "d) i = 1; while (i = 5)";
+            rbOpcionD.UseVisualStyleBackColor = false;
+            // 
+            // rbOpcionC
+            // 
+            rbOpcionC.AutoSize = true;
+            rbOpcionC.BackColor = Color.Transparent;
+            rbOpcionC.ForeColor = Color.Transparent;
+            rbOpcionC.Location = new Point(32, 384);
+            rbOpcionC.Name = "rbOpcionC";
+            rbOpcionC.Size = new Size(162, 24);
+            rbOpcionC.TabIndex = 10;
+            rbOpcionC.TabStop = true;
+            rbOpcionC.Text = "c) i = 1; while (i = 0)";
+            rbOpcionC.UseVisualStyleBackColor = false;
+            // 
+            // rbOpcionB
+            // 
+            rbOpcionB.AutoSize = true;
+            rbOpcionB.BackColor = Color.Transparent;
+            rbOpcionB.ForeColor = SystemColors.ButtonFace;
+            rbOpcionB.Location = new Point(32, 342);
+            rbOpcionB.Name = "rbOpcionB";
+            rbOpcionB.Size = new Size(174, 24);
+            rbOpcionB.TabIndex = 9;
+            rbOpcionB.TabStop = true;
+            rbOpcionB.Text = "b) i = 1; while (i <= 0)";
+            rbOpcionB.UseVisualStyleBackColor = false;
+            // 
+            // rbOpcionA
+            // 
+            rbOpcionA.AutoSize = true;
+            rbOpcionA.BackColor = Color.Transparent;
+            rbOpcionA.ForeColor = SystemColors.Control;
+            rbOpcionA.Location = new Point(32, 302);
+            rbOpcionA.Name = "rbOpcionA";
+            rbOpcionA.Size = new Size(163, 24);
+            rbOpcionA.TabIndex = 8;
+            rbOpcionA.TabStop = true;
+            rbOpcionA.Text = "a) i = 1; while (i < 3)";
+            rbOpcionA.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
             button1.BackColor = Color.Transparent;
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
             button1.BackgroundImageLayout = ImageLayout.Stretch;
             button1.FlatStyle = FlatStyle.Popup;
             button1.ForeColor = SystemColors.ButtonFace;
-            button1.Location = new Point(27, 20);
+            button1.Location = new Point(6, 788);
             button1.Name = "button1";
             button1.Size = new Size(237, 57);
             button1.TabIndex = 6;
@@ -636,12 +636,13 @@
             btnjuego.FlatStyle = FlatStyle.Popup;
             btnjuego.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnjuego.ForeColor = SystemColors.ButtonFace;
-            btnjuego.Location = new Point(992, 20);
+            btnjuego.Location = new Point(1082, 788);
             btnjuego.Name = "btnjuego";
             btnjuego.Size = new Size(237, 57);
             btnjuego.TabIndex = 7;
             btnjuego.Text = "🎮 Practicar lo aprendido";
             btnjuego.UseVisualStyleBackColor = false;
+            btnjuego.Click += btnjuego_Click_1;
             // 
             // MenuTemaCiclo
             // 
@@ -650,8 +651,9 @@
             BackColor = Color.FromArgb(6, 16, 41);
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1278, 751);
-            Controls.Add(panel6);
+            ClientSize = new Size(1354, 851);
+            Controls.Add(button1);
+            Controls.Add(btnjuego);
             Controls.Add(panel5);
             Controls.Add(panel4);
             Controls.Add(panelConsejo);
@@ -670,7 +672,6 @@
             panel4.PerformLayout();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
-            panel6.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -681,7 +682,6 @@
         private Panel panelConsejo;
         private Panel panel4;
         private Panel panel5;
-        private Panel panel6;
         private Button btnAnidados;
         private Button btnDoWhile;
         private Button btnFor;
@@ -694,31 +694,31 @@
         private RichTextBox richTextBox1;
         private Label lblDescripcionTema;
         private Label lblTituloTema;
-        private Panel panelImportante;
-        private Button btnEjecutar;
-        private RichTextBox txtSalida;
         private RichTextBox txtCodigo;
-        private Label label2;
-        private Label label1;
-        private Label label3;
         private Button button1;
-        private Button btnLimpiar;
         private Label label6;
         private Label label5;
         private Label label4;
-        private Label label7;
         private Label label9;
-        private Label label8;
         private Label label11;
         private Label label10;
         private Label label13;
-        private Label label12;
         private Label label17;
         private Label label15;
         private Label label16;
         private Label label14;
         private Label label19;
         private Label label18;
-        private Panel panel3;
+        private Button button2;
+        private Button button3;
+        private Label label7;
+        private Label label1;
+        private RadioButton rbOpcionD;
+        private RadioButton rbOpcionC;
+        private RadioButton rbOpcionB;
+        private RadioButton rbOpcionA;
+        private Label label8;
+        private Button btnComprobar;
+        private Label lblResultado;
     }
 }

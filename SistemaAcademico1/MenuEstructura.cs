@@ -8,6 +8,9 @@ namespace SistemaAcademico1
 {
     public partial class MenuEstructura : Form
     {
+        // Si el botón fue eliminado del diseñador, declararlo aquí para evitar errores de compilación.
+        private Button btnAccesoCiclos;
+
         private readonly string rolUsuario;
 
         public MenuEstructura() : this("Docente")
@@ -18,6 +21,31 @@ namespace SistemaAcademico1
         {
             rolUsuario = string.IsNullOrWhiteSpace(rol) ? "Docente" : rol;
             InitializeComponent();
+            // Asegurar que exista un control placeholder para btnAccesoCiclos si fue eliminado del diseñador
+            if (btnAccesoCiclos == null)
+            {
+                btnAccesoCiclos = new Button
+                {
+                    Name = "btnAccesoCiclos",
+                    Text = "Ciclos",
+                    Size = new Size(195, 45),
+                    BackColor = Color.FromArgb(132, 78, 255),
+                    ForeColor = Color.White,
+                    FlatStyle = FlatStyle.Flat,
+                    Font = new Font("Segoe UI", 10, FontStyle.Bold)
+                };
+                // Añadir al panelAccesos si está inicializado
+                try
+                {
+                    panelAccesos?.Controls.Add(btnAccesoCiclos);
+                }
+                catch
+                {
+                    // ignorar cualquier problema durante la adición; esto solo evita errores de tiempo de ejecución
+                }
+                // Conectar el manejador existente si está presente
+                btnAccesoCiclos.Click += btnAccesoCiclos_Click;
+            }
             AjustarTamanoComun();
             AjustarDashboardGrande();
             ConfigurarPantallaPrincipal();
@@ -77,7 +105,7 @@ namespace SistemaAcademico1
             AjustarContenidoTarjetaTema(tarjetaAlgoritmos, lblIconoAlgoritmos, lblTituloAlgoritmos, lblDescripcionAlgoritmos, btnSeudocodigo, anchoTarjeta);
             AjustarContenidoTarjetaTema(tarjetaVariables, lblIconoVariables, lblTituloVariables, lblDescripcionVariables, btnVariables, anchoTarjeta);
             AjustarContenidoTarjetaTema(tarjetaCondicionales, lblIconoCondicionales, lblTituloCondicionales, lblDescripcionCondicionales, btnCondicionales, anchoTarjeta);
-            AjustarContenidoTarjetaTema(tarjetaCiclos, lblIconoCiclos, lblTituloCiclos, lblDescripcionCiclos, btnCiclos, anchoTarjeta);
+           // AjustarContenidoTarjetaTema(tarjetaCiclos, lblIconoCiclos, lblTituloCiclos, lblDescripcionCiclos,  anchoTarjeta);
 
             panelAccesos.Location = new Point(margen, 635);
             panelAccesos.Size = new Size(anchoDisponible, 120);
@@ -168,7 +196,7 @@ namespace SistemaAcademico1
             btnMinimizar.Click += btnMinimizar_Click;
             //  btnTemas.Click += btnTemas_Click;
             btnJuego.Click += btnJuego_Click;
-            btnCiclos.Click += btnCiclos_Click;
+          //  btnCiclos.Click += btnCiclos_Click;
             // El diseñador ya puede haber asignado un manejador; asegurar que solo se asigne el correcto
             // Asegurar que no haya asignaciones duplicadas (puede venir del diseñador)
             btnSeudocodigo.Click -= btnAlgoritmos_Click;
@@ -177,7 +205,7 @@ namespace SistemaAcademico1
             btnCondicionales.Click += btnCondicionales_Click;
             btnAccesoJuego.Click += btnJuego_Click;
             btnAccesoVariables.Click += btnVariables_Click;
-            btnAccesoCiclos.Click += btnCiclos_Click;
+           // btnAccesoCiclos.Click += btnCiclos_Click;
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -260,7 +288,7 @@ namespace SistemaAcademico1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            btnCiclos_Click(sender, e);
+
         }
 
         private void contenido_Paint(object sender, PaintEventArgs e)
@@ -278,7 +306,9 @@ namespace SistemaAcademico1
 
         private void btnAlgoritmos_Click_1(object sender, EventArgs e)
         {
-            
+            frmPrincipal frmPrincipal = new frmPrincipal();
+            frmPrincipal.Show();
+            Hide();
         }
 
         private void btnJuego_Click_1(object sender, EventArgs e)
@@ -310,7 +340,24 @@ namespace SistemaAcademico1
 
         private void btnAccesoCiclos_Click(object sender, EventArgs e)
         {
+            // Abrir el formulario de ciclos y ocultar el menú
+            CicloWhile1 cicloWhile1 = new CicloWhile1();
+            cicloWhile1.Show();
+            Hide();
+        }
 
+        private void btnCiclos_Click_1(object sender, EventArgs e)
+        {
+            CicloWhile1 cicloWhile1 = new CicloWhile1();
+            cicloWhile1.Show();
+            Hide();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            CicloWhile1 cicloWhile1 = new CicloWhile1();
+            cicloWhile1.Show();
+            Hide();
         }
     }
 

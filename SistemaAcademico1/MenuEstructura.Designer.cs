@@ -62,12 +62,10 @@ namespace SistemaAcademico1
         private Button btnCerrarSesion = null!;
         private Button btnJuego = null!;
         private Button btnVariables = null!;
-        private Button btnCiclos = null!;
         private Button btnSeudocodigo = null!;
         private Button btnCondicionales = null!;
         private Button btnAccesoJuego = null!;
         private Button btnAccesoVariables = null!;
-        private Button btnAccesoCiclos = null!;
 
         protected override void Dispose(bool disposing)
         {
@@ -132,16 +130,15 @@ namespace SistemaAcademico1
             lblDescripcionCondicionales = new Label();
             btnCondicionales = new Button();
             tarjetaCiclos = new Panel();
+            button1 = new Button();
             lblNumeroCiclos = new Label();
             lblIconoCiclos = new Label();
             lblTituloCiclos = new Label();
             lblDescripcionCiclos = new Label();
-            btnCiclos = new Button();
             panelAccesos = new Panel();
             lblAccesos = new Label();
             btnAccesoJuego = new Button();
             btnAccesoVariables = new Button();
-            btnAccesoCiclos = new Button();
             panelSuperior.SuspendLayout();
             panelLateral.SuspendLayout();
             tarjetaUsuario.SuspendLayout();
@@ -234,7 +231,7 @@ namespace SistemaAcademico1
             btnInicio.FlatStyle = FlatStyle.Flat;
             btnInicio.Font = new Font("Segoe UI", 11F);
             btnInicio.ForeColor = Color.Gainsboro;
-            btnInicio.Location = new Point(30, 217);
+            btnInicio.Location = new Point(20, 249);
             btnInicio.Name = "btnInicio";
             btnInicio.Padding = new Padding(20, 0, 0, 0);
             btnInicio.Size = new Size(230, 48);
@@ -260,7 +257,7 @@ namespace SistemaAcademico1
             lblNombre.BackColor = Color.Transparent;
             lblNombre.Font = new Font("Segoe UI", 25F, FontStyle.Bold);
             lblNombre.ForeColor = Color.White;
-            lblNombre.Location = new Point(30, 98);
+            lblNombre.Location = new Point(30, 113);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(230, 48);
             lblNombre.TabIndex = 1;
@@ -272,7 +269,7 @@ namespace SistemaAcademico1
             lblSistema.BackColor = Color.Transparent;
             lblSistema.Font = new Font("Segoe UI", 10F);
             lblSistema.ForeColor = Color.Gainsboro;
-            lblSistema.Location = new Point(35, 150);
+            lblSistema.Location = new Point(32, 161);
             lblSistema.Name = "lblSistema";
             lblSistema.Size = new Size(205, 25);
             lblSistema.TabIndex = 2;
@@ -284,7 +281,7 @@ namespace SistemaAcademico1
             lblCurso.BackColor = Color.Transparent;
             lblCurso.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             lblCurso.ForeColor = Color.FromArgb(86, 139, 255);
-            lblCurso.Location = new Point(35, 176);
+            lblCurso.Location = new Point(30, 196);
             lblCurso.Name = "lblCurso";
             lblCurso.Size = new Size(205, 25);
             lblCurso.TabIndex = 3;
@@ -298,7 +295,7 @@ namespace SistemaAcademico1
             btnJuego.FlatStyle = FlatStyle.Flat;
             btnJuego.Font = new Font("Segoe UI", 11F);
             btnJuego.ForeColor = Color.Gainsboro;
-            btnJuego.Location = new Point(15, 295);
+            btnJuego.Location = new Point(18, 332);
             btnJuego.Name = "btnJuego";
             btnJuego.Padding = new Padding(20, 0, 0, 0);
             btnJuego.Size = new Size(230, 48);
@@ -315,7 +312,7 @@ namespace SistemaAcademico1
             btnCerrarSesion.FlatStyle = FlatStyle.Flat;
             btnCerrarSesion.Font = new Font("Segoe UI", 11F);
             btnCerrarSesion.ForeColor = Color.Gainsboro;
-            btnCerrarSesion.Location = new Point(20, 610);
+            btnCerrarSesion.Location = new Point(20, 465);
             btnCerrarSesion.Name = "btnCerrarSesion";
             btnCerrarSesion.Padding = new Padding(20, 0, 0, 0);
             btnCerrarSesion.Size = new Size(230, 48);
@@ -332,7 +329,7 @@ namespace SistemaAcademico1
             tarjetaUsuario.Controls.Add(lblAvatar);
             tarjetaUsuario.Controls.Add(lblUsuario);
             tarjetaUsuario.Controls.Add(lblRol);
-            tarjetaUsuario.Location = new Point(20, 675);
+            tarjetaUsuario.Location = new Point(20, 631);
             tarjetaUsuario.Name = "tarjetaUsuario";
             tarjetaUsuario.Size = new Size(230, 72);
             tarjetaUsuario.TabIndex = 8;
@@ -352,7 +349,7 @@ namespace SistemaAcademico1
             lblUsuario.BackColor = Color.Transparent;
             lblUsuario.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             lblUsuario.ForeColor = Color.White;
-            lblUsuario.Location = new Point(70, 14);
+            lblUsuario.Location = new Point(68, 12);
             lblUsuario.Name = "lblUsuario";
             lblUsuario.Size = new Size(140, 25);
             lblUsuario.TabIndex = 1;
@@ -596,7 +593,7 @@ namespace SistemaAcademico1
             // 
             lblIconoAlgoritmos.Font = new Font("Consolas", 30F, FontStyle.Bold);
             lblIconoAlgoritmos.ForeColor = Color.MediumPurple;
-            lblIconoAlgoritmos.Location = new Point(65, 55);
+            lblIconoAlgoritmos.Location = new Point(69, 30);
             lblIconoAlgoritmos.Name = "lblIconoAlgoritmos";
             lblIconoAlgoritmos.Size = new Size(105, 70);
             lblIconoAlgoritmos.TabIndex = 1;
@@ -607,7 +604,7 @@ namespace SistemaAcademico1
             // 
             lblTituloAlgoritmos.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             lblTituloAlgoritmos.ForeColor = Color.MediumPurple;
-            lblTituloAlgoritmos.Location = new Point(15, 135);
+            lblTituloAlgoritmos.Location = new Point(12, 100);
             lblTituloAlgoritmos.Name = "lblTituloAlgoritmos";
             lblTituloAlgoritmos.Size = new Size(200, 35);
             lblTituloAlgoritmos.TabIndex = 2;
@@ -666,7 +663,7 @@ namespace SistemaAcademico1
             // 
             lblIconoVariables.Font = new Font("Consolas", 28F, FontStyle.Bold);
             lblIconoVariables.ForeColor = Color.MediumSeaGreen;
-            lblIconoVariables.Location = new Point(55, 55);
+            lblIconoVariables.Location = new Point(61, 30);
             lblIconoVariables.Name = "lblIconoVariables";
             lblIconoVariables.Size = new Size(125, 70);
             lblIconoVariables.TabIndex = 1;
@@ -677,7 +674,7 @@ namespace SistemaAcademico1
             // 
             lblTituloVariables.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             lblTituloVariables.ForeColor = Color.MediumSeaGreen;
-            lblTituloVariables.Location = new Point(15, 130);
+            lblTituloVariables.Location = new Point(15, 100);
             lblTituloVariables.Name = "lblTituloVariables";
             lblTituloVariables.Size = new Size(200, 52);
             lblTituloVariables.TabIndex = 2;
@@ -736,7 +733,7 @@ namespace SistemaAcademico1
             // 
             lblIconoCondicionales.Font = new Font("Consolas", 30F, FontStyle.Bold);
             lblIconoCondicionales.ForeColor = Color.Goldenrod;
-            lblIconoCondicionales.Location = new Point(65, 55);
+            lblIconoCondicionales.Location = new Point(66, 29);
             lblIconoCondicionales.Name = "lblIconoCondicionales";
             lblIconoCondicionales.Size = new Size(105, 70);
             lblIconoCondicionales.TabIndex = 1;
@@ -747,7 +744,7 @@ namespace SistemaAcademico1
             // 
             lblTituloCondicionales.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             lblTituloCondicionales.ForeColor = Color.Goldenrod;
-            lblTituloCondicionales.Location = new Point(15, 135);
+            lblTituloCondicionales.Location = new Point(12, 97);
             lblTituloCondicionales.Name = "lblTituloCondicionales";
             lblTituloCondicionales.Size = new Size(200, 35);
             lblTituloCondicionales.TabIndex = 2;
@@ -778,18 +775,29 @@ namespace SistemaAcademico1
             btnCondicionales.Click += BtnCondicionales_Click;
             // 
             // tarjetaCiclos
-
             // 
             tarjetaCiclos.BackColor = Color.FromArgb(11, 29, 68);
+            tarjetaCiclos.Controls.Add(button1);
             tarjetaCiclos.Controls.Add(lblNumeroCiclos);
             tarjetaCiclos.Controls.Add(lblIconoCiclos);
             tarjetaCiclos.Controls.Add(lblTituloCiclos);
             tarjetaCiclos.Controls.Add(lblDescripcionCiclos);
-            tarjetaCiclos.Controls.Add(btnCiclos);
             tarjetaCiclos.Location = new Point(741, 0);
             tarjetaCiclos.Name = "tarjetaCiclos";
             tarjetaCiclos.Size = new Size(230, 285);
             tarjetaCiclos.TabIndex = 3;
+            // 
+            // button1
+            // 
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.ForeColor = Color.Teal;
+            button1.Location = new Point(15, 245);
+            button1.Name = "button1";
+            button1.Size = new Size(185, 29);
+            button1.TabIndex = 4;
+            button1.Text = "Ver tema";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
             // 
             // lblNumeroCiclos
             // 
@@ -807,7 +815,7 @@ namespace SistemaAcademico1
             // 
             lblIconoCiclos.Font = new Font("Segoe UI", 38F, FontStyle.Bold);
             lblIconoCiclos.ForeColor = Color.DodgerBlue;
-            lblIconoCiclos.Location = new Point(65, 48);
+            lblIconoCiclos.Location = new Point(65, 15);
             lblIconoCiclos.Name = "lblIconoCiclos";
             lblIconoCiclos.Size = new Size(105, 78);
             lblIconoCiclos.TabIndex = 1;
@@ -818,11 +826,11 @@ namespace SistemaAcademico1
             // 
             lblTituloCiclos.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             lblTituloCiclos.ForeColor = Color.DodgerBlue;
-            lblTituloCiclos.Location = new Point(15, 135);
+            lblTituloCiclos.Location = new Point(18, 97);
             lblTituloCiclos.Name = "lblTituloCiclos";
-            lblTituloCiclos.Size = new Size(200, 35);
+            lblTituloCiclos.Size = new Size(200, 73);
             lblTituloCiclos.TabIndex = 2;
-            lblTituloCiclos.Text = "Ciclos o bucles";
+            lblTituloCiclos.Text = "Estructuras de \r\nControl";
             lblTituloCiclos.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblDescripcionCiclos
@@ -832,20 +840,8 @@ namespace SistemaAcademico1
             lblDescripcionCiclos.Name = "lblDescripcionCiclos";
             lblDescripcionCiclos.Size = new Size(195, 55);
             lblDescripcionCiclos.TabIndex = 3;
-            lblDescripcionCiclos.Text = "Estructuras para repetir instrucciones varias veces.";
+            lblDescripcionCiclos.Text = "Estructuras para tomar decisiones y repetir instrucciones varias veces.\r\n";
             lblDescripcionCiclos.TextAlign = ContentAlignment.TopCenter;
-            // 
-            // btnCiclos
-            // 
-            btnCiclos.BackColor = Color.Transparent;
-            btnCiclos.FlatStyle = FlatStyle.Flat;
-            btnCiclos.ForeColor = Color.DodgerBlue;
-            btnCiclos.Location = new Point(18, 245);
-            btnCiclos.Name = "btnCiclos";
-            btnCiclos.Size = new Size(194, 32);
-            btnCiclos.TabIndex = 4;
-            btnCiclos.Text = "Ver tema";
-            btnCiclos.UseVisualStyleBackColor = false;
             // 
             // panelAccesos
             // 
@@ -854,7 +850,6 @@ namespace SistemaAcademico1
             panelAccesos.Controls.Add(lblAccesos);
             panelAccesos.Controls.Add(btnAccesoJuego);
             panelAccesos.Controls.Add(btnAccesoVariables);
-            panelAccesos.Controls.Add(btnAccesoCiclos);
             panelAccesos.Location = new Point(35, 615);
             panelAccesos.Name = "panelAccesos";
             panelAccesos.Size = new Size(976, 105);
@@ -900,21 +895,6 @@ namespace SistemaAcademico1
             btnAccesoVariables.Text = "{ }  Variables";
             btnAccesoVariables.UseVisualStyleBackColor = false;
             // 
-            // btnAccesoCiclos
-            // 
-            btnAccesoCiclos.BackColor = Color.FromArgb(43, 104, 224);
-            btnAccesoCiclos.FlatAppearance.BorderSize = 0;
-            btnAccesoCiclos.FlatStyle = FlatStyle.Flat;
-            btnAccesoCiclos.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            btnAccesoCiclos.ForeColor = Color.White;
-            btnAccesoCiclos.Location = new Point(430, 50);
-            btnAccesoCiclos.Name = "btnAccesoCiclos";
-            btnAccesoCiclos.Size = new Size(185, 42);
-            btnAccesoCiclos.TabIndex = 3;
-            btnAccesoCiclos.Text = "↻  Ciclos";
-            btnAccesoCiclos.UseVisualStyleBackColor = false;
-            btnAccesoCiclos.Click += btnAccesoCiclos_Click;
-            // 
             // MenuEstructura
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -950,5 +930,6 @@ namespace SistemaAcademico1
         }
 
         private Button btnInicio;
+        private Button button1;
     }
 }

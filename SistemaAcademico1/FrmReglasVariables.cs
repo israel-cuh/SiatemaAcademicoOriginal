@@ -13,6 +13,8 @@ namespace SistemaAcademico1
         public FrmReglasVariables()
         {
             InitializeComponent();
+            MenuLateralHelper.AgregarMenu(this, "Variables");
+            ControlesVentanaHelper.Agregar(this, cerrarAplicacion: true);
         }
 
         private void lblRegresar_Click(object sender, EventArgs e)
