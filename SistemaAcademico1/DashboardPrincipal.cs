@@ -33,16 +33,14 @@ namespace SistemaAcademico1
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            CodeNovaDashboard estructura = new CodeNovaDashboard ();
-            estructura.Show();
-            Hide();
+            
         }
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
-            login.Show();
-            Hide();
+            CodeNovaDashboard codeNovaDashboard = new CodeNovaDashboard();
+            codeNovaDashboard.Show();
+            Close();
         }
     }
 }

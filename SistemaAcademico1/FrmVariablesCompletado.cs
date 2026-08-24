@@ -15,6 +15,8 @@ namespace SistemaAcademico1
             InitializeComponent();
             pnlRepasar.Cursor = Cursors.Hand;
             pnlSiguienteTema.Cursor = Cursors.Hand;
+            MenuLateralHelper.AgregarMenu(this, "Variables");
+            ControlesVentanaHelper.Agregar(this, cerrarAplicacion: true);
         }
 
         private void pnlRepasar_Click(object sender, EventArgs e)

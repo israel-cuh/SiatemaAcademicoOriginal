@@ -35,5 +35,62 @@ namespace SistemaAcademico1
                 Close();
             }
         }
+
+        private void btnSeudocodigo_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+       "Esta sección está en proceso de desarrollo.",
+       "Próximamente",
+       MessageBoxButtons.OK,
+       MessageBoxIcon.Information
+       );
+        }
+
+        private void btnVariables_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+     "Esta sección está en proceso de desarrollo.",
+     "Próximamente",
+     MessageBoxButtons.OK,
+     MessageBoxIcon.Information
+     );
+        }
+
+        private void btnCondicionales_Click(object sender, EventArgs e)
+        {
+            DashboardPrincipal dashboard = new DashboardPrincipal("Docente");
+            dashboard.Show();
+            Hide();
+        }
+
+        private void btnCiclos_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+     "Esta sección está en proceso de desarrollo.",
+     "Próximamente",
+     MessageBoxButtons.OK,
+     MessageBoxIcon.Information
+     );
+        }
+
+        private void btnAcceso4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+     "Esta sección está en proceso de desarrollo.",
+     "Próximamente",
+     MessageBoxButtons.OK,
+     MessageBoxIcon.Information
+     );
+        }
+
+        private void btnAcceso5_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+     "Esta sección está en proceso de desarrollo.",
+     "Próximamente",
+     MessageBoxButtons.OK,
+     MessageBoxIcon.Information
+     );
+        }
     }
 }

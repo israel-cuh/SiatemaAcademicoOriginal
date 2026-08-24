@@ -406,5 +406,10 @@ namespace SistemaAcademico1
         {
 
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

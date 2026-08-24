@@ -16,7 +16,6 @@ namespace SistemaAcademico1
         private Panel stat2;
         private Panel stat3;
         private Panel stat4;
-        private Button btnAcceso3;
         private Button btnAcceso4;
         private Button btnAcceso5;
         private Button btnAgregarTarea;
@@ -83,7 +82,6 @@ namespace SistemaAcademico1
             lblTituloCiclos = new Label();
             lblDescripcionCiclos = new Label();
             btnCiclos = new Button();
-            btnAcceso3 = new Button();
             btnAcceso4 = new Button();
             btnAcceso5 = new Button();
             btnAgregarTarea = new Button();
@@ -480,6 +478,7 @@ namespace SistemaAcademico1
             btnSeudocodigo.TabIndex = 4;
             btnSeudocodigo.Text = "Ir al módulo";
             btnSeudocodigo.UseVisualStyleBackColor = false;
+            btnSeudocodigo.Click += btnSeudocodigo_Click;
             // 
             // tarjetaVariables
             // 
@@ -549,6 +548,7 @@ namespace SistemaAcademico1
             btnVariables.TabIndex = 4;
             btnVariables.Text = "Ir al módulo";
             btnVariables.UseVisualStyleBackColor = false;
+            btnVariables.Click += btnVariables_Click;
             // 
             // tarjetaCondicionales
             // 
@@ -618,6 +618,7 @@ namespace SistemaAcademico1
             btnCondicionales.TabIndex = 4;
             btnCondicionales.Text = "Ir al módulo";
             btnCondicionales.UseVisualStyleBackColor = false;
+            btnCondicionales.Click += btnCondicionales_Click;
             // 
             // tarjetaCiclos
             // 
@@ -687,19 +688,7 @@ namespace SistemaAcademico1
             btnCiclos.TabIndex = 4;
             btnCiclos.Text = "Ir al módulo";
             btnCiclos.UseVisualStyleBackColor = false;
-            // 
-            // btnAcceso3
-            // 
-            btnAcceso3.BackColor = Color.FromArgb(150, 90, 200);
-            btnAcceso3.FlatStyle = FlatStyle.Flat;
-            btnAcceso3.ForeColor = Color.White;
-            btnAcceso3.Location = new Point(408, 50);
-            btnAcceso3.Margin = new Padding(10);
-            btnAcceso3.Name = "btnAcceso3";
-            btnAcceso3.Size = new Size(200, 40);
-            btnAcceso3.TabIndex = 2;
-            btnAcceso3.Text = "Ver tareas";
-            btnAcceso3.UseVisualStyleBackColor = false;
+            btnCiclos.Click += btnCiclos_Click;
             // 
             // btnAcceso4
             // 
@@ -713,6 +702,7 @@ namespace SistemaAcademico1
             btnAcceso4.TabIndex = 3;
             btnAcceso4.Text = "Calificaciones";
             btnAcceso4.UseVisualStyleBackColor = false;
+            btnAcceso4.Click += btnAcceso4_Click;
             // 
             // btnAcceso5
             // 
@@ -726,13 +716,14 @@ namespace SistemaAcademico1
             btnAcceso5.TabIndex = 4;
             btnAcceso5.Text = "Nuevo anuncio";
             btnAcceso5.UseVisualStyleBackColor = false;
+            btnAcceso5.Click += btnAcceso5_Click;
             // 
             // btnAgregarTarea
             // 
             btnAgregarTarea.BackColor = Color.FromArgb(40, 180, 90);
             btnAgregarTarea.FlatStyle = FlatStyle.Flat;
             btnAgregarTarea.ForeColor = Color.White;
-            btnAgregarTarea.Location = new Point(624, 50);
+            btnAgregarTarea.Location = new Point(408, 54);
             btnAgregarTarea.Margin = new Padding(10);
             btnAgregarTarea.Name = "btnAgregarTarea";
             btnAgregarTarea.Size = new Size(200, 40);
@@ -745,7 +736,6 @@ namespace SistemaAcademico1
             panel1.Controls.Add(btnAcceso4);
             panel1.Controls.Add(lblAccesos);
             panel1.Controls.Add(btnAcceso5);
-            panel1.Controls.Add(btnAcceso3);
             panel1.Controls.Add(btnAgregarTarea);
             panel1.Location = new Point(258, 642);
             panel1.Name = "panel1";
