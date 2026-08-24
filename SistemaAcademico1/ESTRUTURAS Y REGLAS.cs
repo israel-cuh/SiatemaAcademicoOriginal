@@ -64,5 +64,30 @@ namespace SistemaAcademico1
             frmsa.Show();
             Hide();
         }
+
+        private void buttoncomprobar_Click(object sender, EventArgs e)
+        {
+            // Restablecer el color original del texto en todos los RadioButtons
+            rbsecuencia.ForeColor = Color.White;
+            rbcompilacion.ForeColor = Color.White;
+            rbDEPURACION.ForeColor = Color.White; // Actualizado con tus mayúsculas
+            rbIntalacion.ForeColor = Color.White;
+
+            // Verificar si la respuesta correcta (Secuencia / rbsecuencia) está marcada
+            if (rbsecuencia.Checked)
+            {
+                rbsecuencia.ForeColor = Color.Green;
+                button2.Enabled = true; // Desbloquea el botón Siguiente
+            }
+            else
+            {
+                // Marcar en rojo la opción incorrecta seleccionada
+                if (rbcompilacion.Checked) rbcompilacion.ForeColor = Color.Red;
+                if (rbDEPURACION.Checked) rbDEPURACION.ForeColor = Color.Red; // Actualizado aquí también
+                if (rbIntalacion.Checked) rbIntalacion.ForeColor = Color.Red;
+
+                button2.Enabled = false; // Mantiene bloqueado el botón Siguiente
+            }
+        }
     }
 }

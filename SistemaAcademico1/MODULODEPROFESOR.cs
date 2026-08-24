@@ -58,7 +58,27 @@ namespace SistemaAcademico1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Restablecer el color original del texto en todos los RadioButtons
+            radioButton1.ForeColor = Color.Black;
+            radioButton2.ForeColor = Color.Black;
+            radioButton3.ForeColor = Color.Black;
+            radioButton4.ForeColor = Color.Black;
 
+            // Verificar si la respuesta correcta (Literal A) está marcada
+            if (radioButton1.Checked)
+            {
+                radioButton1.ForeColor = Color.Green;
+                button2.Enabled = true; // Desbloquea el botón Siguiente
+            }
+            else
+            {
+                // Marcar en rojo la opción incorrecta que haya seleccionado el usuario
+                if (radioButton2.Checked) radioButton2.ForeColor = Color.Red;
+                if (radioButton3.Checked) radioButton3.ForeColor = Color.Red;
+                if (radioButton4.Checked) radioButton4.ForeColor = Color.Red;
+
+                button2.Enabled = false; // Mantiene bloqueado el botón Siguiente
+            }
         }
     }
 }

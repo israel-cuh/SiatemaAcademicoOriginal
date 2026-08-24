@@ -48,6 +48,7 @@
             lbl = new Label();
             lblenunciado = new Label();
             lbltitulo = new Label();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -59,11 +60,12 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(49, 33);
+            pictureBox1.Location = new Point(14, 14);
             pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(133, 99);
+            pictureBox1.Size = new Size(149, 123);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -111,7 +113,7 @@
             // 
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(859, 20);
+            pictureBox2.Location = new Point(988, 0);
             pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(167, 137);
@@ -141,7 +143,7 @@
             // 
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(848, 111);
+            pictureBox3.Location = new Point(977, 4);
             pictureBox3.Margin = new Padding(3, 4, 3, 4);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(178, 229);
@@ -167,6 +169,8 @@
             // 
             panel3.BackColor = Color.Transparent;
             panel3.BackgroundImage = (Image)resources.GetObject("panel3.BackgroundImage");
+            panel3.BackgroundImageLayout = ImageLayout.Stretch;
+            panel3.Controls.Add(button1);
             panel3.Controls.Add(rb4);
             panel3.Controls.Add(rb3);
             panel3.Controls.Add(rb2);
@@ -202,6 +206,7 @@
             rb3.TabStop = true;
             rb3.Text = "Compilador.";
             rb3.UseVisualStyleBackColor = true;
+            rb3.CheckedChanged += rb3_CheckedChanged;
             // 
             // rb2
             // 
@@ -214,6 +219,7 @@
             rb2.TabStop = true;
             rb2.Text = "Pseudocodigo.";
             rb2.UseVisualStyleBackColor = true;
+            rb2.CheckedChanged += rb2_CheckedChanged;
             // 
             // rb1
             // 
@@ -226,6 +232,7 @@
             rb1.TabStop = true;
             rb1.Text = "Diagrama de flujo.";
             rb1.UseVisualStyleBackColor = true;
+            rb1.CheckedChanged += rb1_CheckedChanged;
             // 
             // lblconcepto
             // 
@@ -279,7 +286,7 @@
             lblenunciado.BackColor = Color.Transparent;
             lblenunciado.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblenunciado.ForeColor = SystemColors.ButtonFace;
-            lblenunciado.Location = new Point(91, 48);
+            lblenunciado.Location = new Point(98, 64);
             lblenunciado.Name = "lblenunciado";
             lblenunciado.Size = new Size(84, 23);
             lblenunciado.TabIndex = 1;
@@ -292,12 +299,26 @@
             lbltitulo.BackColor = Color.Transparent;
             lbltitulo.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbltitulo.ForeColor = SystemColors.ButtonFace;
-            lbltitulo.Location = new Point(523, 25);
+            lbltitulo.Location = new Point(73, 23);
             lbltitulo.Name = "lbltitulo";
             lbltitulo.Size = new Size(90, 25);
             lbltitulo.TabIndex = 0;
             lbltitulo.Text = "Ejercicio ";
             lbltitulo.Click += lbltitulo_Click;
+            // 
+            // button1
+            // 
+            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.ForeColor = Color.Transparent;
+            button1.Location = new Point(384, 143);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(185, 31);
+            button1.TabIndex = 9;
+            button1.Text = "Comprobar";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
             // 
             // estudiante
             // 
@@ -347,5 +368,6 @@
         private Label lblconcepto;
         private Button btnanterior;
         private PictureBox pictureBox3;
+        private Button button1;
     }
 }
