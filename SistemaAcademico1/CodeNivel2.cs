@@ -423,7 +423,7 @@ namespace SistemaAcademico1
 
             btnIniciarJuego.Enabled = true;
             btnReiniciar.Enabled = false;
-            
+
         }
 
         private void btnNivel3_Click(object sender, EventArgs e)
@@ -436,6 +436,13 @@ namespace SistemaAcademico1
         private void pictureBox5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            CodeMemo2 nivel1 = new CodeMemo2();
+            nivel1.Show();
+            this.Close();
         }
     }
 }
