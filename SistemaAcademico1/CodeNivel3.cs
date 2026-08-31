@@ -420,5 +420,12 @@ namespace SistemaAcademico1
             // Mostrar las cartas durante 10 segundos
             timerMemoria.Start();
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            CodeNivel2 nivel2 = new CodeNivel2();
+            nivel2.Show();
+            this.Close();
+        }
     }
 }

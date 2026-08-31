@@ -58,6 +58,7 @@
             label8 = new Label();
             label7 = new Label();
             timerJuego2 = new System.Windows.Forms.Timer(components);
+            btnRegresar = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -137,6 +138,7 @@
             // panel3
             // 
             panel3.BackColor = Color.MidnightBlue;
+            panel3.Controls.Add(btnRegresar);
             panel3.Controls.Add(pictureBox6);
             panel3.Controls.Add(pictureBox5);
             panel3.Controls.Add(btnNivel3);
@@ -181,7 +183,7 @@
             btnNivel3.BackColor = Color.FromArgb(128, 128, 255);
             btnNivel3.Cursor = Cursors.Hand;
             btnNivel3.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnNivel3.Location = new Point(855, 572);
+            btnNivel3.Location = new Point(941, 574);
             btnNivel3.Name = "btnNivel3";
             btnNivel3.Size = new Size(147, 42);
             btnNivel3.TabIndex = 14;
@@ -194,7 +196,7 @@
             btnReiniciar.BackColor = Color.FromArgb(128, 128, 255);
             btnReiniciar.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnReiniciar.ForeColor = Color.Black;
-            btnReiniciar.Location = new Point(430, 565);
+            btnReiniciar.Location = new Point(593, 498);
             btnReiniciar.Name = "btnReiniciar";
             btnReiniciar.Size = new Size(191, 49);
             btnReiniciar.TabIndex = 13;
@@ -206,7 +208,7 @@
             // 
             btnIniciarJuego.BackColor = Color.FromArgb(128, 128, 255);
             btnIniciarJuego.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnIniciarJuego.Location = new Point(221, 565);
+            btnIniciarJuego.Location = new Point(314, 498);
             btnIniciarJuego.Name = "btnIniciarJuego";
             btnIniciarJuego.Size = new Size(191, 49);
             btnIniciarJuego.TabIndex = 12;
@@ -378,6 +380,18 @@
             // 
             timerJuego2.Interval = 1000;
             // 
+            // btnRegresar
+            // 
+            btnRegresar.BackColor = Color.FromArgb(128, 128, 255);
+            btnRegresar.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRegresar.Location = new Point(14, 574);
+            btnRegresar.Name = "btnRegresar";
+            btnRegresar.Size = new Size(156, 42);
+            btnRegresar.TabIndex = 17;
+            btnRegresar.Text = "Volver N1";
+            btnRegresar.UseVisualStyleBackColor = false;
+            btnRegresar.Click += btnRegresar_Click;
+            // 
             // CodeNivel2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -437,5 +451,6 @@
         private PictureBox pictureBox6;
         private PictureBox pictureBox5;
         private System.Windows.Forms.Timer timerJuego2;
+        private Button btnRegresar;
     }
 }

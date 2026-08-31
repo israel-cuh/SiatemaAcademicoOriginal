@@ -57,6 +57,7 @@
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             timerJuego3 = new System.Windows.Forms.Timer(components);
+            btnRegresar = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel4.SuspendLayout();
@@ -210,6 +211,7 @@
             // panel3
             // 
             panel3.BackColor = Color.MidnightBlue;
+            panel3.Controls.Add(btnRegresar);
             panel3.Controls.Add(pictureBox6);
             panel3.Controls.Add(pictureBox5);
             panel3.Controls.Add(btnReiniciar);
@@ -252,7 +254,7 @@
             btnReiniciar.BackColor = Color.FromArgb(128, 128, 255);
             btnReiniciar.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnReiniciar.ForeColor = Color.Black;
-            btnReiniciar.Location = new Point(486, 572);
+            btnReiniciar.Location = new Point(553, 572);
             btnReiniciar.Name = "btnReiniciar";
             btnReiniciar.Size = new Size(191, 49);
             btnReiniciar.TabIndex = 13;
@@ -264,7 +266,7 @@
             // 
             btnIniciarJuego.BackColor = Color.FromArgb(128, 128, 255);
             btnIniciarJuego.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnIniciarJuego.Location = new Point(219, 572);
+            btnIniciarJuego.Location = new Point(307, 572);
             btnIniciarJuego.Name = "btnIniciarJuego";
             btnIniciarJuego.Size = new Size(191, 49);
             btnIniciarJuego.TabIndex = 12;
@@ -362,6 +364,18 @@
             // 
             timerJuego3.Interval = 1000;
             // 
+            // btnRegresar
+            // 
+            btnRegresar.BackColor = Color.FromArgb(128, 128, 255);
+            btnRegresar.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRegresar.Location = new Point(23, 579);
+            btnRegresar.Name = "btnRegresar";
+            btnRegresar.Size = new Size(156, 42);
+            btnRegresar.TabIndex = 18;
+            btnRegresar.Text = "Volver N2";
+            btnRegresar.UseVisualStyleBackColor = false;
+            btnRegresar.Click += btnRegresar_Click;
+            // 
             // CodeNivel3
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -420,5 +434,6 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
         private System.Windows.Forms.Timer timerJuego3;
+        private Button btnRegresar;
     }
 }

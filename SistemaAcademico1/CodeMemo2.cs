@@ -480,5 +480,12 @@ namespace SistemaAcademico1
             nivel2.Show();
             this.Close();
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            Menuvariables menu = new Menuvariables();
+            menu.Show();
+            this.Close();
+        }
     }
 }
